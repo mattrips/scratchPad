@@ -15,7 +15,7 @@ The file explorer is accessible using the button in left corner of the navigatio
 This explains the interesting twist.  All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree. 
 All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
 
-<a href="custom-id">Heas</a>
+<a href="#custom-id">Heas</a>
 
 ## Switch to another file
 
@@ -151,6 +151,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2NzQ3MjcyMSwtOTkwMTk5ODE1LDIwOD
-Y4NjMxOCwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbMjcwNDY2NTc2LC05OTAxOTk4MTUsMjA4Nj
+g2MzE4LC0zMzI0NTUzNjNdfQ==
 -->
