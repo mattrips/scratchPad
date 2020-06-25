@@ -71,9 +71,9 @@ A protocol conformance is the abstract representation of the behavior of a given
 EXAMPLE
 
 
-## Rule of Protocol Conformance
-The rule of protocol conformance is stated, as follows:
->The  most specialized implementation of a protocol requirement that is  available to the protocol  will be selected as the witness for the protocol requirement.
+## Basic Rule of Protocol Conformance
+The basic rule of protocol conformance is stated, as follows:
+>The  ***most specialized implementation*** of a protocol requirement that is  ***available to the protocol*** will be selected as the witness for the protocol requirement.
 
 Protocol conformance involves matching each protocol requirement of a protocol to an implementation of the requirement.  For a given protocol requirement, multiple implementations may be present.  An implementation selected by protocol conformance is referred to as a  witness.  The  most specialized implementation of a protocol requirement that is  available to the protocol  will be selected as the witness for the protocol requirement.
 
@@ -180,7 +180,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTczOTc5OTYsMjE0NjY2NDQ0OSwtMTIwND
-I3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4MTYzLC0xMTM4ODU1
-MjIwXX0=
+eyJoaXN0b3J5IjpbNjg4Nzk4ODg2LDIxNDY2NjQ0NDksLTEyMD
+QyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgzODE2MywtMTEzODg1
+NTIyMF19
 -->
