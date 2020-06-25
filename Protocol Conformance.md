@@ -20,7 +20,7 @@ Most powerfully, a protocol may serve as the basis for an existential type beari
 
 ## Protocol Conformance
 
-A type may be declared to conform to a protocol.  For the declaration to be valid, the type must satisfy each of the protocol requirements of the protocol by having available at least one implementation for each protocol requirement.  For each protocol requirement, Swift selects one and only one implementation that will be used by the program to sati
+A type may be declared to conform to a protocol.  For the declaration to be valid, the type must satisfy each of the protocol requirements of the protocol by having available at least one implementation for each protocol requirement.  For each protocol requirement, Swift selects one and only one implementation that will be used by the program to satisfy the protocol requirement.  The implementation so selected for a protocol requirement is referred to as the witness for the protocol requirement.  
 
  but only one of those specific ways may be used.  That one specific way is referred to as a protocol conformance.  A protocol conformance specifies, for each protocol requirement of a protocol, which property, method, initializer, subscript or typealias will be used if and when the protocol requirement is invoked.
 
@@ -167,6 +167,6 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1OTYxNjIyOCwxODE3ODM4MTYzLC0xMT
-M4ODU1MjIwXX0=
+eyJoaXN0b3J5IjpbLTIxMzM1OTU0NTYsMTgxNzgzODE2MywtMT
+EzODg1NTIyMF19
 -->
