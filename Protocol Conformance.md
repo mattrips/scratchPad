@@ -22,7 +22,9 @@ Most powerfully, a protocol may serve as the basis for an existential type beari
 
 A protocol conformance specifies, for each protocol requirement of a protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement if the protocol requirement is invoked.
 
-If a type is declared to conform to a protocol, the type must satisfy each of the protocol requirements of the protocol.  The type does so by having available at least one implementation for each protocol requirement.  For each protocol requirement, Swift selects one and only one implementation that will be used by the program to satisfy the protocol requirement.  The implementation so selected is referred to as the witness for the protocol requirement.  The selected set of witnesses for a particular type's conformance to a protocol is referred to as a protocol conformance.
+If a type is declared to conform to a protocol, the type must satisfy each of the protocol requirements of the protocol.  The type does so by having available at least one implementation--that is at least one property, method, initializer, subscript or typealias--for each protocol requirement of the protocol.  
+
+For each protocol requirement, Swift selects one and only one implementation that will be used by the program to satisfy the protocol requirement.  The implementation so selected is referred to as the witness for the protocol requirement.  The selected set of witnesses for a particular type's conformance to a protocol is referred to as a protocol conformance.
 
 While a type is declared to conform to a protocol, the protocol conformance undermining that declaration is not expressly declared.  Instead, Swift determines the protocol conformance for the declaration.    
 
@@ -167,6 +169,6 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2MDY4MTUzOSwxODE3ODM4MTYzLC0xMT
-M4ODU1MjIwXX0=
+eyJoaXN0b3J5IjpbLTEyNTk3MjYyNzYsMTgxNzgzODE2MywtMT
+EzODg1NTIyMF19
 -->
