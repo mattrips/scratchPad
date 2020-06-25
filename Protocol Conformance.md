@@ -18,7 +18,7 @@ A protocol also may supply functionality, which may serve as default implementat
 
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 
-## Protocol Conformance
+# Protocol Conformance
 
 A protocol conformance specifies, for each protocol requirement of a protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement if the protocol requirement is invoked.
 
@@ -28,7 +28,7 @@ While a type is declared to conform to a protocol, the protocol conformance unde
 
 Understanding protocol conformance is key to obtaining predictable polymorphic behavior.
 
-**The Nature of Protocol Conformance**
+## The Nature of Protocol Conformance
 
 **Single, Immutable Protocol Conformance for Each Type-Protocol Pairing**
 
@@ -167,6 +167,6 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTcxMjQyNjksMTgxNzgzODE2MywtMT
-EzODg1NTIyMF19
+eyJoaXN0b3J5IjpbMTgxNTgyNDc3MiwtMTExNzEyNDI2OSwxOD
+E3ODM4MTYzLC0xMTM4ODU1MjIwXX0=
 -->
