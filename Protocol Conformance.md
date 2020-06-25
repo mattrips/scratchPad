@@ -36,7 +36,9 @@ Before reviewing the fundamental rule of protocol conformance, it is useful to r
 
 A protocol conformance is determined with respect to the pairing of a type and a protocol to which it conforms.  If a type conforms to multiple protocols, there will be a distinct protocol conformance for each type-protocol pairing.
 
-A type may conform to a protocol in one and only one way.  There cannot be more than one protocol conformance for a type-protocol pairing.  It is an error to twice declare the conformance of a type to a given protocol.  Attempting to twice declare conditional conformance of a type to a protocol, even with disjoint conditions, is an error.
+A type may conform to a protocol in one and only one way.  There cannot be more than one protocol conformance for a type-protocol pairing.  
+
+It is an error to twice declare the conformance of a type to a given protocol.  Attempting to twice declare conditional conformance of a type to a protocol, even with disjoint conditions, is an error.
 
 ### Immutable
 
@@ -171,7 +173,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NzE1NDkwNywyMTQ2NjY0NDQ5LC0xMj
+eyJoaXN0b3J5IjpbMTkyMDMwNzA3MywyMTQ2NjY0NDQ5LC0xMj
 A0Mjc1NDIzLC0xMTE3MTI0MjY5LDE4MTc4MzgxNjMsLTExMzg4
 NTUyMjBdfQ==
 -->
