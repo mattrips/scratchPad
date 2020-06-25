@@ -30,6 +30,8 @@ Understanding protocol conformance is key to obtaining predictable polymorphic b
 
 ## The Nature of Protocol Conformance
 
+Before reviewing the fundamental rule of protocol conformance 
+
 ### Singular
 
 A protocol conformance is determined with respect to the pairing of a type and a protocol to which it conforms.  If a type conforms to multiple protocols, there will be a distinct protocol conformance for each type-protocol pairing.
@@ -169,6 +171,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NjY2NDQ0OSwtMTIwNDI3NTQyMywtMT
-ExNzEyNDI2OSwxODE3ODM4MTYzLC0xMTM4ODU1MjIwXX0=
+eyJoaXN0b3J5IjpbOTA3MjUwMjU2LDIxNDY2NjQ0NDksLTEyMD
+QyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgzODE2MywtMTEzODg1
+NTIyMF19
 -->
