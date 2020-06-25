@@ -10,7 +10,7 @@ witness
 : The particular implementation used to satisfy a protocol requirement.
 
 protocol conformance
-: 
+: The set of witnesses used to satisfy the re
 
 A protocol specifies a set of requirements.  A protocol may be applied to any type that satisfies its protocol requirements.  
 
@@ -160,5 +160,6 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzg4NTUyMjBdfQ==
+eyJoaXN0b3J5IjpbLTE2MzI2NDE3NDAsLTExMzg4NTUyMjBdfQ
+==
 -->
