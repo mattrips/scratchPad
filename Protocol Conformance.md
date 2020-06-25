@@ -42,7 +42,7 @@ It is an error to twice declare the conformance of a type to a given protocol.  
 
 ### Immutable
 
-Once established in a program, a protocol conformance cannot be altered by operation of the program.  [except for imports…]
+Once established in a program, a protocol conformance cannot be altered by operation of the program.  [except for imports…]  Does not depend upon how used...
 
 ### Sourcing of Implementations
 
@@ -53,6 +53,10 @@ In a simple case, there may exist only one possible implementation for each prot
 ### Interaction with Class Inheritance
 
 Where a class conforms to a protocol, the nature of class inheritance impacts the availability of implementations for purposes of protocol conformance.  For instance, a superclass may expose functionality that incidentally has the same signature as a protocol requirement.  Conversely, if a class is declared to conform to a protocol, the implementations in a subclass of the class are not available to satisfy the protocol requirements.
+
+### Invocation
+
+
 
 ### Signature Matching
 
@@ -180,7 +184,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4MjA5MTU5NywyMTQ2NjY0NDQ5LC0xMj
-A0Mjc1NDIzLC0xMTE3MTI0MjY5LDE4MTc4MzgxNjMsLTExMzg4
-NTUyMjBdfQ==
+eyJoaXN0b3J5IjpbNjcwODEwNTg5LDIwODIwOTE1OTcsMjE0Nj
+Y2NDQ0OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4
+MTYzLC0xMTM4ODU1MjIwXX0=
 -->
