@@ -22,7 +22,7 @@ Most powerfully, a protocol may serve as the basis for an existential type beari
 
 A protocol conformance specifies, for each protocol requirement of a protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement if the protocol requirement is invoked.
 
-If a type is declared to conform to a protocol, the type must satisfy each of the protocol requirements of the protocol.  The type does so by having available at least one implementation--that is at least one property, method, initializer, subscript or typealias--for each protocol requirement of the protocol.  For each protocol requirement, Swift selects one and only one implementation that will be used throughout a program to satisfy the protocol requirement.  The implementation so selected is referred to as the witness for the protocol requirement.  The selected set of witnesses for a particular type's conformance to a protocol is referred to as a protocol conformance.
+If a type is declared to conform to a protocol, the type must satisfy each of the protocol requirements of the protocol.  The type does so by having available at least one implementation--that is at least one property, method, initializer, subscript or typealias--for each protocol requirement of the protocol.  For each protocol requirement, Swift selects one and only one implementation that will be used throughout a program to satisfy the protocol requirement.  The implementation so selected is referred to as the witness for the protocol requirement.  The selected set of witnesses for a particular type's conformance to a protocol is referred to as a protocol conformance.  Metaphorically, the protocol conformance is a Dic
 
 While a type is declared to conform to a protocol, the protocol conformance underpinning the declaration is not expressly declared.  Instead, Swift determines the protocol conformance for the declaration.    
 
@@ -30,11 +30,13 @@ Understanding protocol conformance is key to obtaining predictable polymorphic b
 
 ## The Nature of Protocol Conformance
 
-**Single, Immutable Protocol Conformance for Each Type-Protocol Pairing**
+### Singular
 
 A protocol conformance is determined with respect to the pairing of a type and a protocol to which it conforms.  If a type conforms to multiple protocols, there will be a distinct protocol conformance for each type-protocol pairing.
 
 A type may conform to a protocol in one and only one way.  There cannot be more than one protocol conformance for a type-protocol pairing.  It is an error to twice declare the conformance of a type to a given protocol.  Attempting to twice declare conditional conformance of a type to a protocol, even with disjoint conditions, is an error.
+
+### Immutable
 
 Once established in a program, a protocol conformance cannot be altered by operation of the program.  [except for imports…]
 
@@ -167,6 +169,6 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxNTgyNDc3MiwtMTExNzEyNDI2OSwxOD
+eyJoaXN0b3J5IjpbLTE0OTg5NTMyMCwtMTExNzEyNDI2OSwxOD
 E3ODM4MTYzLC0xMTM4ODU1MjIwXX0=
 -->
