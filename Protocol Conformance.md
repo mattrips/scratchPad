@@ -30,7 +30,7 @@ Understanding protocol conformance is key to obtaining predictable polymorphic b
 
 ## The Foundations of Protocol Conformance
 
-Before reviewing the fundamental rule of protocol conformance, it is useful to review the foundations upon which protocol conformance stands.
+Before reviewing the rule of protocol conformance, it is useful to review the foundations upon which protocol conformance stands.
 
 ### Singular
 
@@ -175,7 +175,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjcwOTM2NTk4LDIxNDY2NjQ0NDksLTEyMD
-QyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgzODE2MywtMTEzODg1
-NTIyMF19
+eyJoaXN0b3J5IjpbLTE3MTY1NTcwMjksMjE0NjY2NDQ0OSwtMT
+IwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4MTYzLC0xMTM4
+ODU1MjIwXX0=
 -->
