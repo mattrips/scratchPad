@@ -10,7 +10,7 @@ witness
 : The particular implementation used to satisfy a protocol requirement.
 
 protocol conformance
-: The set of witnesses used to satisfy the re
+: The set of witnesses used to satisfy the requirements of a given protocol.
 
 A protocol specifies a set of requirements.  A protocol may be applied to any type that satisfies its protocol requirements.  
 
@@ -20,7 +20,7 @@ Most powerfully, a protocol may serve as the basis for an existential type beari
 
 ## Protocol Conformance
 
-A type may be declared to conform  to a protocol.  For the declaration to be valid, the type must satisfy the protocol requirements of the protocol.  A  protocol conformance  is not expressly declared.
+A type may be declared to conform to a protocol.  For the declaration to be valid, the type must satisfy each of the protocol requirements of the protocol.  A  protocol conformance is not expressly declared.
 
 If a type is declared to conform to a protocol, the compiler determines how the type satisfies each  protocol requirement  of the protocol.  Protocol conformance predetermines which implementation of a given method, property, subscript or initializer requirement of a protocol will be used by a conforming type if the requirement is invoked, whether the invocation is directly on an instance of the type or through an existential container holding an instance of the type.  Understanding protocol conformance is key to obtaining predictable polymorphic behavior.
 
@@ -160,6 +160,5 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzI2NDE3NDAsLTExMzg4NTUyMjBdfQ
-==
+eyJoaXN0b3J5IjpbMjYxOTE3MTc4LC0xMTM4ODU1MjIwXX0=
 -->
