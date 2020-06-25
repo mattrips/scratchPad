@@ -20,9 +20,9 @@ Most powerfully, a protocol may serve as the basis for an existential type beari
 
 ## Protocol Conformance
 
-A type may be declared to conform to a protocol.  For the declaration to be valid, the type must satisfy each of the protocol requirements of the protocol by having available at least one implementation for each protocol requirement.  For each protocol requirement, Swift selects one and only one implementation that will be used by the program to satisfy the protocol requirement.  The implementation so selected is referred to as the witness for the protocol requirement.  The selected set of witnesses for a particular type's conformance to a protocol  
+A protocol conformance specifies, for each protocol requirement of a protocol, which property, method, initializer, subscript or typealias will be used if and when the protocol requirement is invoked.  
 
- but only one of those specific ways may be used.  That one specific way is referred to as a protocol conformance.  A protocol conformance specifies, for each protocol requirement of a protocol, which property, method, initializer, subscript or typealias will be used if and when the protocol requirement is invoked.
+A type may be declared to conform to a protocol.  For the declaration to be valid, the type must satisfy each of the protocol requirements of the protocol by having available at least one implementation for each protocol requirement.  For each protocol requirement, Swift selects one and only one implementation that will be used by the program to satisfy the protocol requirement.  The implementation so selected is referred to as the witness for the protocol requirement.  The selected set of witnesses for a particular type's conformance to a protocol is referred to as a protocol conformance.  In other words, 
 
 While a type is declared to conform to a protocol, the protocol conformance undermining that declaration is not expressly declared.  Instead, Swift determines the protocol conformance for the declaration.    
 
@@ -167,6 +167,6 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2MDU1MDcxNywxODE3ODM4MTYzLC0xMT
+eyJoaXN0b3J5IjpbMTM0ODIyMjc0MSwxODE3ODM4MTYzLC0xMT
 M4ODU1MjIwXX0=
 -->
