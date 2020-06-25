@@ -78,7 +78,8 @@ You can publish your file by opening the **Publish** sub-menu and by clicking **
 - Markdown: publish the Markdown text on a website that can interpret it (**GitHub** for instance),
 - HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
 
-## Update a publication
+## Update a publication ```
+{#custom-id}
 
 After publishing, StackEdit keeps your file linked to that publication which makes it easy for you to re-publish it. Once you have modified your file and you want to update your publication, click on the **Publish now** button in the navigation bar.
 
@@ -146,6 +147,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4NDk5Nzg5MywtOTkwMTk5ODE1LDIwOD
-Y4NjMxOCwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbLTE1Njc5NDcwMTMsLTk5MDE5OTgxNSwyMD
+g2ODYzMTgsLTMzMjQ1NTM2M119
 -->
