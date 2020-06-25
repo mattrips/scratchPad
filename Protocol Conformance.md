@@ -70,7 +70,12 @@ A protocol conformance is the abstract representation of the behavior of a given
 
 EXAMPLE
 
-Protocol conformance involves matching each protocol requirement of a protocol to an implementation of the requirement.  For a given protocol requirement, multiple implementations may be present.  An implementation selected by protocol conformance is referred to as a  witness.  The  most specialized implementation  of a protocol requirement that is  available to the protocol  will be selected as the witness for the protocol requirement.
+
+## Rule of Protocol Conformance
+The rule of protocol conformance is stated, as follows:
+>The  most specialized implementation of a protocol requirement that is  available to the protocol  will be selected as the witness for the protocol requirement.
+
+Protocol conformance involves matching each protocol requirement of a protocol to an implementation of the requirement.  For a given protocol requirement, multiple implementations may be present.  An implementation selected by protocol conformance is referred to as a  witness.  The  most specialized implementation of a protocol requirement that is  available to the protocol  will be selected as the witness for the protocol requirement.
 
 Protocol conformance results in a set of requirement/witness pairings for the conformance of a given type to a given protocol:  one witness for each protocol requirement.  That set is referred to as a  protocol witness table.  The concept of the protocol witness table is an implementation detail, not visible to the user.  Nonetheless, the idea of the protocol witness table may help inform a user’s mental model of protocol conformance and what it produces.
 
@@ -175,7 +180,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTY1NTcwMjksMjE0NjY2NDQ0OSwtMT
-IwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4MTYzLC0xMTM4
-ODU1MjIwXX0=
+eyJoaXN0b3J5IjpbNTczOTc5OTYsMjE0NjY2NDQ0OSwtMTIwND
+I3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4MTYzLC0xMTM4ODU1
+MjIwXX0=
 -->
