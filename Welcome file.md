@@ -11,8 +11,8 @@ StackEdit stores your files in your browser, which means[^1] all your files are 
 ## Create files and folders
 
 The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.[^2]
-[^2]: ### An Interesting Twist
-This explains the interesting twist.
+[^2]: ##### An Interesting Twist
+    This explains the interesting twist.  All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
 
 ## Switch to another file
 
@@ -145,6 +145,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2ODE5MDM0NSwtOTkwMTk5ODE1LDIwOD
-Y4NjMxOCwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbLTEzOTk0NTE4NjEsLTk5MDE5OTgxNSwyMD
+g2ODYzMTgsLTMzMjQ1NTM2M119
 -->
