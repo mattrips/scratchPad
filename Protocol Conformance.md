@@ -26,7 +26,7 @@ If a type is declared to conform to a protocol, the type must satisfy each of th
 
 While a type is declared to conform to a protocol, the protocol conformance underpinning the declaration is not expressly declared.  Instead, Swift determines the protocol conformance for the declaration.    
 
-Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of protocol conformance.  
+Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
 
 ## The Nature of Protocol Conformance
 
@@ -169,6 +169,6 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzA4ODkyMjMsLTEyMDQyNzU0MjMsLT
-ExMTcxMjQyNjksMTgxNzgzODE2MywtMTEzODg1NTIyMF19
+eyJoaXN0b3J5IjpbMjE0NjY2NDQ0OSwtMTIwNDI3NTQyMywtMT
+ExNzEyNDI2OSwxODE3ODM4MTYzLC0xMTM4ODU1MjIwXX0=
 -->
