@@ -6,11 +6,12 @@ Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about St
 # Files
 
 StackEdit stores your files in your browser, which means[^1] all your files are automatically saved locally and are accessible **offline!**
+[^1]: This is the note.
 
 ## Create files and folders
 
-The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
-
+The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.[^2]
+[^2]: This is another note.
 ## Switch to another file
 
 All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
@@ -142,5 +143,6 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4Njg2MzE4LC0zMzI0NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbLTE3MDQwNDQ5NSwyMDg2ODYzMTgsLTMzMj
+Q1NTM2M119
 -->
