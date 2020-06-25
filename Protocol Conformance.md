@@ -73,7 +73,7 @@ EXAMPLE
 
 ## Basic Rule of Protocol Conformance
 The basic rule of protocol conformance is stated, as follows:
->The  ***most specialized implementation*** of a protocol requirement that is  ***available to the protocol*** will be selected as the witness for the protocol requirement.
+>For a given protocol requirement, the ***most specialized implementation*** that is  ***available to the protocol via the type*** will be selected as the witness.
 
 Protocol conformance involves matching each protocol requirement of a protocol to an implementation of the requirement.  For a given protocol requirement, multiple implementations may be present.  An implementation selected by protocol conformance is referred to as a  witness.  The  most specialized implementation of a protocol requirement that is  available to the protocol  will be selected as the witness for the protocol requirement.
 
@@ -180,7 +180,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg4Nzk4ODg2LDIxNDY2NjQ0NDksLTEyMD
-QyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgzODE2MywtMTEzODg1
-NTIyMF19
+eyJoaXN0b3J5IjpbLTgyOTU0OTA1MSwyMTQ2NjY0NDQ5LC0xMj
+A0Mjc1NDIzLC0xMTE3MTI0MjY5LDE4MTc4MzgxNjMsLTExMzg4
+NTUyMjBdfQ==
 -->
