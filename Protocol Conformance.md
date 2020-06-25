@@ -44,15 +44,17 @@ It is an error to twice declare the conformance of a type to a given protocol.  
 
 Once established in a program, a protocol conformance cannot be altered by operation of the program.  [except for imports…]
 
+### Sourcing of Implementations
+
 **Potential for Multiple Implementations of a Requirement**
 
 In a simple case, there may exist only one possible implementation for each protocol requirement.  In that case, determining the  protocol conformance  is a simple matter of matching each requirement with its implementation.  In more complex cases, there may be several  implementations  available for each  protocol requirement.  Implementations  may be scattered across multiple files, in the source code of other modules in a project, and in the binary files of imported SDKs.  Anticipating the  protocol conformance  that will result in a complex case requires careful attention to detail.
 
-**Interaction with Class Inheritance**
+### Interaction with Class Inheritance
 
 Where a class conforms to a protocol, the nature of class inheritance impacts the availability of implementations for purposes of protocol conformance.  For instance, a superclass may expose functionality that incidentally has the same signature as a protocol requirement.  Conversely, if a class is declared to conform to a protocol, the implementations in a subclass of the class are not available to satisfy the protocol requirements.
 
-**Signature Matching**
+### Signature Matching
 
 Protocol requirements and implementations are matched based on _____.  [check this]  Member names, argument labels, parameter order, parameter types, return types, etc., must be the same.  Parts that are not part of the signatures, such as parameter names, are disregarded for matching.
 
@@ -173,7 +175,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMDMwNzA3MywyMTQ2NjY0NDQ5LC0xMj
-A0Mjc1NDIzLC0xMTE3MTI0MjY5LDE4MTc4MzgxNjMsLTExMzg4
-NTUyMjBdfQ==
+eyJoaXN0b3J5IjpbMjcwOTM2NTk4LDIxNDY2NjQ0NDksLTEyMD
+QyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgzODE2MywtMTEzODg1
+NTIyMF19
 -->
