@@ -56,13 +56,14 @@ extension Y: Q where T: Equatable {
 
 let y = Y<Int>()
 
-print(y.id2) // "P" or "Q" or ? 
+print(y.id2) // "P", "Q", "R", "Y1" or "Y2"? 
 ```
 Protocol `P` declares its sole protocol requirement, `id: String { get }`, at Point #1.  Protocol `Q` inherits from protocol `P`, but has no protocol requirements of its own. Protocol `R` inherits from protocol `P`, but has no protocol requirements of its own.
 
 Struct `Y<T>` is unconditionally declared to conform to `P`, and is conditionally declared to conform to `Q`.  Two protocol conformances are formed, one for `Y: P` and one for `Y:Q`. 
 
-Five implementations of `id: String { get }` are present in the source code, but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`.  
+Five implementations of `id: String { get }` are present in the source code, but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`.   ``
+
 
 
 
@@ -262,7 +263,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MzkwMjgwMCw2MjU3NTk3MjUsLTIxND
+eyJoaXN0b3J5IjpbMTU4MjE3NzExNCw2MjU3NTk3MjUsLTIxND
 AyMjc2NzMsMTU5Nzc2MTEwOCwtMTM1NzE3NjQzLDc5MDY3ODc5
 MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMxLC0zMT
 kwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxNDY2NjQ0
