@@ -56,7 +56,7 @@ extension Y: Q where T: Equatable {
 
 let y = Y<Int>()
 
-print(y.id2) // "P" or "Q"? 
+print(y.id2) // "P" or "Q" or ? 
 ```
 Protocol `P` declares its sole protocol requirement, `id: String { get }`, at Point #1.  Protocol `Q` inherits from protocol `P`, but has no protocol requirements of its own. Protocol `R` inherits from protocol `P`, but has no protocol requirements of its own.
 
@@ -262,10 +262,10 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI1NzU5NzI1LC0yMTQwMjI3NjczLDE1OT
-c3NjExMDgsLTEzNTcxNzY0Myw3OTA2Nzg3OTEsMTUwNzUwODA4
-NiwxMTc4OTc1OTg5LDg2ODcxMzMzMSwtMzE5MDkwODA1LDEzND
-E0MTQ1MzYsMjA4MjA5MTU5NywyMTQ2NjY0NDQ5LC0xMjA0Mjc1
-NDIzLC0xMTE3MTI0MjY5LDE4MTc4MzgxNjMsLTExMzg4NTUyMj
-BdfQ==
+eyJoaXN0b3J5IjpbMTM0MzkwMjgwMCw2MjU3NTk3MjUsLTIxND
+AyMjc2NzMsMTU5Nzc2MTEwOCwtMTM1NzE3NjQzLDc5MDY3ODc5
+MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMxLC0zMT
+kwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxNDY2NjQ0
+NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgzODE2My
+wtMTEzODg1NTIyMF19
 -->
