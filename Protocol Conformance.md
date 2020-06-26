@@ -23,15 +23,14 @@ Most powerfully, a protocol may serve as the basis for an existential type beari
 A protocol conformance specifies, for each protocol requirement of a protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement if the protocol requirement is invoked.
 
 ## 1.1 The Witness
-
 If a type is declared to conform to a protocol, the type must satisfy each of the protocol requirements of the protocol.  The type does so by having available at least one implementation--that is at least one property, method, initializer, subscript or typealias--for each protocol requirement of the protocol.  
 
 With respect to the a type that is declared to conform to a protocol,
-for each protocol requirement of the protocol, Swift determines the one and only implementation that will be used throughout a program to satisfy that protocol requirement for that type.  The implementation so selected is referred to as the witness for the protocol requirement.  
+for each protocol requirement of the protocol, Swift determines the one and only implementation that will be used throughout a program to satisfy that protocol requirement for that type.  The implementation so determined is referred to as the witness for the protocol requirement.  
 
 ## 1.2 Collection of Protocol Requirement-Witness Pairs
 
-The selected set of witnesses for a particular type's conformance to a protocol is referred to as a protocol conformance.  
+The collection of the witnesses for a type's conformance to a protocol is referred to as a protocol conformance.  
  
 &#9724;   Metaphorically, each protocol conformance is an immutable struct containing a declaration that a type conforms to a protocol and a dictionary of protocol requirement-witness pairs:
 ```
@@ -206,7 +205,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTA1NzYxOTYsODY4NzEzMzMxLC0zMT
+eyJoaXN0b3J5IjpbLTExNDcwMjIwMTksODY4NzEzMzMxLC0zMT
 kwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxNDY2NjQ0
 NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgzODE2My
 wtMTEzODg1NTIyMF19
