@@ -38,7 +38,7 @@ extension P {
 
 protocol Q: P {}
 extension Q {
-  var id: String { "Q" } // Point #4
+  var id: String { "Q" } // << Point #4
 }
 
 struct Y<T> {}
@@ -49,7 +49,7 @@ let y = Y<Int>()
 
 print(y.id2) // "P" or "Q"? 
 ```
-Protocol `P` states its sole protocol requirement at Point A.  Protocol 
+Protocol `P` declares its sole protocol requirement, `id: String` at Point #1.  Protocol `P` declares an implementation for 
 
 ### 1.2 Model of a Protocol Conformance
 With respect to the declaration that a type conforms to a protocol, the protocol conformance is a collection containing the witness for each protocol requirement of the protocol.
@@ -247,10 +247,10 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzIxNzQ1MTAsLTIxNDAyMjc2NzMsMT
-U5Nzc2MTEwOCwtMTM1NzE3NjQzLDc5MDY3ODc5MSwxNTA3NTA4
-MDg2LDExNzg5NzU5ODksODY4NzEzMzMxLC0zMTkwOTA4MDUsMT
-M0MTQxNDUzNiwyMDgyMDkxNTk3LDIxNDY2NjQ0NDksLTEyMDQy
-NzU0MjMsLTExMTcxMjQyNjksMTgxNzgzODE2MywtMTEzODg1NT
-IyMF19
+eyJoaXN0b3J5IjpbMTQ3NzIyNTUzNSwtMjE0MDIyNzY3MywxNT
+k3NzYxMTA4LC0xMzU3MTc2NDMsNzkwNjc4NzkxLDE1MDc1MDgw
+ODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEsLTMxOTA5MDgwNSwxMz
+QxNDE0NTM2LDIwODIwOTE1OTcsMjE0NjY2NDQ0OSwtMTIwNDI3
+NTQyMywtMTExNzEyNDI2OSwxODE3ODM4MTYzLC0xMTM4ODU1Mj
+IwXX0=
 -->
