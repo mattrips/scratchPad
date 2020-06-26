@@ -6,9 +6,6 @@ protocol requirement
 implementation
 : A property, method, initializer, subscript or typealias that is capable of satisfying a given protocol requirement.    
 
-witness
-: The particular implementation used to satisfy a protocol requirement.
-
 protocol conformance
 : The set of witnesses used to satisfy the requirements of a given protocol.
 
@@ -22,7 +19,7 @@ Most powerfully, a protocol may serve as the basis for an existential type beari
 With respect to a type declared to conform to a protocol, a protocol conformance specifies, for each protocol requirement of the protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement if the protocol requirement is invoked on the type.  Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
 
 &#9724; protocol requirement
-: A statement describing a property, method, initializer, subscript or typealias that a type declared to conform to a given protocol must implement.
+: A statement in a protocol declaration describing a property, method, initializer, subscript or typealias that a type conforming to the protocol must implement.
 
 ### 1.1 The Witness
 If a type is declared to conform to a protocol, the type must satisfy each of the protocol requirements of the protocol.  The type does so by having available at least one implementation--that is at least one property, method, initializer, subscript or typealias--for each protocol requirement of the protocol.  
@@ -273,7 +270,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzIyNDkwMDAsLTM3NDc2MTA4LDYyNT
+eyJoaXN0b3J5IjpbLTEwNzQ2NDI3NzAsLTM3NDc2MTA4LDYyNT
 c1OTcyNSwtMjE0MDIyNzY3MywxNTk3NzYxMTA4LC0xMzU3MTc2
 NDMsNzkwNjc4NzkxLDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Nj
 g3MTMzMzEsLTMxOTA5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1
