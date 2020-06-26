@@ -21,6 +21,9 @@ Most powerfully, a protocol may serve as the basis for an existential type beari
 ## 1. Protocol Conformance
 With respect to a type declared to conform to a protocol, a protocol conformance specifies, for each protocol requirement of the protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement if the protocol requirement is invoked on the type.  Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
 
+&#9724; protocol requirement
+: A statement describing a property, method, initializer, subscript or typealias that a type declared to conform to a given protocol must implement.
+
 ### 1.1 The Witness
 If a type is declared to conform to a protocol, the type must satisfy each of the protocol requirements of the protocol.  The type does so by having available at least one implementation--that is at least one property, method, initializer, subscript or typealias--for each protocol requirement of the protocol.  
 
@@ -224,11 +227,56 @@ Annotations:
 [annotate re: leakage of imported protocols beyond the file in which the import occurs]
 
 [test harness to ensure desired protocol conformance]
+
+
+For example:
+```swift
+protocol P {
+  var id: String { get } // << Point #1
+}
+extension P {
+  var id: String { "P" } // << Point #2
+  var id2: String { self.id } // << Point #3
+}
+
+protocol Q: P {}
+extension Q {
+  var id: String { "Q" } // << Point #4
+}
+
+protocol R: P {}
+extension R {
+  var id: String { "R" } // << Point #5
+}
+
+struct Y<T> {}
+extension Y: P {
+  var id: String { "Y1" } // << Point #6
+}
+extension Y: Q where T: Equatable {
+  var id: String { "Y2" } // << Point #7
+}
+
+let y = Y<Int>()
+
+print(y.id2) // "P", "Q", "R", "Y1" or "Y2"? 
+```
+Protocol `P` declares its sole protocol requirement, `id: String { get }`, at Point #1.  Protocol `Q` inherits from protocol `P`, but has no protocol requirements of its own. Protocol `R` inherits from protocol `P`, but has no protocol requirements of its own.
+
+Struct `Y<T>` is unconditionally declared to conform to `P`, and is conditionally declared to conform to `Q`.  Two protocol conformances are formed, one for `Y: P` and one for `Y:Q`. 
+
+Five implementations of `id: String { get }` are present in the source code.
+
+The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter declared in the extension of `P` is accessed via `y`. 
+
+
+
+but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2NTc4NDI0OSwtMzc0NzYxMDgsNjI1Nz
-U5NzI1LC0yMTQwMjI3NjczLDE1OTc3NjExMDgsLTEzNTcxNzY0
-Myw3OTA2Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2OD
-cxMzMzMSwtMzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5
-NywyMTQ2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LD
-E4MTc4MzgxNjMsLTExMzg4NTUyMjBdfQ==
+eyJoaXN0b3J5IjpbLTE3NzIyNDkwMDAsLTM3NDc2MTA4LDYyNT
+c1OTcyNSwtMjE0MDIyNzY3MywxNTk3NzYxMTA4LC0xMzU3MTc2
+NDMsNzkwNjc4NzkxLDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Nj
+g3MTMzMzEsLTMxOTA5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1
+OTcsMjE0NjY2NDQ0OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OS
+wxODE3ODM4MTYzLC0xMTM4ODU1MjIwXX0=
 -->
