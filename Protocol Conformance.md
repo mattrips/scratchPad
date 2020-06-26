@@ -39,9 +39,10 @@ struct ConformanceDeclaration {
 
 struct ProtocolConformance {
 	let declaration: ConformanceDeclaration
-	let witnessDictionary: Dictionary<ProtocolRequirement, Witness>
-	init(_ context: Context) {
-		// See §1.4 of this 
+	let witnessDictionary: [ProtocolRequirement: Witness>
+	
+	init(/* the entire visible context */) {
+		// See §1.4 of this guide
 	}
 }
 ```
@@ -208,9 +209,9 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0NDgyMjcxNCwtMTM1NzE3NjQzLDc5MD
-Y3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMx
-LC0zMTkwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxND
-Y2NjQ0NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgz
-ODE2MywtMTEzODg1NTIyMF19
+eyJoaXN0b3J5IjpbLTExMjg4OTg1NTksLTEzNTcxNzY0Myw3OT
+A2Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2ODcxMzMz
+MSwtMzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5NywyMT
+Q2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LDE4MTc4
+MzgxNjMsLTExMzg4NTUyMjBdfQ==
 -->
