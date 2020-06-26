@@ -42,7 +42,9 @@ struct ProtocolConformance {
 	let witnessDictionary: Dictionary<ProtocolRequirement, Witness>
 }
 ```
-### 1.3 Inferred Declaration
+
+
+#### 1.3.1 Inferred Declaration
 The declaration that a type conforms to a protocol is expressly stated. But the protocol conformance underpinning the declaration is neither declared nor guided by annotation.  Instead, Swift infers the protocol conformance for the declaration.
 
 ### 1.4 Singular
@@ -59,10 +61,9 @@ A protocol conformance is immutable.  It cannot be altered by operation of a pro
 With respect to a protocol conformance, during operation of a program, the witness for a particular protocol requirement will not vary, and does not depend upon how the type is used.
 
 &#9724;   In complex arrangements, it may be perceived that the witness varies.  Sometimes, this appearance is due to a different protocol being used, with the protocols having the same requirement.  Other times, this appearance is due to complexity making it difficult to reason about which implementation is the witness for a protocol requirement.[^1]
+[^1]: Could this also be due to overloading?
 
-[^1] Could this also be due to overloading?
-
-### Sourcing of Implementations
+### 1.7 Sources of Implementations
 
 **Potential for Multiple Implementations of a Requirement**
 
@@ -203,9 +204,9 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczNTg2NjE3LC0xMzU3MTc2NDMsNzkwNj
-c4NzkxLDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEs
-LTMxOTA5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OTcsMjE0Nj
-Y2NDQ0OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4
-MTYzLC0xMTM4ODU1MjIwXX0=
+eyJoaXN0b3J5IjpbMTExMTUxNzA2MywtMTM1NzE3NjQzLDc5MD
+Y3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMx
+LC0zMTkwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxND
+Y2NjQ0NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgz
+ODE2MywtMTEzODg1NTIyMF19
 -->
