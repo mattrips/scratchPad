@@ -61,10 +61,10 @@ With respect to a protocol conformance, during operation of a program, the witne
 &#9724;   In complex arrangements, it may be perceived that the witness varies.  Sometimes, this appearance is due to a different protocol being used, with the protocols having the same requirement.  *See*, ____.  Other times, this appearance is due to complexity making it difficult to reason about which implementation is the witness for a protocol requirement.  *See*, ____. [^1]
 [^1]: Could this also be due to overloading?
 
-#### 1.3.1 Inferred Declaration
+#### 1.3.5 Inferred Declaration
 The declaration that a type conforms to a protocol is expressly stated. But the protocol conformance underpinning the declaration is neither declared nor guided by annotation.  Instead, Swift infers the protocol conformance for the declaration, through static analysis of all possibly available implementations of a protocol requirement.
 
-#### 1.3.5 Sources of Implementations
+#### 1.3.6 Possibly Available Implementations
 
 **Potential for Multiple Implementations of a Requirement**
 
@@ -205,7 +205,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTk0NTM1NzAsLTEzNTcxNzY0Myw3OT
+eyJoaXN0b3J5IjpbLTEwMzUxNDcwNTIsLTEzNTcxNzY0Myw3OT
 A2Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2ODcxMzMz
 MSwtMzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5NywyMT
 Q2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LDE4MTc4
