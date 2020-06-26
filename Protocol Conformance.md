@@ -75,7 +75,7 @@ In more complex cases, there may be numerous implementations available for each 
 
 &#9724;   Engineering protocol conformance requires careful attention to detail.  It would not be unusual for a small change, far from the point of declaration, to significantly alter a protocol conformance.
 
-A possibly available implementation may be declared in any of the following, with the subject type and subject protocol being the type-protocol conformance with respect to which a :
+A possibly available implementation may be declared in any of the following (with the subject type and subject protocol being the type and protocol to which a type is delcared to conform):
 1. the declaration or an extension of the subject type,
 
 2. the declaration or an extension of a superclass of the subject type.  [check this]
@@ -222,7 +222,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc1MjQ0NDUwLC0xMzU3MTc2NDMsNzkwNj
+eyJoaXN0b3J5IjpbNDYxOTk2NjM3LC0xMzU3MTc2NDMsNzkwNj
 c4NzkxLDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEs
 LTMxOTA5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OTcsMjE0Nj
 Y2NDQ0OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4
