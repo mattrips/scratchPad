@@ -227,6 +227,13 @@ Annotations:
 ## Selection of Protocol Conformance
 At the point where a protocol requirement is accessed on a conforming type, there may exist more than one protocol to which the type conforms that carries the ability to access the protocol requirement.  Typically, th
 
+sequenceDiagram
+Note left of A: Note to the\n left of A
+Note right of A: Note to the\n right of A
+Note over A: Note over A
+Note over A,B: Note over both A and B
+
+
 Single possibility case...
 
 
@@ -280,11 +287,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTMwNzM2NDcsLTkxMzU1NTAxNywtMz
-c0NzYxMDgsNjI1NzU5NzI1LC0yMTQwMjI3NjczLDE1OTc3NjEx
-MDgsLTEzNTcxNzY0Myw3OTA2Nzg3OTEsMTUwNzUwODA4NiwxMT
-c4OTc1OTg5LDg2ODcxMzMzMSwtMzE5MDkwODA1LDEzNDE0MTQ1
-MzYsMjA4MjA5MTU5NywyMTQ2NjY0NDQ5LC0xMjA0Mjc1NDIzLC
-0xMTE3MTI0MjY5LDE4MTc4MzgxNjMsLTExMzg4NTUyMjBdfQ==
-
+eyJoaXN0b3J5IjpbMTM3MTYxMzYwNSwtMTU5MzA3MzY0NywtOT
+EzNTU1MDE3LC0zNzQ3NjEwOCw2MjU3NTk3MjUsLTIxNDAyMjc2
+NzMsMTU5Nzc2MTEwOCwtMTM1NzE3NjQzLDc5MDY3ODc5MSwxNT
+A3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMxLC0zMTkwOTA4
+MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxNDY2NjQ0NDksLT
+EyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgzODE2MywtMTEz
+ODg1NTIyMF19
 -->
