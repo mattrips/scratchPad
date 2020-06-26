@@ -18,13 +18,15 @@ A protocol also may supply functionality, which may serve as default implementat
 
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 
-# Protocol Conformance
+# 1. Protocol Conformance
 
 A protocol conformance specifies, for each protocol requirement of a protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement if the protocol requirement is invoked.
 
+## 1.1 The Witness
 
+If a type is declared to conform to a protocol, the type must satisfy each of the protocol requirements of the protocol.  The type does so by having available at least one implementation--that is at least one property, method, initializer, subscript or typealias--for each protocol requirement of the protocol.  For each protocol requirement, Swift selects one and only one implementation that will be used throughout a program to satisfy the protocol requirement.  The implementation so selected is referred to as the witness for the protocol requirement.  
 
-If a type is declared to conform to a protocol, the type must satisfy each of the protocol requirements of the protocol.  The type does so by having available at least one implementation--that is at least one property, method, initializer, subscript or typealias--for each protocol requirement of the protocol.  For each protocol requirement, Swift selects one and only one implementation that will be used throughout a program to satisfy the protocol requirement.  The implementation so selected is referred to as the witness for the protocol requirement.  The selected set of witnesses for a particular type's conformance to a protocol is referred to as a protocol conformance.  Metaphorically, each protocol conformance is an immutable dictionary with protocol requirements as keys and witnesses as values:  `let protocolConformance = Dictionary<ProtocolRequirement, Witness>`.
+The selected set of witnesses for a particular type's conformance to a protocol is referred to as a protocol conformance.  Metaphorically, each protocol conformance is an immutable dictionary with protocol requirements as keys and witnesses as values:  `let protocolConformance = Dictionary<ProtocolRequirement, Witness>`.
 
 While a type is declared to conform to a protocol, the protocol conformance underpinning the declaration is not expressly declared.  Instead, Swift determines the protocol conformance for the declaration.    
 
@@ -187,7 +189,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyOTY2MzU0MywxMzQxNDE0NTM2LDIwOD
-IwOTE1OTcsMjE0NjY2NDQ0OSwtMTIwNDI3NTQyMywtMTExNzEy
-NDI2OSwxODE3ODM4MTYzLC0xMTM4ODU1MjIwXX0=
+eyJoaXN0b3J5IjpbOTQ1NzcyMjQwLDEzNDE0MTQ1MzYsMjA4Mj
+A5MTU5NywyMTQ2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0
+MjY5LDE4MTc4MzgxNjMsLTExMzg4NTUyMjBdfQ==
 -->
