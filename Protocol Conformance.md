@@ -19,7 +19,7 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 
 ## 1. Protocol Conformance
-A protocol conformance specifies, for each protocol requirement of a protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement if the protocol requirement is invoked.
+With respect to a type declared to conform to a protocol, a protocol conformance specifies, for each protocol requirement of a protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement if the protocol requirement is invoked on the .
 
 ### 1.1 The Witness
 If a type is declared to conform to a protocol, the type must satisfy each of the protocol requirements of the protocol.  The type does so by having available at least one implementation--that is at least one property, method, initializer, subscript or typealias--for each protocol requirement of the protocol.  
@@ -44,8 +44,6 @@ struct ProtocolConformance {
 ```
 ### Inferred Declaration
 The declaration that a type conforms to a protocol is expressly stated. But the protocol conformance underpinning the declaration is neither declared nor guided by annotation.  Instead, Swift infers the protocol conformance for the declaration.
-
-Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
 
 ## _.2 The Foundations of Protocol Conformance
 
@@ -204,9 +202,9 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM3NTk5OTcwLDc5MDY3ODc5MSwxNTA3NT
-A4MDg2LDExNzg5NzU5ODksODY4NzEzMzMxLC0zMTkwOTA4MDUs
-MTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxNDY2NjQ0NDksLTEyMD
-QyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgzODE2MywtMTEzODg1
-NTIyMF19
+eyJoaXN0b3J5IjpbLTE2NzA2NzgyNzgsNzkwNjc4NzkxLDE1MD
+c1MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEsLTMxOTA5MDgw
+NSwxMzQxNDE0NTM2LDIwODIwOTE1OTcsMjE0NjY2NDQ0OSwtMT
+IwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4MTYzLC0xMTM4
+ODU1MjIwXX0=
 -->
