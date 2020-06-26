@@ -65,14 +65,11 @@ With respect to a protocol conformance, during operation of a program, the witne
 &#9724;   In complex arrangements, it may be perceived that the witness varies.  Sometimes, this appearance is due to a different protocol being used, with the protocols having the same requirement.  *See*, ____.  Other times, this appearance is due to complexity making it difficult to reason about which implementation is the witness for a protocol requirement.  *See*, ____. [^1]
 [^1]: Could this also be due to overloading?
 
-#### 1.3.5 Inferred Declaration
-The declaration that a type conforms to a protocol is expressly stated. But the protocol conformance underpinning the declaration is neither declared nor guided by annotation.  Instead, Swift infers the protocol conformance through analysis of all possibly available implementations of a protocol requirement.
+#### 1.3.5 Inferred
+The declaration that a type conforms to a protocol is expressly stated. But the protocol conformance underpinning that declaration is neither declared nor guided by annotation.  Instead, Swift infers the protocol conformance through analysis of all possibly available implementations of a protocol requirement.
 
 #### 1.3.6 Possibly Available Implementations
-
-**Potential for Multiple Implementations of a Requirement**
-
-In a simple case, there may exist only one possible implementation for each protocol requirement.  In that case, determining the  protocol conformance  is a simple matter of matching each requirement with its implementation.  In more complex cases, there may be several  implementations  available for each  protocol requirement.  Implementations  may be scattered across multiple files, in the source code of other modules in a project, and in the binary files of imported SDKs.  Anticipating the  protocol conformance  that will result in a complex case requires careful attention to detail.
+In a simple case, there may exist only one possible implementation for each protocol requirement.  In that case, determining the protocol conformance is a simple matter of matching each requirement with its implementation.  In more complex cases, there may be several  implementations  available for each  protocol requirement.  Implementations  may be scattered across multiple files, in the source code of other modules in a project, and in the binary files of imported SDKs.  Anticipating the  protocol conformance  that will result in a complex case requires careful attention to detail.
 
 ### Interaction with Class Inheritance
 
@@ -209,9 +206,9 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI3MDM3MzQxLC0xMzU3MTc2NDMsNzkwNj
-c4NzkxLDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEs
-LTMxOTA5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OTcsMjE0Nj
-Y2NDQ0OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4
-MTYzLC0xMTM4ODU1MjIwXX0=
+eyJoaXN0b3J5IjpbMTkwMTM0NjU3OCwtMTM1NzE3NjQzLDc5MD
+Y3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMx
+LC0zMTkwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxND
+Y2NjQ0NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgz
+ODE2MywtMTEzODg1NTIyMF19
 -->
