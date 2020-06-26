@@ -27,7 +27,40 @@ If a type is declared to conform to a protocol, the type must satisfy each of th
 With respect to the a type that is declared to conform to a protocol, for each protocol requirement of the protocol, Swift determines the one and only implementation that will be used throughout a program to satisfy that protocol requirement for that type.  The implementation so determined is referred to as the witness for the protocol requirement.
 
 &#9724;   The purpose of a protocol conformance is to define which witness will be called when a given protocol requirement is accessed.
+```swift
+protocol P {
+  associatedtype A
+  var id: String { get }
+}
+extension P {
+  var id: String { "P" }
+  var idFrom: String { self.id }
+}
 
+protocol Q: P {}
+extension Q {
+  var id: String { "Q" }
+  var idFrom: String { self.id }
+}
+
+struct Y<T> {}
+
+extension Y: P {
+
+typealias A = Int
+
+}
+
+extension Y: Q where T: Equatable {}
+
+extension Y where T: Numeric {
+
+var id: String { "Y<Int>" }
+
+}
+
+print(Y<Int>().idFrom)
+```
   
 
 ### 1.2 Model of a Protocol Conformance
@@ -226,9 +259,10 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDAyMjc2NzMsMTU5Nzc2MTEwOCwtMT
-M1NzE3NjQzLDc5MDY3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5
-ODksODY4NzEzMzMxLC0zMTkwOTA4MDUsMTM0MTQxNDUzNiwyMD
-gyMDkxNTk3LDIxNDY2NjQ0NDksLTEyMDQyNzU0MjMsLTExMTcx
-MjQyNjksMTgxNzgzODE2MywtMTEzODg1NTIyMF19
+eyJoaXN0b3J5IjpbLTU3MDEzMTM4NywtMjE0MDIyNzY3MywxNT
+k3NzYxMTA4LC0xMzU3MTc2NDMsNzkwNjc4NzkxLDE1MDc1MDgw
+ODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEsLTMxOTA5MDgwNSwxMz
+QxNDE0NTM2LDIwODIwOTE1OTcsMjE0NjY2NDQ0OSwtMTIwNDI3
+NTQyMywtMTExNzEyNDI2OSwxODE3ODM4MTYzLC0xMTM4ODU1Mj
+IwXX0=
 -->
