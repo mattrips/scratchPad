@@ -53,7 +53,9 @@ It is an error to twice declare the conformance of a type to a given protocol.  
 If a type conforms to multiple protocols, there will be a distinct protocol conformance for each type-protocol pair.
 
 ### 1.5 Immutable
-Once established in a program, a protocol conformance cannot be altered by operation of the program.  [except for imports…]  Does not depend upon how used...
+A protocol conformance is immutable.  It cannot be altered by operation of a program.  
+
+A protocol conformance does not depend upon how it is used.
 
 ### Sourcing of Implementations
 
@@ -196,9 +198,9 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODY1MDI3NzEsLTEzNTcxNzY0Myw3OT
-A2Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2ODcxMzMz
-MSwtMzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5NywyMT
-Q2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LDE4MTc4
-MzgxNjMsLTExMzg4NTUyMjBdfQ==
+eyJoaXN0b3J5IjpbMTc4MDQ2ODk4NiwtMTM1NzE3NjQzLDc5MD
+Y3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMx
+LC0zMTkwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxND
+Y2NjQ0NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgz
+ODE2MywtMTEzODg1NTIyMF19
 -->
