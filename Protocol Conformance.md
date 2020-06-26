@@ -42,18 +42,11 @@ struct ProtocolConformance {
 	let witnessDictionary: Dictionary<ProtocolRequirement, Witness>
 }
 ```
-### Inferred Declaration
+### 1.3 Inferred Declaration
 The declaration that a type conforms to a protocol is expressly stated. But the protocol conformance underpinning the declaration is neither declared nor guided by annotation.  Instead, Swift infers the protocol conformance for the declaration.
 
-## _.2 The Foundations of Protocol Conformance
-
-Before reviewing the rule of protocol conformance, it is useful to review the foundations upon which protocol conformance stands.
-
-### Singular
-
-A protocol conformance is determined with respect to the pairing of a type and a protocol to which it conforms.  If a type conforms to multiple protocols, there will be a distinct protocol conformance for each type-protocol pairing.
-
-A type may conform to a protocol in one and only one way.  There cannot be more than one protocol conformance for a type-protocol pairing.  
+### 1.4 Singular
+A protocol conformance is determined with respect to the pairing of a type and a protocol to which it conforms. A type may conform to a protocol in one and only one way.  There cannot be more than one protocol conformance for a type-protocol pairing.  
 
 It is an error to twice declare the conformance of a type to a given protocol.  Attempting to twice declare conditional conformance of a type to a protocol, even with disjoint conditions, is an error.
 
@@ -202,9 +195,9 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTcxNzY0Myw3OTA2Nzg3OTEsMTUwNz
-UwODA4NiwxMTc4OTc1OTg5LDg2ODcxMzMzMSwtMzE5MDkwODA1
-LDEzNDE0MTQ1MzYsMjA4MjA5MTU5NywyMTQ2NjY0NDQ5LC0xMj
-A0Mjc1NDIzLC0xMTE3MTI0MjY5LDE4MTc4MzgxNjMsLTExMzg4
-NTUyMjBdfQ==
+eyJoaXN0b3J5IjpbNjcxMTcwMjA3LC0xMzU3MTc2NDMsNzkwNj
+c4NzkxLDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEs
+LTMxOTA5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OTcsMjE0Nj
+Y2NDQ0OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4
+MTYzLC0xMTM4ODU1MjIwXX0=
 -->
