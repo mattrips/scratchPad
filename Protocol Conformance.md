@@ -291,11 +291,12 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mjg1MDQ0MjcsLTE1OTMwNzM2NDcsLT
-kxMzU1NTAxNywtMzc0NzYxMDgsNjI1NzU5NzI1LC0yMTQwMjI3
-NjczLDE1OTc3NjExMDgsLTEzNTcxNzY0Myw3OTA2Nzg3OTEsMT
-UwNzUwODA4NiwxMTc4OTc1OTg5LDg2ODcxMzMzMSwtMzE5MDkw
-ODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5NywyMTQ2NjY0NDQ5LC
-0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LDE4MTc4MzgxNjMsLTEx
-Mzg4NTUyMjBdfQ==
+eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
+BnZm1cbiIsImhpc3RvcnkiOlstMTI2MTI1ODUwLC0xNTkzMDcz
+NjQ3LC05MTM1NTUwMTcsLTM3NDc2MTA4LDYyNTc1OTcyNSwtMj
+E0MDIyNzY3MywxNTk3NzYxMTA4LC0xMzU3MTc2NDMsNzkwNjc4
+NzkxLDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEsLT
+MxOTA5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OTcsMjE0NjY2
+NDQ0OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4MT
+YzLC0xMTM4ODU1MjIwXX0=
 -->
