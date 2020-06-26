@@ -62,8 +62,9 @@ Protocol `P` declares its sole protocol requirement, `id: String { get }`, at Po
 
 Struct `Y<T>` is unconditionally declared to conform to `P`, and is conditionally declared to conform to `Q`.  Two protocol conformances are formed, one for `Y: P` and one for `Y:Q`. 
 
-Five implementations of `id: String { get }` are present in the source code, but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`.   ``
+Five implementations of `id: String { get }` are present in the source code, but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 
+The instance `y` of `Y<Int>` conforms to both `P` and `Q`.
 
 
 
@@ -263,10 +264,10 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4MjE3NzExNCw2MjU3NTk3MjUsLTIxND
-AyMjc2NzMsMTU5Nzc2MTEwOCwtMTM1NzE3NjQzLDc5MDY3ODc5
-MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMxLC0zMT
-kwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxNDY2NjQ0
-NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgzODE2My
-wtMTEzODg1NTIyMF19
+eyJoaXN0b3J5IjpbNjE5OTEwNjU3LDYyNTc1OTcyNSwtMjE0MD
+IyNzY3MywxNTk3NzYxMTA4LC0xMzU3MTc2NDMsNzkwNjc4Nzkx
+LDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEsLTMxOT
+A5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OTcsMjE0NjY2NDQ0
+OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4MTYzLC
+0xMTM4ODU1MjIwXX0=
 -->
