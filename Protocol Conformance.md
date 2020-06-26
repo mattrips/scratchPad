@@ -61,7 +61,7 @@ If a type conforms to multiple protocols, there will be a distinct protocol conf
 A protocol conformance is immutable.  It cannot be altered by operation of a program.  
 
 #### 1.3.3 Invariable
-With respect to a protocol conformance, during operation of a program, the witness for a particular protocol requirement will not vary, and does not depend upon how the type is used.
+Within a given protocol conformance, the witness for a particular protocol requirement will not vary during operation of a program, and does not depend upon how the type is used.
 
 &#9724;   In complex arrangements, it may be perceived that the witness varies.  Sometimes, this appearance is due to a different protocol being used, with the protocols having the same requirement.  *See*, ____.  Other times, this appearance is due to complexity making it difficult to reason about which implementation is the witness for a protocol requirement.  *See*, ____. [^1]
 [^1]: Could this also be due to overloading?
@@ -269,10 +269,10 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMzU1NTAxNywtMzc0NzYxMDgsNjI1Nz
-U5NzI1LC0yMTQwMjI3NjczLDE1OTc3NjExMDgsLTEzNTcxNzY0
-Myw3OTA2Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2OD
-cxMzMzMSwtMzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5
-NywyMTQ2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LD
-E4MTc4MzgxNjMsLTExMzg4NTUyMjBdfQ==
+eyJoaXN0b3J5IjpbMTA5MjI5OTg1MCwtOTEzNTU1MDE3LC0zNz
+Q3NjEwOCw2MjU3NTk3MjUsLTIxNDAyMjc2NzMsMTU5Nzc2MTEw
+OCwtMTM1NzE3NjQzLDc5MDY3ODc5MSwxNTA3NTA4MDg2LDExNz
+g5NzU5ODksODY4NzEzMzMxLC0zMTkwOTA4MDUsMTM0MTQxNDUz
+NiwyMDgyMDkxNTk3LDIxNDY2NjQ0NDksLTEyMDQyNzU0MjMsLT
+ExMTcxMjQyNjksMTgxNzgzODE2MywtMTEzODg1NTIyMF19
 -->
