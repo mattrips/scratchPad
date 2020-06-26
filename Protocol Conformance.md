@@ -26,7 +26,7 @@ With respect to the a type that is declared to conform to a protocol, for each p
 &#9724; witness
 : The particular implementation used to satisfy a protocol requirement.
 
-The purpose of a protocol conformance is to define which witness will be called when a given protocol requirement is accessed.
+The purpose of a protocol conformance is to define which witness will be accessed when a given protocol requirement is accessed.
 
 ### 1.2 Model of a Protocol Conformance
 With respect to the declaration that a type conforms to a protocol, the protocol conformance is a collection containing the witness for each protocol requirement of the protocol.
@@ -269,10 +269,10 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE0MDYxODg4LC0zNzQ3NjEwOCw2MjU3NT
-k3MjUsLTIxNDAyMjc2NzMsMTU5Nzc2MTEwOCwtMTM1NzE3NjQz
-LDc5MDY3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4Nz
-EzMzMxLC0zMTkwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3
-LDIxNDY2NjQ0NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMT
-gxNzgzODE2MywtMTEzODg1NTIyMF19
+eyJoaXN0b3J5IjpbMTYyNDEyMjM2MiwtMzc0NzYxMDgsNjI1Nz
+U5NzI1LC0yMTQwMjI3NjczLDE1OTc3NjExMDgsLTEzNTcxNzY0
+Myw3OTA2Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2OD
+cxMzMzMSwtMzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5
+NywyMTQ2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LD
+E4MTc4MzgxNjMsLTExMzg4NTUyMjBdfQ==
 -->
