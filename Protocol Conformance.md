@@ -49,7 +49,8 @@ let y = Y<Int>()
 
 print(y.id2) // "P" or "Q"? 
 ```
-Protocol `P` declares its sole protocol requirement, `id: String { get }`, at Point #1.  Protocol `P` declares an implementation for `id: String { get }` at Point #2.  Protocol `Q` declares an implementation for `id: String { get }` at Point #4.  The protocol requirement is used at     
+Protocol `P` declares its sole protocol requirement, `id: String { get }`, at Point #1.  Protocol `Q` inherits from protocol `P`, but has not protocol requirements of its own.
+Protocol `P` declares an implementation for `id: String { get }` at Point #2.  Protocol `Q` declares an implementation for `id: String { get }` at Point #4.  The protocol requirement is accessed at Point #3.      
 
 ### 1.2 Model of a Protocol Conformance
 With respect to the declaration that a type conforms to a protocol, the protocol conformance is a collection containing the witness for each protocol requirement of the protocol.
@@ -247,10 +248,10 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA1MDg4OTE1LC0yMTQwMjI3NjczLDE1OT
-c3NjExMDgsLTEzNTcxNzY0Myw3OTA2Nzg3OTEsMTUwNzUwODA4
-NiwxMTc4OTc1OTg5LDg2ODcxMzMzMSwtMzE5MDkwODA1LDEzND
-E0MTQ1MzYsMjA4MjA5MTU5NywyMTQ2NjY0NDQ5LC0xMjA0Mjc1
-NDIzLC0xMTE3MTI0MjY5LDE4MTc4MzgxNjMsLTExMzg4NTUyMj
-BdfQ==
+eyJoaXN0b3J5IjpbLTQ2OTUyMjI3NywtMjE0MDIyNzY3MywxNT
+k3NzYxMTA4LC0xMzU3MTc2NDMsNzkwNjc4NzkxLDE1MDc1MDgw
+ODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEsLTMxOTA5MDgwNSwxMz
+QxNDE0NTM2LDIwODIwOTE1OTcsMjE0NjY2NDQ0OSwtMTIwNDI3
+NTQyMywtMTExNzEyNDI2OSwxODE3ODM4MTYzLC0xMTM4ODU1Mj
+IwXX0=
 -->
