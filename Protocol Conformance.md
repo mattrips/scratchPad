@@ -3,8 +3,7 @@
 protocol requirement
 : A statement describing a property, method, initializer, subscript or typealias that a type declared to conform to a given protocol must implement.
 
-implementation
-: A property, method, initializer, subscript or typealias that is capable of satisfying a given protocol requirement.    
+ 
 
 protocol conformance
 : The set of witnesses used to satisfy the requirements of a given protocol.
@@ -18,6 +17,9 @@ Most powerfully, a protocol may serve as the basis for an existential type beari
 ## 1. Protocol Conformance
 With respect to a type declared to conform to a protocol, a protocol conformance specifies, for each protocol requirement of the protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement if the protocol requirement is invoked on the type.  Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
 
+implementation
+: A property, method, initializer, subscript or typealias that is capable of satisfying a given protocol requirement.   
+
 &#9724; protocol requirement
 : A statement in a protocol declaration describing a property, method, initializer, subscript or typealias that a type conforming to the protocol must implement.
 
@@ -26,8 +28,10 @@ If a type is declared to conform to a protocol, the type must satisfy each of th
 
 With respect to the a type that is declared to conform to a protocol, for each protocol requirement of the protocol, Swift determines the one and only implementation that will be used throughout a program to satisfy that protocol requirement for that type.  The implementation so determined is referred to as the witness for the protocol requirement.
 
-&#9724;   The purpose of a protocol conformance is to define which witness will be called when a given protocol requirement is accessed.  
+&#9724; witness
+: The particular implementation used to satisfy a protocol requirement.
 
+The purpose of a protocol conformance is to define which witness will be called when a given protocol requirement is accessed.
 
 ### 1.2 Model of a Protocol Conformance
 With respect to the declaration that a type conforms to a protocol, the protocol conformance is a collection containing the witness for each protocol requirement of the protocol.
@@ -270,10 +274,10 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzQ2NDI3NzAsLTM3NDc2MTA4LDYyNT
-c1OTcyNSwtMjE0MDIyNzY3MywxNTk3NzYxMTA4LC0xMzU3MTc2
-NDMsNzkwNjc4NzkxLDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Nj
-g3MTMzMzEsLTMxOTA5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1
-OTcsMjE0NjY2NDQ0OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OS
-wxODE3ODM4MTYzLC0xMTM4ODU1MjIwXX0=
+eyJoaXN0b3J5IjpbMTYzNzYwNzIyMiwtMzc0NzYxMDgsNjI1Nz
+U5NzI1LC0yMTQwMjI3NjczLDE1OTc3NjExMDgsLTEzNTcxNzY0
+Myw3OTA2Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2OD
+cxMzMzMSwtMzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5
+NywyMTQ2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LD
+E4MTc4MzgxNjMsLTExMzg4NTUyMjBdfQ==
 -->
