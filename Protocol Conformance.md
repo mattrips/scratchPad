@@ -57,7 +57,7 @@ A protocol conformance is immutable.  It cannot be altered by operation of a pro
 
 ### 1.6 Invariable
 With respect to a protocol conformance, during operation of a program, the witness for a particular protocol requirement will not vary, and does not depend upon how the type is used.
-&#9724;   In complex arrangements, it sometimes is perceived that the witness varies.  The cause of this appearance often is a product of a different protocol being 
+&#9724;   In complex arrangements, it sometimes is perceived that the witness varies.  Sometimes, this appearance is due to a different protocol being used.  Other times, this appearance is due to complexity making it difficult to reason about which witness 
 
 
 ### Sourcing of Implementations
@@ -201,7 +201,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDE3NzgwNiwtMTM1NzE3NjQzLDc5MD
+eyJoaXN0b3J5IjpbLTI2NDg0NDU4MywtMTM1NzE3NjQzLDc5MD
 Y3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMx
 LC0zMTkwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxND
 Y2NjQ0NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgz
