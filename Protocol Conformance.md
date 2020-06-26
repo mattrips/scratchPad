@@ -81,9 +81,11 @@ Possibly available implementations may be declared in any of the following wheth
 3. the declaration of a superclass of the subject type,  [check this]
 4. a visible extension of a superclass of the subject type,
 5. a visible extension of another protocol lower in the subject protocol’s chain of protocol inheritance to which lower protocol the subject type also conforms,
-6. a visible extension of the subject protocol, or
-7. a visible extension of another protocol higher in the subject protocol’s chain of protocol inheritance.
+6. a visible extension of the subject protocol,
+7. a visible extension of another protocol higher in the subject protocol’s chain of protocol inheritance,
+8. a visible extension of 
 
+&#9724;   
 
 ### Interaction with Class Inheritance
 
@@ -220,9 +222,9 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzczNzc1NTIsLTEzNTcxNzY0Myw3OTA2Nz
-g3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2ODcxMzMzMSwt
-MzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5NywyMTQ2Nj
-Y0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LDE4MTc4Mzgx
-NjMsLTExMzg4NTUyMjBdfQ==
+eyJoaXN0b3J5IjpbMTI3NTUwODkyNiwtMTM1NzE3NjQzLDc5MD
+Y3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMx
+LC0zMTkwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxND
+Y2NjQ0NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgz
+ODE2MywtMTEzODg1NTIyMF19
 -->
