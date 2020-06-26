@@ -71,7 +71,9 @@ The declaration that a type conforms to a protocol is expressly stated. But the 
 #### 1.3.6 Possibly Available Implementations
 In a simple case, there may exist only one possible implementation for each protocol requirement of a protocol.  In that case, determining the protocol conformance is a simple matter of matching each requirement with its implementation.  
 
-In more complex cases, there may be numerous implementations available for each protocol requirement.  Implementations may be scattered across multiple files of the modul and , in the source code of imported modules, and in the binary files of imported SDKs.  Anticipating the  protocol conformance  that will result in a complex case requires careful attention to detail.
+In more complex cases, there may be numerous implementations available for each protocol requirement.  Implementations may be scattered across multiple files of the module, in the source code and binary files of imported modules, or in the Standard Library.
+
+&#9724;   Anticipating the protocol conformance that will result requires careful attention to detail.  It would not 
 
 ### Interaction with Class Inheritance
 
@@ -208,9 +210,9 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc5NzU2MzM1LC0xMzU3MTc2NDMsNzkwNj
-c4NzkxLDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEs
-LTMxOTA5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OTcsMjE0Nj
-Y2NDQ0OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4
-MTYzLC0xMTM4ODU1MjIwXX0=
+eyJoaXN0b3J5IjpbMTkwNDA5NjYxMywtMTM1NzE3NjQzLDc5MD
+Y3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMx
+LC0zMTkwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxND
+Y2NjQ0NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgz
+ODE2MywtMTEzODg1NTIyMF19
 -->
