@@ -29,16 +29,16 @@ With respect to the a type that is declared to conform to a protocol, for each p
 &#9724;   The purpose of a protocol conformance is to define which witness will be called when a given protocol requirement is accessed.  For example:
 ```swift
 protocol P {
-  var id: String { get }
+  var id: String { get } // << Point #1
 }
 extension P {
-  var id: String { "P" }
-  var id2: String { self.id } // << Point A
+  var id: String { "P" } // << Point #2
+  var id2: String { self.id } // << Point #3
 }
 
 protocol Q: P {}
 extension Q {
-  var id: String { "Q" }
+  var id: String { "Q" } // Point #4
 }
 
 struct Y<T> {}
@@ -49,7 +49,7 @@ let y = Y<Int>()
 
 print(y.id2) // "P" or "Q"? 
 ```
-  
+Protocol `P` states its sole protocol requirement at Point A.  Protocol 
 
 ### 1.2 Model of a Protocol Conformance
 With respect to the declaration that a type conforms to a protocol, the protocol conformance is a collection containing the witness for each protocol requirement of the protocol.
@@ -247,7 +247,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODU2ODY0ODMsLTIxNDAyMjc2NzMsMT
+eyJoaXN0b3J5IjpbLTE1NzIxNzQ1MTAsLTIxNDAyMjc2NzMsMT
 U5Nzc2MTEwOCwtMTM1NzE3NjQzLDc5MDY3ODc5MSwxNTA3NTA4
 MDg2LDExNzg5NzU5ODksODY4NzEzMzMxLC0zMTkwOTA4MDUsMT
 M0MTQxNDUzNiwyMDgyMDkxNTk3LDIxNDY2NjQ0NDksLTEyMDQy
