@@ -19,7 +19,6 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 
 ## 1. Protocol Conformance
-
 A protocol conformance specifies, for each protocol requirement of a protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement if the protocol requirement is invoked.
 
 ### 1.1 The Witness
@@ -28,8 +27,7 @@ If a type is declared to conform to a protocol, the type must satisfy each of th
 With respect to the a type that is declared to conform to a protocol,
 for each protocol requirement of the protocol, Swift determines the one and only implementation that will be used throughout a program to satisfy that protocol requirement for that type.  The implementation so determined is referred to as the witness for the protocol requirement.  
 
-## 1.2 Collection of Protocol Requirement-Witness Pairs
-
+### 1.2 Collection of Protocol Requirement-Witness Pairs
 With respect to the declaration that a type conforms to a protocol, the protocol conformance is a collection containing the witness for each protocol requirement of the protocol.
  
 &#9724;   Metaphorically, a protocol conformance may be modeled as an immutable struct containing a declaration that a type conforms to a protocol and a dictionary of protocol requirement-witness pairs:
@@ -44,10 +42,8 @@ struct ProtocolConformance {
 	let witnessDictionary: Dictionary<ProtocolRequirement, Witness>
 }
 ```
-## Implicit Declaration
-
-
-While a type is declared to conform to a protocol, the protocol conformance underpinning the declaration is not expressly declared.  Instead, Swift determines the protocol conformance for the declaration.    
+### Implicit Declaration
+While the declaration that a type conforms to a protocol is expressly stated, the protocol conformance underpinning the declaration is neither declared nor .  Instead, Swift determines the protocol conformance for the declaration.    
 
 Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
 
@@ -208,8 +204,8 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDM5OTgwMzIsMTE3ODk3NTk4OSw4Nj
-g3MTMzMzEsLTMxOTA5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1
-OTcsMjE0NjY2NDQ0OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OS
-wxODE3ODM4MTYzLC0xMTM4ODU1MjIwXX0=
+eyJoaXN0b3J5IjpbMTIzMTExMTMxOCwxMTc4OTc1OTg5LDg2OD
+cxMzMzMSwtMzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5
+NywyMTQ2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LD
+E4MTc4MzgxNjMsLTExMzg4NTUyMjBdfQ==
 -->
