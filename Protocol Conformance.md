@@ -50,6 +50,8 @@ let y = Y<Int>()
 print(y.id2) // "P" or "Q"? 
 ```
 Protocol `P` declares its sole protocol requirement, `id: String { get }`, at Point #1.  Protocol `Q` inherits from protocol `P`, but has not protocol requirements of its own.
+
+Struct `Y<T>` is unconditionally declared to conform to `P`, and is conditionally declared to conform to `Q`.  Two protocol conformances are   
 Protocol `P` declares an implementation for `id: String { get }` at Point #2.  Protocol `Q` declares an implementation for `id: String { get }` at Point #4.  The protocol requirement is accessed at Point #3.      
 
 ### 1.2 Model of a Protocol Conformance
@@ -248,10 +250,10 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2OTUyMjI3NywtMjE0MDIyNzY3MywxNT
-k3NzYxMTA4LC0xMzU3MTc2NDMsNzkwNjc4NzkxLDE1MDc1MDgw
-ODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEsLTMxOTA5MDgwNSwxMz
-QxNDE0NTM2LDIwODIwOTE1OTcsMjE0NjY2NDQ0OSwtMTIwNDI3
-NTQyMywtMTExNzEyNDI2OSwxODE3ODM4MTYzLC0xMTM4ODU1Mj
-IwXX0=
+eyJoaXN0b3J5IjpbLTE2NjU5OTIxNjQsLTIxNDAyMjc2NzMsMT
+U5Nzc2MTEwOCwtMTM1NzE3NjQzLDc5MDY3ODc5MSwxNTA3NTA4
+MDg2LDExNzg5NzU5ODksODY4NzEzMzMxLC0zMTkwOTA4MDUsMT
+M0MTQxNDUzNiwyMDgyMDkxNTk3LDIxNDY2NjQ0NDksLTEyMDQy
+NzU0MjMsLTExMTcxMjQyNjksMTgxNzgzODE2MywtMTEzODg1NT
+IyMF19
 -->
