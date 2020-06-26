@@ -33,13 +33,13 @@ With respect to the declaration that a type conforms to a protocol, the protocol
 &#9724;   Metaphorically, a protocol conformance may be modeled as an immutable struct containing a declaration that a type conforms to a protocol and a dictionary of protocol requirement-witness pairs:
 ```
 struct ConformanceDeclaration {
-	let type: Type // must be struct, enum or class
+	let type: Type // must be a struct, enum or class
 	let protocol: Type // must be a protocol
 }
 
 struct ProtocolConformance {
 	let declaration: ConformanceDeclaration
-	let witnessDictionary: [ProtocolRequirement: Witness>
+	let witnesses: [ProtocolRequirement: Witness]
 	
 	init(/* the entire visible context */) {
 		// See §1.4 of this guide
@@ -209,9 +209,9 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjg4OTg1NTksLTEzNTcxNzY0Myw3OT
-A2Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2ODcxMzMz
-MSwtMzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5NywyMT
-Q2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LDE4MTc4
-MzgxNjMsLTExMzg4NTUyMjBdfQ==
+eyJoaXN0b3J5IjpbMTgyNzM0MDY4MywtMTM1NzE3NjQzLDc5MD
+Y3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMx
+LC0zMTkwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxND
+Y2NjQ0NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgz
+ODE2MywtMTEzODg1NTIyMF19
 -->
