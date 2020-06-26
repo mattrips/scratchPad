@@ -227,7 +227,7 @@ Annotations:
 ## Selection of Protocol Conformance
 At the point where a protocol requirement is accessed on a conforming type, there may exist more than one protocol to which the type conforms that carries the ability to access the protocol requirement.  Typically, th
 ```mermaid
-sequenceDiagam
+sequenceDiagram
 Alice ->> Bob: Hello Bob, how are you?
 Bob-->>John: How about you John?
 Bob--x Alice: I am good thanks!
@@ -291,7 +291,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-BnZm1cbiIsImhpc3RvcnkiOlstMjg3OTEzMzQxLC0xMjYxMjU4
+BnZm1cbiIsImhpc3RvcnkiOlsxOTEzNDc5MDExLC0xMjYxMjU4
 NTAsLTE1OTMwNzM2NDcsLTkxMzU1NTAxNywtMzc0NzYxMDgsNj
 I1NzU5NzI1LC0yMTQwMjI3NjczLDE1OTc3NjExMDgsLTEzNTcx
 NzY0Myw3OTA2Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LD
