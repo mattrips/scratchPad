@@ -77,14 +77,15 @@ In more complex cases, there may be numerous implementations available for each 
 
 Possibly available implementations may be declared in any of the following (with the subject type and subject protocol being the protocol to which the type is declared to conform):
 1. the declaration of the subject type,
-2. an visible extension of the subject type,
-3. the declaration of a superclass of the subject type.  [check this]
+2. a visible extension of the subject type,
+3. the declaration of a superclass of the subject type,  [check this]
+4. a visible extension of a superclass of the subject type,
+5. if the subject protocol 
+6. an extension of another protocol lower in the subject protocol’s chain of protocol inheritance to which lower protocol the subject type also conforms,
 
-4. an extension of another protocol lower in the subject protocol’s chain of protocol inheritance to which lower protocol the subject type also conforms,
+7. an extension of the subject protocol, or
 
-5. an extension of the subject protocol, or
-
-6. an extension of another protocol higher in the subject protocol’s chain of protocol inheritance.
+8. an extension of another protocol higher in the subject protocol’s chain of protocol inheritance.
 
 
 ### Interaction with Class Inheritance
@@ -222,7 +223,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjM0MDIxMzAsLTEzNTcxNzY0Myw3OT
+eyJoaXN0b3J5IjpbLTEzNDA1OTg4NjQsLTEzNTcxNzY0Myw3OT
 A2Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2ODcxMzMz
 MSwtMzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5NywyMT
 Q2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LDE4MTc4
