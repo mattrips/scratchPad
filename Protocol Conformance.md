@@ -75,16 +75,16 @@ In more complex cases, there may be numerous implementations available for each 
 
 &#9724;   Engineering protocol conformance requires careful attention to detail.  It would not be unusual for a small change, far from the point of declaration, to significantly alter a protocol conformance.
 
-A possibly available implementation may be declared in any of the following (with the subject type and subject protocol being the type and protocol to which a type is delcared to conform):
-1. the declaration or an extension of the subject type,
+Possibly available implementations may be declared in any of the following (with the subject type and subject protocol being the protocol to which the type is declared to conform):
+1. the declaration of the subject type,
+2. an visible extension of the subject type,
+3. the declaration of a superclass of the subject type.  [check this]
 
-2. the declaration or an extension of a superclass of the subject type.  [check this]
+4. an extension of another protocol lower in the subject protocol’s chain of protocol inheritance to which lower protocol the subject type also conforms,
 
-3. an extension of another protocol lower in the subject protocol’s chain of protocol inheritance to which lower protocol the subject type also conforms,
+5. an extension of the subject protocol, or
 
-4. an extension of the subject protocol, or
-
-5. an extension of another protocol higher in the subject protocol’s chain of protocol inheritance.
+6. an extension of another protocol higher in the subject protocol’s chain of protocol inheritance.
 
 
 ### Interaction with Class Inheritance
@@ -222,9 +222,9 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYxOTk2NjM3LC0xMzU3MTc2NDMsNzkwNj
-c4NzkxLDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEs
-LTMxOTA5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OTcsMjE0Nj
-Y2NDQ0OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4
-MTYzLC0xMTM4ODU1MjIwXX0=
+eyJoaXN0b3J5IjpbLTEwNjM0MDIxMzAsLTEzNTcxNzY0Myw3OT
+A2Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2ODcxMzMz
+MSwtMzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5NywyMT
+Q2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LDE4MTc4
+MzgxNjMsLTExMzg4NTUyMjBdfQ==
 -->
