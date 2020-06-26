@@ -29,9 +29,8 @@ If a type is declared to conform to a protocol, the type must satisfy each of th
 ## 1.2 Collection of Protocol Requirement-Witness Pairs
 
 The selected set of witnesses for a particular type's conformance to a protocol is referred to as a protocol conformance.  
-
-Metaphorically, each protocol conformance is an immutable dictionary with protocol requirements as keys and witnesses as values:  
-&#11035;  
+ 
+&#9724;   Metaphorically, each protocol conformance is an immutable struct dictionary with protocol requirements as keys and witnesses as values: 
 ```
 struct ProtocolConformance {
 	let type: Type // must be struct, enum or class
@@ -200,8 +199,8 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY4NzEzMzMxLC0zMTkwOTA4MDUsMTM0MT
-QxNDUzNiwyMDgyMDkxNTk3LDIxNDY2NjQ0NDksLTEyMDQyNzU0
-MjMsLTExMTcxMjQyNjksMTgxNzgzODE2MywtMTEzODg1NTIyMF
-19
+eyJoaXN0b3J5IjpbMTE1MDE3OTY1Niw4Njg3MTMzMzEsLTMxOT
+A5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OTcsMjE0NjY2NDQ0
+OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4MTYzLC
+0xMTM4ODU1MjIwXX0=
 -->
