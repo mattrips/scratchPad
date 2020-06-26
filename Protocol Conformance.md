@@ -1,10 +1,5 @@
 ## Terminology
 
-protocol requirement
-: A statement describing a property, method, initializer, subscript or typealias that a type declared to conform to a given protocol must implement.
-
- 
-
 protocol conformance
 : The set of witnesses used to satisfy the requirements of a given protocol.
 
@@ -17,11 +12,11 @@ Most powerfully, a protocol may serve as the basis for an existential type beari
 ## 1. Protocol Conformance
 With respect to a type declared to conform to a protocol, a protocol conformance specifies, for each protocol requirement of the protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement if the protocol requirement is invoked on the type.  Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
 
-implementation
-: A property, method, initializer, subscript or typealias that is capable of satisfying a given protocol requirement.   
-
 &#9724; protocol requirement
 : A statement in a protocol declaration describing a property, method, initializer, subscript or typealias that a type conforming to the protocol must implement.
+
+&#9724; implementation
+: A property, method, initializer, subscript or typealias that is capable of satisfying a given protocol requirement.   
 
 ### 1.1 The Witness
 If a type is declared to conform to a protocol, the type must satisfy each of the protocol requirements of the protocol.  The type does so by having available at least one implementation--that is at least one property, method, initializer, subscript or typealias--for each protocol requirement of the protocol.  
@@ -274,10 +269,10 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNzYwNzIyMiwtMzc0NzYxMDgsNjI1Nz
-U5NzI1LC0yMTQwMjI3NjczLDE1OTc3NjExMDgsLTEzNTcxNzY0
-Myw3OTA2Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2OD
-cxMzMzMSwtMzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5
-NywyMTQ2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LD
-E4MTc4MzgxNjMsLTExMzg4NTUyMjBdfQ==
+eyJoaXN0b3J5IjpbODE0MDYxODg4LC0zNzQ3NjEwOCw2MjU3NT
+k3MjUsLTIxNDAyMjc2NzMsMTU5Nzc2MTEwOCwtMTM1NzE3NjQz
+LDc5MDY3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4Nz
+EzMzMxLC0zMTkwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3
+LDIxNDY2NjQ0NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMT
+gxNzgzODE2MywtMTEzODg1NTIyMF19
 -->
