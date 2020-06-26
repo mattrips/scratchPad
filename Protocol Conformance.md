@@ -42,8 +42,8 @@ struct ProtocolConformance {
 	let witnessDictionary: Dictionary<ProtocolRequirement, Witness>
 }
 ```
-### Implicit Declaration
-While the declaration that a type conforms to a protocol is expressly stated, the protocol conformance underpinning the declaration is neither declared nor guided by annotation.  Instead, Swift determines the protocol conformance for the declaration.    
+### Inferred Declaration
+The declaration that a type conforms to a protocol is expressly stated. But the protocol conformance underpinning the declaration is neither declared nor guided by annotation.  Instead, Swift infers the protocol conformance for the declaration.
 
 Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
 
@@ -204,8 +204,8 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2OD
-cxMzMzMSwtMzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5
-NywyMTQ2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LD
-E4MTc4MzgxNjMsLTExMzg4NTUyMjBdfQ==
+eyJoaXN0b3J5IjpbNzkwNjc4NzkxLDE1MDc1MDgwODYsMTE3OD
+k3NTk4OSw4Njg3MTMzMzEsLTMxOTA5MDgwNSwxMzQxNDE0NTM2
+LDIwODIwOTE1OTcsMjE0NjY2NDQ0OSwtMTIwNDI3NTQyMywtMT
+ExNzEyNDI2OSwxODE3ODM4MTYzLC0xMTM4ODU1MjIwXX0=
 -->
