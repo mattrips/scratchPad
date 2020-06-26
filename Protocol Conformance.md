@@ -41,9 +41,16 @@ extension Q {
   var id: String { "Q" } // << Point #4
 }
 
+protocol R: P {}
+extension R {
+  var id: String { "R" } // << Point #5
+}
+
 struct Y<T> {}
 extension Y: P {}
-extension Y: Q where T: Equatable {}
+extension Y: Q where T: Equatable {
+
+}
 
 let y = Y<Int>()
 
@@ -53,7 +60,7 @@ Protocol `P` declares its sole protocol requirement, `id: String { get }`, at Po
 
 Struct `Y<T>` is unconditionally declared to conform to `P`, and is conditionally declared to conform to `Q`.  Two protocol conformances are formed, one for `Y: P` and one for `Y:Q`. 
 
-Protocol `P` declares an implementation for `id: String { get }` at Point #2.  Protocol `Q` declares an implementation for `id: String { get }` at Point #4.  
+Protocol `P` declares an implementation for `id: String { get }` at Point #2.  Protocol `Q` declares an implementation for `id: String { get }` at Point #4.  Those two implementations are possibly visible implementations of `id: String { get }`.
 
 
 
@@ -256,10 +263,10 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU0ODM3MTksLTIxNDAyMjc2NzMsMTU5Nz
-c2MTEwOCwtMTM1NzE3NjQzLDc5MDY3ODc5MSwxNTA3NTA4MDg2
-LDExNzg5NzU5ODksODY4NzEzMzMxLC0zMTkwOTA4MDUsMTM0MT
-QxNDUzNiwyMDgyMDkxNTk3LDIxNDY2NjQ0NDksLTEyMDQyNzU0
-MjMsLTExMTcxMjQyNjksMTgxNzgzODE2MywtMTEzODg1NTIyMF
-19
+eyJoaXN0b3J5IjpbLTE1NjMxODExNjIsLTIxNDAyMjc2NzMsMT
+U5Nzc2MTEwOCwtMTM1NzE3NjQzLDc5MDY3ODc5MSwxNTA3NTA4
+MDg2LDExNzg5NzU5ODksODY4NzEzMzMxLC0zMTkwOTA4MDUsMT
+M0MTQxNDUzNiwyMDgyMDkxNTk3LDIxNDY2NjQ0NDksLTEyMDQy
+NzU0MjMsLTExMTcxMjQyNjksMTgxNzgzODE2MywtMTEzODg1NT
+IyMF19
 -->
