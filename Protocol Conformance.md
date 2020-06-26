@@ -26,49 +26,7 @@ If a type is declared to conform to a protocol, the type must satisfy each of th
 
 With respect to the a type that is declared to conform to a protocol, for each protocol requirement of the protocol, Swift determines the one and only implementation that will be used throughout a program to satisfy that protocol requirement for that type.  The implementation so determined is referred to as the witness for the protocol requirement.
 
-&#9724;   The purpose of a protocol conformance is to define which witness will be called when a given protocol requirement is accessed.  For example:
-```swift
-protocol P {
-  var id: String { get } // << Point #1
-}
-extension P {
-  var id: String { "P" } // << Point #2
-  var id2: String { self.id } // << Point #3
-}
-
-protocol Q: P {}
-extension Q {
-  var id: String { "Q" } // << Point #4
-}
-
-protocol R: P {}
-extension R {
-  var id: String { "R" } // << Point #5
-}
-
-struct Y<T> {}
-extension Y: P {
-  var id: String { "Y1" } // << Point #6
-}
-extension Y: Q where T: Equatable {
-  var id: String { "Y2" } // << Point #7
-}
-
-let y = Y<Int>()
-
-print(y.id2) // "P", "Q", "R", "Y1" or "Y2"? 
-```
-Protocol `P` declares its sole protocol requirement, `id: String { get }`, at Point #1.  Protocol `Q` inherits from protocol `P`, but has no protocol requirements of its own. Protocol `R` inherits from protocol `P`, but has no protocol requirements of its own.
-
-Struct `Y<T>` is unconditionally declared to conform to `P`, and is conditionally declared to conform to `Q`.  Two protocol conformances are formed, one for `Y: P` and one for `Y:Q`. 
-
-Five implementations of `id: String { get }` are present in the source code.
-
-The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter declared in the extension of `P` is accessed via `y`. 
-
-
-
-but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
+&#9724;   The purpose of a protocol conformance is to define which witness will be called when a given protocol requirement is accessed.  
 
 
 ### 1.2 Model of a Protocol Conformance
@@ -267,10 +225,10 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3NDc2MTA4LDYyNTc1OTcyNSwtMjE0MD
-IyNzY3MywxNTk3NzYxMTA4LC0xMzU3MTc2NDMsNzkwNjc4Nzkx
-LDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEsLTMxOT
-A5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OTcsMjE0NjY2NDQ0
-OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4MTYzLC
-0xMTM4ODU1MjIwXX0=
+eyJoaXN0b3J5IjpbMTM2NTc4NDI0OSwtMzc0NzYxMDgsNjI1Nz
+U5NzI1LC0yMTQwMjI3NjczLDE1OTc3NjExMDgsLTEzNTcxNzY0
+Myw3OTA2Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2OD
+cxMzMzMSwtMzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5
+NywyMTQ2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LD
+E4MTc4MzgxNjMsLTExMzg4NTUyMjBdfQ==
 -->
