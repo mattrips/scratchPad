@@ -58,11 +58,11 @@ let y = Y<Int>()
 
 print(y.id2) // "P" or "Q"? 
 ```
-Protocol `P` declares its sole protocol requirement, `id: String { get }`, at Point #1.  Protocol `Q` inherits from protocol `P`, but has not protocol requirements of its own.
+Protocol `P` declares its sole protocol requirement, `id: String { get }`, at Point #1.  Protocol `Q` inherits from protocol `P`, but has no protocol requirements of its own. Protocol `R` inherits from protocol `P`, but has no protocol requirements of its own.
 
 Struct `Y<T>` is unconditionally declared to conform to `P`, and is conditionally declared to conform to `Q`.  Two protocol conformances are formed, one for `Y: P` and one for `Y:Q`. 
 
-Protocol `P` declares an implementation for `id: String { get }` at Point #2.  Protocol `Q` declares an implementation for `id: String { get }` at Point #4.  Those two implementations are possibly visible implementations of `id: String { get }`.
+Five implementations of `id: String { get }` are present in the source code, but only four of those implementations are possibly visible implementations with respect to 
 
 
 
@@ -265,10 +265,10 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMzYwMTk4MiwtMjE0MDIyNzY3MywxNT
-k3NzYxMTA4LC0xMzU3MTc2NDMsNzkwNjc4NzkxLDE1MDc1MDgw
-ODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEsLTMxOTA5MDgwNSwxMz
-QxNDE0NTM2LDIwODIwOTE1OTcsMjE0NjY2NDQ0OSwtMTIwNDI3
-NTQyMywtMTExNzEyNDI2OSwxODE3ODM4MTYzLC0xMTM4ODU1Mj
-IwXX0=
+eyJoaXN0b3J5IjpbNjc4NzAwODI3LC0yMTQwMjI3NjczLDE1OT
+c3NjExMDgsLTEzNTcxNzY0Myw3OTA2Nzg3OTEsMTUwNzUwODA4
+NiwxMTc4OTc1OTg5LDg2ODcxMzMzMSwtMzE5MDkwODA1LDEzND
+E0MTQ1MzYsMjA4MjA5MTU5NywyMTQ2NjY0NDQ5LC0xMjA0Mjc1
+NDIzLC0xMTE3MTI0MjY5LDE4MTc4MzgxNjMsLTExMzg4NTUyMj
+BdfQ==
 -->
