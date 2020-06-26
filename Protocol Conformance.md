@@ -55,7 +55,7 @@ If a type conforms to multiple protocols, there will be a distinct protocol conf
 ### 1.5 Immutable
 A protocol conformance is immutable.  It cannot be altered by operation of a program.  
 
-The witness to which a protocol conformance points for a particular protocol requirement does not depend upon how it is used within a program.
+With respect to a protocol conformance, the witness for a particular protocol requirement does not depend upon how the type is used or how 
 
 ### Sourcing of Implementations
 
@@ -198,9 +198,9 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjM1OTc5NjEsLTEzNTcxNzY0Myw3OT
-A2Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2ODcxMzMz
-MSwtMzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5NywyMT
-Q2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LDE4MTc4
-MzgxNjMsLTExMzg4NTUyMjBdfQ==
+eyJoaXN0b3J5IjpbMTA5NzQ1NDA2OCwtMTM1NzE3NjQzLDc5MD
+Y3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMx
+LC0zMTkwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxND
+Y2NjQ0NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgz
+ODE2MywtMTEzODg1NTIyMF19
 -->
