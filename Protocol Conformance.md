@@ -47,9 +47,11 @@ extension R {
 }
 
 struct Y<T> {}
-extension Y: P {}
+extension Y: P {
+  var id: String { "Y1" } // << Point #6
+}
 extension Y: Q where T: Equatable {
-
+  var id: String { "Y2" } // << Point #7
 }
 
 let y = Y<Int>()
@@ -263,10 +265,10 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjMxODExNjIsLTIxNDAyMjc2NzMsMT
-U5Nzc2MTEwOCwtMTM1NzE3NjQzLDc5MDY3ODc5MSwxNTA3NTA4
-MDg2LDExNzg5NzU5ODksODY4NzEzMzMxLC0zMTkwOTA4MDUsMT
-M0MTQxNDUzNiwyMDgyMDkxNTk3LDIxNDY2NjQ0NDksLTEyMDQy
-NzU0MjMsLTExMTcxMjQyNjksMTgxNzgzODE2MywtMTEzODg1NT
-IyMF19
+eyJoaXN0b3J5IjpbLTgxMzYwMTk4MiwtMjE0MDIyNzY3MywxNT
+k3NzYxMTA4LC0xMzU3MTc2NDMsNzkwNjc4NzkxLDE1MDc1MDgw
+ODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEsLTMxOTA5MDgwNSwxMz
+QxNDE0NTM2LDIwODIwOTE1OTcsMjE0NjY2NDQ0OSwtMTIwNDI3
+NTQyMywtMTExNzEyNDI2OSwxODE3ODM4MTYzLC0xMTM4ODU1Mj
+IwXX0=
 -->
