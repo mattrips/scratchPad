@@ -75,7 +75,7 @@ In more complex cases, there may be numerous implementations available for each 
 
 &#9724;   Engineering protocol conformance requires careful attention to detail.  It would not be unusual for a small change, far from the point of declaration, to significantly alter a protocol conformance.
 
-Possibly available implementations may be declared in any of the following (with the subject type and subject protocol being the protocol to which the type is declared to conform):
+Possibly available implementations may be declared in any of the following whether within the same module or in a module imported into the file in which the subject type is declared to conform to the subject protocol:
 1. the declaration of the subject type,
 2. a visible extension of the subject type,
 3. the declaration of a superclass of the subject type,  [check this]
@@ -220,9 +220,9 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDc1MTEzNDIsLTEzNTcxNzY0Myw3OT
-A2Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2ODcxMzMz
-MSwtMzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5NywyMT
-Q2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LDE4MTc4
-MzgxNjMsLTExMzg4NTUyMjBdfQ==
+eyJoaXN0b3J5IjpbNzczNzc1NTIsLTEzNTcxNzY0Myw3OTA2Nz
+g3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2ODcxMzMzMSwt
+MzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5NywyMTQ2Nj
+Y0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LDE4MTc4Mzgx
+NjMsLTExMzg4NTUyMjBdfQ==
 -->
