@@ -224,7 +224,14 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 
-## 
+## Selection of Protocol Conformance
+At the point where a protocol requirement is accessed on a conforming type, there may exist more than one protocol to which the type
+
+
+
+
+
+
 
 
 For example:
@@ -271,10 +278,10 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2NjA2MTE4NywtOTEzNTU1MDE3LC0zNz
-Q3NjEwOCw2MjU3NTk3MjUsLTIxNDAyMjc2NzMsMTU5Nzc2MTEw
-OCwtMTM1NzE3NjQzLDc5MDY3ODc5MSwxNTA3NTA4MDg2LDExNz
-g5NzU5ODksODY4NzEzMzMxLC0zMTkwOTA4MDUsMTM0MTQxNDUz
-NiwyMDgyMDkxNTk3LDIxNDY2NjQ0NDksLTEyMDQyNzU0MjMsLT
-ExMTcxMjQyNjksMTgxNzgzODE2MywtMTEzODg1NTIyMF19
+eyJoaXN0b3J5IjpbNTA0MjUwNjI0LC05MTM1NTUwMTcsLTM3ND
+c2MTA4LDYyNTc1OTcyNSwtMjE0MDIyNzY3MywxNTk3NzYxMTA4
+LC0xMzU3MTc2NDMsNzkwNjc4NzkxLDE1MDc1MDgwODYsMTE3OD
+k3NTk4OSw4Njg3MTMzMzEsLTMxOTA5MDgwNSwxMzQxNDE0NTM2
+LDIwODIwOTE1OTcsMjE0NjY2NDQ0OSwtMTIwNDI3NTQyMywtMT
+ExNzEyNDI2OSwxODE3ODM4MTYzLC0xMTM4ODU1MjIwXX0=
 -->
