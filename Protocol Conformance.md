@@ -28,7 +28,7 @@ While a type is declared to conform to a protocol, the protocol conformance unde
 
 Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
 
-## The Foundations of Protocol Conformance
+## _.2 The Foundations of Protocol Conformance
 
 Before reviewing the rule of protocol conformance, it is useful to review the foundations upon which protocol conformance stands.
 
@@ -185,7 +185,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxND
-Y2NjQ0NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgz
-ODE2MywtMTEzODg1NTIyMF19
+eyJoaXN0b3J5IjpbLTgxNjM5NTM1NSwxMzQxNDE0NTM2LDIwOD
+IwOTE1OTcsMjE0NjY2NDQ0OSwtMTIwNDI3NTQyMywtMTExNzEy
+NDI2OSwxODE3ODM4MTYzLC0xMTM4ODU1MjIwXX0=
 -->
