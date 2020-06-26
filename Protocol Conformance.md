@@ -69,7 +69,9 @@ With respect to a protocol conformance, during operation of a program, the witne
 The declaration that a type conforms to a protocol is expressly stated. But the protocol conformance underpinning that declaration is neither declared nor guided by annotation.  Instead, Swift infers the protocol conformance through analysis of all possibly available implementations of a protocol requirement.
 
 #### 1.3.6 Possibly Available Implementations
-In a simple case, there may exist only one possible implementation for each protocol requirement.  In that case, determining the protocol conformance is a simple matter of matching each requirement with its implementation.  In more complex cases, there may be several  implementations  available for each  protocol requirement.  Implementations  may be scattered across multiple files, in the source code of other modules in a project, and in the binary files of imported SDKs.  Anticipating the  protocol conformance  that will result in a complex case requires careful attention to detail.
+In a simple case, there may exist only one possible implementation for each protocol requirement of a protocol.  In that case, determining the protocol conformance is a simple matter of matching each requirement with its implementation.  
+
+In more complex cases, there may be numerous implementations available for each protocol requirement.  Implementations may be scattered across multiple files of the modul and , in the source code of imported modules, and in the binary files of imported SDKs.  Anticipating the  protocol conformance  that will result in a complex case requires careful attention to detail.
 
 ### Interaction with Class Inheritance
 
@@ -206,9 +208,9 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwMTM0NjU3OCwtMTM1NzE3NjQzLDc5MD
-Y3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMx
-LC0zMTkwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxND
-Y2NjQ0NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgz
-ODE2MywtMTEzODg1NTIyMF19
+eyJoaXN0b3J5IjpbODc5NzU2MzM1LC0xMzU3MTc2NDMsNzkwNj
+c4NzkxLDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEs
+LTMxOTA5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OTcsMjE0Nj
+Y2NDQ0OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4
+MTYzLC0xMTM4ODU1MjIwXX0=
 -->
