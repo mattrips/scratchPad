@@ -52,7 +52,7 @@ struct ProtocolConformance {
 #### 1.3.1 Singular
 A protocol conformance is determined with respect to the pairing of a type and a protocol to which it conforms. A type may conform to a protocol in one and only one way.  There cannot be more than one protocol conformance for a type-protocol pairing.  
 
-It is an error to twice declare the conformance of a type to a given protocol.  The same is true even if the conformances are conditional with disjoint conditions.
+&#9724;   It is an error to twice declare the conformance of a type to a given protocol.  The same is true even if the conformances are conditional with disjoint conditions.
 
 If a type conforms to multiple protocols, there will be a distinct protocol conformance for each type-protocol pair.
 
@@ -66,7 +66,7 @@ With respect to a protocol conformance, during operation of a program, the witne
 [^1]: Could this also be due to overloading?
 
 #### 1.3.5 Inferred Declaration
-The declaration that a type conforms to a protocol is expressly stated. But the protocol conformance underpinning the declaration is neither declared nor guided by annotation.  Instead, Swift infers the protocol conformance for the declaration, through static analysis of all possibly available implementations of a protocol requirement.
+The declaration that a type conforms to a protocol is expressly stated. But the protocol conformance underpinning the declaration is neither declared nor guided by annotation.  Instead, Swift infers the protocol conformance through analysis of all possibly available implementations of a protocol requirement.
 
 #### 1.3.6 Possibly Available Implementations
 
@@ -209,9 +209,9 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNzM0MDY4MywtMTM1NzE3NjQzLDc5MD
-Y3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMx
-LC0zMTkwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxND
-Y2NjQ0NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgz
-ODE2MywtMTEzODg1NTIyMF19
+eyJoaXN0b3J5IjpbNjI3MDM3MzQxLC0xMzU3MTc2NDMsNzkwNj
+c4NzkxLDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEs
+LTMxOTA5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OTcsMjE0Nj
+Y2NDQ0OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4
+MTYzLC0xMTM4ODU1MjIwXX0=
 -->
