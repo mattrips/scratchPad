@@ -224,6 +224,8 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 
+## 
+
 
 For example:
 ```swift
@@ -269,7 +271,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NDk1ODY2NywtOTEzNTU1MDE3LC0zNz
+eyJoaXN0b3J5IjpbMTY2NjA2MTE4NywtOTEzNTU1MDE3LC0zNz
 Q3NjEwOCw2MjU3NTk3MjUsLTIxNDAyMjc2NzMsMTU5Nzc2MTEw
 OCwtMTM1NzE3NjQzLDc5MDY3ODc5MSwxNTA3NTA4MDg2LDExNz
 g5NzU5ODksODY4NzEzMzMxLC0zMTkwOTA4MDUsMTM0MTQxNDUz
