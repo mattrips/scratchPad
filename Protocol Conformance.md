@@ -75,6 +75,18 @@ In more complex cases, there may be numerous implementations available for each 
 
 &#9724;   Engineering protocol conformance requires careful attention to detail.  It would not be unusual for a small change, far from the point of declaration, to significantly alter a protocol conformance.
 
+A possibly available implementation may be declared in any of the following, with the subject type and subject protocol being the type-protocol conformance with respect to which a :
+1. the declaration or an extension of the subject type,
+
+2. the declaration or an extension of a superclass of the subject type.  [check this]
+
+3. an extension of another protocol lower in the subject protocol’s chain of protocol inheritance to which lower protocol the subject type also conforms,
+
+4. an extension of the subject protocol, or
+
+5. an extension of another protocol higher in the subject protocol’s chain of protocol inheritance.
+
+
 ### Interaction with Class Inheritance
 
 Where a class conforms to a protocol, the nature of class inheritance impacts the availability of implementations for purposes of protocol conformance.  For instance, a superclass may expose functionality that incidentally has the same signature as a protocol requirement.  Conversely, if a class is declared to conform to a protocol, the implementations in a subclass of the class are not available to satisfy the protocol requirements.
@@ -210,9 +222,9 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1ODYwNTE1NywtMTM1NzE3NjQzLDc5MD
-Y3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMx
-LC0zMTkwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxND
-Y2NjQ0NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgz
-ODE2MywtMTEzODg1NTIyMF19
+eyJoaXN0b3J5IjpbNTc1MjQ0NDUwLC0xMzU3MTc2NDMsNzkwNj
+c4NzkxLDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEs
+LTMxOTA5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OTcsMjE0Nj
+Y2NDQ0OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4
+MTYzLC0xMTM4ODU1MjIwXX0=
 -->
