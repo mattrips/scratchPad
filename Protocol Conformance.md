@@ -64,7 +64,7 @@ Struct `Y<T>` is unconditionally declared to conform to `P`, and is conditionall
 
 Five implementations of `id: String { get }` are present in the source code.
 
-The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter declared in the extension of `P` is access
+The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter declared in the extension of `P` is accessed via `y`. 
 
 
 
@@ -267,10 +267,10 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3MDgwNzM2Niw2MjU3NTk3MjUsLTIxND
-AyMjc2NzMsMTU5Nzc2MTEwOCwtMTM1NzE3NjQzLDc5MDY3ODc5
-MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMxLC0zMT
-kwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxNDY2NjQ0
-NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgzODE2My
-wtMTEzODg1NTIyMF19
+eyJoaXN0b3J5IjpbLTM3NDc2MTA4LDYyNTc1OTcyNSwtMjE0MD
+IyNzY3MywxNTk3NzYxMTA4LC0xMzU3MTc2NDMsNzkwNjc4Nzkx
+LDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEsLTMxOT
+A5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OTcsMjE0NjY2NDQ0
+OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4MTYzLC
+0xMTM4ODU1MjIwXX0=
 -->
