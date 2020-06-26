@@ -29,37 +29,25 @@ With respect to the a type that is declared to conform to a protocol, for each p
 &#9724;   The purpose of a protocol conformance is to define which witness will be called when a given protocol requirement is accessed.
 ```swift
 protocol P {
-  associatedtype A
   var id: String { get }
 }
 extension P {
   var id: String { "P" }
-  var idFrom: String { self.id }
+  var id2: String { self.id } // << Point A
 }
 
 protocol Q: P {}
 extension Q {
   var id: String { "Q" }
-  var idFrom: String { self.id }
 }
 
 struct Y<T> {}
-
-extension Y: P {
-
-typealias A = Int
-
-}
-
+extension Y: P {}
 extension Y: Q where T: Equatable {}
 
-extension Y where T: Numeric {
+let y = Y<Int>()
 
-var id: String { "Y<Int>" }
-
-}
-
-print(Y<Int>().idFrom)
+print(y.id2) 
 ```
   
 
@@ -259,7 +247,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3MDEzMTM4NywtMjE0MDIyNzY3MywxNT
+eyJoaXN0b3J5IjpbMTc3NzE2MTk5MywtMjE0MDIyNzY3MywxNT
 k3NzYxMTA4LC0xMzU3MTc2NDMsNzkwNjc4NzkxLDE1MDc1MDgw
 ODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEsLTMxOTA5MDgwNSwxMz
 QxNDE0NTM2LDIwODIwOTE1OTcsMjE0NjY2NDQ0OSwtMTIwNDI3
