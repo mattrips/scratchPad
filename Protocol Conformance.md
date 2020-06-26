@@ -48,10 +48,11 @@ The declaration that a type conforms to a protocol is expressly stated. But the 
 ### 1.4 Singular
 A protocol conformance is determined with respect to the pairing of a type and a protocol to which it conforms. A type may conform to a protocol in one and only one way.  There cannot be more than one protocol conformance for a type-protocol pairing.  
 
-It is an error to twice declare the conformance of a type to a given protocol.  Attempting to twice declare conditional conformance of a type to a protocol, even with disjoint conditions, is an error.
+It is an error to twice declare the conformance of a type to a given protocol.  The same is true even if the conformances are conditional with disjoint conditions.
 
-### Immutable
+If a type conforms to multiple protocols, there will be a distinct protocol conformance for each type-protocol pair.
 
+### 1.5 Immutable
 Once established in a program, a protocol conformance cannot be altered by operation of the program.  [except for imports…]  Does not depend upon how used...
 
 ### Sourcing of Implementations
@@ -195,9 +196,9 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjcxMTcwMjA3LC0xMzU3MTc2NDMsNzkwNj
-c4NzkxLDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEs
-LTMxOTA5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OTcsMjE0Nj
-Y2NDQ0OSwtMTIwNDI3NTQyMywtMTExNzEyNDI2OSwxODE3ODM4
-MTYzLC0xMTM4ODU1MjIwXX0=
+eyJoaXN0b3J5IjpbLTExODY1MDI3NzEsLTEzNTcxNzY0Myw3OT
+A2Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2ODcxMzMz
+MSwtMzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5NywyMT
+Q2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0MjY5LDE4MTc4
+MzgxNjMsLTExMzg4NTUyMjBdfQ==
 -->
