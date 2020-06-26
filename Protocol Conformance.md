@@ -27,7 +27,7 @@ If a type is declared to conform to a protocol, the type must satisfy each of th
 With respect to the a type that is declared to conform to a protocol,
 for each protocol requirement of the protocol, Swift determines the one and only implementation that will be used throughout a program to satisfy that protocol requirement for that type.  The implementation so determined is referred to as the witness for the protocol requirement.  
 
-### 1.2 Collection of Protocol Requirement-Witness Pairs
+### 1.2 Model of a Protocol Conformance
 With respect to the declaration that a type conforms to a protocol, the protocol conformance is a collection containing the witness for each protocol requirement of the protocol.
  
 &#9724;   Metaphorically, a protocol conformance may be modeled as an immutable struct containing a declaration that a type conforms to a protocol and a dictionary of protocol requirement-witness pairs:
@@ -204,8 +204,9 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkwNjc4NzkxLDE1MDc1MDgwODYsMTE3OD
-k3NTk4OSw4Njg3MTMzMzEsLTMxOTA5MDgwNSwxMzQxNDE0NTM2
-LDIwODIwOTE1OTcsMjE0NjY2NDQ0OSwtMTIwNDI3NTQyMywtMT
-ExNzEyNDI2OSwxODE3ODM4MTYzLC0xMTM4ODU1MjIwXX0=
+eyJoaXN0b3J5IjpbMjM3NTk5OTcwLDc5MDY3ODc5MSwxNTA3NT
+A4MDg2LDExNzg5NzU5ODksODY4NzEzMzMxLC0zMTkwOTA4MDUs
+MTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxNDY2NjQ0NDksLTEyMD
+QyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgzODE2MywtMTEzODg1
+NTIyMF19
 -->
