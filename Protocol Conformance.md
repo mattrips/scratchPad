@@ -30,7 +30,7 @@ for each protocol requirement of the protocol, Swift determines the one and only
 
 ## 1.2 Collection of Protocol Requirement-Witness Pairs
 
-The collection of the witnesses for a type's conformance to a protocol is referred to as a protocol conformance.  
+The collection of each witness for each protocol requirement of a protocol to which a type is declared to conform is   a type's conformance to a protocol is referred to as a protocol conformance.  
  
 &#9724;   Metaphorically, each protocol conformance is an immutable struct containing a declaration that a type conforms to a protocol and a dictionary of protocol requirement-witness pairs:
 ```
@@ -205,7 +205,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDcwMjIwMTksODY4NzEzMzMxLC0zMT
+eyJoaXN0b3J5IjpbLTE2NTcyMzEzNTEsODY4NzEzMzMxLC0zMT
 kwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxNDY2NjQ0
 NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgzODE2My
 wtMTEzODg1NTIyMF19
