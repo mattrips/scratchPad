@@ -87,7 +87,6 @@ Possibly available implementations may be declared in any of the following wheth
 
 In this case, visible means _____.
 
-&#97
 
 ### Interaction with Class Inheritance
 
@@ -224,7 +223,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MzE2MDEyMSwtMTM1NzE3NjQzLDc5MD
+eyJoaXN0b3J5IjpbMTU5Nzc2MTEwOCwtMTM1NzE3NjQzLDc5MD
 Y3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMx
 LC0zMTkwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxND
 Y2NjQ0NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgz
