@@ -73,7 +73,7 @@ In a simple case, there may exist only one possible implementation for each prot
 
 In more complex cases, there may be numerous implementations available for each protocol requirement.  Implementations may be scattered across multiple files of the module, in the source code and binary files of imported modules, or in the Standard Library.
 
-&#9724;   Anticipating the protocol conformance that will result requires careful attention to detail.  It would not 
+&#9724;   Anticipating the protocol conformance that will result requires careful attention to detail.  It would not be unusual for a small change, far from the point of declaration, to significantly alter a protocol conformance behavior.
 
 ### Interaction with Class Inheritance
 
@@ -210,7 +210,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNDA5NjYxMywtMTM1NzE3NjQzLDc5MD
+eyJoaXN0b3J5IjpbLTI1OTQ4ODQwMCwtMTM1NzE3NjQzLDc5MD
 Y3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMzMx
 LC0zMTkwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LDIxND
 Y2NjQ0NDksLTEyMDQyNzU0MjMsLTExMTcxMjQyNjksMTgxNzgz
