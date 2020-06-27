@@ -69,7 +69,7 @@ Possibly available implementations may be declared in any of the following wheth
 In this case, visible means _____.
 
 #### 1.3.7 Visible Implementations
-With respect to a declaration that a type conforms to a protocol, an implementation of a protocol requirement of the protocol is visible if: (a) the implementation is declared in the declaration of the type or in any extension of the type within the scope visible at the point of declaration; (b) the implementation is declared on any protocol 
+With respect to a declaration that a type conforms to a protocol, an implementation of a protocol requirement of the protocol is visible if: (a) the implementation is declared in the declaration of the type or in any extension of the type within the scope visible at the point of declaration; (b) the implementation is declared on *any* protocol to which the type is declared in the visible scope to conform; or (c) the implementation is declared on *any* protocol 
 
 or any other protocol from which the protocol directly or indirectly inherits; or (c) the implementation is visible with respect to any other 
 
@@ -311,7 +311,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-BnZm1cbiIsImhpc3RvcnkiOlsxMDQ2Njg0MDI1LC0xOTAwODMx
+BnZm1cbiIsImhpc3RvcnkiOlstOTI5MTAxNzEzLC0xOTAwODMx
 NjgzLDExMzI3OTA3MzgsLTEyNjQ2MTgwMjcsNzc2MDU1MjQ4LD
 E5MTM0NzkwMTEsLTEyNjEyNTg1MCwtMTU5MzA3MzY0NywtOTEz
 NTU1MDE3LC0zNzQ3NjEwOCw2MjU3NTk3MjUsLTIxNDAyMjc2Nz
