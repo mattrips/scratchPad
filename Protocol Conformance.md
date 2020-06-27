@@ -88,7 +88,10 @@ By contrast, a senior protocol in an inheritance relationship with a junior prot
 
 #### 1.3.8 Conflicting Implementations
 With respect to a protocol requirement, it is a compile-time ambiguity error if multiple accessible implementations exist and not all such implementations belong to the same line of protocol inheritance.  The compiler does not attempt to resolve the ambiguity.
+
 &#9724; line of protocol inheritance
+: [insert a definition]
+
 
 
 
@@ -317,11 +320,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-BnZm1cbiIsImhpc3RvcnkiOlstMTM5MDY2MTcwNCwxMjAyNzg4
-ODY1LC0xMjUwNTU5ODM5LDcyMTA1NzQ1OSwtMzYyMjA4MjUsMT
-QzODgxMTYyNywtMTkwMDgzMTY4MywxMTMyNzkwNzM4LC0xMjY0
-NjE4MDI3LDc3NjA1NTI0OCwxOTEzNDc5MDExLC0xMjYxMjU4NT
-AsLTE1OTMwNzM2NDcsLTkxMzU1NTAxNywtMzc0NzYxMDgsNjI1
-NzU5NzI1LC0yMTQwMjI3NjczLDE1OTc3NjExMDgsLTEzNTcxNz
-Y0Myw3OTA2Nzg3OTFdfQ==
+AnJ1xuIiwiaGlzdG9yeSI6Wy00Njc0Mjg0NSwxMjAyNzg4ODY1
+LC0xMjUwNTU5ODM5LDcyMTA1NzQ1OSwtMzYyMjA4MjUsMTQzOD
+gxMTYyNywtMTkwMDgzMTY4MywxMTMyNzkwNzM4LC0xMjY0NjE4
+MDI3LDc3NjA1NTI0OCwxOTEzNDc5MDExLC0xMjYxMjU4NTAsLT
+E1OTMwNzM2NDcsLTkxMzU1NTAxNywtMzc0NzYxMDgsNjI1NzU5
+NzI1LC0yMTQwMjI3NjczLDE1OTc3NjExMDgsLTEzNTcxNzY0My
+w3OTA2Nzg3OTFdfQ==
 -->
