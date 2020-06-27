@@ -68,8 +68,8 @@ Possibly available implementations may be declared in any of the following wheth
 
 In this case, visible means _____.
 
-#### 1.3.7 Implementations in Line of Inheritance
-
+#### 1.3.7 Visible Implementations
+With respect to a type declared to conform to a protocol, an implementation is visible 
 
 #### 1.3.7 Implementations in Line of Inheritance
 With respect to a type declared to conform to a protocol, 
@@ -309,11 +309,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-BnZm1cbiIsImhpc3RvcnkiOls0NzM0NDU1NzEsLTE5MDA4MzE2
-ODMsMTEzMjc5MDczOCwtMTI2NDYxODAyNyw3NzYwNTUyNDgsMT
-kxMzQ3OTAxMSwtMTI2MTI1ODUwLC0xNTkzMDczNjQ3LC05MTM1
-NTUwMTcsLTM3NDc2MTA4LDYyNTc1OTcyNSwtMjE0MDIyNzY3My
-wxNTk3NzYxMTA4LC0xMzU3MTc2NDMsNzkwNjc4NzkxLDE1MDc1
-MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEsLTMxOTA5MDgwNS
-wxMzQxNDE0NTM2XX0=
+BnZm1cbiIsImhpc3RvcnkiOlstMTgwOTA5MDU1NywtMTkwMDgz
+MTY4MywxMTMyNzkwNzM4LC0xMjY0NjE4MDI3LDc3NjA1NTI0OC
+wxOTEzNDc5MDExLC0xMjYxMjU4NTAsLTE1OTMwNzM2NDcsLTkx
+MzU1NTAxNywtMzc0NzYxMDgsNjI1NzU5NzI1LC0yMTQwMjI3Nj
+czLDE1OTc3NjExMDgsLTEzNTcxNzY0Myw3OTA2Nzg3OTEsMTUw
+NzUwODA4NiwxMTc4OTc1OTg5LDg2ODcxMzMzMSwtMzE5MDkwOD
+A1LDEzNDE0MTQ1MzZdfQ==
 -->
