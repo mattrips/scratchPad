@@ -72,8 +72,8 @@ In this case, visible means _____.
 As discussed in the general documentation of protocols, if a type is declared to conform unconditionally to a protocol, that declaration also acts as an implicit declaration that the type conforms to all other protocols from which the protocol directly or indirectly inherits.
 
 
-#### 1.3.7 Visible Implementations
-With respect to a declaration that a type conforms to a protocol, an implementation of a protocol requirement is visible if, at the point of such declaration: (a) the implementation is a visible member of the type, with visibility ; or (b) the implementation is declared on *any* protocol to which the type is expressly or implicitly declared to conform,  or in any visible extension of any such protocol.  For purposes of the foregoing, extensions not visible within the scope in which  
+#### 1.3.7 Accessible Implementations
+With respect to a declaration that a type conforms to a protocol, an implementation of a protocol requirement is visible if, at the point of such declaration: (a) the implementation is an accessible member of the type, with an access level no more restrictive than the access of the protocol requirement; or (b) the implementation is declared on *any* protocol to which the type is expressly or implicitly declared to conform,  or in any visible extension of any such protocol.  For purposes of the foregoing, extensions not visible within the scope in which  
 
 or any other protocol from which the protocol directly or indirectly inherits; or (c) the implementation is visible with respect to any other 
 
@@ -315,11 +315,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-BnZm1cbiIsImhpc3RvcnkiOlsxNjgxMzA5MTk1LDE0Mzg4MTE2
-MjcsLTE5MDA4MzE2ODMsMTEzMjc5MDczOCwtMTI2NDYxODAyNy
-w3NzYwNTUyNDgsMTkxMzQ3OTAxMSwtMTI2MTI1ODUwLC0xNTkz
-MDczNjQ3LC05MTM1NTUwMTcsLTM3NDc2MTA4LDYyNTc1OTcyNS
-wtMjE0MDIyNzY3MywxNTk3NzYxMTA4LC0xMzU3MTc2NDMsNzkw
-Njc4NzkxLDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMz
-EsLTMxOTA5MDgwNV19
+BnZm1cbiIsImhpc3RvcnkiOlstMzYyMjA4MjUsMTQzODgxMTYy
+NywtMTkwMDgzMTY4MywxMTMyNzkwNzM4LC0xMjY0NjE4MDI3LD
+c3NjA1NTI0OCwxOTEzNDc5MDExLC0xMjYxMjU4NTAsLTE1OTMw
+NzM2NDcsLTkxMzU1NTAxNywtMzc0NzYxMDgsNjI1NzU5NzI1LC
+0yMTQwMjI3NjczLDE1OTc3NjExMDgsLTEzNTcxNzY0Myw3OTA2
+Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2ODcxMzMzMS
+wtMzE5MDkwODA1XX0=
 -->
