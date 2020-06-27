@@ -69,7 +69,7 @@ Possibly available implementations may be declared in any of the following wheth
 In this case, visible means _____.
 
 #### 1.3.7 Line of Inheritance
-With respect to a protocol that inherits from another protocol, the inheriting protocol inherits the  
+With respect to a protocol that inherits from another protocol, the inheriting protocol inherits all of the implementations and  
 
 #### 1.3.8 Conflicting Implementations
 If 
@@ -303,11 +303,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-BnZm1cbiIsImhpc3RvcnkiOls4MzI1MTMzNTUsLTEyNjQ2MTgw
-MjcsNzc2MDU1MjQ4LDE5MTM0NzkwMTEsLTEyNjEyNTg1MCwtMT
-U5MzA3MzY0NywtOTEzNTU1MDE3LC0zNzQ3NjEwOCw2MjU3NTk3
-MjUsLTIxNDAyMjc2NzMsMTU5Nzc2MTEwOCwtMTM1NzE3NjQzLD
-c5MDY3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEz
-MzMxLC0zMTkwOTA4MDUsMTM0MTQxNDUzNiwyMDgyMDkxNTk3LD
-IxNDY2NjQ0NDldfQ==
+BnZm1cbiIsImhpc3RvcnkiOlstMTkwMDI5NjA0MSwtMTI2NDYx
+ODAyNyw3NzYwNTUyNDgsMTkxMzQ3OTAxMSwtMTI2MTI1ODUwLC
+0xNTkzMDczNjQ3LC05MTM1NTUwMTcsLTM3NDc2MTA4LDYyNTc1
+OTcyNSwtMjE0MDIyNzY3MywxNTk3NzYxMTA4LC0xMzU3MTc2ND
+MsNzkwNjc4NzkxLDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3
+MTMzMzEsLTMxOTA5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OT
+csMjE0NjY2NDQ0OV19
 -->
