@@ -73,7 +73,10 @@ As discussed in the general documentation of protocols, if a type is declared to
 
 
 #### 1.3.7 Accessible Implementations
-With respect to a declaration that a type conforms to a protocol, an implementation of a protocol requirement is visible if, at the point of such declaration: (a) the implementation is an accessible member of the type (with an access level no more restrictive than the access of the protocol requirement); or (b) the implementation is an accessible member of *any* protocol to which the type is expressly or implicitly declared to conform,  or in any visible extension of any such protocol.  For purposes of the foregoing, extensions not visible within the scope in which  
+With respect to a declaration that a type conforms to a protocol, an implementation of a protocol requirement is visible if, at the point of such declaration: (a) the implementation is an accessible member of the type (with an access level no more restrictive than the access of the protocol requirement); or (b) the implementation is an accessible member of *any* protocol to which the type is expressly or implicitly declared to conform (with an access level no more restrictive than the access of the protocol requirement).[^1]  For purposes of the foregoing, extensions not visible within the scope in which  
+
+[^1]:  Drafting Note:  Is it necessary to caveat the access level?
+
 
 or any other protocol from which the protocol directly or indirectly inherits; or (c) the implementation is visible with respect to any other 
 
@@ -315,7 +318,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-BnZm1cbiIsImhpc3RvcnkiOlstMjAxMTk2NDE1NywtMzYyMjA4
+BnZm1cbiIsImhpc3RvcnkiOlstMTU5ODk2MTEyMywtMzYyMjA4
 MjUsMTQzODgxMTYyNywtMTkwMDgzMTY4MywxMTMyNzkwNzM4LC
 0xMjY0NjE4MDI3LDc3NjA1NTI0OCwxOTEzNDc5MDExLC0xMjYx
 MjU4NTAsLTE1OTMwNzM2NDcsLTkxMzU1NTAxNywtMzc0NzYxMD
