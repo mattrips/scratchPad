@@ -73,7 +73,7 @@ As discussed in the general documentation of protocols, if a type is declared to
 
 
 #### 1.3.7 Accessible Implementations
-With respect to the declaration that a type conforms to a protocol, an implementation of a protocol requirement is visible if, at the point of the declaration, the implementation is an accessible member of the type; or (b) the implementation is an accessible member of *any* protocol to which the type is expressly or implicitly declared to conform. In each case, the access level of the implementation must be no more restrictive than the access of the protocol requirement.
+With respect to the declaration that a type conforms to a protocol, an implementation of a protocol requirement is visible if, at the point of the declaration, the implementation is an accessible member of the type or *any* protocol to which the type is expressly or implicitly declared to conform, with the access level of the implementation being no more restrictive than the access level of the protocol.
 [Is it necessary to caveat the access level?]  
 
 #### 1.3.7 Implementations in Line of Inheritance
@@ -314,11 +314,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-BnZm1cbiIsImhpc3RvcnkiOlstODAxNjU4ODc4LC0zNjIyMDgy
-NSwxNDM4ODExNjI3LC0xOTAwODMxNjgzLDExMzI3OTA3MzgsLT
-EyNjQ2MTgwMjcsNzc2MDU1MjQ4LDE5MTM0NzkwMTEsLTEyNjEy
-NTg1MCwtMTU5MzA3MzY0NywtOTEzNTU1MDE3LC0zNzQ3NjEwOC
-w2MjU3NTk3MjUsLTIxNDAyMjc2NzMsMTU5Nzc2MTEwOCwtMTM1
-NzE3NjQzLDc5MDY3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5OD
-ksODY4NzEzMzMxXX0=
+BnZm1cbiIsImhpc3RvcnkiOls3MjEwNTc0NTksLTM2MjIwODI1
+LDE0Mzg4MTE2MjcsLTE5MDA4MzE2ODMsMTEzMjc5MDczOCwtMT
+I2NDYxODAyNyw3NzYwNTUyNDgsMTkxMzQ3OTAxMSwtMTI2MTI1
+ODUwLC0xNTkzMDczNjQ3LC05MTM1NTUwMTcsLTM3NDc2MTA4LD
+YyNTc1OTcyNSwtMjE0MDIyNzY3MywxNTk3NzYxMTA4LC0xMzU3
+MTc2NDMsNzkwNjc4NzkxLDE1MDc1MDgwODYsMTE3ODk3NTk4OS
+w4Njg3MTMzMzFdfQ==
 -->
