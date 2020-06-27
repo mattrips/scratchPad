@@ -73,7 +73,7 @@ As discussed in the general documentation of protocols, if a type is declared to
 
 
 #### 1.3.7 Visible Implementations
-With respect to a declaration that a type conforms to a protocol, an implementation of a protocol requirement is visible if: (a) the implementation is declared in the declaration of the type or in any visible extension thereof; or (b) the implementation is declared on *any* protocol to which the type is expressly or implicitly declared to conform.  For purposes of the foregoing, extensions not visible within the scope in which  
+With respect to a declaration that a type conforms to a protocol, an implementation of a protocol requirement is visible if: (a) the implementation is declared in the declaration of the type, or in any visible extension thereof; or (b) the implementation is declared on *any* protocol to which the type is expressly or implicitly declared to conform,  or in any visible extension of any such protocol.  For purposes of the foregoing, extensions not visible within the scope in which  
 
 or any other protocol from which the protocol directly or indirectly inherits; or (c) the implementation is visible with respect to any other 
 
@@ -315,11 +315,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-BnZm1cbiIsImhpc3RvcnkiOls2NTU2MjE0NDEsMTQzODgxMTYy
-NywtMTkwMDgzMTY4MywxMTMyNzkwNzM4LC0xMjY0NjE4MDI3LD
-c3NjA1NTI0OCwxOTEzNDc5MDExLC0xMjYxMjU4NTAsLTE1OTMw
-NzM2NDcsLTkxMzU1NTAxNywtMzc0NzYxMDgsNjI1NzU5NzI1LC
-0yMTQwMjI3NjczLDE1OTc3NjExMDgsLTEzNTcxNzY0Myw3OTA2
-Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LDg2ODcxMzMzMS
-wtMzE5MDkwODA1XX0=
+BnZm1cbiIsImhpc3RvcnkiOlstMTIyOTU4OTU2OCwxNDM4ODEx
+NjI3LC0xOTAwODMxNjgzLDExMzI3OTA3MzgsLTEyNjQ2MTgwMj
+csNzc2MDU1MjQ4LDE5MTM0NzkwMTEsLTEyNjEyNTg1MCwtMTU5
+MzA3MzY0NywtOTEzNTU1MDE3LC0zNzQ3NjEwOCw2MjU3NTk3Mj
+UsLTIxNDAyMjc2NzMsMTU5Nzc2MTEwOCwtMTM1NzE3NjQzLDc5
+MDY3ODc5MSwxNTA3NTA4MDg2LDExNzg5NzU5ODksODY4NzEzMz
+MxLC0zMTkwOTA4MDVdfQ==
 -->
