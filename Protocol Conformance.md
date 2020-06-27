@@ -92,7 +92,7 @@ With respect to a protocol requirement, it is a compile-time ambiguity error if 
 : [insert a definition]
 
 #### 1.3.8 Relative Specialization of Implementations
-With respect to the declaration that a type conforms to a protocol, as between any two implementations of a protocol requirement, an implementation is the more specialized implementation if it is declared on the type or on a superclass of the type or on a protocol that is more refined than the protocol on which the other implementation is declared.  See, §__ re: refinement of protocols.
+With respect to a declaration that a type conforms to a protocol, as between any two implementations of a protocol requirement, an implementation is the more specialized implementation if it is declared on the type or on a superclass of the type or on a protocol that is more refined than the protocol on which the other implementation is declared.  See, §__ re: refinement of protocols.
   
 
 
@@ -327,7 +327,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzEzNTM3OTM4OTIsMTIwMjc4ODg2
+AnJ1xuIiwiaGlzdG9yeSI6Wy0zNTc0NTQ3NjQsMTIwMjc4ODg2
 NSwtMTI1MDU1OTgzOSw3MjEwNTc0NTksLTM2MjIwODI1LDE0Mz
 g4MTE2MjcsLTE5MDA4MzE2ODMsMTEzMjc5MDczOCwtMTI2NDYx
 ODAyNyw3NzYwNTUyNDgsMTkxMzQ3OTAxMSwtMTI2MTI1ODUwLC
