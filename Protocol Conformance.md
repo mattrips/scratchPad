@@ -1,4 +1,3 @@
-
 ## Terminology
 
 protocol conformance
@@ -333,11 +332,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzE0OTIyMTY4NTEsMzQ3MDEzODU0
-LC0zMTEyNzcxNDgsMTU1Njc1MDcxMiwxMzg4MDU0MzAsLTM1Nz
-Q1NDc2NCwxMjAyNzg4ODY1LC0xMjUwNTU5ODM5LDcyMTA1NzQ1
-OSwtMzYyMjA4MjUsMTQzODgxMTYyNywtMTkwMDgzMTY4MywxMT
-MyNzkwNzM4LC0xMjY0NjE4MDI3LDc3NjA1NTI0OCwxOTEzNDc5
-MDExLC0xMjYxMjU4NTAsLTE1OTMwNzM2NDcsLTkxMzU1NTAxNy
-wtMzc0NzYxMDhdfQ==
+AnJ1xuIiwiaGlzdG9yeSI6WzEzOTE0Nzg5LDM0NzAxMzg1NCwt
+MzExMjc3MTQ4LDE1NTY3NTA3MTIsMTM4ODA1NDMwLC0zNTc0NT
+Q3NjQsMTIwMjc4ODg2NSwtMTI1MDU1OTgzOSw3MjEwNTc0NTks
+LTM2MjIwODI1LDE0Mzg4MTE2MjcsLTE5MDA4MzE2ODMsMTEzMj
+c5MDczOCwtMTI2NDYxODAyNyw3NzYwNTUyNDgsMTkxMzQ3OTAx
+MSwtMTI2MTI1ODUwLC0xNTkzMDczNjQ3LC05MTM1NTUwMTcsLT
+M3NDc2MTA4XX0=
 -->
