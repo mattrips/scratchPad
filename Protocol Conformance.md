@@ -73,7 +73,8 @@ As discussed in the general documentation of protocols, if a type is declared to
 
 
 #### 1.3.7 Accessible Implementations
-With respect to the declaration that a type conforms to a protocol, an implementation of a protocol requirement is visible if, at the point of the declaration, the implementation is an accessible member of the type, whether declared on the type, any superclass from which the type inherits, or *any* protocol to which the type is expressly or implicitly declared to conform.  For purposes of protocol conformance, members available via conditionally declared conformances are considered inaccessible... ON THE EXISTENTIAL BUT NOT ON THE CONCRETE TYPE?
+With respect to the declaration that a type conforms to a protocol, an implementation of a protocol requirement is visible if, at the point of the declaration, the implementation is an accessible member of the type, whether declared on the type, any superclass from which the type inherits, or *any* protocol to which the type is expressly or implicitly declared to conform.  
+
 
 
 [, with the access level of the implementation being no more restrictive than the access level of the protocol.]
@@ -329,11 +330,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0zMTEyNzcxNDgsMTU1Njc1MDcx
-MiwxMzg4MDU0MzAsLTM1NzQ1NDc2NCwxMjAyNzg4ODY1LC0xMj
-UwNTU5ODM5LDcyMTA1NzQ1OSwtMzYyMjA4MjUsMTQzODgxMTYy
-NywtMTkwMDgzMTY4MywxMTMyNzkwNzM4LC0xMjY0NjE4MDI3LD
-c3NjA1NTI0OCwxOTEzNDc5MDExLC0xMjYxMjU4NTAsLTE1OTMw
-NzM2NDcsLTkxMzU1NTAxNywtMzc0NzYxMDgsNjI1NzU5NzI1LC
-0yMTQwMjI3NjczXX0=
+AnJ1xuIiwiaGlzdG9yeSI6WzM0NzAxMzg1NCwtMzExMjc3MTQ4
+LDE1NTY3NTA3MTIsMTM4ODA1NDMwLC0zNTc0NTQ3NjQsMTIwMj
+c4ODg2NSwtMTI1MDU1OTgzOSw3MjEwNTc0NTksLTM2MjIwODI1
+LDE0Mzg4MTE2MjcsLTE5MDA4MzE2ODMsMTEzMjc5MDczOCwtMT
+I2NDYxODAyNyw3NzYwNTUyNDgsMTkxMzQ3OTAxMSwtMTI2MTI1
+ODUwLC0xNTkzMDczNjQ3LC05MTM1NTUwMTcsLTM3NDc2MTA4LD
+YyNTc1OTcyNV19
 -->
