@@ -54,7 +54,7 @@ In a simple case, there may exist only one possible implementation for each prot
 
 In more complex cases, there may be numerous implementations available for each protocol requirement.  Implementations may be scattered across multiple files of the module, in the source code and binary files of imported modules, or in the Standard Library.
 
-&#9724;   Engineering protocol conformance requires careful attention to detail.  It would not be unusual for a small change, far from the point of declaration, to significantly alter a protocol conformance.
+&#9724;   Engineering a protocol conformance requires careful attention to detail.  It would not be unusual for a small change, far from the point of declaration, to significantly alter a protocol conformance.
 
 Possibly available implementations may be declared in any of the following whether within the same module or in a module imported into the file in which the subject type is declared to conform to the subject protocol:
 1. the declaration of the subject type,
@@ -68,6 +68,8 @@ Possibly available implementations may be declared in any of the following wheth
 
 In this case, visible means _____.
 
+#### 1.3.7 Possibly Available Implementations
+In a simple case
 
 ### 1.4 Interaction with Class Inheritance
 
@@ -294,11 +296,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-BnZm1cbiIsImhpc3RvcnkiOlstMTI2NDYxODAyNyw3NzYwNTUy
-NDgsMTkxMzQ3OTAxMSwtMTI2MTI1ODUwLC0xNTkzMDczNjQ3LC
-05MTM1NTUwMTcsLTM3NDc2MTA4LDYyNTc1OTcyNSwtMjE0MDIy
-NzY3MywxNTk3NzYxMTA4LC0xMzU3MTc2NDMsNzkwNjc4NzkxLD
-E1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEsLTMxOTA5
-MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OTcsMjE0NjY2NDQ0OS
-wtMTIwNDI3NTQyM119
+BnZm1cbiIsImhpc3RvcnkiOlstMjEyNjI2ODc1NiwtMTI2NDYx
+ODAyNyw3NzYwNTUyNDgsMTkxMzQ3OTAxMSwtMTI2MTI1ODUwLC
+0xNTkzMDczNjQ3LC05MTM1NTUwMTcsLTM3NDc2MTA4LDYyNTc1
+OTcyNSwtMjE0MDIyNzY3MywxNTk3NzYxMTA4LC0xMzU3MTc2ND
+MsNzkwNjc4NzkxLDE1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3
+MTMzMzEsLTMxOTA5MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OT
+csMjE0NjY2NDQ0OV19
 -->
