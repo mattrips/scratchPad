@@ -73,7 +73,7 @@ As discussed in the general documentation of protocols, if a type is declared to
 
 
 #### 1.3.7 Accessible Implementations
-With respect to the declaration that a type conforms to a protocol, an implementation of a protocol requirement is visible if, at the point of the declaration, the implementation is an accessible member of the type or *any* protocol to which the type is expressly or implicitly declared to conform, with the access level of the implementation being no more restrictive than the access level of the protocol.
+With respect to the declaration that a type conforms to a protocol, an implementation of a protocol requirement is visible if, at the point of the declaration, the implementation is an accessible member of the type, whether declared on the type, any superclass from which the type inherits, or *any* protocol to which the type is expressly or implicitly declared to conform, with the access level of the implementation being no more restrictive than the access level of the protocol.
 [Is it necessary to caveat the access level?  Is the caveat correct?]  
 
 #### 1.3.7 Implementations in Line of Inheritance
@@ -314,7 +314,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-BnZm1cbiIsImhpc3RvcnkiOlstMTQ5ODIyMTY5Myw3MjEwNTc0
+BnZm1cbiIsImhpc3RvcnkiOlstMTI1MDU1OTgzOSw3MjEwNTc0
 NTksLTM2MjIwODI1LDE0Mzg4MTE2MjcsLTE5MDA4MzE2ODMsMT
 EzMjc5MDczOCwtMTI2NDYxODAyNyw3NzYwNTUyNDgsMTkxMzQ3
 OTAxMSwtMTI2MTI1ODUwLC0xNTkzMDczNjQ3LC05MTM1NTUwMT
