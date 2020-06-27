@@ -69,6 +69,8 @@ Possibly available implementations may be declared in any of the following wheth
 In this case, visible means _____.
 
 #### 1.3.7 Implementations in Line of Inheritance
+With respect to a type declared to conform to a protocol, 
+
 With respect to a protocol that inherits from another protocol, the junior protocol has access to all of the implementations available to the senior protocol, including those accessible to the senior protocol by way of inheriting from yet another protocol.  As a result, a protocol that inherits from another protocol will have access to all implementations declared in the line of inheritance, running from the senior-most protocol to the subject protocol.
 By contrast, a senior protocol in an inheritance relationship with a junior protocol does not have access to the methods     
 
@@ -304,11 +306,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-BnZm1cbiIsImhpc3RvcnkiOlstNDc0NjgxNTgsMTEzMjc5MDcz
-OCwtMTI2NDYxODAyNyw3NzYwNTUyNDgsMTkxMzQ3OTAxMSwtMT
-I2MTI1ODUwLC0xNTkzMDczNjQ3LC05MTM1NTUwMTcsLTM3NDc2
-MTA4LDYyNTc1OTcyNSwtMjE0MDIyNzY3MywxNTk3NzYxMTA4LC
-0xMzU3MTc2NDMsNzkwNjc4NzkxLDE1MDc1MDgwODYsMTE3ODk3
-NTk4OSw4Njg3MTMzMzEsLTMxOTA5MDgwNSwxMzQxNDE0NTM2LD
-IwODIwOTE1OTddfQ==
+BnZm1cbiIsImhpc3RvcnkiOlstMTkwMDgzMTY4MywxMTMyNzkw
+NzM4LC0xMjY0NjE4MDI3LDc3NjA1NTI0OCwxOTEzNDc5MDExLC
+0xMjYxMjU4NTAsLTE1OTMwNzM2NDcsLTkxMzU1NTAxNywtMzc0
+NzYxMDgsNjI1NzU5NzI1LC0yMTQwMjI3NjczLDE1OTc3NjExMD
+gsLTEzNTcxNzY0Myw3OTA2Nzg3OTEsMTUwNzUwODA4NiwxMTc4
+OTc1OTg5LDg2ODcxMzMzMSwtMzE5MDkwODA1LDEzNDE0MTQ1Mz
+YsMjA4MjA5MTU5N119
 -->
