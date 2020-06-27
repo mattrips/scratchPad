@@ -224,7 +224,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 
-## Selection of Protocol Conformance
+## Which Protocol Conformance?
 At the point where a protocol requirement is accessed on a conforming type, there may exist more than one protocol to which the type conforms that carries the ability to access the protocol requirement.  Typically, th
 ```mermaid
 sequenceDiagram
@@ -291,11 +291,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-BnZm1cbiIsImhpc3RvcnkiOlsxOTEzNDc5MDExLC0xMjYxMjU4
-NTAsLTE1OTMwNzM2NDcsLTkxMzU1NTAxNywtMzc0NzYxMDgsNj
-I1NzU5NzI1LC0yMTQwMjI3NjczLDE1OTc3NjExMDgsLTEzNTcx
-NzY0Myw3OTA2Nzg3OTEsMTUwNzUwODA4NiwxMTc4OTc1OTg5LD
-g2ODcxMzMzMSwtMzE5MDkwODA1LDEzNDE0MTQ1MzYsMjA4MjA5
-MTU5NywyMTQ2NjY0NDQ5LC0xMjA0Mjc1NDIzLC0xMTE3MTI0Mj
-Y5LDE4MTc4MzgxNjNdfQ==
+BnZm1cbiIsImhpc3RvcnkiOls3NzYwNTUyNDgsMTkxMzQ3OTAx
+MSwtMTI2MTI1ODUwLC0xNTkzMDczNjQ3LC05MTM1NTUwMTcsLT
+M3NDc2MTA4LDYyNTc1OTcyNSwtMjE0MDIyNzY3MywxNTk3NzYx
+MTA4LC0xMzU3MTc2NDMsNzkwNjc4NzkxLDE1MDc1MDgwODYsMT
+E3ODk3NTk4OSw4Njg3MTMzMzEsLTMxOTA5MDgwNSwxMzQxNDE0
+NTM2LDIwODIwOTE1OTcsMjE0NjY2NDQ0OSwtMTIwNDI3NTQyMy
+wtMTExNzEyNDI2OV19
 -->
