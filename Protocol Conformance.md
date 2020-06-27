@@ -91,8 +91,9 @@ With respect to a protocol requirement, it is a compile-time ambiguity error if 
 &#9724; line of protocol inheritance
 : [insert a definition]
 
-#### 1.3.8 Degree of Specialization
-An implementation is more specialized than another implementation if it is declared on the type or is declared on a protocol that inherits from the protocol on which the latter implementation is declared.  
+#### 1.3.8 Most Specialized Implementation
+An implementation declared on the type or a superclass of the type always is the most specialized implementation.  If two impelem 
+is more specialized than another implementation if it is declared on the type or is declared on a protocol that inherits from the protocol on which the latter implementation is declared.  
 [address subclass issues]
 
 
@@ -322,11 +323,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xNjQ2NjkzNTYyLDEyMDI3ODg4
-NjUsLTEyNTA1NTk4MzksNzIxMDU3NDU5LC0zNjIyMDgyNSwxND
-M4ODExNjI3LC0xOTAwODMxNjgzLDExMzI3OTA3MzgsLTEyNjQ2
-MTgwMjcsNzc2MDU1MjQ4LDE5MTM0NzkwMTEsLTEyNjEyNTg1MC
-wtMTU5MzA3MzY0NywtOTEzNTU1MDE3LC0zNzQ3NjEwOCw2MjU3
-NTk3MjUsLTIxNDAyMjc2NzMsMTU5Nzc2MTEwOCwtMTM1NzE3Nj
-QzLDc5MDY3ODc5MV19
+AnJ1xuIiwiaGlzdG9yeSI6WzcxMjA2NjQxNSwxMjAyNzg4ODY1
+LC0xMjUwNTU5ODM5LDcyMTA1NzQ1OSwtMzYyMjA4MjUsMTQzOD
+gxMTYyNywtMTkwMDgzMTY4MywxMTMyNzkwNzM4LC0xMjY0NjE4
+MDI3LDc3NjA1NTI0OCwxOTEzNDc5MDExLC0xMjYxMjU4NTAsLT
+E1OTMwNzM2NDcsLTkxMzU1NTAxNywtMzc0NzYxMDgsNjI1NzU5
+NzI1LC0yMTQwMjI3NjczLDE1OTc3NjExMDgsLTEzNTcxNzY0My
+w3OTA2Nzg3OTFdfQ==
 -->
