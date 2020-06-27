@@ -91,8 +91,8 @@ With respect to a protocol requirement, it is a compile-time ambiguity error if 
 &#9724; line of protocol inheritance
 : [insert a definition]
 
-#### 1.3.8 Most Specialized Implementation
-An implementation declared on the type or a superclass of the type always is the most specialized implementation.  If no such implementation exists, than  if only one implementation 
+#### 1.3.8 Relative Specialization of Implementations
+An implementation declared on the type or a superclass of the type always is the a more specialized implementation than any other possible implementation.  If there is no such implementation exists, than  if only one implementatio
 
 two implementations are declared in the same line of protocol inheritance, the implementation 
 
@@ -327,7 +327,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0yMDUzNzQ4MjgzLDEyMDI3ODg4
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xNzYwODcyNzEzLDEyMDI3ODg4
 NjUsLTEyNTA1NTk4MzksNzIxMDU3NDU5LC0zNjIyMDgyNSwxND
 M4ODExNjI3LC0xOTAwODMxNjgzLDExMzI3OTA3MzgsLTEyNjQ2
 MTgwMjcsNzc2MDU1MjQ4LDE5MTM0NzkwMTEsLTEyNjEyNTg1MC
