@@ -98,6 +98,10 @@ An implementation declared on the type or a superclass of the type always is mor
 is more specialized than another implementation if it is declared on the type or is declared on a protocol that inherits from the protocol on which the latter implementation is declared.  
 [address subclass issues]
 
+#### 1.3._ Provisional Validity Assumption
+
+
+
 
 
 ### 1.4 Interaction with Class Inheritance
@@ -325,11 +329,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xOTMzODQ5MjMxLDEyMDI3ODg4
-NjUsLTEyNTA1NTk4MzksNzIxMDU3NDU5LC0zNjIyMDgyNSwxND
-M4ODExNjI3LC0xOTAwODMxNjgzLDExMzI3OTA3MzgsLTEyNjQ2
-MTgwMjcsNzc2MDU1MjQ4LDE5MTM0NzkwMTEsLTEyNjEyNTg1MC
-wtMTU5MzA3MzY0NywtOTEzNTU1MDE3LC0zNzQ3NjEwOCw2MjU3
-NTk3MjUsLTIxNDAyMjc2NzMsMTU5Nzc2MTEwOCwtMTM1NzE3Nj
-QzLDc5MDY3ODc5MV19
+AnJ1xuIiwiaGlzdG9yeSI6Wy0yNjAwNDAxMDMsMTIwMjc4ODg2
+NSwtMTI1MDU1OTgzOSw3MjEwNTc0NTksLTM2MjIwODI1LDE0Mz
+g4MTE2MjcsLTE5MDA4MzE2ODMsMTEzMjc5MDczOCwtMTI2NDYx
+ODAyNyw3NzYwNTUyNDgsMTkxMzQ3OTAxMSwtMTI2MTI1ODUwLC
+0xNTkzMDczNjQ3LC05MTM1NTUwMTcsLTM3NDc2MTA4LDYyNTc1
+OTcyNSwtMjE0MDIyNzY3MywxNTk3NzYxMTA4LC0xMzU3MTc2ND
+MsNzkwNjc4NzkxXX0=
 -->
