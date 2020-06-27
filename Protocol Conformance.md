@@ -28,26 +28,6 @@ With respect to the a type that is declared to conform to a protocol, for each p
 
 The purpose of a protocol conformance is to define which witness will be accessed when a given protocol requirement is accessed.
 
-### 1.1c Model of a Protocol Conformance
-With respect to the declaration that a type conforms to a protocol, the protocol conformance is a collection containing the witness for each protocol requirement of the protocol.
- 
-&#9724;   Metaphorically, a protocol conformance may be modeled as an immutable struct containing a declaration that a type conforms to a protocol and a dictionary of protocol requirement-witness pairs:
-```swift
-struct ConformanceDeclaration {
-	let type: Type // must be a struct, enum or class
-	let protocol: Type // must be a protocol
-}
-
-struct ProtocolConformance {
-	let declaration: ConformanceDeclaration
-	let witnesses: [ProtocolRequirement: Witness]
-	
-	init(/* the entire visible context */) {
-		// See §1.4 of this guide
-	}
-}
-```
-
 ### 1.3 Underpinnings of Protocol Conformance
 
 #### 1.3.1 Singular
@@ -89,7 +69,7 @@ Possibly available implementations may be declared in any of the following wheth
 In this case, visible means _____.
 
 
-### Interaction with Class Inheritance
+### 1.4 Interaction with Class Inheritance
 
 Where a class conforms to a protocol, the nature of class inheritance impacts the availability of implementations for purposes of protocol conformance.  For instance, a superclass may expose functionality that incidentally has the same signature as a protocol requirement.  Conversely, if a class is declared to conform to a protocol, the implementations in a subclass of the class are not available to satisfy the protocol requirements.
 
@@ -224,6 +204,29 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 
+
+### 1.1c Model of a Protocol Conformance
+With respect to the declaration that a type conforms to a protocol, the protocol conformance is a collection containing the witness for each protocol requirement of the protocol.
+ 
+&#9724;   Metaphorically, a protocol conformance may be modeled as an immutable struct containing a declaration that a type conforms to a protocol and a dictionary of protocol requirement-witness pairs:
+```swift
+struct ConformanceDeclaration {
+	let type: Type // must be a struct, enum or class
+	let protocol: Type // must be a protocol
+}
+
+struct ProtocolConformance {
+	let declaration: ConformanceDeclaration
+	let witnesses: [ProtocolRequirement: Witness]
+	
+	init(/* the entire visible context */) {
+		// See §1.4 of this guide
+	}
+}
+```
+
+
+
 ## Which Protocol Conformance?
 At the point where a protocol requirement is accessed on a conforming type, there may exist more than one protocol to which the type conforms that carries the ability to access the protocol requirement.  Typically, th
 ```mermaid
@@ -291,11 +294,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-BnZm1cbiIsImhpc3RvcnkiOlsxMjU3NzY3MTkwLDc3NjA1NTI0
-OCwxOTEzNDc5MDExLC0xMjYxMjU4NTAsLTE1OTMwNzM2NDcsLT
-kxMzU1NTAxNywtMzc0NzYxMDgsNjI1NzU5NzI1LC0yMTQwMjI3
-NjczLDE1OTc3NjExMDgsLTEzNTcxNzY0Myw3OTA2Nzg3OTEsMT
-UwNzUwODA4NiwxMTc4OTc1OTg5LDg2ODcxMzMzMSwtMzE5MDkw
-ODA1LDEzNDE0MTQ1MzYsMjA4MjA5MTU5NywyMTQ2NjY0NDQ5LC
-0xMjA0Mjc1NDIzXX0=
+BnZm1cbiIsImhpc3RvcnkiOlstMTI2NDYxODAyNyw3NzYwNTUy
+NDgsMTkxMzQ3OTAxMSwtMTI2MTI1ODUwLC0xNTkzMDczNjQ3LC
+05MTM1NTUwMTcsLTM3NDc2MTA4LDYyNTc1OTcyNSwtMjE0MDIy
+NzY3MywxNTk3NzYxMTA4LC0xMzU3MTc2NDMsNzkwNjc4NzkxLD
+E1MDc1MDgwODYsMTE3ODk3NTk4OSw4Njg3MTMzMzEsLTMxOTA5
+MDgwNSwxMzQxNDE0NTM2LDIwODIwOTE1OTcsMjE0NjY2NDQ0OS
+wtMTIwNDI3NTQyM119
 -->
