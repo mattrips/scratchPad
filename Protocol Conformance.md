@@ -1,15 +1,12 @@
-<head>  
-<style>  
-note  {ackground-color: b}  
-</style>  
-</head>
 
 ## Terminology
 
 protocol conformance
 : The set of witnesses used to satisfy the requirements of a given protocol.
 
+<block style="color:blue;"> 
 A protocol specifies a set of requirements.  A protocol may be applied to any type that satisfies its protocol requirements.  
+</block>
 
 A protocol also may supply functionality, which may serve as default implementations of its own protocol requirements.  A protocol provide may provide additional functionality of an arbitrary nature.  
 
@@ -336,11 +333,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xMDg1NDQ1MTYwLDM0NzAxMzg1
-NCwtMzExMjc3MTQ4LDE1NTY3NTA3MTIsMTM4ODA1NDMwLC0zNT
-c0NTQ3NjQsMTIwMjc4ODg2NSwtMTI1MDU1OTgzOSw3MjEwNTc0
-NTksLTM2MjIwODI1LDE0Mzg4MTE2MjcsLTE5MDA4MzE2ODMsMT
-EzMjc5MDczOCwtMTI2NDYxODAyNyw3NzYwNTUyNDgsMTkxMzQ3
-OTAxMSwtMTI2MTI1ODUwLC0xNTkzMDczNjQ3LC05MTM1NTUwMT
-csLTM3NDc2MTA4XX0=
+AnJ1xuIiwiaGlzdG9yeSI6WzE0OTIyMTY4NTEsMzQ3MDEzODU0
+LC0zMTEyNzcxNDgsMTU1Njc1MDcxMiwxMzg4MDU0MzAsLTM1Nz
+Q1NDc2NCwxMjAyNzg4ODY1LC0xMjUwNTU5ODM5LDcyMTA1NzQ1
+OSwtMzYyMjA4MjUsMTQzODgxMTYyNywtMTkwMDgzMTY4MywxMT
+MyNzkwNzM4LC0xMjY0NjE4MDI3LDc3NjA1NTI0OCwxOTEzNDc5
+MDExLC0xMjYxMjU4NTAsLTE1OTMwNzM2NDcsLTkxMzU1NTAxNy
+wtMzc0NzYxMDhdfQ==
 -->
