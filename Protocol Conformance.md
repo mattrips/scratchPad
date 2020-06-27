@@ -92,7 +92,8 @@ With respect to a protocol requirement, it is a compile-time ambiguity error if 
 &#9724; line of protocol inheritance
 : [insert a definition]
 
-
+#### 1.3.9 Conflicting Implementations
+With respect to a protocol requirement, it is a compile-time ambiguity error if multiple accessible implementations exist and not all such implementations belong to the same line of protocol inheritance.  The compiler does not attempt to resolve the ambiguity.
 
 
 ### 1.4 Interaction with Class Inheritance
@@ -320,11 +321,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy00Njc0Mjg0NSwxMjAyNzg4ODY1
-LC0xMjUwNTU5ODM5LDcyMTA1NzQ1OSwtMzYyMjA4MjUsMTQzOD
-gxMTYyNywtMTkwMDgzMTY4MywxMTMyNzkwNzM4LC0xMjY0NjE4
-MDI3LDc3NjA1NTI0OCwxOTEzNDc5MDExLC0xMjYxMjU4NTAsLT
-E1OTMwNzM2NDcsLTkxMzU1NTAxNywtMzc0NzYxMDgsNjI1NzU5
-NzI1LC0yMTQwMjI3NjczLDE1OTc3NjExMDgsLTEzNTcxNzY0My
-w3OTA2Nzg3OTFdfQ==
+AnJ1xuIiwiaGlzdG9yeSI6WzE2NzM2MTM3MTIsMTIwMjc4ODg2
+NSwtMTI1MDU1OTgzOSw3MjEwNTc0NTksLTM2MjIwODI1LDE0Mz
+g4MTE2MjcsLTE5MDA4MzE2ODMsMTEzMjc5MDczOCwtMTI2NDYx
+ODAyNyw3NzYwNTUyNDgsMTkxMzQ3OTAxMSwtMTI2MTI1ODUwLC
+0xNTkzMDczNjQ3LC05MTM1NTUwMTcsLTM3NDc2MTA4LDYyNTc1
+OTcyNSwtMjE0MDIyNzY3MywxNTk3NzYxMTA4LC0xMzU3MTc2ND
+MsNzkwNjc4NzkxXX0=
 -->
