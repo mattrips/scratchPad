@@ -77,6 +77,9 @@ With respect to the declaration that a type conforms to a protocol, an implement
 [, with the access level of the implementation being no more restrictive than the access level of the protocol.]
 [Is it necessary to caveat the access level?  Is the caveat correct?]  
 
+#### 1.3.8 Degree of Specialization
+
+
 #### 1.3.7 Implementations in Line of Inheritance
 With respect to a type declared to conform to a protocol, 
 
@@ -315,11 +318,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-BnZm1cbiIsImhpc3RvcnkiOlszMDEzNDMyMTUsLTEyNTA1NTk4
-MzksNzIxMDU3NDU5LC0zNjIyMDgyNSwxNDM4ODExNjI3LC0xOT
-AwODMxNjgzLDExMzI3OTA3MzgsLTEyNjQ2MTgwMjcsNzc2MDU1
-MjQ4LDE5MTM0NzkwMTEsLTEyNjEyNTg1MCwtMTU5MzA3MzY0Ny
-wtOTEzNTU1MDE3LC0zNzQ3NjEwOCw2MjU3NTk3MjUsLTIxNDAy
-Mjc2NzMsMTU5Nzc2MTEwOCwtMTM1NzE3NjQzLDc5MDY3ODc5MS
-wxNTA3NTA4MDg2XX0=
+BnZm1cbiIsImhpc3RvcnkiOlsxMjUxNTMxNTgzLC0xMjUwNTU5
+ODM5LDcyMTA1NzQ1OSwtMzYyMjA4MjUsMTQzODgxMTYyNywtMT
+kwMDgzMTY4MywxMTMyNzkwNzM4LC0xMjY0NjE4MDI3LDc3NjA1
+NTI0OCwxOTEzNDc5MDExLC0xMjYxMjU4NTAsLTE1OTMwNzM2ND
+csLTkxMzU1NTAxNywtMzc0NzYxMDgsNjI1NzU5NzI1LC0yMTQw
+MjI3NjczLDE1OTc3NjExMDgsLTEzNTcxNzY0Myw3OTA2Nzg3OT
+EsMTUwNzUwODA4Nl19
 -->
