@@ -87,7 +87,9 @@ With respect to a protocol that inherits from another protocol, the junior proto
 By contrast, a senior protocol in an inheritance relationship with a junior protocol does not have access to the methods     
 
 #### 1.3.8 Conflicting Implementations
-With respect to a protocol requirement, it is a compile-time ambiguity error if multiple accessible implementations exist and not all such implementations belong to the same line of protocol.  The compiler does not attempt to resolve the ambiguity.
+With respect to a protocol requirement, it is a compile-time ambiguity error if multiple accessible implementations exist and not all such implementations belong to the same line of protocol inheritance.  The compiler does not attempt to resolve the ambiguity.
+&#9724; line of protocol inheritance
+
 
 
 ### 1.4 Interaction with Class Inheritance
@@ -315,7 +317,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-BnZm1cbiIsImhpc3RvcnkiOlstMTY2Mjg2OTgxNSwxMjAyNzg4
+BnZm1cbiIsImhpc3RvcnkiOlstMTM5MDY2MTcwNCwxMjAyNzg4
 ODY1LC0xMjUwNTU5ODM5LDcyMTA1NzQ1OSwtMzYyMjA4MjUsMT
 QzODgxMTYyNywtMTkwMDgzMTY4MywxMTMyNzkwNzM4LC0xMjY0
 NjE4MDI3LDc3NjA1NTI0OCwxOTEzNDc5MDExLC0xMjYxMjU4NT
