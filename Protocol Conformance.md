@@ -73,7 +73,9 @@ As discussed in the general documentation of protocols, if a type is declared to
 
 
 #### 1.3.7 Accessible Implementations
-With respect to the declaration that a type conforms to a protocol, an implementation of a protocol requirement is visible if, at the point of the declaration, the implementation is an accessible member of the type, whether declared on the type, any superclass from which the type inherits, or *any* protocol to which the type is expressly or implicitly declared to conform.
+With respect to the declaration that a type conforms to a protocol, an implementation of a protocol requirement is visible if, at the point of the declaration, the implementation is an accessible member of the type, whether declared on the type, any superclass from which the type inherits, or *any* protocol to which the type is expressly or implicitly declared to conform.  For purposes of protocol conformance, conditionally declared members are considered inaccessible unless all 
+
+
 [, with the access level of the implementation being no more restrictive than the access level of the protocol.]
 [Is it necessary to caveat the access level?  Is the caveat correct?]  
 [what about impls declared on a protocol that a superclass of the type conforms to?]
@@ -327,11 +329,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0zNTc0NTQ3NjQsMTIwMjc4ODg2
-NSwtMTI1MDU1OTgzOSw3MjEwNTc0NTksLTM2MjIwODI1LDE0Mz
-g4MTE2MjcsLTE5MDA4MzE2ODMsMTEzMjc5MDczOCwtMTI2NDYx
-ODAyNyw3NzYwNTUyNDgsMTkxMzQ3OTAxMSwtMTI2MTI1ODUwLC
-0xNTkzMDczNjQ3LC05MTM1NTUwMTcsLTM3NDc2MTA4LDYyNTc1
-OTcyNSwtMjE0MDIyNzY3MywxNTk3NzYxMTA4LC0xMzU3MTc2ND
-MsNzkwNjc4NzkxXX0=
+AnJ1xuIiwiaGlzdG9yeSI6WzEzODgwNTQzMCwtMzU3NDU0NzY0
+LDEyMDI3ODg4NjUsLTEyNTA1NTk4MzksNzIxMDU3NDU5LC0zNj
+IyMDgyNSwxNDM4ODExNjI3LC0xOTAwODMxNjgzLDExMzI3OTA3
+MzgsLTEyNjQ2MTgwMjcsNzc2MDU1MjQ4LDE5MTM0NzkwMTEsLT
+EyNjEyNTg1MCwtMTU5MzA3MzY0NywtOTEzNTU1MDE3LC0zNzQ3
+NjEwOCw2MjU3NTk3MjUsLTIxNDAyMjc2NzMsMTU5Nzc2MTEwOC
+wtMTM1NzE3NjQzXX0=
 -->
