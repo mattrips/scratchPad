@@ -76,7 +76,7 @@ As discussed in the general documentation of protocols, if a type is declared to
 With respect to the declaration that a type conforms to a protocol, an implementation of a protocol requirement is visible if, at the point of the declaration, the implementation is an accessible member of the type, whether declared on the type, any superclass from which the type inherits, or *any* protocol to which the type is expressly or implicitly declared to conform.
 [, with the access level of the implementation being no more restrictive than the access level of the protocol.]
 [Is it necessary to caveat the access level?  Is the caveat correct?]  
-
+[what about impls declared on a protocol that a superclass of the type conforms to?]
 
 
 #### 1.3.7 Implementations in Line of Inheritance
@@ -92,7 +92,9 @@ With respect to a protocol requirement, it is a compile-time ambiguity error if 
 : [insert a definition]
 
 #### 1.3.8 Degree of Specialization
-An implementation is more specialized than another implementation if it is declared on the type or is declared on a protocol that inherits from the protocol on which the latter implementation is declared.
+An implementation is more specialized than another implementation if it is declared on the type or is declared on a protocol that inherits from the protocol on which the latter implementation is declared.  
+[address subclass issues]
+
 
 
 ### 1.4 Interaction with Class Inheritance
@@ -320,11 +322,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xODI1NzMwNjgsMTIwMjc4ODg2
-NSwtMTI1MDU1OTgzOSw3MjEwNTc0NTksLTM2MjIwODI1LDE0Mz
-g4MTE2MjcsLTE5MDA4MzE2ODMsMTEzMjc5MDczOCwtMTI2NDYx
-ODAyNyw3NzYwNTUyNDgsMTkxMzQ3OTAxMSwtMTI2MTI1ODUwLC
-0xNTkzMDczNjQ3LC05MTM1NTUwMTcsLTM3NDc2MTA4LDYyNTc1
-OTcyNSwtMjE0MDIyNzY3MywxNTk3NzYxMTA4LC0xMzU3MTc2ND
-MsNzkwNjc4NzkxXX0=
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xNjQ2NjkzNTYyLDEyMDI3ODg4
+NjUsLTEyNTA1NTk4MzksNzIxMDU3NDU5LC0zNjIyMDgyNSwxND
+M4ODExNjI3LC0xOTAwODMxNjgzLDExMzI3OTA3MzgsLTEyNjQ2
+MTgwMjcsNzc2MDU1MjQ4LDE5MTM0NzkwMTEsLTEyNjEyNTg1MC
+wtMTU5MzA3MzY0NywtOTEzNTU1MDE3LC0zNzQ3NjEwOCw2MjU3
+NTk3MjUsLTIxNDAyMjc2NzMsMTU5Nzc2MTEwOCwtMTM1NzE3Nj
+QzLDc5MDY3ODc5MV19
 -->
