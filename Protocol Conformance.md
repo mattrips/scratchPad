@@ -87,7 +87,7 @@ With respect to a protocol that inherits from another protocol, the junior proto
 By contrast, a senior protocol in an inheritance relationship with a junior protocol does not have access to the methods     
 
 #### 1.3.8 Conflicting Implementations
-If a type has more than one accessible implementation of a protocol requirement, and not all such implementations 
+With respect to a protocol requirement, if a type receives an accessible implementation from one protocol to which it conforms and another accessible implementation form 
 
 At the lexical point where a type is declared to conform to a protocol, 
 
@@ -318,7 +318,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-BnZm1cbiIsImhpc3RvcnkiOlstMTcwNDY3OTc3MCwtMTI1MDU1
+BnZm1cbiIsImhpc3RvcnkiOlstMTcwMDc1MjgyMCwtMTI1MDU1
 OTgzOSw3MjEwNTc0NTksLTM2MjIwODI1LDE0Mzg4MTE2MjcsLT
 E5MDA4MzE2ODMsMTEzMjc5MDczOCwtMTI2NDYxODAyNyw3NzYw
 NTUyNDgsMTkxMzQ3OTAxMSwtMTI2MTI1ODUwLC0xNTkzMDczNj
