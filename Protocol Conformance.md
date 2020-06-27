@@ -69,7 +69,7 @@ Possibly available implementations may be declared in any of the following wheth
 In this case, visible means _____.
 
 #### 1.3.7 Implicit Conformance
-As discussed in the general documentation of protocols, at ___, if a type is declared to conform unconditionally to a protocol, that declaration also acts as an implicity 
+As discussed in the general documentation of protocols, if a type is declared to conform unconditionally to a protocol, that declaration also acts as an implicit declaration that the type conforms to all other protocols from which the protocol directly or indirectly inherits.
 
 
 #### 1.3.7 Visible Implementations
@@ -315,7 +315,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-BnZm1cbiIsImhpc3RvcnkiOlstNDY3NjQ3MTg2LC0xOTAwODMx
+BnZm1cbiIsImhpc3RvcnkiOlsxNDM4ODExNjI3LC0xOTAwODMx
 NjgzLDExMzI3OTA3MzgsLTEyNjQ2MTgwMjcsNzc2MDU1MjQ4LD
 E5MTM0NzkwMTEsLTEyNjEyNTg1MCwtMTU5MzA3MzY0NywtOTEz
 NTU1MDE3LC0zNzQ3NjEwOCw2MjU3NTk3MjUsLTIxNDAyMjc2Nz
