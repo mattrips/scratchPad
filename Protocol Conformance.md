@@ -18,7 +18,7 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 : A statement in a protocol declaration describing a property, method, initializer, subscript or associatedtype that a type conforming to the protocol must implement.
 
 &#9724; implementation
-: A property, method, initializer, subscript or typealias that is capable of satisfying a given protocol requirement.   
+: Given a protocol requirementA property, method, enum case, initializer, subscript or typealias that is capable of satisfying a .   
 
 ### 1.1 The Witness
 If a type is declared to conform to a protocol, the type must satisfy each of the protocol requirements of the protocol.  The type does so by having available at least one implementation--that is at least one property, method, initializer, subscript or typealias--for each protocol requirement of the protocol.  
@@ -333,11 +333,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzEzNTQ5NzA1NzgsLTEwODA3OTAy
-NTEsMTM5MTQ3ODksMzQ3MDEzODU0LC0zMTEyNzcxNDgsMTU1Nj
-c1MDcxMiwxMzg4MDU0MzAsLTM1NzQ1NDc2NCwxMjAyNzg4ODY1
-LC0xMjUwNTU5ODM5LDcyMTA1NzQ1OSwtMzYyMjA4MjUsMTQzOD
-gxMTYyNywtMTkwMDgzMTY4MywxMTMyNzkwNzM4LC0xMjY0NjE4
-MDI3LDc3NjA1NTI0OCwxOTEzNDc5MDExLC0xMjYxMjU4NTAsLT
-E1OTMwNzM2NDddfQ==
+AnJ1xuIiwiaGlzdG9yeSI6Wy0yMDk3Mzg3MDgyLDEzNTQ5NzA1
+NzgsLTEwODA3OTAyNTEsMTM5MTQ3ODksMzQ3MDEzODU0LC0zMT
+EyNzcxNDgsMTU1Njc1MDcxMiwxMzg4MDU0MzAsLTM1NzQ1NDc2
+NCwxMjAyNzg4ODY1LC0xMjUwNTU5ODM5LDcyMTA1NzQ1OSwtMz
+YyMjA4MjUsMTQzODgxMTYyNywtMTkwMDgzMTY4MywxMTMyNzkw
+NzM4LC0xMjY0NjE4MDI3LDc3NjA1NTI0OCwxOTEzNDc5MDExLC
+0xMjYxMjU4NTBdfQ==
 -->
