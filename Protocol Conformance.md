@@ -23,8 +23,11 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 &#9724; declared requirement
 : Given a protocol, a protocol requirement expressly declared 
 
+&#9724; declared requirement
+: Given a protocol `P`, all protocol requirements of `P` that are declared . 
+
 &#9724; inherited requirement
-: Given a protocol `Q` that is declared to inherit from a protocol `P`, all protocol requirements of `P`, including both its declared requirements and inherited requirements. 
+: Given a protocol `Q` that is declared to inherit from a protocol `P`, all protocol requirements of `P`. 
 
 
 
@@ -341,11 +344,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy05Mjg4NDg2OTUsMTY1NjM3NTAw
-NywtMTQxMDU2MTIyMywtNDY1MTAwMDQ5LC00OTg4ODQ1MDMsMT
-M1NDk3MDU3OCwtMTA4MDc5MDI1MSwxMzkxNDc4OSwzNDcwMTM4
-NTQsLTMxMTI3NzE0OCwxNTU2NzUwNzEyLDEzODgwNTQzMCwtMz
-U3NDU0NzY0LDEyMDI3ODg4NjUsLTEyNTA1NTk4MzksNzIxMDU3
-NDU5LC0zNjIyMDgyNSwxNDM4ODExNjI3LC0xOTAwODMxNjgzLD
-ExMzI3OTA3MzhdfQ==
+AnJ1xuIiwiaGlzdG9yeSI6Wy01Mzk2MTkxNDQsLTkyODg0ODY5
+NSwxNjU2Mzc1MDA3LC0xNDEwNTYxMjIzLC00NjUxMDAwNDksLT
+Q5ODg4NDUwMywxMzU0OTcwNTc4LC0xMDgwNzkwMjUxLDEzOTE0
+Nzg5LDM0NzAxMzg1NCwtMzExMjc3MTQ4LDE1NTY3NTA3MTIsMT
+M4ODA1NDMwLC0zNTc0NTQ3NjQsMTIwMjc4ODg2NSwtMTI1MDU1
+OTgzOSw3MjEwNTc0NTksLTM2MjIwODI1LDE0Mzg4MTE2MjcsLT
+E5MDA4MzE2ODNdfQ==
 -->
