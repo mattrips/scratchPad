@@ -22,7 +22,7 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 
 &#9724; witness
 : Given a protocol requirement of a protocol and a declaration that a type conforms to the protocol, the ***witness*** is the one and only implementation that will be used to satisfy the protocol requirement.
-[comments:  this does not apply in the case of a non-protoc]
+[comments:  this does not apply in the case of the direct use of an implementation -- calling the impl.]
 
 &#9724; declared requirement
 : Given a protocol `Q`, a protocol requirement declared within the declaration of `Q`. 
@@ -348,11 +348,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy00NDg1NTU5NywtMzA1NzI1MjE4
-LC03MjgzNzE3NzcsODQzNTgwODA4LDEyNTYzMTA2MjYsMTIzNT
-k1MTQxLC0yMDM0OTcyMjkwLC0xMDQ3OTExNDA5LC05Mjg4NDg2
-OTUsMTY1NjM3NTAwNywtMTQxMDU2MTIyMywtNDY1MTAwMDQ5LC
-00OTg4ODQ1MDMsMTM1NDk3MDU3OCwtMTA4MDc5MDI1MSwxMzkx
-NDc4OSwzNDcwMTM4NTQsLTMxMTI3NzE0OCwxNTU2NzUwNzEyLD
-EzODgwNTQzMF19
+AnJ1xuIiwiaGlzdG9yeSI6Wy02OTM0NzU2ODEsLTMwNTcyNTIx
+OCwtNzI4MzcxNzc3LDg0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMz
+U5NTE0MSwtMjAzNDk3MjI5MCwtMTA0NzkxMTQwOSwtOTI4ODQ4
+Njk1LDE2NTYzNzUwMDcsLTE0MTA1NjEyMjMsLTQ2NTEwMDA0OS
+wtNDk4ODg0NTAzLDEzNTQ5NzA1NzgsLTEwODA3OTAyNTEsMTM5
+MTQ3ODksMzQ3MDEzODU0LC0zMTEyNzcxNDgsMTU1Njc1MDcxMi
+wxMzg4MDU0MzBdfQ==
 -->
