@@ -20,8 +20,8 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 &#9724; implementation
 : Given a protocol requirement, a property, method, enum case, initializer, subscript or typealias that is capable of satisfying such requirement.   
 
-&#9724; protocol requirement
-: asdf
+&#9724; inherited requirement
+: Given a protocl
 
 
 
@@ -338,11 +338,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy00OTg4ODQ1MDMsMTM1NDk3MDU3
-OCwtMTA4MDc5MDI1MSwxMzkxNDc4OSwzNDcwMTM4NTQsLTMxMT
-I3NzE0OCwxNTU2NzUwNzEyLDEzODgwNTQzMCwtMzU3NDU0NzY0
-LDEyMDI3ODg4NjUsLTEyNTA1NTk4MzksNzIxMDU3NDU5LC0zNj
-IyMDgyNSwxNDM4ODExNjI3LC0xOTAwODMxNjgzLDExMzI3OTA3
-MzgsLTEyNjQ2MTgwMjcsNzc2MDU1MjQ4LDE5MTM0NzkwMTEsLT
-EyNjEyNTg1MF19
+AnJ1xuIiwiaGlzdG9yeSI6WzYzODYzNzY5MiwtNDk4ODg0NTAz
+LDEzNTQ5NzA1NzgsLTEwODA3OTAyNTEsMTM5MTQ3ODksMzQ3MD
+EzODU0LC0zMTEyNzcxNDgsMTU1Njc1MDcxMiwxMzg4MDU0MzAs
+LTM1NzQ1NDc2NCwxMjAyNzg4ODY1LC0xMjUwNTU5ODM5LDcyMT
+A1NzQ1OSwtMzYyMjA4MjUsMTQzODgxMTYyNywtMTkwMDgzMTY4
+MywxMTMyNzkwNzM4LC0xMjY0NjE4MDI3LDc3NjA1NTI0OCwxOT
+EzNDc5MDExXX0=
 -->
