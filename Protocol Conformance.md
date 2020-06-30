@@ -21,7 +21,7 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 : Given a protocol requirement, a property, method, enum case, initializer, subscript or typealias that is capable of satisfying such requirement.   
 
 &#9724; inherited requirement
-: Given a protocl
+: Given a protocol `Q` that is declared to inherit from a protocol `P`, all protocol requirements of `P`, including  
 
 
 
@@ -338,11 +338,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzYzODYzNzY5MiwtNDk4ODg0NTAz
-LDEzNTQ5NzA1NzgsLTEwODA3OTAyNTEsMTM5MTQ3ODksMzQ3MD
-EzODU0LC0zMTEyNzcxNDgsMTU1Njc1MDcxMiwxMzg4MDU0MzAs
-LTM1NzQ1NDc2NCwxMjAyNzg4ODY1LC0xMjUwNTU5ODM5LDcyMT
-A1NzQ1OSwtMzYyMjA4MjUsMTQzODgxMTYyNywtMTkwMDgzMTY4
-MywxMTMyNzkwNzM4LC0xMjY0NjE4MDI3LDc3NjA1NTI0OCwxOT
-EzNDc5MDExXX0=
+AnJ1xuIiwiaGlzdG9yeSI6Wy01NDY1Mjc5NzcsLTQ5ODg4NDUw
+MywxMzU0OTcwNTc4LC0xMDgwNzkwMjUxLDEzOTE0Nzg5LDM0Nz
+AxMzg1NCwtMzExMjc3MTQ4LDE1NTY3NTA3MTIsMTM4ODA1NDMw
+LC0zNTc0NTQ3NjQsMTIwMjc4ODg2NSwtMTI1MDU1OTgzOSw3Mj
+EwNTc0NTksLTM2MjIwODI1LDE0Mzg4MTE2MjcsLTE5MDA4MzE2
+ODMsMTEzMjc5MDczOCwtMTI2NDYxODAyNyw3NzYwNTUyNDgsMT
+kxMzQ3OTAxMV19
 -->
