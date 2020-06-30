@@ -21,7 +21,7 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 : Given a protocol requirement and a type, a member of the type that is capable of satisfying the protocol requirement.   
 
 &#9724; witness
-: Given a declaration that a type conforms to a protocol  protocol requirement, the particular implementation used to satisfy a protocol requirement.
+: Given a declaration that a type conforms to a protocol and a protocol requirement of that protocol, the particular implementation used to satisfy the protocol requirement.
 
 &#9724; declared requirement
 : Given a protocol `Q`, all protocol requirements of `Q` that are declared within the declaration of `Q`. 
@@ -345,11 +345,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy04ODI1NDIwMzgsMTIzNTk1MTQx
-LC0yMDM0OTcyMjkwLC0xMDQ3OTExNDA5LC05Mjg4NDg2OTUsMT
-Y1NjM3NTAwNywtMTQxMDU2MTIyMywtNDY1MTAwMDQ5LC00OTg4
-ODQ1MDMsMTM1NDk3MDU3OCwtMTA4MDc5MDI1MSwxMzkxNDc4OS
-wzNDcwMTM4NTQsLTMxMTI3NzE0OCwxNTU2NzUwNzEyLDEzODgw
-NTQzMCwtMzU3NDU0NzY0LDEyMDI3ODg4NjUsLTEyNTA1NTk4Mz
-ksNzIxMDU3NDU5XX0=
+AnJ1xuIiwiaGlzdG9yeSI6WzIyMTg5OTU1NiwxMjM1OTUxNDEs
+LTIwMzQ5NzIyOTAsLTEwNDc5MTE0MDksLTkyODg0ODY5NSwxNj
+U2Mzc1MDA3LC0xNDEwNTYxMjIzLC00NjUxMDAwNDksLTQ5ODg4
+NDUwMywxMzU0OTcwNTc4LC0xMDgwNzkwMjUxLDEzOTE0Nzg5LD
+M0NzAxMzg1NCwtMzExMjc3MTQ4LDE1NTY3NTA3MTIsMTM4ODA1
+NDMwLC0zNTc0NTQ3NjQsMTIwMjc4ODg2NSwtMTI1MDU1OTgzOS
+w3MjEwNTc0NTldfQ==
 -->
