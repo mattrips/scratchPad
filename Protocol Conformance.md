@@ -20,8 +20,11 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 &#9724; implementation
 : Given a protocol requirement, a property, method, enum case, initializer, subscript or typealias that is capable of satisfying such requirement.   
 
+&#9724; declared requirement
+: Given a protocol, a protocol requirement expressly declared 
+
 &#9724; inherited requirement
-: Given a protocol `Q` that is declared to inherit from a protocol `P`, all protocol requirements of `P`, including  
+: Given a protocol `Q` that is declared to inherit from a protocol `P`, all protocol requirements of `P`, including both its declared requirements and inherited requirements. 
 
 
 
@@ -338,7 +341,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy01NDY1Mjc5NzcsLTQ5ODg4NDUw
+AnJ1xuIiwiaGlzdG9yeSI6Wy00NjUxMDAwNDksLTQ5ODg4NDUw
 MywxMzU0OTcwNTc4LC0xMDgwNzkwMjUxLDEzOTE0Nzg5LDM0Nz
 AxMzg1NCwtMzExMjc3MTQ4LDE1NTY3NTA3MTIsMTM4ODA1NDMw
 LC0zNTc0NTQ3NjQsMTIwMjc4ODg2NSwtMTI1MDU1OTgzOSw3Mj
