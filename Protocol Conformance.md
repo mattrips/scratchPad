@@ -15,10 +15,15 @@ Most powerfully, a protocol may serve as the basis for an existential type beari
 With respect to a type declared to conform to a protocol, a protocol conformance specifies, for each protocol requirement of the protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement when invoked on the type.  Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
 
 &#9724; protocol requirement
-: A statement in a protocol declaration describing a property, method, initializer, subscript or associatedtype that a type conforming to the protocol must implement.
+: Given a protocol, a statement in the declaration of a protocol whi describing a property, method, initializer, subscript or associatedtype that a type conforming to the protocol must implement.
 
 &#9724; implementation
 : Given a protocol requirement, a property, method, enum case, initializer, subscript or typealias that is capable of satisfying such requirement.   
+
+&#9724; protocol requirement
+: asdf
+
+
 
 ### 1.1 The Witness
 If a type is declared to conform to a protocol, the type must satisfy each of the protocol requirements of the protocol.  The type does so by having available at least one implementation--that is at least one property, method, initializer, subscript or typealias--for each protocol requirement of the protocol.  
@@ -333,11 +338,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy05MDg2MzQ0MywxMzU0OTcwNTc4
-LC0xMDgwNzkwMjUxLDEzOTE0Nzg5LDM0NzAxMzg1NCwtMzExMj
-c3MTQ4LDE1NTY3NTA3MTIsMTM4ODA1NDMwLC0zNTc0NTQ3NjQs
-MTIwMjc4ODg2NSwtMTI1MDU1OTgzOSw3MjEwNTc0NTksLTM2Mj
-IwODI1LDE0Mzg4MTE2MjcsLTE5MDA4MzE2ODMsMTEzMjc5MDcz
-OCwtMTI2NDYxODAyNyw3NzYwNTUyNDgsMTkxMzQ3OTAxMSwtMT
-I2MTI1ODUwXX0=
+AnJ1xuIiwiaGlzdG9yeSI6WzEzMDIzMzg3MjgsMTM1NDk3MDU3
+OCwtMTA4MDc5MDI1MSwxMzkxNDc4OSwzNDcwMTM4NTQsLTMxMT
+I3NzE0OCwxNTU2NzUwNzEyLDEzODgwNTQzMCwtMzU3NDU0NzY0
+LDEyMDI3ODg4NjUsLTEyNTA1NTk4MzksNzIxMDU3NDU5LC0zNj
+IyMDgyNSwxNDM4ODExNjI3LC0xOTAwODMxNjgzLDExMzI3OTA3
+MzgsLTEyNjQ2MTgwMjcsNzc2MDU1MjQ4LDE5MTM0NzkwMTEsLT
+EyNjEyNTg1MF19
 -->
