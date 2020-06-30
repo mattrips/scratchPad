@@ -27,6 +27,8 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 : Given a protocol `Q` that inherits from a protocol `P`, all protocol requirements of `P`. 
 
 
+NOTE:  where a concrete type has a conditional extension, that extension does not participate in protocol conformance.
+
 
 ### 1.1 The Witness
 If a type is declared to conform to a protocol, the type must satisfy each of the protocol requirements of the protocol.  The type does so by having available at least one implementation--that is at least one property, method, initializer, subscript or typealias--for each protocol requirement of the protocol.  
@@ -341,11 +343,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0yMDM0OTcyMjkwLC0xMDQ3OTEx
-NDA5LC05Mjg4NDg2OTUsMTY1NjM3NTAwNywtMTQxMDU2MTIyMy
-wtNDY1MTAwMDQ5LC00OTg4ODQ1MDMsMTM1NDk3MDU3OCwtMTA4
-MDc5MDI1MSwxMzkxNDc4OSwzNDcwMTM4NTQsLTMxMTI3NzE0OC
-wxNTU2NzUwNzEyLDEzODgwNTQzMCwtMzU3NDU0NzY0LDEyMDI3
-ODg4NjUsLTEyNTA1NTk4MzksNzIxMDU3NDU5LC0zNjIyMDgyNS
-wxNDM4ODExNjI3XX0=
+AnJ1xuIiwiaGlzdG9yeSI6Wy03NzE1MDk3MTUsLTIwMzQ5NzIy
+OTAsLTEwNDc5MTE0MDksLTkyODg0ODY5NSwxNjU2Mzc1MDA3LC
+0xNDEwNTYxMjIzLC00NjUxMDAwNDksLTQ5ODg4NDUwMywxMzU0
+OTcwNTc4LC0xMDgwNzkwMjUxLDEzOTE0Nzg5LDM0NzAxMzg1NC
+wtMzExMjc3MTQ4LDE1NTY3NTA3MTIsMTM4ODA1NDMwLC0zNTc0
+NTQ3NjQsMTIwMjc4ODg2NSwtMTI1MDU1OTgzOSw3MjEwNTc0NT
+ksLTM2MjIwODI1XX0=
 -->
