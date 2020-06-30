@@ -15,7 +15,7 @@ Most powerfully, a protocol may serve as the basis for an existential type beari
 With respect to a type declared to conform to a protocol, a protocol conformance specifies, for each protocol requirement of the protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement when invoked on the type.  Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
 
 &#9724; protocol requirement
-: Given a protocol, a statement in the declaration of a protocol that describes a member that a type conforming to the protocol must implement.
+: Given a protocol, a statement in the declaration of a protocol that describes a member that a type conforming to the protocol must implement (a/k/a protocol member declaration).
 
 &#9724; implementation
 : Given a protocol requirement, a property, method, enum case, initializer, subscript or typealias that is capable of satisfying such requirement.   
@@ -341,11 +341,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xNDEwNTYxMjIzLC00NjUxMDAw
-NDksLTQ5ODg4NDUwMywxMzU0OTcwNTc4LC0xMDgwNzkwMjUxLD
-EzOTE0Nzg5LDM0NzAxMzg1NCwtMzExMjc3MTQ4LDE1NTY3NTA3
-MTIsMTM4ODA1NDMwLC0zNTc0NTQ3NjQsMTIwMjc4ODg2NSwtMT
-I1MDU1OTgzOSw3MjEwNTc0NTksLTM2MjIwODI1LDE0Mzg4MTE2
-MjcsLTE5MDA4MzE2ODMsMTEzMjc5MDczOCwtMTI2NDYxODAyNy
-w3NzYwNTUyNDhdfQ==
+AnJ1xuIiwiaGlzdG9yeSI6WzE2NTYzNzUwMDcsLTE0MTA1NjEy
+MjMsLTQ2NTEwMDA0OSwtNDk4ODg0NTAzLDEzNTQ5NzA1NzgsLT
+EwODA3OTAyNTEsMTM5MTQ3ODksMzQ3MDEzODU0LC0zMTEyNzcx
+NDgsMTU1Njc1MDcxMiwxMzg4MDU0MzAsLTM1NzQ1NDc2NCwxMj
+AyNzg4ODY1LC0xMjUwNTU5ODM5LDcyMTA1NzQ1OSwtMzYyMjA4
+MjUsMTQzODgxMTYyNywtMTkwMDgzMTY4MywxMTMyNzkwNzM4LC
+0xMjY0NjE4MDI3XX0=
 -->
