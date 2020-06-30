@@ -17,8 +17,14 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 &#9724; protocol requirement
 : Given a protocol, a ***protocol requirement*** is a statement in the declaration of a protocol that describes a member that a type must have as a condition of being able to be declared to conform to the protocol.
 
+
+
 &#9724; implementation
 : Given a protocol requirement and a type, an ***implementation*** is a member of the type that is capable of satisfying the requirement.
+
+&#9724; member of a type
+: A property, method, initializer, typealias or enum case is a member of a given type if it is declared in any of:  the declaration of the type, any extension of the type, or any extension of any protocol to which the type conforms.
+[types have other members; ]
 
 &#9724; witness
 : Given a protocol requirement of a protocol and a declaration that a type conforms to the protocol, the ***witness*** is the one and only implementation that will be used to satisfy the protocol requirement.
@@ -30,9 +36,7 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 &#9724; inherited requirements
 : Given a protocol `Q` that inherits from a protocol `P`, all protocol requirements of `P`. 
 
-&#9724; member of a type
-: A property, method, initializer, typealias or enum case is a member of a given type if it is declared in any of:  the declaration of the type, any extension of the type, or any extension of any protocol to which the type conforms.
-[types have other members; ]
+
 
 
 
@@ -349,11 +353,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xOTUzMDE1MjEsMTYwOTg4NzAw
-NSwtODUzNjMxNzMzLC0zMDU3MjUyMTgsLTcyODM3MTc3Nyw4ND
-M1ODA4MDgsMTI1NjMxMDYyNiwxMjM1OTUxNDEsLTIwMzQ5NzIy
-OTAsLTEwNDc5MTE0MDksLTkyODg0ODY5NSwxNjU2Mzc1MDA3LC
-0xNDEwNTYxMjIzLC00NjUxMDAwNDksLTQ5ODg4NDUwMywxMzU0
-OTcwNTc4LC0xMDgwNzkwMjUxLDEzOTE0Nzg5LDM0NzAxMzg1NC
-wtMzExMjc3MTQ4XX0=
+AnJ1xuIiwiaGlzdG9yeSI6WzE2ODYzMTAxMjksLTE5NTMwMTUy
+MSwxNjA5ODg3MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIxOCwtNz
+I4MzcxNzc3LDg0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMzU5NTE0
+MSwtMjAzNDk3MjI5MCwtMTA0NzkxMTQwOSwtOTI4ODQ4Njk1LD
+E2NTYzNzUwMDcsLTE0MTA1NjEyMjMsLTQ2NTEwMDA0OSwtNDk4
+ODg0NTAzLDEzNTQ5NzA1NzgsLTEwODA3OTAyNTEsMTM5MTQ3OD
+ksMzQ3MDEzODU0XX0=
 -->
