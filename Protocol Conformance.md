@@ -242,6 +242,7 @@ Annotations:
 
 [test harness to ensure desired protocol conformance]
 
+[https://forums.swift.org/t/protocol-witness-matching-mini-manifesto/32752]
 
 ### 1.1c Model of a Protocol Conformance
 With respect to the declaration that a type conforms to a protocol, the protocol conformance is a collection containing the witness for each protocol requirement of the protocol.
@@ -332,11 +333,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xMDgwNzkwMjUxLDEzOTE0Nzg5
-LDM0NzAxMzg1NCwtMzExMjc3MTQ4LDE1NTY3NTA3MTIsMTM4OD
-A1NDMwLC0zNTc0NTQ3NjQsMTIwMjc4ODg2NSwtMTI1MDU1OTgz
-OSw3MjEwNTc0NTksLTM2MjIwODI1LDE0Mzg4MTE2MjcsLTE5MD
-A4MzE2ODMsMTEzMjc5MDczOCwtMTI2NDYxODAyNyw3NzYwNTUy
-NDgsMTkxMzQ3OTAxMSwtMTI2MTI1ODUwLC0xNTkzMDczNjQ3LC
-05MTM1NTUwMTddfQ==
+AnJ1xuIiwiaGlzdG9yeSI6WzEzNTQ5NzA1NzgsLTEwODA3OTAy
+NTEsMTM5MTQ3ODksMzQ3MDEzODU0LC0zMTEyNzcxNDgsMTU1Nj
+c1MDcxMiwxMzg4MDU0MzAsLTM1NzQ1NDc2NCwxMjAyNzg4ODY1
+LC0xMjUwNTU5ODM5LDcyMTA1NzQ1OSwtMzYyMjA4MjUsMTQzOD
+gxMTYyNywtMTkwMDgzMTY4MywxMTMyNzkwNzM4LC0xMjY0NjE4
+MDI3LDc3NjA1NTI0OCwxOTEzNDc5MDExLC0xMjYxMjU4NTAsLT
+E1OTMwNzM2NDddfQ==
 -->
