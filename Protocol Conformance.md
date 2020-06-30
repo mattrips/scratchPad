@@ -17,10 +17,8 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 &#9724; protocol requirement
 : Given a protocol, a statement in the declaration of a protocol that describes a member that a conforming type must have.
 
-
-
 &#9724; implementation
-: Given a protocol requirement, a property, method, enum case, initializer, subscript or typealias that is capable of satisfying such requirement.   
+: Given a protocol requirement and a type, a member of the type that is capable of satisfying the protocol requirement.   
 
 &#9724; declared requirement
 : Given a protocol `Q`, all protocol requirements of `Q` that are declared within the declaration of `Q`. 
@@ -344,11 +342,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzEyMzU5NTE0MSwtMjAzNDk3MjI5
-MCwtMTA0NzkxMTQwOSwtOTI4ODQ4Njk1LDE2NTYzNzUwMDcsLT
-E0MTA1NjEyMjMsLTQ2NTEwMDA0OSwtNDk4ODg0NTAzLDEzNTQ5
-NzA1NzgsLTEwODA3OTAyNTEsMTM5MTQ3ODksMzQ3MDEzODU0LC
-0zMTEyNzcxNDgsMTU1Njc1MDcxMiwxMzg4MDU0MzAsLTM1NzQ1
-NDc2NCwxMjAyNzg4ODY1LC0xMjUwNTU5ODM5LDcyMTA1NzQ1OS
-wtMzYyMjA4MjVdfQ==
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xNjY1MjI3MTE2LDEyMzU5NTE0
+MSwtMjAzNDk3MjI5MCwtMTA0NzkxMTQwOSwtOTI4ODQ4Njk1LD
+E2NTYzNzUwMDcsLTE0MTA1NjEyMjMsLTQ2NTEwMDA0OSwtNDk4
+ODg0NTAzLDEzNTQ5NzA1NzgsLTEwODA3OTAyNTEsMTM5MTQ3OD
+ksMzQ3MDEzODU0LC0zMTEyNzcxNDgsMTU1Njc1MDcxMiwxMzg4
+MDU0MzAsLTM1NzQ1NDc2NCwxMjAyNzg4ODY1LC0xMjUwNTU5OD
+M5LDcyMTA1NzQ1OV19
 -->
