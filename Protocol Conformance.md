@@ -18,9 +18,7 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 : Given a protocol, a ***protocol requirement*** is a statement in the declaration of a protocol that describes a member that a type must have as a condition of being able to be declared to conform to the protocol.
 
   * This is my laration of a protocol that describes a member that a type must have as a condition of being able to be declared to conform to the protocol.
-     * asdf
-  * pdf 
-
+   
 
 
 &#9724; implementation
@@ -357,11 +355,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzE5NDc1MDUzMywxNjg2MzEwMTI5
-LC0xOTUzMDE1MjEsMTYwOTg4NzAwNSwtODUzNjMxNzMzLC0zMD
-U3MjUyMTgsLTcyODM3MTc3Nyw4NDM1ODA4MDgsMTI1NjMxMDYy
-NiwxMjM1OTUxNDEsLTIwMzQ5NzIyOTAsLTEwNDc5MTE0MDksLT
-kyODg0ODY5NSwxNjU2Mzc1MDA3LC0xNDEwNTYxMjIzLC00NjUx
-MDAwNDksLTQ5ODg4NDUwMywxMzU0OTcwNTc4LC0xMDgwNzkwMj
-UxLDEzOTE0Nzg5XX0=
+AnJ1xuIiwiaGlzdG9yeSI6WzExMzc5NjAzMzksMTY4NjMxMDEy
+OSwtMTk1MzAxNTIxLDE2MDk4ODcwMDUsLTg1MzYzMTczMywtMz
+A1NzI1MjE4LC03MjgzNzE3NzcsODQzNTgwODA4LDEyNTYzMTA2
+MjYsMTIzNTk1MTQxLC0yMDM0OTcyMjkwLC0xMDQ3OTExNDA5LC
+05Mjg4NDg2OTUsMTY1NjM3NTAwNywtMTQxMDU2MTIyMywtNDY1
+MTAwMDQ5LC00OTg4ODQ1MDMsMTM1NDk3MDU3OCwtMTA4MDc5MD
+I1MSwxMzkxNDc4OV19
 -->
