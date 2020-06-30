@@ -15,10 +15,11 @@ Most powerfully, a protocol may serve as the basis for an existential type beari
 With respect to a type declared to conform to a protocol, a protocol conformance specifies, for each protocol requirement of the protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement when invoked on the type.  Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
 
 &#9724; protocol requirement
-: Given a protocol, a statement in the declaration of a protocol that describes a member that a conforming type must have.
+: Given a protocol, a statement in the declaration of a protocol that describes a member 
+... that a conforming type must have.
 
 &#9724; implementation
-: Given a protocol requirement and a type, a member of the type that is capable of satisfying the protocol requirement.   
+: Given a protocol requirement and a type, a member of the type that is capable of satisfying the requirement is referred to as an implementation of the requirement.
 
 &#9724; witness
 : Given a declaration that a type conforms to a protocol and given a protocol requirement of the protocol, the particular implementation used by the type to satisfy the protocol requirement.
@@ -345,11 +346,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wzk0MDQ4NjQxMiwxMjM1OTUxNDEs
-LTIwMzQ5NzIyOTAsLTEwNDc5MTE0MDksLTkyODg0ODY5NSwxNj
-U2Mzc1MDA3LC0xNDEwNTYxMjIzLC00NjUxMDAwNDksLTQ5ODg4
-NDUwMywxMzU0OTcwNTc4LC0xMDgwNzkwMjUxLDEzOTE0Nzg5LD
-M0NzAxMzg1NCwtMzExMjc3MTQ4LDE1NTY3NTA3MTIsMTM4ODA1
-NDMwLC0zNTc0NTQ3NjQsMTIwMjc4ODg2NSwtMTI1MDU1OTgzOS
-w3MjEwNTc0NTldfQ==
+AnJ1xuIiwiaGlzdG9yeSI6WzIwMjI3MDMzMzAsMTIzNTk1MTQx
+LC0yMDM0OTcyMjkwLC0xMDQ3OTExNDA5LC05Mjg4NDg2OTUsMT
+Y1NjM3NTAwNywtMTQxMDU2MTIyMywtNDY1MTAwMDQ5LC00OTg4
+ODQ1MDMsMTM1NDk3MDU3OCwtMTA4MDc5MDI1MSwxMzkxNDc4OS
+wzNDcwMTM4NTQsLTMxMTI3NzE0OCwxNTU2NzUwNzEyLDEzODgw
+NTQzMCwtMzU3NDU0NzY0LDEyMDI3ODg4NjUsLTEyNTA1NTk4Mz
+ksNzIxMDU3NDU5XX0=
 -->
