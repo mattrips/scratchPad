@@ -31,7 +31,7 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 : Given a protocol `Q` that inherits from a protocol `P`, all protocol requirements of `P`. 
 
 &#9724; members of a type
-: Given a type, the ***members of the type*** are any property, method, initializer, typealias or enum case declared in the declaration of the type, any extension of the type, or any extension of any protocol to which the type conforms.
+: Given a type, a property, method, initializer, typealias or enum case declared in the declaration of the type, any extension of the type, or any extension of any protocol to which the type conforms.
 
 
 
@@ -348,11 +348,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzE2MDk4ODcwMDUsLTg1MzYzMTcz
-MywtMzA1NzI1MjE4LC03MjgzNzE3NzcsODQzNTgwODA4LDEyNT
-YzMTA2MjYsMTIzNTk1MTQxLC0yMDM0OTcyMjkwLC0xMDQ3OTEx
-NDA5LC05Mjg4NDg2OTUsMTY1NjM3NTAwNywtMTQxMDU2MTIyMy
-wtNDY1MTAwMDQ5LC00OTg4ODQ1MDMsMTM1NDk3MDU3OCwtMTA4
-MDc5MDI1MSwxMzkxNDc4OSwzNDcwMTM4NTQsLTMxMTI3NzE0OC
-wxNTU2NzUwNzEyXX0=
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xMDM0Mzc3NTQ2LDE2MDk4ODcw
+MDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3NzcsOD
+QzNTgwODA4LDEyNTYzMTA2MjYsMTIzNTk1MTQxLC0yMDM0OTcy
+MjkwLC0xMDQ3OTExNDA5LC05Mjg4NDg2OTUsMTY1NjM3NTAwNy
+wtMTQxMDU2MTIyMywtNDY1MTAwMDQ5LC00OTg4ODQ1MDMsMTM1
+NDk3MDU3OCwtMTA4MDc5MDI1MSwxMzkxNDc4OSwzNDcwMTM4NT
+QsLTMxMTI3NzE0OF19
 -->
