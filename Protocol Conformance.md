@@ -15,7 +15,7 @@ Most powerfully, a protocol may serve as the basis for an existential type beari
 With respect to a type declared to conform to a protocol, a protocol conformance specifies, for each protocol requirement of the protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement when invoked on the type.  Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
 
 &#9724; protocol requirement
-: Given a protocol, a statement in the declaration of a protocol that describes a member that a type conforming to the protocol must implement (a/k/a protocol member declaration).
+: Given a protocol, a statement in the declaration of a protocol that describes a member that a type conforming to the protocol must implement (a/k/a all *protocol-member-declaration* excepting therefrom, any *typealias-declartion*).
 
 &#9724; implementation
 : Given a protocol requirement, a property, method, enum case, initializer, subscript or typealias that is capable of satisfying such requirement.   
@@ -341,11 +341,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzE2NTYzNzUwMDcsLTE0MTA1NjEy
-MjMsLTQ2NTEwMDA0OSwtNDk4ODg0NTAzLDEzNTQ5NzA1NzgsLT
-EwODA3OTAyNTEsMTM5MTQ3ODksMzQ3MDEzODU0LC0zMTEyNzcx
-NDgsMTU1Njc1MDcxMiwxMzg4MDU0MzAsLTM1NzQ1NDc2NCwxMj
-AyNzg4ODY1LC0xMjUwNTU5ODM5LDcyMTA1NzQ1OSwtMzYyMjA4
-MjUsMTQzODgxMTYyNywtMTkwMDgzMTY4MywxMTMyNzkwNzM4LC
-0xMjY0NjE4MDI3XX0=
+AnJ1xuIiwiaGlzdG9yeSI6Wy05Mjg4NDg2OTUsMTY1NjM3NTAw
+NywtMTQxMDU2MTIyMywtNDY1MTAwMDQ5LC00OTg4ODQ1MDMsMT
+M1NDk3MDU3OCwtMTA4MDc5MDI1MSwxMzkxNDc4OSwzNDcwMTM4
+NTQsLTMxMTI3NzE0OCwxNTU2NzUwNzEyLDEzODgwNTQzMCwtMz
+U3NDU0NzY0LDEyMDI3ODg4NjUsLTEyNTA1NTk4MzksNzIxMDU3
+NDU5LC0zNjIyMDgyNSwxNDM4ODExNjI3LC0xOTAwODMxNjgzLD
+ExMzI3OTA3MzhdfQ==
 -->
