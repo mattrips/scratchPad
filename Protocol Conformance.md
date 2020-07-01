@@ -27,7 +27,7 @@ If `t` is declared to conform to `p`, then, for protocol requirement `m` of `p`,
 
 A type may have more than one implementation of a given protocol requirement.  Given the declaration `t: p` and protocol requirement `m` of `p`, the protocol witness for `m` is the *most specialized* implementation from among the implementations that are *unconditionally accessible* on `t`, as determined in the scope in which the declaration `t: p` is stated.  If `t` has only one *unconditionally accessible* implementation of `m`,  that implementation will be the protocol witness.  If `t` has more than one *unconditionally accessible* implementation of `m`,  the *most specialized* of those implementations will be the protocol witness.
 
-An implementation cannot be declared to be protocol witness.  The identify of the protocol witness for a protocol requirement is inferred from the entirety of the scope, including all declarations made within the scope and those imported into the scope.  For a type conforming to a multitude of protocols, the potential sources of implementations may be numerous and far flung.  For the conformance of a type to a protocol,   the determination of which implementation is used as the witness for a requirement of the protocol may be altered by a small change to a distant declaration of a different, but related, protocol
+An implementation cannot be declared to be protocol witness.  The identify of the protocol witness for a protocol requirement is inferred from the entirety of the scope, including all declarations made within the scope and those imported into the scope.  For a type conforming to a multitude of protocols, the potential sources of implementations may be numerous and far flung.  For the conformance of a type to a protocol,   the determination of which implementation is used as the protocol witness for a requirement of the protocol may be altered by a small change to a distant declaration of a different, but related, protocol or by a change to the declaration of the type, any of which could take place in a different module.
 
 Carefuly engineering is required.  For instance,  .
 
@@ -400,7 +400,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy02NjA2MjcyMTUsMTc0MzUwOTky
+AnJ1xuIiwiaGlzdG9yeSI6Wy04MDg1MzIwMDAsMTc0MzUwOTky
 NCwxMjEzNTAxNDkyLDUzNzU3MjUxNiwxMTM3OTYwMzM5LDE2OD
 YzMTAxMjksLTE5NTMwMTUyMSwxNjA5ODg3MDA1LC04NTM2MzE3
 MzMsLTMwNTcyNTIxOCwtNzI4MzcxNzc3LDg0MzU4MDgwOCwxMj
