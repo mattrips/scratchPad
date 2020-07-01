@@ -25,8 +25,9 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 &#9724; protocol witness set
 : Given a declaration that a type conforms to a protocol, the protocol witness set is the set consisting of the protocol witness for each declared requirement of the protocol.
   * The protocol witness set is immutable.
-  * If the protocol has not declared requirements, the protocol witness set is empty.
-  * Inherited requirements do not participate in
+  * If the protocol has no declared requirements, the protocol witness set is empty.
+  * Inherited requirements of the protocol are irrelevant to determination of the protocol witness set.
+  * 
 
 
 &#9724; unconditionally accessible implementation
@@ -374,11 +375,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wzc0MTM3ODM1MCw1Mzc1NzI1MTYs
-MTEzNzk2MDMzOSwxNjg2MzEwMTI5LC0xOTUzMDE1MjEsMTYwOT
-g4NzAwNSwtODUzNjMxNzMzLC0zMDU3MjUyMTgsLTcyODM3MTc3
-Nyw4NDM1ODA4MDgsMTI1NjMxMDYyNiwxMjM1OTUxNDEsLTIwMz
-Q5NzIyOTAsLTEwNDc5MTE0MDksLTkyODg0ODY5NSwxNjU2Mzc1
-MDA3LC0xNDEwNTYxMjIzLC00NjUxMDAwNDksLTQ5ODg4NDUwMy
-wxMzU0OTcwNTc4XX0=
+AnJ1xuIiwiaGlzdG9yeSI6WzI5ODg1NzQsNTM3NTcyNTE2LDEx
+Mzc5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MDk4OD
+cwMDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3Nzcs
+ODQzNTgwODA4LDEyNTYzMTA2MjYsMTIzNTk1MTQxLC0yMDM0OT
+cyMjkwLC0xMDQ3OTExNDA5LC05Mjg4NDg2OTUsMTY1NjM3NTAw
+NywtMTQxMDU2MTIyMywtNDY1MTAwMDQ5LC00OTg4ODQ1MDMsMT
+M1NDk3MDU3OF19
 -->
