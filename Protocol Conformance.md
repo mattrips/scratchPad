@@ -22,7 +22,7 @@ A type's possible implementation of a protocol requirement is available to serve
 
 With respect to generic types, clause (i) of this rule is not fully implemented.  A generic type instantiated with its generic arguments specified as concrete types may be referred to as a *concretization* of the generic type.  A concretization is a type separate and apart from its generic type.  Swift's existing implementation of protocols does not include the ability for a concretization to develop its own, specialized conformance relationship with a protocol.  Instead, a concretization uses the protocol conformances of its generic type, without specialization for implementations available via the concretization.  Thus, although a concretization may satisfy the conditions of a generic where clause that would make an implementation unconditionally accessible, the implementation subject to such where clause nevertheless is unavailable to serve as a protocol witness for the shared conformance.  
   * Although specialized implementations available to a concretization are not available to serve as protocol witnesses and cannot be accessed via the interface of a protocol, they remain members of the concretization.  Accordingly, as members, they may be accessed directly on the concretization following the rules applicable to resolution of overloads.
-  * Notwithstanding the general inability of concretizations to take advantage of specialized implementations, the `Collection` family of protocols in the Standard Library has certain abilities to access specialized implementations for concretizations of generic types conforming to `BidirectionalCollection` and `RandomAccessCollection`.  This ability is obtained through use of a private attribute.
+  * Notwithstanding the general inability of concretizations to take advantage of specialized implementations, the `Collection` family of protocols in the Standard Library uses a private attribute to access specialized implementations for concretizations of generic types conforming to `BidirectionalCollection` and `RandomAccessCollection`.
   
 
 ## 1.4 Most Specialized Implementation
@@ -394,11 +394,11 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xMzM1NjE4OTYwLDgwMDkyODIx
-MCwtMTEyMjU3OTI0MCwxNTYzMDk1MzIxLC0yMTQzNDU3NzgyLD
-U3MzI1MDkzNiwtMTExMTQwMzY2LC0xOTk3OTc3MjgyLC0xNzA0
-MzMwNjIwLDY2MDE1NzA4MSwxODYwMTQ1NTU2LDY2MDQyODEyOS
-wtNjQ2MzkwNDE5LC0yOTA3NTg0MzEsMTc0MzUwOTkyNCwxMjEz
-NTAxNDkyLDUzNzU3MjUxNiwxMTM3OTYwMzM5LDE2ODYzMTAxMj
-ksLTE5NTMwMTUyMV19
+AnJ1xuIiwiaGlzdG9yeSI6WzEwODA5NTc3NzcsODAwOTI4MjEw
+LC0xMTIyNTc5MjQwLDE1NjMwOTUzMjEsLTIxNDM0NTc3ODIsNT
+czMjUwOTM2LC0xMTExNDAzNjYsLTE5OTc5NzcyODIsLTE3MDQz
+MzA2MjAsNjYwMTU3MDgxLDE4NjAxNDU1NTYsNjYwNDI4MTI5LC
+02NDYzOTA0MTksLTI5MDc1ODQzMSwxNzQzNTA5OTI0LDEyMTM1
+MDE0OTIsNTM3NTcyNTE2LDExMzc5NjAzMzksMTY4NjMxMDEyOS
+wtMTk1MzAxNTIxXX0=
 -->
