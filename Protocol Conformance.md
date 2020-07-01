@@ -16,7 +16,7 @@ A type may have more than one implementation of a given protocol requirement.  G
 
 An implementation is not declared to be a protocol witness.  The identity of the protocol witness for a protocol requirement is inferred from the entirety of the scope, including all declarations made within the scope and those imported into the scope.  Careful engineering is required in order to achieve the intended witness for a given requirement.
 
-The identity of a protocol witness will not change during the
+The identity of a protocol witness is determined in relation to the declaration of a protocol conformance.    
 
 ## 1.3 Unconditionally Accessible Implementations
 Given a declaration that a type conforms to the protocol, the scope in which such declaration is stated, and an implementation of a protocol requirement of the protocol, the implementation is unconditionally accessible if and only if (i) the conditions of any generic where clause to which the declaration of the implementation is subject are satisfied, and (ii) per the rules of access control, the implementation is visible in the scope.
@@ -400,11 +400,11 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xMjg5MjA3NTYyLC0yOTA3NTg0
-MzEsMTc0MzUwOTkyNCwxMjEzNTAxNDkyLDUzNzU3MjUxNiwxMT
-M3OTYwMzM5LDE2ODYzMTAxMjksLTE5NTMwMTUyMSwxNjA5ODg3
-MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIxOCwtNzI4MzcxNzc3LD
-g0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMzU5NTE0MSwtMjAzNDk3
-MjI5MCwtMTA0NzkxMTQwOSwtOTI4ODQ4Njk1LDE2NTYzNzUwMD
-csLTE0MTA1NjEyMjNdfQ==
+AnJ1xuIiwiaGlzdG9yeSI6Wy05NDM4NTM2NzIsLTI5MDc1ODQz
+MSwxNzQzNTA5OTI0LDEyMTM1MDE0OTIsNTM3NTcyNTE2LDExMz
+c5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MDk4ODcw
+MDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3NzcsOD
+QzNTgwODA4LDEyNTYzMTA2MjYsMTIzNTk1MTQxLC0yMDM0OTcy
+MjkwLC0xMDQ3OTExNDA5LC05Mjg4NDg2OTUsMTY1NjM3NTAwNy
+wtMTQxMDU2MTIyM119
 -->
