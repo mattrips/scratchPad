@@ -34,8 +34,12 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 &#9724; protocol witness
 : Given a protocol requirement of a protocol and a declaration that a type conforms to the protocol, the ***protocol witness*** with respect to such protocol requirement is the most specialized implementation from among the implementations that are unconditionally accessible on the type in the scope in which the conformance is declared.
 
-&#9724; unconditionally accessible implementation
-: Given a type in a scope, a me
+&#9724; accessible member
+: Given a type in a scope, a member of the type is accessible if, per the rules of access control, the member is visible in the scope.
+
+&#9724; accessible member
+: Given a type in a scope, a member of the type is accessible if, per the rules of access control, the member is visible in the scope.
+
 
 
 &#9724; protocol requirement
@@ -377,7 +381,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0yOTE4MjgxMjEsNTM3NTcyNTE2
+AnJ1xuIiwiaGlzdG9yeSI6WzE3NDI0MDAwODgsNTM3NTcyNTE2
 LDExMzc5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MD
 k4ODcwMDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3
 NzcsODQzNTgwODA4LDEyNTYzMTA2MjYsMTIzNTk1MTQxLC0yMD
