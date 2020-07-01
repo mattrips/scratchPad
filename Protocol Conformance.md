@@ -30,9 +30,12 @@ With respect to a type declared to conform to a protocol, a protocol conformance
   * If a protocol has no declared requirements, the protocol witness set for conformances to the protocol is empty.
   * Inherited requirements of a protocol are irrelevant to determination of a protocol witness set.
   * 
+  
+&#9724; implementation
+: Given a protocol requirement and a type, an ***implementation*** is a member of the type that is capable of satisfying the requirement.
 
 &#9724; protocol witness
-: Given a protocol requirement of a protocol and a declaration that a type conforms to the protocol, the ***protocol witness*** with respect to such protocol requirement is the most specialized implementation from among the implementations that are unconditionally accessible.
+: Given a protocol requirement of a protocol and a declaration that a type conforms to the protocol, the ***protocol witness*** for such protocol requirement is the most specialized implementation from among the implementations that are unconditionally accessible.
 
 &#9724; unconditionally accessible implementation
 : Given a declaration that a type conforms to the protocol, the scope in which such declaration is stated, and an implementation of a protocol requirement of the protocol, the implementation is unconditionally accessible if and only if (i) the conditions of any generic where clause to which the declaration of the implementation is subject are satisfied, and (ii) per the rules of access control, the implementation is visible in the scope.
@@ -51,8 +54,7 @@ With respect to a type declared to conform to a protocol, a protocol conformance
    
 
 
-&#9724; implementation
-: Given a protocol requirement and a type, an ***implementation*** is a member of the type that is capable of satisfying the requirement.
+
 
 &#9724; member of a type
 : A property, method, initializer, typealias or enum case is a member of a given type if it is declared in any of:  the declaration of the type, any extension of the type, or any extension of any protocol to which the type conforms.
@@ -383,7 +385,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xNjYwNTY3MzYyLDUzNzU3MjUx
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xNDg4NTUyMTk4LDUzNzU3MjUx
 NiwxMTM3OTYwMzM5LDE2ODYzMTAxMjksLTE5NTMwMTUyMSwxNj
 A5ODg3MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIxOCwtNzI4Mzcx
 Nzc3LDg0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMzU5NTE0MSwtMj
