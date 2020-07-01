@@ -25,7 +25,7 @@ Given a protocol `p`, a *protocol requirement* `m` is a statement in the declara
 
 If `t` is declared to conform to `p`, then, for protocol requirement `m` of `p`, one and only one of `t`'s  implementations of `m` will actually be used as the implementation of `m`.  Such implementation of `m` is referred to as the *protocol witness* for the `m` requirement of the conformance `t: p`.  A protocol witness exists with respect to a given protocol requirement of a given declaration of conformance of a type to a protocol.
 
-A type may have more than one implementation of a given protocol requirement.  Given a declaration that a type `t` conforms to a protocol `p` and a protocol requirement `m` of `p`, the ***protocol witness*** for such protocol requirement is the most specialized implementation from among the implementations that are unconditionally accessible on the type.
+A type may have more than one implementation of a given protocol requirement.  Given a declaration that a type `t` conforms to a protocol `p` and a protocol requirement `m` of `p`, the protocol witness for `m` is the most specialized implementation from among the implementations that are unconditionally accessible on `t`., as determined in the scope in which the declaration of conformance is state
 
 If a type has only one *unconditionally accessible* implementation of a given protocol requirement, then that implementation will be the protocol witness.  If a type has more than *unconditionally accessible* implementation of a given protocol requirement, then the *most specialized* of those implementations will be the protocol witness.
 
@@ -400,7 +400,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzExNjA2Nzc1ODQsMTc0MzUwOTky
+AnJ1xuIiwiaGlzdG9yeSI6Wy0yOTgxMTE2NDMsMTc0MzUwOTky
 NCwxMjEzNTAxNDkyLDUzNzU3MjUxNiwxMTM3OTYwMzM5LDE2OD
 YzMTAxMjksLTE5NTMwMTUyMSwxNjA5ODg3MDA1LC04NTM2MzE3
 MzMsLTMwNTcyNTIxOCwtNzI4MzcxNzc3LDg0MzU4MDgwOCwxMj
