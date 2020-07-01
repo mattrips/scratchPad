@@ -18,9 +18,9 @@ An implementation is not declared to be a protocol witness.  The identity of the
 
 ## 1.3 Unconditionally Accessible Implementations
 A type's possible implementation of a protocol requirement is available to serve as the protocol witness for the requirement only if the implementation is an *unconditionally accessible* member of the type in the scope in which the protocol conformance is declared.  Given a declaration that a type `t` conforms to a protocol `p` and an implementation of a protocol requirement `m` of `p`, the implementation is *unconditionally accessible* if and only if (i) the conditions of any generic where clause to which the declaration of the implementation is subject are satisfied, and (ii) per the rules of access control, the implementation is visible in the scope in which the protocol conformance is declared.
-  * With respect to generic types, this rule is not fully implemented.  Referring to a type that is a generic type with its generic arguments all specified as concrete types as a *concretization* of the generic type, the current implementation of the protocol feature of Swift does not include the ability to declare a concretization as conforming to a protocol.  Instead, a concretization of a generic type uses the protocol conformances of the generic type, without specialization for implementations available via the concretization.  Thus, although such a type may satisfy the conditions of a generic where clause that would make an implementation unconditionally accessible, the implementation subject to such where clause nevertheless is unavailable to serve as a protocol witness for the conformance.  However, if such implementations remain available to be accessed directly as a member of the concretization, instead of indirectly through the interface of a protocol.
+  * With respect to generic types, this rule is not fully implemented.  Referring to a type that is a generic type with its generic arguments all specified as concrete types as a *concretization* of the generic type, the current implementation of the protocol feature of Swift does not include the ability to declare a concretization as conforming to a protocol.  Instead, a concretization of a generic type uses the protocol conformances of the generic type, without specialization for implementations available via the concretization.  Thus, although such a type may satisfy the conditions of a generic where clause that would make an implementation unconditionally accessible, the implementation subject to such where clause nevertheless is unavailable to serve as a protocol witness for the conformance.  However, if such implementations remain available to be accessed directly as members of concretizations, instead of indirectly through protocol interfaces.
 
-## Most Specialized Implementation
+## 1.4 Most Specialized Implementation
 : Given multiple implementations of the same protocol requirement, the degree of specialization of an implementation is based on the declaration of the implementation, as follows, from most specialized to least specialized: [check this]
   1. conditionally declared in an extension of the type;
   2. unconditionally declared in the declaration or an extension of the type;
@@ -30,7 +30,7 @@ A type's possible implementation of a protocol requirement is available to serve
   * If multiple protocols in a chain of inheritance of protocols provide declarations of an implementation, the implementation on a more refined protocol is more specialized than an implementation on a less refined protocol. [check this]
   * Where multiple protocols outside of a single chain of inheritance provide implementations, an ambiguity error occurs. [check this]
 
-## Protocol Witness Set
+## 1.5 Protocol Witness Set
 
 The set of requirements declared within the declaration of a protocol.  
 
@@ -40,14 +40,6 @@ Given a declaration that a type conforms to a protocol, the protocol witness set
   * Inherited requirements of a protocol are irrelevant to determination of a protocol witness set.
   
 
-
-&#9724; accessible member
-: Given a type in a scope, a member of the type is accessible if, per the rules of access control, the member is visible in the scope.
-
-
-
-&#9724; protocol requirement
-: Given a protocol, a ***protocol requirement*** is a statement in the declaration of a protocol that describes a member that a type must have as a condition of being able to be declared to conform to the protocol.
 
   * This is my laration of a protocol that describes a member that a type must have as a condition of being able to be declared to conform to the protocol.
    
@@ -397,11 +389,11 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy02NDk3ODM5NDAsNjYwMTU3MDgx
-LDE4NjAxNDU1NTYsNjYwNDI4MTI5LC02NDYzOTA0MTksLTI5MD
-c1ODQzMSwxNzQzNTA5OTI0LDEyMTM1MDE0OTIsNTM3NTcyNTE2
-LDExMzc5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MD
-k4ODcwMDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3
-NzcsODQzNTgwODA4LDEyNTYzMTA2MjYsMTIzNTk1MTQxLC0yMD
-M0OTcyMjkwXX0=
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xNzA0MzMwNjIwLDY2MDE1NzA4
+MSwxODYwMTQ1NTU2LDY2MDQyODEyOSwtNjQ2MzkwNDE5LC0yOT
+A3NTg0MzEsMTc0MzUwOTkyNCwxMjEzNTAxNDkyLDUzNzU3MjUx
+NiwxMTM3OTYwMzM5LDE2ODYzMTAxMjksLTE5NTMwMTUyMSwxNj
+A5ODg3MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIxOCwtNzI4Mzcx
+Nzc3LDg0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMzU5NTE0MSwtMj
+AzNDk3MjI5MF19
 -->
