@@ -36,7 +36,7 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 
 &#9724; unconditionally accessible implementation
 : Given a type, a scope in which the type is declared to conform to a protocol, and an implementation of a protocol requirement of the protocol, the implementation is unconditionally accessible if (i) the conditions of any generic where clause to which the declaration of the implementation is subject are satisfied, and (ii) per the rules of access control, the implementation is visible in the scope.
-  * With respect to a type that is a concretization of a generic type, this rule is not implemented.  Although the concretization of 
+  * With respect to a type that is a concretization of a generic type, this rule is not fully implemented.  Although the type that is a concretization may fully satisfy the conditions of a generic where clause stated on the generic type, implementations 
 
 &#9724; accessible member
 : Given a type in a scope, a member of the type is accessible if, per the rules of access control, the member is visible in the scope.
@@ -382,11 +382,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzQ0MTYwMTU4NCw1Mzc1NzI1MTYs
-MTEzNzk2MDMzOSwxNjg2MzEwMTI5LC0xOTUzMDE1MjEsMTYwOT
-g4NzAwNSwtODUzNjMxNzMzLC0zMDU3MjUyMTgsLTcyODM3MTc3
-Nyw4NDM1ODA4MDgsMTI1NjMxMDYyNiwxMjM1OTUxNDEsLTIwMz
-Q5NzIyOTAsLTEwNDc5MTE0MDksLTkyODg0ODY5NSwxNjU2Mzc1
-MDA3LC0xNDEwNTYxMjIzLC00NjUxMDAwNDksLTQ5ODg4NDUwMy
-wxMzU0OTcwNTc4XX0=
+AnJ1xuIiwiaGlzdG9yeSI6WzE2NDg0NzY5NjYsNTM3NTcyNTE2
+LDExMzc5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MD
+k4ODcwMDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3
+NzcsODQzNTgwODA4LDEyNTYzMTA2MjYsMTIzNTk1MTQxLC0yMD
+M0OTcyMjkwLC0xMDQ3OTExNDA5LC05Mjg4NDg2OTUsMTY1NjM3
+NTAwNywtMTQxMDU2MTIyMywtNDY1MTAwMDQ5LC00OTg4ODQ1MD
+MsMTM1NDk3MDU3OF19
 -->
