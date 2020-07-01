@@ -1,5 +1,5 @@
 # 1 Protocol Conformance
-With respect to the declaration that a type conforms to a protocol, a set of implementations--*protocol witnesses*--is determined, one for each protocol requirement of the protocol.  Understanding how the *protocol witness set* is determined is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
+When a type is declared to conform to a protocol, a set of implementations--*protocol witnesses*--is determined, one for each protocol requirement of the protocol.  Understanding how the *protocol witness set* is determined is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines the protocol witness set for a protocol conformance.
 
 
 ## 1.1 Declaration of Protocol Conformance
@@ -392,11 +392,11 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xMTExNDAzNjYsLTE5OTc5Nzcy
-ODIsLTE3MDQzMzA2MjAsNjYwMTU3MDgxLDE4NjAxNDU1NTYsNj
-YwNDI4MTI5LC02NDYzOTA0MTksLTI5MDc1ODQzMSwxNzQzNTA5
-OTI0LDEyMTM1MDE0OTIsNTM3NTcyNTE2LDExMzc5NjAzMzksMT
-Y4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MDk4ODcwMDUsLTg1MzYz
-MTczMywtMzA1NzI1MjE4LC03MjgzNzE3NzcsODQzNTgwODA4LD
-EyNTYzMTA2MjZdfQ==
+AnJ1xuIiwiaGlzdG9yeSI6Wy03NDkyNDE5NzYsLTExMTE0MDM2
+NiwtMTk5Nzk3NzI4MiwtMTcwNDMzMDYyMCw2NjAxNTcwODEsMT
+g2MDE0NTU1Niw2NjA0MjgxMjksLTY0NjM5MDQxOSwtMjkwNzU4
+NDMxLDE3NDM1MDk5MjQsMTIxMzUwMTQ5Miw1Mzc1NzI1MTYsMT
+EzNzk2MDMzOSwxNjg2MzEwMTI5LC0xOTUzMDE1MjEsMTYwOTg4
+NzAwNSwtODUzNjMxNzMzLC0zMDU3MjUyMTgsLTcyODM3MTc3Ny
+w4NDM1ODA4MDhdfQ==
 -->
