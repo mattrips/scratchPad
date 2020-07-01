@@ -18,7 +18,7 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 #### Declaration of Protocol Conformance
 For a type `t` to conform to a protocol `p`, `t` must be declared to conform to `p`, and `t` must have at least one unconditionally accessible implementation for each protocol requirement of `p`.  A declaration that `t` conforms to `p` further constitutes, with respect to each protocol `o`*<sub>i</sub>* from which `p` directly or indirectly inherits, a declaration that `t` conforms to `o`*<sub>i</sub>* so long as `t` has not already been declared to conform to `o`*<sub>i</sub>*.   
 
-In a given scope, a type may not be declared to conform to a protocol if a declaration of the conformance of the same type to the same protocol is visible in the scope.  In other words, a type can conform to a protocol in only one way.  This rule holds true even where two declarations of conformance are conditional with disjoint conditions.  
+In a given scope, a type may not be declared to conform to a protocol if a declaration of the conformance of the same type to the same protocol is visible in the scope.  In a given scope, a type can conform to a protocol in only one way.  This rule holds true even where competing declarations are conditional with disjoint conditions.  
   
 
 &#9724; implementation
@@ -396,11 +396,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wzc0ODkwOTE5NSwxMjEzNTAxNDky
-LDUzNzU3MjUxNiwxMTM3OTYwMzM5LDE2ODYzMTAxMjksLTE5NT
-MwMTUyMSwxNjA5ODg3MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIx
-OCwtNzI4MzcxNzc3LDg0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMz
-U5NTE0MSwtMjAzNDk3MjI5MCwtMTA0NzkxMTQwOSwtOTI4ODQ4
-Njk1LDE2NTYzNzUwMDcsLTE0MTA1NjEyMjMsLTQ2NTEwMDA0OS
-wtNDk4ODg0NTAzXX0=
+AnJ1xuIiwiaGlzdG9yeSI6WzE3NDM1MDk5MjQsMTIxMzUwMTQ5
+Miw1Mzc1NzI1MTYsMTEzNzk2MDMzOSwxNjg2MzEwMTI5LC0xOT
+UzMDE1MjEsMTYwOTg4NzAwNSwtODUzNjMxNzMzLC0zMDU3MjUy
+MTgsLTcyODM3MTc3Nyw4NDM1ODA4MDgsMTI1NjMxMDYyNiwxMj
+M1OTUxNDEsLTIwMzQ5NzIyOTAsLTEwNDc5MTE0MDksLTkyODg0
+ODY5NSwxNjU2Mzc1MDA3LC0xNDEwNTYxMjIzLC00NjUxMDAwND
+ksLTQ5ODg4NDUwM119
 -->
