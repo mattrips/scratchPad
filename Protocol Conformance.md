@@ -9,7 +9,7 @@ A declaration that `t` conforms to `p` further constitutes, with respect to each
 In a given scope, a type can conform to a protocol in only one way.  A type `t` cannot be declared to conform to a protocol `p` if, within the visible scope, another declaration exists of `t: p`.  This rule holds true even where competing declarations are conditional with disjoint conditions.  
 
 ## 1.2 Protocol Witness
-Given the declaration of conformance `t: p`, a *protocol requirement* `m` is a statement in the declaration of `p` that describes a member, such that, as a requirement for a type `t` to conform to `p`, `t` must have a member satisfying the requirements of `m`.  A member of `t` that satisfies the requirements of `m` is referred to as an *implementation* of `m`.  
+Given the declaration of conformance `t: p`, a *protocol requirement* `m` is a statement in the declaration of `p` that `t` or any other type seeking to conform to `p` must have a member satisfying the requirements of `m`.  A member of `t` that satisfies the requirements of `m` is referred to as an *implementation* of `m`.  
 
 If `t` is declared to conform to `p`, then, for protocol requirement `m` of `p`, one and only one of `t`'s  implementations of `m` will actually be used as the implementation of `m`.  Such implementation of `m` is referred to as the *protocol witness* for the `m` requirement of the conformance `t: p`.
 
@@ -393,7 +393,7 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy05MzI4MDM5MjEsMTU2MzA5NTMy
+AnJ1xuIiwiaGlzdG9yeSI6WzE3MTE0MTE5NzksMTU2MzA5NTMy
 MSwtMjE0MzQ1Nzc4Miw1NzMyNTA5MzYsLTExMTE0MDM2NiwtMT
 k5Nzk3NzI4MiwtMTcwNDMzMDYyMCw2NjAxNTcwODEsMTg2MDE0
 NTU1Niw2NjA0MjgxMjksLTY0NjM5MDQxOSwtMjkwNzU4NDMxLD
