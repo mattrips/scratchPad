@@ -23,7 +23,8 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 : The set of requirements declared in the declaration of a protocol.  
 
 &#9724; protocol witness set
-: Given a declaration that a type conforms to a protocol, the set consisting of the protocol witness for each declared requirement of the protocol.
+: Given a declaration that a type conforms to a protocol, the protocol witness set is the set consisting of the protocol witness for each declared requirement of the protocol.
+  * If the protocol has not declared requirements, the protocol witness set is empty
 
 
 &#9724; unconditionally accessible implementation
@@ -371,7 +372,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy03NjI2NTk3NDMsNTM3NTcyNTE2
+AnJ1xuIiwiaGlzdG9yeSI6WzE2NDMxMzkyNjksNTM3NTcyNTE2
 LDExMzc5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MD
 k4ODcwMDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3
 NzcsODQzNTgwODA4LDEyNTYzMTA2MjYsMTIzNTk1MTQxLC0yMD
