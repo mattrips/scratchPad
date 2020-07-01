@@ -21,7 +21,12 @@ For a type `t` to conform to a protocol `p`, `t` must be declared to conform to 
 In a given scope, a type may not be declared to conform to a protocol if a declaration of the conformance of the same type to the same protocol is visible in the scope.  In a given scope, a type can conform to a protocol in only one way.  This rule holds true even where competing declarations are conditional with disjoint conditions.  
   
 #### Protocol Witness
-Given a protocol `p`, a *protocol requirement* `m` is a statement in the declaration of `p` that describes a member, such that, as a condition of a type `t` being able to conform to `p`, `t` must have a member satisfying the requirements of `m`.  A member of `t` that satisfies the requirements of `m` is referred to as an implementation of `m`.  A type may have more than one member that satisfies a given protocol requirement.  
+Given a protocol `p`, a *protocol requirement* `m` is a statement in the declaration of `p` that describes a member, such that, as a condition of a type `t` being able to conform to `p`, `t` must have a member satisfying the requirements of `m`.  A member of `t` that satisfies the requirements of `m` is referred to as an implementation of `m`.  
+
+If a type has only one
+A type may have more than one member that satisfies a given protocol requirement.
+
+
 
 &#9724; protocol witness
 : Given a declaration that a type conforms to a protocol and a protocol requirement of the protocol, the ***protocol witness*** for such protocol requirement is the most specialized implementation from among the implementations that are unconditionally accessible on the type.
@@ -395,7 +400,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xODEwMDE1MDM3LDE3NDM1MDk5
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xNDEzNjUyNjU1LDE3NDM1MDk5
 MjQsMTIxMzUwMTQ5Miw1Mzc1NzI1MTYsMTEzNzk2MDMzOSwxNj
 g2MzEwMTI5LC0xOTUzMDE1MjEsMTYwOTg4NzAwNSwtODUzNjMx
 NzMzLC0zMDU3MjUyMTgsLTcyODM3MTc3Nyw4NDM1ODA4MDgsMT
