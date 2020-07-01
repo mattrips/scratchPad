@@ -15,8 +15,8 @@ Most powerfully, a protocol may serve as the basis for an existential type beari
 With respect to a type declared to conform to a protocol, a protocol conformance specifies, for each protocol requirement of the protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement when invoked on the type.  Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
 
 
-#### Protocol conformance declaration
-: a declaration that a type conforms to a protocol.
+#### Declaration of Protocol Conformance
+To conform to a protocol, a type must be declared to conform to conform to the protocol.    
   * In a given scope, a type may not be declared to conform to a protocol if a declaration of the conformance of the same type to the same protocol is visible in the scope.  This rule that a type can conform to a protocol only once holds true even if two declarations of conformance are conditional with disjoint conditions.  
   * A declaration that a type conforms to a protocol `a` further constitutes, with respect to each protocol `n` from which protocol `a` directly or indirectly inherits, a declaration that the type conforms to protocol `n` so long as the type has not already been declared to conform to protocol `n`.
 
@@ -396,7 +396,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xNDcyNzQyNjA3LDUzNzU3MjUx
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xMzc2MDE0OTg2LDUzNzU3MjUx
 NiwxMTM3OTYwMzM5LDE2ODYzMTAxMjksLTE5NTMwMTUyMSwxNj
 A5ODg3MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIxOCwtNzI4Mzcx
 Nzc3LDg0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMzU5NTE0MSwtMj
