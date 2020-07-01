@@ -25,7 +25,7 @@ Given a protocol `p`, a *protocol requirement* `m` is a statement in the declara
 
 If `t` is declared to conform to `p`, then, for protocol requirement `m` of `p`, one and only one of `t`'s possible implementations of `m` will actually be used as the implementation of `m`.  Such implementation of `m` is referred to as the *protocol witness* for `m` of the conformance of `t: p`.
 
-A protocol witness exists with respect to a given protocol requirement of a given protocol of a give 
+A protocol witness exists with respect to a given protocol requirement of a given declaration of conformance of a type to a protocol.
 
 A type may have more than one implementation of a given protocol requirement.  If a type has only one unconditionally available implementation of a given protocol requirement, then that implementation will be the protocol witness for that protocol requirement.  If a type has more than 
 
@@ -402,11 +402,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzI5NTg4MjY5OCwxNzQzNTA5OTI0
-LDEyMTM1MDE0OTIsNTM3NTcyNTE2LDExMzc5NjAzMzksMTY4Nj
-MxMDEyOSwtMTk1MzAxNTIxLDE2MDk4ODcwMDUsLTg1MzYzMTcz
-MywtMzA1NzI1MjE4LC03MjgzNzE3NzcsODQzNTgwODA4LDEyNT
-YzMTA2MjYsMTIzNTk1MTQxLC0yMDM0OTcyMjkwLC0xMDQ3OTEx
-NDA5LC05Mjg4NDg2OTUsMTY1NjM3NTAwNywtMTQxMDU2MTIyMy
-wtNDY1MTAwMDQ5XX0=
+AnJ1xuIiwiaGlzdG9yeSI6Wy0yMDYzNTk3MjIxLDE3NDM1MDk5
+MjQsMTIxMzUwMTQ5Miw1Mzc1NzI1MTYsMTEzNzk2MDMzOSwxNj
+g2MzEwMTI5LC0xOTUzMDE1MjEsMTYwOTg4NzAwNSwtODUzNjMx
+NzMzLC0zMDU3MjUyMTgsLTcyODM3MTc3Nyw4NDM1ODA4MDgsMT
+I1NjMxMDYyNiwxMjM1OTUxNDEsLTIwMzQ5NzIyOTAsLTEwNDc5
+MTE0MDksLTkyODg0ODY5NSwxNjU2Mzc1MDA3LC0xNDEwNTYxMj
+IzLC00NjUxMDAwNDldfQ==
 -->
