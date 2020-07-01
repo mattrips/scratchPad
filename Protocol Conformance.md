@@ -21,7 +21,7 @@ For a type `t` to conform to a protocol `p`, `t` must be declared to conform to 
 In a given scope, a type may not be declared to conform to a protocol if a declaration of the conformance of the same type to the same protocol is visible in the scope.  In a given scope, a type can conform to a protocol in only one way.  This rule holds true even where competing declarations are conditional with disjoint conditions.  
   
 #### Protocol Witness
-Given a protocol `p`, a ***protocol requirement*** is a statement in the declaration of `p` that describes the requirement a member that a type must have as a condition of being able to be declared to conform to the protocol.
+Given a protocol `p`, a ***protocol requirement*** is a statement in the declaration of `p` that describes the requirement that, as a condition of type `t` being able to conform to `p`, `t` must have a member .
 For a protocol requirement and a type, an ***implementation*** is a member of the type that is capable of satisfying the protocol requirement.
 
 &#9724; protocol witness
@@ -396,11 +396,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0yMTA0NTM2MjQsMTc0MzUwOTky
-NCwxMjEzNTAxNDkyLDUzNzU3MjUxNiwxMTM3OTYwMzM5LDE2OD
-YzMTAxMjksLTE5NTMwMTUyMSwxNjA5ODg3MDA1LC04NTM2MzE3
-MzMsLTMwNTcyNTIxOCwtNzI4MzcxNzc3LDg0MzU4MDgwOCwxMj
-U2MzEwNjI2LDEyMzU5NTE0MSwtMjAzNDk3MjI5MCwtMTA0Nzkx
-MTQwOSwtOTI4ODQ4Njk1LDE2NTYzNzUwMDcsLTE0MTA1NjEyMj
-MsLTQ2NTEwMDA0OV19
+AnJ1xuIiwiaGlzdG9yeSI6Wzc2NTU0MjQ2MiwxNzQzNTA5OTI0
+LDEyMTM1MDE0OTIsNTM3NTcyNTE2LDExMzc5NjAzMzksMTY4Nj
+MxMDEyOSwtMTk1MzAxNTIxLDE2MDk4ODcwMDUsLTg1MzYzMTcz
+MywtMzA1NzI1MjE4LC03MjgzNzE3NzcsODQzNTgwODA4LDEyNT
+YzMTA2MjYsMTIzNTk1MTQxLC0yMDM0OTcyMjkwLC0xMDQ3OTEx
+NDA5LC05Mjg4NDg2OTUsMTY1NjM3NTAwNywtMTQxMDU2MTIyMy
+wtNDY1MTAwMDQ5XX0=
 -->
