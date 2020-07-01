@@ -1,6 +1,5 @@
 # 1 Protocol Conformance
-When a type is declared to conform to a protocol, a set of implementations--*protocol witnesses*--is determined, one for each protocol requirement of the protocol.  Understanding how the *protocol witness set* is determined is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines the protocol witness set for a protocol conformance.
-
+When a type is declared to conform to a protocol, a set of implementations--*protocol witnesses*--is determined, one for each protocol requirement of the protocol.  Understanding how the *protocol witness set* is determined is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines the set of protocol witnesses for a protocol conformance.
 
 ## 1.1 Declaration of Protocol Conformance
 For a type `t` to conform to a protocol `p`, `t` must be declared to conform to `p`, and `t` must have at least one unconditionally accessible implementation for each protocol requirement of `p`.  A declaration that `t` conforms to `p` further constitutes, with respect to each protocol `o`*<sub>i</sub>* from which `p` directly or indirectly inherits, a declaration that `t` conforms to `o`*<sub>i</sub>* so long as `t` has not already been declared to conform to `o`*<sub>i</sub>*.   
@@ -392,11 +391,11 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy03NDkyNDE5NzYsLTExMTE0MDM2
-NiwtMTk5Nzk3NzI4MiwtMTcwNDMzMDYyMCw2NjAxNTcwODEsMT
-g2MDE0NTU1Niw2NjA0MjgxMjksLTY0NjM5MDQxOSwtMjkwNzU4
-NDMxLDE3NDM1MDk5MjQsMTIxMzUwMTQ5Miw1Mzc1NzI1MTYsMT
-EzNzk2MDMzOSwxNjg2MzEwMTI5LC0xOTUzMDE1MjEsMTYwOTg4
-NzAwNSwtODUzNjMxNzMzLC0zMDU3MjUyMTgsLTcyODM3MTc3Ny
-w4NDM1ODA4MDhdfQ==
+AnJ1xuIiwiaGlzdG9yeSI6Wy0yMDUyMDY4NTU1LC0xMTExNDAz
+NjYsLTE5OTc5NzcyODIsLTE3MDQzMzA2MjAsNjYwMTU3MDgxLD
+E4NjAxNDU1NTYsNjYwNDI4MTI5LC02NDYzOTA0MTksLTI5MDc1
+ODQzMSwxNzQzNTA5OTI0LDEyMTM1MDE0OTIsNTM3NTcyNTE2LD
+ExMzc5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MDk4
+ODcwMDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3Nz
+csODQzNTgwODA4XX0=
 -->
