@@ -4,7 +4,7 @@ When a type is declared to conform to a protocol, a set of implementations--*pro
 ## 1.1 Declaration of Protocol Conformance
 For a type `t` to conform to a protocol `p`, `t` must be declared to conform to `p`, and `t` must have at least one unconditionally accessible implementation for each protocol requirement of `p`.  
 
-A declaration that `t` conforms to `p` further constitutes, with respect to each protocol `o`*<sub>i</sub>* from which `p` directly or indirectly inherits, a declaration that `t` conforms to `o`*<sub>i</sub>* so long as `t` has not already been declared to conform to `o`*<sub>i</sub>*.   Thus, for the declaration of `t: p` to be valid, 
+A declaration that `t` conforms to `p` further constitutes, with respect to each protocol `o`*<sub>i</sub>* from which `p` directly or indirectly inherits, a declaration that `t` conforms to `o`*<sub>i</sub>* so long as `t` has not already been declared to conform to `o`*<sub>i</sub>*.   Thus, for the declaration of `t: p` to be valid, the declarations of each `t: o`*<sub>i</sub>* must be satisfy the requirement that  
 
 In a given scope, a type can conform to a protocol in only one way.  A type cannot be declared to conform to a protocol if, within the visible scope, another declaration exists of the same type conforming to the same protocol.  This rule holds true even where competing declarations are conditional with disjoint conditions.  
   
@@ -393,11 +393,11 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzE4MDgzNjQ3OCwxNTYzMDk1MzIx
-LC0yMTQzNDU3NzgyLDU3MzI1MDkzNiwtMTExMTQwMzY2LC0xOT
-k3OTc3MjgyLC0xNzA0MzMwNjIwLDY2MDE1NzA4MSwxODYwMTQ1
-NTU2LDY2MDQyODEyOSwtNjQ2MzkwNDE5LC0yOTA3NTg0MzEsMT
-c0MzUwOTkyNCwxMjEzNTAxNDkyLDUzNzU3MjUxNiwxMTM3OTYw
-MzM5LDE2ODYzMTAxMjksLTE5NTMwMTUyMSwxNjA5ODg3MDA1LC
-04NTM2MzE3MzNdfQ==
+AnJ1xuIiwiaGlzdG9yeSI6Wy0yMjcwNTE2NTMsMTU2MzA5NTMy
+MSwtMjE0MzQ1Nzc4Miw1NzMyNTA5MzYsLTExMTE0MDM2NiwtMT
+k5Nzk3NzI4MiwtMTcwNDMzMDYyMCw2NjAxNTcwODEsMTg2MDE0
+NTU1Niw2NjA0MjgxMjksLTY0NjM5MDQxOSwtMjkwNzU4NDMxLD
+E3NDM1MDk5MjQsMTIxMzUwMTQ5Miw1Mzc1NzI1MTYsMTEzNzk2
+MDMzOSwxNjg2MzEwMTI5LC0xOTUzMDE1MjEsMTYwOTg4NzAwNS
+wtODUzNjMxNzMzXX0=
 -->
