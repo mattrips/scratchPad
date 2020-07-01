@@ -45,7 +45,7 @@ For a type `t` to conform to a protocol `p`, `t` must be declared to conform to 
 : The set of requirements declared within the declaration of a protocol.  
 
 &#9724; protocol witness set
-: Given a declaration that a type conforms to a protocol, the protocol witness set is the set consisting of the protocol witness for each declared requirement of the protocol.  [A protocol witness set also is referred to as a protocol conformance.  To avoid ambiguity between that usage of the term protocol conformance and similar usage of the term t
+: Given a declaration that a type conforms to a protocol, the protocol witness set is the set consisting of the protocol witness for each declared requirement of the protocol.  [A protocol witness set also is referred to as a protocol conformance.  I am suggesting this term to avoid ambiguity between that usage of the term protocol conformance and similar usage of the term to refer to the more general notion that a type is declared to conform to a protocol or that a type has implementations capable of conforming to a protocol.
   * There is only one protocol witness set for a protocol conformance declaration.  Such set is immutable, and is not subject to replacement.
   * If a protocol has no declared requirements, the protocol witness set for conformances to the protocol is empty.
   * Inherited requirements of a protocol are irrelevant to determination of a protocol witness set.
@@ -395,7 +395,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xNTgwOTMwMjQ1LDEyMTM1MDE0
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xMDM4ODIzMzA1LDEyMTM1MDE0
 OTIsNTM3NTcyNTE2LDExMzc5NjAzMzksMTY4NjMxMDEyOSwtMT
 k1MzAxNTIxLDE2MDk4ODcwMDUsLTg1MzYzMTczMywtMzA1NzI1
 MjE4LC03MjgzNzE3NzcsODQzNTgwODA4LDEyNTYzMTA2MjYsMT
