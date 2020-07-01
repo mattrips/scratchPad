@@ -18,7 +18,7 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 &#9724; protocol conformance declaration
 : a declaration that a type conforms to a protocol.
   * A declaration that a type conforms to a protocol `a` further constitutes, with respect to each protocol `n` from which protocol `a` inherits, a declaration that the type conforms to protocol `n` so long as the type has not already been declared to conform to protocol `n`.
-  * In a given scope, a type may not be declared to conform to a protocol if a.  That rule holds true even if two declarations of conformance are conditional with disjoint conditions.  
+  * In a given scope, a type may not be declared to conform to a protocol if a declaration of the same type to the same protocol is visible in the scope.  That rule holds true even if two declarations of conformance are conditional with disjoint conditions.  
 
 &#9724; protocol requirements set
 : The set of requirements declared in the declaration of a protocol.  
@@ -377,7 +377,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy03Nzk4MjU0NjEsNTM3NTcyNTE2
+AnJ1xuIiwiaGlzdG9yeSI6WzIwOTk1ODUwODksNTM3NTcyNTE2
 LDExMzc5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MD
 k4ODcwMDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3
 NzcsODQzNTgwODA4LDEyNTYzMTA2MjYsMTIzNTk1MTQxLC0yMD
