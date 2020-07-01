@@ -18,7 +18,8 @@ An implementation is not declared to be a protocol witness.  The identity of the
 
 ## 1.3 Unconditionally Accessible Implementations
 A type's possible implementation of a protocol requirement is available to serve as the protocol witness for the requirement only if the implementation is an *unconditionally accessible* member of the type in the scope in which the protocol conformance is declared.  Given a declaration that a type `t` conforms to a protocol `p` and an implementation of a protocol requirement `m` of `p`, the implementation is *unconditionally accessible* if and only if (i) the conditions of any generic where clause to which the declaration of the implementation is subject are satisfied, and (ii) per the rules of access control, the implementation is visible in the scope in which the protocol conformance is declared.
-  * With respect to generic types, this rule is not fully implemented.  Referring to a type that is a generic type with its generic arguments all specified as concrete types as a *concretization* of the generic type, the current implementation of the protocol feature of Swift does not include the ability to declare a concretization as conforming to a protocol.  Instead, a concretization of a generic type uses the protocol conformances of the generic type, without specialization for implementations available via the concretization.  Thus, although such a type may satisfy the conditions of a generic where clause that would make an implementation unconditionally accessible, the implementation subject to such where clause nevertheless is unavailable to serve as a protocol witness for the conformance.  However, if such implementations remain available to be accessed directly as members of concretizations, instead of indirectly through protocol interfaces.
+
+With respect to generic types, this rule is not fully implemented.  A generic type with its generic arguments all specified as concrete types may be referred to as a *concretization* of the generic type.  Swift's existing implThe current implementation of the protocol feature of Swift does not include the ability to declare a concretization as conforming to a protocol.  Instead, a concretization of a generic type uses the protocol conformances of the generic type, without specialization for implementations available via the concretization.  Thus, although such a type may satisfy the conditions of a generic where clause that would make an implementation unconditionally accessible, the implementation subject to such where clause nevertheless is unavailable to serve as a protocol witness for the conformance.  However, if such implementations remain available to be accessed directly as members of concretizations, instead of indirectly through protocol interfaces.
 
 ## 1.4 Most Specialized Implementation
 : Given multiple implementations of the same protocol requirement, the degree of specialization of an implementation is based on the declaration of the implementation, as follows, from most specialized to least specialized: [check this]
@@ -389,11 +390,11 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xNzA0MzMwNjIwLDY2MDE1NzA4
-MSwxODYwMTQ1NTU2LDY2MDQyODEyOSwtNjQ2MzkwNDE5LC0yOT
-A3NTg0MzEsMTc0MzUwOTkyNCwxMjEzNTAxNDkyLDUzNzU3MjUx
-NiwxMTM3OTYwMzM5LDE2ODYzMTAxMjksLTE5NTMwMTUyMSwxNj
-A5ODg3MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIxOCwtNzI4Mzcx
-Nzc3LDg0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMzU5NTE0MSwtMj
-AzNDk3MjI5MF19
+AnJ1xuIiwiaGlzdG9yeSI6WzEwOTE1ODUxMDksLTE3MDQzMzA2
+MjAsNjYwMTU3MDgxLDE4NjAxNDU1NTYsNjYwNDI4MTI5LC02ND
+YzOTA0MTksLTI5MDc1ODQzMSwxNzQzNTA5OTI0LDEyMTM1MDE0
+OTIsNTM3NTcyNTE2LDExMzc5NjAzMzksMTY4NjMxMDEyOSwtMT
+k1MzAxNTIxLDE2MDk4ODcwMDUsLTg1MzYzMTczMywtMzA1NzI1
+MjE4LC03MjgzNzE3NzcsODQzNTgwODA4LDEyNTYzMTA2MjYsMT
+IzNTk1MTQxXX0=
 -->
