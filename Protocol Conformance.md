@@ -31,6 +31,11 @@ With respect to a type declared to conform to a protocol, a protocol conformance
   * Inherited requirements of a protocol are irrelevant to determination of a protocol witness set.
   * 
 
+&#9724; witness
+: Given a protocol requirement of a protocol and a declaration that a type conforms to the protocol, the ***witness*** is the one and only implementation that will be used to satisfy the protocol requirement.
+[comments:  this does not apply in the case of the direct use of an implementation -- accessing the implementation directly on the type.]
+
+
 
 &#9724; unconditionally accessible implementation
 : Given a declaration that a type conforms to a protocol,
@@ -50,9 +55,7 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 : A property, method, initializer, typealias or enum case is a member of a given type if it is declared in any of:  the declaration of the type, any extension of the type, or any extension of any protocol to which the type conforms.
 [types have other members; ]
 
-&#9724; witness
-: Given a protocol requirement of a protocol and a declaration that a type conforms to the protocol, the ***witness*** is the one and only implementation that will be used to satisfy the protocol requirement.
-[comments:  this does not apply in the case of the direct use of an implementation -- accessing the implementation directly on the type.]
+
 
 &#9724; declared requirement
 : Given a protocol `Q`, a protocol requirement declared within the declaration of `Q`. 
@@ -377,7 +380,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy02NzIwMDQ2NDYsNTM3NTcyNTE2
+AnJ1xuIiwiaGlzdG9yeSI6Wy00NjMzMzQyODIsNTM3NTcyNTE2
 LDExMzc5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MD
 k4ODcwMDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3
 NzcsODQzNTgwODA4LDEyNTYzMTA2MjYsMTIzNTk1MTQxLC0yMD
