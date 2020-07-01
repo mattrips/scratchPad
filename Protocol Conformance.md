@@ -23,7 +23,7 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 : The set of requirements declared in the declaration of a protocol.  
 
 &#9724; protocol witness set
-: Given a declaration that a type conforms to a protocol, the set of witnesses
+: Given a declaration that a type conforms to a protocol, the set consisting of the protocol witness for each declared requirement of the protocol.
 
 
 &#9724; unconditionally accessible implementation
@@ -371,11 +371,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xMjQ0ODUwMjkwLDUzNzU3MjUx
-NiwxMTM3OTYwMzM5LDE2ODYzMTAxMjksLTE5NTMwMTUyMSwxNj
-A5ODg3MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIxOCwtNzI4Mzcx
-Nzc3LDg0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMzU5NTE0MSwtMj
-AzNDk3MjI5MCwtMTA0NzkxMTQwOSwtOTI4ODQ4Njk1LDE2NTYz
-NzUwMDcsLTE0MTA1NjEyMjMsLTQ2NTEwMDA0OSwtNDk4ODg0NT
-AzLDEzNTQ5NzA1NzhdfQ==
+AnJ1xuIiwiaGlzdG9yeSI6Wy03NjI2NTk3NDMsNTM3NTcyNTE2
+LDExMzc5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MD
+k4ODcwMDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3
+NzcsODQzNTgwODA4LDEyNTYzMTA2MjYsMTIzNTk1MTQxLC0yMD
+M0OTcyMjkwLC0xMDQ3OTExNDA5LC05Mjg4NDg2OTUsMTY1NjM3
+NTAwNywtMTQxMDU2MTIyMywtNDY1MTAwMDQ5LC00OTg4ODQ1MD
+MsMTM1NDk3MDU3OF19
 -->
