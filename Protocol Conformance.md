@@ -32,8 +32,7 @@ With respect to a type declared to conform to a protocol, a protocol conformance
   * 
 
 &#9724; protocol witness
-: Given a protocol requirement of a protocol and a declaration that a type conforms to the protocol, the ***protocol witness*** is the most specialized of the unconditionally accessible implementations.   that will be used to satisfy the protocol requirement.
-[comments:  this does not apply in the case of the direct use of an implementation -- accessing the implementation directly on the type.]
+: Given a protocol requirement of a protocol and a declaration that a type conforms to the protocol, the ***protocol witness*** is the most specialized implementation from among the implementations that are unconditionally accessible on the type in the scope in which the confor.
 
 
 
@@ -380,11 +379,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wzk2OTIwNTQyNCw1Mzc1NzI1MTYs
-MTEzNzk2MDMzOSwxNjg2MzEwMTI5LC0xOTUzMDE1MjEsMTYwOT
-g4NzAwNSwtODUzNjMxNzMzLC0zMDU3MjUyMTgsLTcyODM3MTc3
-Nyw4NDM1ODA4MDgsMTI1NjMxMDYyNiwxMjM1OTUxNDEsLTIwMz
-Q5NzIyOTAsLTEwNDc5MTE0MDksLTkyODg0ODY5NSwxNjU2Mzc1
-MDA3LC0xNDEwNTYxMjIzLC00NjUxMDAwNDksLTQ5ODg4NDUwMy
-wxMzU0OTcwNTc4XX0=
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xNTcyNTYxNTUwLDUzNzU3MjUx
+NiwxMTM3OTYwMzM5LDE2ODYzMTAxMjksLTE5NTMwMTUyMSwxNj
+A5ODg3MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIxOCwtNzI4Mzcx
+Nzc3LDg0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMzU5NTE0MSwtMj
+AzNDk3MjI5MCwtMTA0NzkxMTQwOSwtOTI4ODQ4Njk1LDE2NTYz
+NzUwMDcsLTE0MTA1NjEyMjMsLTQ2NTEwMDA0OSwtNDk4ODg0NT
+AzLDEzNTQ5NzA1NzhdfQ==
 -->
