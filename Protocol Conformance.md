@@ -32,7 +32,7 @@ With respect to generic types, clause (i) of this rule is not fully implemented.
 Among a type's unconditionally accessible implementations of a protocol requirement, the most specialized will serve as the protocol witness for the requirement.  The relative specialization between two implementations, imp1 and imp2, is determined as follows:
 If imp1 is declared in an extension of a protocol and imp2 is declared on t (whether in the declaration and/or an extension), then imp2 is more specialized.  
 If imp1 is declared in an extension of protocol p1 and imp2 is declared in an extension of protocol p2, then (a) if p2 inherits from p1, imp2 is more specialized, (b) if p1 inherits from p2, imp1 is more specialized, and (c) otherwise, imp1 and m2 present an ambiguity (if there is no other implementation that is more specialized than both imp1 and imp2, an error will be raised at compile time).  
-If imp1 and imp2 are both declared on t (whether in the declaration and/or an extension) or are both declared in extensions of the same protocol,[^2] then (a) if the declaration of imp1 is more constrained than the declaration of imp2, imp1 is more specialized, (b) if the declaration of m2 is more constrained than the declaration of imp1, imp2 is more specialized, and (c) otherwise, imp1 and imp2 present an ambiguity (if there is no other implementation that is more specialized than both imp1 and imp2, an error will be raised at compile time). 
+If imp1 and imp2 are both declared on t (whether in the declaration and/or an extension) or are both declared in extensions of the same protocol,[^2] then (i) if the declaration of imp1 is more constrained than the declaration of imp2, imp1 is more specialized, (ii) if the declaration of m2 is more constrained than the declaration of imp1, imp2 is more specialized, and (iii) otherwise, imp1 and imp2 present an ambiguity (if there is no other implementation that is more specialized than both imp1 and imp2, an error will be raised at compile time). 
 
 [^2 ]: Given the way conditional declarations work or don’t work, I’m not sure these declared-on-same-type situations could arise in a meaningful way. Thoughts?
 
@@ -410,11 +410,11 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzQwMDM2NTUwMCwxNDE3OTU4MDYz
-LDM1MDEyMjQ2OSwxMzExMzA3Mzg5LDgwMDkyODIxMCwtMTEyMj
-U3OTI0MCwxNTYzMDk1MzIxLC0yMTQzNDU3NzgyLDU3MzI1MDkz
-NiwtMTExMTQwMzY2LC0xOTk3OTc3MjgyLC0xNzA0MzMwNjIwLD
-Y2MDE1NzA4MSwxODYwMTQ1NTU2LDY2MDQyODEyOSwtNjQ2Mzkw
-NDE5LC0yOTA3NTg0MzEsMTc0MzUwOTkyNCwxMjEzNTAxNDkyLD
-UzNzU3MjUxNl19
+AnJ1xuIiwiaGlzdG9yeSI6Wy01MTg0OTM5MTAsMTQxNzk1ODA2
+MywzNTAxMjI0NjksMTMxMTMwNzM4OSw4MDA5MjgyMTAsLTExMj
+I1NzkyNDAsMTU2MzA5NTMyMSwtMjE0MzQ1Nzc4Miw1NzMyNTA5
+MzYsLTExMTE0MDM2NiwtMTk5Nzk3NzI4MiwtMTcwNDMzMDYyMC
+w2NjAxNTcwODEsMTg2MDE0NTU1Niw2NjA0MjgxMjksLTY0NjM5
+MDQxOSwtMjkwNzU4NDMxLDE3NDM1MDk5MjQsMTIxMzUwMTQ5Mi
+w1Mzc1NzI1MTZdfQ==
 -->
