@@ -17,14 +17,14 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 
 &#9724; protocol conformance declaration
 : a declaration that a type conforms to a protocol.
-  * A declaration that a type conforms to a protocol `a` further constitutes, with respect to each protocol `n` from which protocol `a` inherits, a declaration that the type conforms to protocol `n`.  [need caveat for other declarations that already drag in some or all of those protocols]
+  * A declaration that a type conforms to a protocol `a` further constitutes, with respect to each protocol `n` from which protocol `a` inherits, a declaration that the type conforms to protocol `n` so long as the type has not already been declared to conform to  provided, however, if a .  [need caveat for other declarations that already drag in some or all of those protocols]
 
 &#9724; protocol requirements set
 : The set of requirements declared in the declaration of a protocol.  
 
 &#9724; protocol witness set
 : Given a declaration that a type conforms to a protocol, the protocol witness set is the set consisting of the protocol witness for each declared requirement of the protocol.
-  * There is only one protocol witness set for a given declaration that a type conforms to a protocol.
+  * There is only one protocol witness set for a declaration that a type conforms to a protocol.
   * The protocol witness set for a  is immutable.  It does not 
   * If the protocol has no declared requirements, the protocol witness set is empty.
   * Inherited requirements of a protocol are irrelevant to determination of a protocol witness set.
@@ -376,11 +376,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xNjE2MTY5NzE2LDUzNzU3MjUx
-NiwxMTM3OTYwMzM5LDE2ODYzMTAxMjksLTE5NTMwMTUyMSwxNj
-A5ODg3MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIxOCwtNzI4Mzcx
-Nzc3LDg0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMzU5NTE0MSwtMj
-AzNDk3MjI5MCwtMTA0NzkxMTQwOSwtOTI4ODQ4Njk1LDE2NTYz
-NzUwMDcsLTE0MTA1NjEyMjMsLTQ2NTEwMDA0OSwtNDk4ODg0NT
-AzLDEzNTQ5NzA1NzhdfQ==
+AnJ1xuIiwiaGlzdG9yeSI6WzE3Mjk0MTY2OTIsNTM3NTcyNTE2
+LDExMzc5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MD
+k4ODcwMDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3
+NzcsODQzNTgwODA4LDEyNTYzMTA2MjYsMTIzNTk1MTQxLC0yMD
+M0OTcyMjkwLC0xMDQ3OTExNDA5LC05Mjg4NDg2OTUsMTY1NjM3
+NTAwNywtMTQxMDU2MTIyMywtNDY1MTAwMDQ5LC00OTg4ODQ1MD
+MsMTM1NDk3MDU3OF19
 -->
