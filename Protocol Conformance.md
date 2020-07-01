@@ -45,11 +45,10 @@ For a type `t` to conform to a protocol `p`, `t` must be declared to conform to 
 : The set of requirements declared within the declaration of a protocol.  
 
 &#9724; protocol witness set
-: Given a declaration that a type conforms to a protocol, the protocol witness set is the set consisting of the protocol witness for each declared requirement of the protocol.
+: Given a declaration that a type conforms to a protocol, the protocol witness set is the set consisting of the protocol witness for each declared requirement of the protocol.  [A protocol witness set also is referred to as a protocol conformance.  To avoid ambiguity between that usage of the term protocol conformance and similar usage of the term t
   * There is only one protocol witness set for a protocol conformance declaration.  Such set is immutable, and is not subject to replacement.
   * If a protocol has no declared requirements, the protocol witness set for conformances to the protocol is empty.
   * Inherited requirements of a protocol are irrelevant to determination of a protocol witness set.
-  * A protocol witness set sometimes is referred to as a protocol conformance.  To avoid overloading of that term
   
 
 
@@ -396,11 +395,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzEyNjA1NDMwMzYsMTIxMzUwMTQ5
-Miw1Mzc1NzI1MTYsMTEzNzk2MDMzOSwxNjg2MzEwMTI5LC0xOT
-UzMDE1MjEsMTYwOTg4NzAwNSwtODUzNjMxNzMzLC0zMDU3MjUy
-MTgsLTcyODM3MTc3Nyw4NDM1ODA4MDgsMTI1NjMxMDYyNiwxMj
-M1OTUxNDEsLTIwMzQ5NzIyOTAsLTEwNDc5MTE0MDksLTkyODg0
-ODY5NSwxNjU2Mzc1MDA3LC0xNDEwNTYxMjIzLC00NjUxMDAwND
-ksLTQ5ODg4NDUwM119
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xNTgwOTMwMjQ1LDEyMTM1MDE0
+OTIsNTM3NTcyNTE2LDExMzc5NjAzMzksMTY4NjMxMDEyOSwtMT
+k1MzAxNTIxLDE2MDk4ODcwMDUsLTg1MzYzMTczMywtMzA1NzI1
+MjE4LC03MjgzNzE3NzcsODQzNTgwODA4LDEyNTYzMTA2MjYsMT
+IzNTk1MTQxLC0yMDM0OTcyMjkwLC0xMDQ3OTExNDA5LC05Mjg4
+NDg2OTUsMTY1NjM3NTAwNywtMTQxMDU2MTIyMywtNDY1MTAwMD
+Q5LC00OTg4ODQ1MDNdfQ==
 -->
