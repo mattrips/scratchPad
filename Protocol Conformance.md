@@ -13,7 +13,7 @@ Given the declaration of conformance `t: p`, a *protocol requirement* `m` is a s
 
 Given `t: p` and a protocol requirement `m` of `p`, one and only one of `t`'s  implementations of `m` will actually be used as the implementation of `m`.  Such implementation of `m` is referred to as the *protocol witness* for the `m` requirement of the conformance `t: p`.
 
-Given the declaration `t: p` and a protocol requirement `m` of `p`, the protocol witness for `m` is the *most specialized* of the *unconditionally accessible* implementations of `m` on `t`, as determined in the scope in which the declaration `t: p` is stated.  If `t` has only one unconditionally accessible implementation of `m`,  that implementation will be the protocol witness.  If `t` has more than one unconditionally accessible implementation of `m`,  the most specialized of those implementations will be the protocol witness.
+The protocol witness for `m` is the implementation of `m` on `t` that is the *most specialized* of the *unconditionally accessible* implementations, as determined in the scope in which the declaration `t: p` is stated.  If `t` has only one unconditionally accessible implementation of `m`,  that implementation will be the protocol witness.  If `t` has more than one unconditionally accessible implementation of `m`,  the most specialized of those implementations will be the protocol witness.
 
 An implementation is not *declared* to be a protocol witness.  The identity of the protocol witness for a protocol requirement is inferred from the entirety of the scope, including all declarations made within the scope and those imported into the scope.  Careful engineering is required in order to achieve the intended witness for a given requirement.
 
@@ -394,11 +394,11 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wzk4NDI2MzE2NCwxMzExMzA3Mzg5
-LDgwMDkyODIxMCwtMTEyMjU3OTI0MCwxNTYzMDk1MzIxLC0yMT
-QzNDU3NzgyLDU3MzI1MDkzNiwtMTExMTQwMzY2LC0xOTk3OTc3
-MjgyLC0xNzA0MzMwNjIwLDY2MDE1NzA4MSwxODYwMTQ1NTU2LD
-Y2MDQyODEyOSwtNjQ2MzkwNDE5LC0yOTA3NTg0MzEsMTc0MzUw
-OTkyNCwxMjEzNTAxNDkyLDUzNzU3MjUxNiwxMTM3OTYwMzM5LD
-E2ODYzMTAxMjldfQ==
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xMDQ3NDA3MTc1LDEzMTEzMDcz
+ODksODAwOTI4MjEwLC0xMTIyNTc5MjQwLDE1NjMwOTUzMjEsLT
+IxNDM0NTc3ODIsNTczMjUwOTM2LC0xMTExNDAzNjYsLTE5OTc5
+NzcyODIsLTE3MDQzMzA2MjAsNjYwMTU3MDgxLDE4NjAxNDU1NT
+YsNjYwNDI4MTI5LC02NDYzOTA0MTksLTI5MDc1ODQzMSwxNzQz
+NTA5OTI0LDEyMTM1MDE0OTIsNTM3NTcyNTE2LDExMzc5NjAzMz
+ksMTY4NjMxMDEyOV19
 -->
