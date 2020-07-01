@@ -32,7 +32,8 @@ With respect to a type declared to conform to a protocol, a protocol conformance
   * Similarly,  this rule is not fully implemented, in the case of implementations declared in protocol extensions that are subject to the conditions of a generic where clause tied to `associated type` requirements of the protocol.  Regardless of whether the conditions are satisfied, implementations subject to such conditions remain unavailable to serve as protocol witnesses. 
 
 &#9724; degree of specialization
-: Given  a declaration that a type conforms to a protocol, a protocol requirement of the protocol, and multiple implementations of the protocol requirement, the most specialized amo
+: Given multiple implementations of the same protocol requirement, the degree of specialization of an implementation is determined as follows, from most specialized to least specialized:
+  1. 
 
 
 &#9724; protocol requirements set
@@ -389,7 +390,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0yMDIxNzI5MzM4LDUzNzU3MjUx
+AnJ1xuIiwiaGlzdG9yeSI6Wy0yMDMyODgzNDU5LDUzNzU3MjUx
 NiwxMTM3OTYwMzM5LDE2ODYzMTAxMjksLTE5NTMwMTUyMSwxNj
 A5ODg3MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIxOCwtNzI4Mzcx
 Nzc3LDg0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMzU5NTE0MSwtMj
