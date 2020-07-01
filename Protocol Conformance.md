@@ -12,7 +12,7 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 
 ## 1 Protocol Conformance
-With respect to a type declared to conform to a protocol, a protocol conformance specifies, for each protocol requirement of the protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement when invoked on the type.  Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
+With respect to the de type declared to conform to a protocol, a set of implementations--*protocol witnesses*--is specified, one for each for each protocol requirement of the protocol.  Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
 
 
 ### 1.1 Declaration of Protocol Conformance
@@ -398,11 +398,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0yOTA3NTg0MzEsMTc0MzUwOTky
-NCwxMjEzNTAxNDkyLDUzNzU3MjUxNiwxMTM3OTYwMzM5LDE2OD
-YzMTAxMjksLTE5NTMwMTUyMSwxNjA5ODg3MDA1LC04NTM2MzE3
-MzMsLTMwNTcyNTIxOCwtNzI4MzcxNzc3LDg0MzU4MDgwOCwxMj
-U2MzEwNjI2LDEyMzU5NTE0MSwtMjAzNDk3MjI5MCwtMTA0Nzkx
-MTQwOSwtOTI4ODQ4Njk1LDE2NTYzNzUwMDcsLTE0MTA1NjEyMj
-MsLTQ2NTEwMDA0OV19
+AnJ1xuIiwiaGlzdG9yeSI6WzE1ODc2MTE2OTYsLTI5MDc1ODQz
+MSwxNzQzNTA5OTI0LDEyMTM1MDE0OTIsNTM3NTcyNTE2LDExMz
+c5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MDk4ODcw
+MDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3NzcsOD
+QzNTgwODA4LDEyNTYzMTA2MjYsMTIzNTk1MTQxLC0yMDM0OTcy
+MjkwLC0xMDQ3OTExNDA5LC05Mjg4NDg2OTUsMTY1NjM3NTAwNy
+wtMTQxMDU2MTIyM119
 -->
