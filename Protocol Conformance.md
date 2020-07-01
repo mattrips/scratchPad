@@ -28,8 +28,8 @@ For a type `t` to conform to a protocol `p`, `t` must be declared to conform to 
 
 &#9724; unconditionally accessible implementation
 : Given a declaration that a type conforms to the protocol, the scope in which such declaration is stated, and an implementation of a protocol requirement of the protocol, the implementation is unconditionally accessible if and only if (i) the conditions of any generic where clause to which the declaration of the implementation is subject are satisfied, and (ii) per the rules of access control, the implementation is visible in the scope.
-  * With respect to a type that is a concretization of a generic type, this rule is not fully implemented.  Although the type that is a concretization  may fully satisfy the conditions of a generic where clause stated on the generic type, implementations subject to such conditions remain unavailable to serve as protocol witnesses.
-  * Similarly,  this rule is not fully implemented, in the case of implementations declared in protocol extensions that are subject to the conditions of a generic where clause tied to `associated type` requirements of the protocol.  Regardless of whether the conditions are satisfied, implementations subject to such conditions remain unavailable to serve as protocol witnesses. 
+  * With respect to a type that is a concretization of a generic type, this rule is not fully implemented; although the type that is a concretization  may fully satisfy the conditions of a where clause stated on the generic type, implementations subject to such conditions remain unavailable to serve as protocol witnesses.
+  * ~~Similarly,  this rule is not fully implemented, in the case of implementations declared in protocol extensions that are subject to the conditions of a generic where clause tied to `associated type` requirements of the protocol.  Regardless of whether the conditions are satisfied, implementations subject to such conditions remain unavailable to serve as protocol witnesses.~~[check this]
 
 &#9724; degree of specialization
 : Given multiple implementations of the same protocol requirement, the degree of specialization of an implementation is based on the declaration of the implementation, as follows, from most specialized to least specialized: [check this]
@@ -396,11 +396,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzEyMTM1MDE0OTIsNTM3NTcyNTE2
-LDExMzc5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MD
-k4ODcwMDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3
-NzcsODQzNTgwODA4LDEyNTYzMTA2MjYsMTIzNTk1MTQxLC0yMD
-M0OTcyMjkwLC0xMDQ3OTExNDA5LC05Mjg4NDg2OTUsMTY1NjM3
-NTAwNywtMTQxMDU2MTIyMywtNDY1MTAwMDQ5LC00OTg4ODQ1MD
-MsMTM1NDk3MDU3OF19
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xNzYwNjU1NjgsMTIxMzUwMTQ5
+Miw1Mzc1NzI1MTYsMTEzNzk2MDMzOSwxNjg2MzEwMTI5LC0xOT
+UzMDE1MjEsMTYwOTg4NzAwNSwtODUzNjMxNzMzLC0zMDU3MjUy
+MTgsLTcyODM3MTc3Nyw4NDM1ODA4MDgsMTI1NjMxMDYyNiwxMj
+M1OTUxNDEsLTIwMzQ5NzIyOTAsLTEwNDc5MTE0MDksLTkyODg0
+ODY5NSwxNjU2Mzc1MDA3LC0xNDEwNTYxMjIzLC00NjUxMDAwND
+ksLTQ5ODg4NDUwM119
 -->
