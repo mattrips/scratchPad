@@ -5,7 +5,7 @@ With respect to the declaration that a type conforms to a protocol, a set of imp
 ## 1.1 Declaration of Protocol Conformance
 For a type `t` to conform to a protocol `p`, `t` must be declared to conform to `p`, and `t` must have at least one unconditionally accessible implementation for each protocol requirement of `p`.  A declaration that `t` conforms to `p` further constitutes, with respect to each protocol `o`*<sub>i</sub>* from which `p` directly or indirectly inherits, a declaration that `t` conforms to `o`*<sub>i</sub>* so long as `t` has not already been declared to conform to `o`*<sub>i</sub>*.   
 
-In a given scope, a type may not be declared to conform to a protocol if a declaration of the conformance of the same type to the same protocol is visible in the scope.  In a given scope, a type can conform to a protocol in only one way.  This rule holds true even where competing declarations are conditional with disjoint conditions.  
+A type cannot be declared to conform to a protocol if, within the visible scope, another declaration exists of the conformance of the same type to the same protocol.  In a given scope, a type can conform to a protocol in only one way.  This rule holds true even where competing declarations are conditional with disjoint conditions.  
   
 ## 1.2 Protocol Witness
 Given a protocol `p`, a *protocol requirement* `m` is a statement in the declaration of `p` that describes a member, such that, as a condition of a type `t` being able to conform to `p`, `t` must have a member satisfying the requirements of `m`.  A member of `t` that satisfies the requirements of `m` is referred to as an *implementation* of `m`.  
@@ -398,11 +398,11 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzE5NDE0OTgyMDksLTI5MDc1ODQz
-MSwxNzQzNTA5OTI0LDEyMTM1MDE0OTIsNTM3NTcyNTE2LDExMz
-c5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MDk4ODcw
-MDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3NzcsOD
-QzNTgwODA4LDEyNTYzMTA2MjYsMTIzNTk1MTQxLC0yMDM0OTcy
-MjkwLC0xMDQ3OTExNDA5LC05Mjg4NDg2OTUsMTY1NjM3NTAwNy
-wtMTQxMDU2MTIyM119
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xODY2MjI0OTQzLC0yOTA3NTg0
+MzEsMTc0MzUwOTkyNCwxMjEzNTAxNDkyLDUzNzU3MjUxNiwxMT
+M3OTYwMzM5LDE2ODYzMTAxMjksLTE5NTMwMTUyMSwxNjA5ODg3
+MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIxOCwtNzI4MzcxNzc3LD
+g0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMzU5NTE0MSwtMjAzNDk3
+MjI5MCwtMTA0NzkxMTQwOSwtOTI4ODQ4Njk1LDE2NTYzNzUwMD
+csLTE0MTA1NjEyMjNdfQ==
 -->
