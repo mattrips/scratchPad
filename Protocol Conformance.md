@@ -6,10 +6,10 @@ For a type `t` to conform to a protocol `p`, `t` must be declared to conform to 
 
 A declaration that `t` conforms to `p` further constitutes, with respect to each protocol `o`*<sub>i</sub>* from which `p` directly or indirectly inherits, a declaration that `t` conforms to `o`*<sub>i</sub>* so long as `t` has not already been declared to conform to `o`*<sub>i</sub>*.   Thus, for the declaration of `t: p` to be valid, the declarations of each `t: o`*<sub>i</sub>* must be satisfy the requirement that `t` must have at least one unconditionally accessible implementation for each protocol requirement of  `o`*<sub>i</sub>*. For each conformance `t: o`*<sub>i</sub>*, a distinct set of protocol witnesses is established.
 
-In a given scope, a type can conform to a protocol in only one way.  A type `t` cannot be declared to conform to a protocol `p` if, within the visible scope, another declaration exists of the same type conforming to the same protocol.  This rule holds true even where competing declarations are conditional with disjoint conditions.  
+In a given scope, a type can conform to a protocol in only one way.  A type `t` cannot be declared to conform to a protocol `p` if, within the visible scope, another declaration exists of `t: p`.  This rule holds true even where competing declarations are conditional with disjoint conditions.  
 
 ## 1.2 Protocol Witness
-Given a protocol `p`, a *protocol requirement* `m` is a statement in the declaration of `p` that describes a member, such that, as a requirement for a type `t` to conform to `p`, `t` must have a member satisfying the requirements of `m`.  A member of `t` that satisfies the requirements of `m` is referred to as an *implementation* of `m`.  
+Given the declaration of conformance `t: p`, a *protocol requirement* `m` is a statement in the declaration of `p` that describes a member, such that, as a requirement for a type `t` to conform to `p`, `t` must have a member satisfying the requirements of `m`.  A member of `t` that satisfies the requirements of `m` is referred to as an *implementation* of `m`.  
 
 If `t` is declared to conform to `p`, then, for protocol requirement `m` of `p`, one and only one of `t`'s  implementations of `m` will actually be used as the implementation of `m`.  Such implementation of `m` is referred to as the *protocol witness* for the `m` requirement of the conformance `t: p`.
 
@@ -393,11 +393,11 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzE5NjYyNTYxNCwxNTYzMDk1MzIx
-LC0yMTQzNDU3NzgyLDU3MzI1MDkzNiwtMTExMTQwMzY2LC0xOT
-k3OTc3MjgyLC0xNzA0MzMwNjIwLDY2MDE1NzA4MSwxODYwMTQ1
-NTU2LDY2MDQyODEyOSwtNjQ2MzkwNDE5LC0yOTA3NTg0MzEsMT
-c0MzUwOTkyNCwxMjEzNTAxNDkyLDUzNzU3MjUxNiwxMTM3OTYw
-MzM5LDE2ODYzMTAxMjksLTE5NTMwMTUyMSwxNjA5ODg3MDA1LC
-04NTM2MzE3MzNdfQ==
+AnJ1xuIiwiaGlzdG9yeSI6Wy05MzI4MDM5MjEsMTU2MzA5NTMy
+MSwtMjE0MzQ1Nzc4Miw1NzMyNTA5MzYsLTExMTE0MDM2NiwtMT
+k5Nzk3NzI4MiwtMTcwNDMzMDYyMCw2NjAxNTcwODEsMTg2MDE0
+NTU1Niw2NjA0MjgxMjksLTY0NjM5MDQxOSwtMjkwNzU4NDMxLD
+E3NDM1MDk5MjQsMTIxMzUwMTQ5Miw1Mzc1NzI1MTYsMTEzNzk2
+MDMzOSwxNjg2MzEwMTI5LC0xOTUzMDE1MjEsMTYwOTg4NzAwNS
+wtODUzNjMxNzMzXX0=
 -->
