@@ -29,7 +29,7 @@ With respect to generic types, clause (i) of this rule is not fully implemented.
   
 
 ## 1.4 Most Specialized Implementation
-Among a type's possible implementation of a protocol requirement is available to serve as the protocol witness for the requirement only if the implementation is an *unconditionally accessible* member of the type in the scope in which the protocol conformance is declared.  Given a declaration of `t: p` and an implementation of a protocol requirement `m` of `p`, the implementation is *unconditionally accessible* if and only if (i) `t` satisfies the conditions, if any, to which the declaration of the implementation is subject, and (ii) per the rules of access control, the implementation is visible in the scope in which `t: p` is declared.
+Among a type's unconditionally accessible implementations of a protocol requirement, the most specialized will serve as the protocol witness for the requirement.  Given a set of implementations of a protocol requirement `m` of `p`, the implementation is *unconditionally accessible* if and only if (i) `t` satisfies the conditions, if any, to which the declaration of the implementation is subject, and (ii) per the rules of access control, the implementation is visible in the scope in which `t: p` is declared.
 
 en multiple implementations of the same protocol requirement, the degree of specialization of an implementation is based on the declaration of the implementation, as follows, from most specialized to least specialized: [check this]
   1. conditionally declared in an extension of the type;
@@ -399,11 +399,11 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xMzEwMzk0ODQ5LDE0MTc5NTgw
-NjMsMzUwMTIyNDY5LDEzMTEzMDczODksODAwOTI4MjEwLC0xMT
-IyNTc5MjQwLDE1NjMwOTUzMjEsLTIxNDM0NTc3ODIsNTczMjUw
-OTM2LC0xMTExNDAzNjYsLTE5OTc5NzcyODIsLTE3MDQzMzA2Mj
-AsNjYwMTU3MDgxLDE4NjAxNDU1NTYsNjYwNDI4MTI5LC02NDYz
-OTA0MTksLTI5MDc1ODQzMSwxNzQzNTA5OTI0LDEyMTM1MDE0OT
-IsNTM3NTcyNTE2XX0=
+AnJ1xuIiwiaGlzdG9yeSI6WzM0MzQyMzY0MiwxNDE3OTU4MDYz
+LDM1MDEyMjQ2OSwxMzExMzA3Mzg5LDgwMDkyODIxMCwtMTEyMj
+U3OTI0MCwxNTYzMDk1MzIxLC0yMTQzNDU3NzgyLDU3MzI1MDkz
+NiwtMTExMTQwMzY2LC0xOTk3OTc3MjgyLC0xNzA0MzMwNjIwLD
+Y2MDE1NzA4MSwxODYwMTQ1NTU2LDY2MDQyODEyOSwtNjQ2Mzkw
+NDE5LC0yOTA3NTg0MzEsMTc0MzUwOTkyNCwxMjEzNTAxNDkyLD
+UzNzU3MjUxNl19
 -->
