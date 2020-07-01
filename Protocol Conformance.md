@@ -20,7 +20,6 @@ An implementation is not declared to be a protocol witness.  The identity of the
 A type's possible implementation of a protocol requirement is available to serve as the protocol witness for the requirement only if the implementation is an *unconditionally accessible* member of the type in the scope in which the protocol conformance is declared.  Given a declaration that a type `t` conforms to a protocol `p` and an implementation of a protocol requirement `m` of `p`, the implementation is *unconditionally accessible* if and only if (i) the conditions of any generic where clause to which the declaration of the implementation is subject are satisfied, and (ii) per the rules of access control, the implementation is visible in the scope in which the protocol conformance is declared.
 
 With respect to generic types, this rule is not fully implemented.  A generic type with its generic arguments all specified as concrete types may be referred to as a *concretization* of the generic type.  Swift's existing implementation of protocols does not include the ability to declare a concretization as conforming to a protocol.  Instead, a concretization uses the protocol conformances of its generic type, without specialization for implementations available via the concretization.  Thus, although a concretization may satisfy the conditions of a generic where clause that would make an implementation unconditionally accessible, the implementation subject to such where clause nevertheless is unavailable to serve as a protocol witness for the shared conformance.  
-
   * Although specialized implementations available to a concretization are not available to serve as protocol witnesses and cannot be accessed via the interface of a protocol, they remain members of the concretization.  Accordingly, as members, they may be accessed directly on the concretization.   
   
 
@@ -393,7 +392,7 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0yNjI0NDU4NDYsLTE3MDQzMzA2
+AnJ1xuIiwiaGlzdG9yeSI6Wy0yODE5MTA5NTIsLTE3MDQzMzA2
 MjAsNjYwMTU3MDgxLDE4NjAxNDU1NTYsNjYwNDI4MTI5LC02ND
 YzOTA0MTksLTI5MDc1ODQzMSwxNzQzNTA5OTI0LDEyMTM1MDE0
 OTIsNTM3NTcyNTE2LDExMzc5NjAzMzksMTY4NjMxMDEyOSwtMT
