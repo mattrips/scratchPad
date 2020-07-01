@@ -16,7 +16,7 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 
 
 #### Declaration of Protocol Conformance
-For a type `t` to conform to a protocol `p`, `t` must be declared to conform to `p`, and `t` must have at least one unconditionally accessible implementation for each protocol requirement of `p`.  A declaration that `t` conforms to `p` further constitutes, with respect to each protocol `o`<sub>1</sub>...`o`<sub>n</sub> from which `p` directly or indirectly inherits, a declaration that `t` conforms to such `o` so long as `t` has not already been declared to conform to such `o`.    
+For a type `t` to conform to a protocol `p`, `t` must be declared to conform to `p`, and `t` must have at least one unconditionally accessible implementation for each protocol requirement of `p`.  A declaration that `t` conforms to `p` further constitutes, with respect to each protocol `o`*<sub>1</sub>*...`o`*<sub>n</sub>* from which `p` directly or indirectly inherits, a declaration that `t` conforms to such `o` so long as `t` has not already been declared to conform to such `o`.    
   * In a given scope, a type may not be declared to conform to a protocol if a declaration of the conformance of the same type to the same protocol is visible in the scope.  This rule that a type can conform to a protocol only once holds true even if two declarations of conformance are conditional with disjoint conditions.  
   * 
 
@@ -395,11 +395,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xODM1NjE4ODI3LDEyMTM1MDE0
-OTIsNTM3NTcyNTE2LDExMzc5NjAzMzksMTY4NjMxMDEyOSwtMT
-k1MzAxNTIxLDE2MDk4ODcwMDUsLTg1MzYzMTczMywtMzA1NzI1
-MjE4LC03MjgzNzE3NzcsODQzNTgwODA4LDEyNTYzMTA2MjYsMT
-IzNTk1MTQxLC0yMDM0OTcyMjkwLC0xMDQ3OTExNDA5LC05Mjg4
-NDg2OTUsMTY1NjM3NTAwNywtMTQxMDU2MTIyMywtNDY1MTAwMD
-Q5LC00OTg4ODQ1MDNdfQ==
+AnJ1xuIiwiaGlzdG9yeSI6WzQyNjQyMjk3MSwxMjEzNTAxNDky
+LDUzNzU3MjUxNiwxMTM3OTYwMzM5LDE2ODYzMTAxMjksLTE5NT
+MwMTUyMSwxNjA5ODg3MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIx
+OCwtNzI4MzcxNzc3LDg0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMz
+U5NTE0MSwtMjAzNDk3MjI5MCwtMTA0NzkxMTQwOSwtOTI4ODQ4
+Njk1LDE2NTYzNzUwMDcsLTE0MTA1NjEyMjMsLTQ2NTEwMDA0OS
+wtNDk4ODg0NTAzXX0=
 -->
