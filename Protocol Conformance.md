@@ -1,18 +1,5 @@
-## Terminology
-
-protocol conformance
-: The set of witnesses used to satisfy the requirements of a given protocol.
-
-<block style="color:blue;"> 
-A protocol specifies a set of requirements.  A protocol may be applied to any type that satisfies its protocol requirements.  
-</block>
-
-A protocol also may supply functionality, which may serve as default implementations of its own protocol requirements.  A protocol provide may provide additional functionality of an arbitrary nature.  
-
-Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
-
 ## 1 Protocol Conformance
-With respect to the de type declared to conform to a protocol, a set of implementations--*protocol witnesses*--is specified, one for each for each protocol requirement of the protocol.  Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
+With respect to the declaration that a type conforms to a protocol, a set of implementations--*protocol witnesses*--is determined, one for each protocol requirement of the protocol.  Understanding how the protocol witness set is determined is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
 
 
 ### 1.1 Declaration of Protocol Conformance
@@ -398,11 +385,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzE1ODc2MTE2OTYsLTI5MDc1ODQz
-MSwxNzQzNTA5OTI0LDEyMTM1MDE0OTIsNTM3NTcyNTE2LDExMz
-c5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MDk4ODcw
-MDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3NzcsOD
-QzNTgwODA4LDEyNTYzMTA2MjYsMTIzNTk1MTQxLC0yMDM0OTcy
-MjkwLC0xMDQ3OTExNDA5LC05Mjg4NDg2OTUsMTY1NjM3NTAwNy
-wtMTQxMDU2MTIyM119
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xMTE3MTYzODk5LC0yOTA3NTg0
+MzEsMTc0MzUwOTkyNCwxMjEzNTAxNDkyLDUzNzU3MjUxNiwxMT
+M3OTYwMzM5LDE2ODYzMTAxMjksLTE5NTMwMTUyMSwxNjA5ODg3
+MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIxOCwtNzI4MzcxNzc3LD
+g0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMzU5NTE0MSwtMjAzNDk3
+MjI5MCwtMTA0NzkxMTQwOSwtOTI4ODQ4Njk1LDE2NTYzNzUwMD
+csLTE0MTA1NjEyMjNdfQ==
 -->
