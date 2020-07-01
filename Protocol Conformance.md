@@ -23,7 +23,7 @@ In a given scope, a type may not be declared to conform to a protocol if a decla
 #### Protocol Witness
 Given a protocol `p`, a *protocol requirement* `m` is a statement in the declaration of `p` that describes a member, such that, as a condition of a type `t` being able to conform to `p`, `t` must have a member satisfying the requirements of `m`.  A member of `t` that satisfies the requirements of `m` is referred to as an implementation of `m`.  
 
-If `t` is declared to conform to `p`, then, for each protocol requirement of `p`, one and only one of `t`'s possible implementation of the protocol requirement , which implementation is referred to as the *protocol witness* for the requirement. 
+If `t` is declared to conform to `p`, then, for protocol requirement `m` of `p`, one and only one of `t`'s possible implementations of `m` will be used to perform the protocol requirement.   which implementation is referred to as the *protocol witness* for the requirement. 
 A type may have more than one implementation of a given protocol requirement.  
 If a type has only one implementation of a given protocol requirement, then that implementation 
 
@@ -400,7 +400,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzE3NTgzMTM2NDAsMTc0MzUwOTky
+AnJ1xuIiwiaGlzdG9yeSI6Wy02MjE4NTk2MDgsMTc0MzUwOTky
 NCwxMjEzNTAxNDkyLDUzNzU3MjUxNiwxMTM3OTYwMzM5LDE2OD
 YzMTAxMjksLTE5NTMwMTUyMSwxNjA5ODg3MDA1LC04NTM2MzE3
 MzMsLTMwNTcyNTIxOCwtNzI4MzcxNzc3LDg0MzU4MDgwOCwxMj
