@@ -38,9 +38,8 @@ For a type `t` to conform to a protocol `p`, `t` must be declared to conform to 
   3.  conditionally declared in an extension of a protocol to which the type conforms; and
   4. unconditionally declared in an extension of a protocol to which the type conforms. 
 
-  * If multiple protocols in a chain of inheritance of protocols provide declarations of an implementation, the implementation on a more refined protocol is more specialized than an implementation on a less refined protocol.
-  * Where multiple protocols outside of a single chain of inheritance provide implementations, an ambiguity error occurs.
-
+  * If multiple protocols in a chain of inheritance of protocols provide declarations of an implementation, the implementation on a more refined protocol is more specialized than an implementation on a less refined protocol. [check this]
+  * Where multiple protocols outside of a single chain of inheritance provide implementations, an ambiguity error occurs. [check this]
 
 &#9724; protocol requirements set
 : The set of requirements declared within the declaration of a protocol.  
@@ -50,6 +49,7 @@ For a type `t` to conform to a protocol `p`, `t` must be declared to conform to 
   * There is only one protocol witness set for a protocol conformance declaration.  Such set is immutable, and is not subject to replacement.
   * If a protocol has no declared requirements, the protocol witness set for conformances to the protocol is empty.
   * Inherited requirements of a protocol are irrelevant to determination of a protocol witness set.
+  * A protocol witness set sometimes is referred to as a protocol conformance.  To avoid overloading of that term
   
 
 
@@ -396,7 +396,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xNzYwNjU1NjgsMTIxMzUwMTQ5
+AnJ1xuIiwiaGlzdG9yeSI6WzEyNjA1NDMwMzYsMTIxMzUwMTQ5
 Miw1Mzc1NzI1MTYsMTEzNzk2MDMzOSwxNjg2MzEwMTI5LC0xOT
 UzMDE1MjEsMTYwOTg4NzAwNSwtODUzNjMxNzMzLC0zMDU3MjUy
 MTgsLTcyODM3MTc3Nyw4NDM1ODA4MDgsMTI1NjMxMDYyNiwxMj
