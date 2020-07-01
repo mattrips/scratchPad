@@ -16,9 +16,9 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 
 
 #### Declaration of Protocol Conformance
-To conform to a protocol, a type must be declared to conform to conform to the protocol.    
+For a type `t` to conform to a protocol `p`, `t` must be declared to conform to `p`, and must have at.  A declaration that a type conforms to a protocol `p` further constitutes, with respect to each protocol `n` from which protocol `p` directly or indirectly inherits, a declaration that the type conforms to protocol `n` so long as the type has not already been declared to conform to protocol `n`.    
   * In a given scope, a type may not be declared to conform to a protocol if a declaration of the conformance of the same type to the same protocol is visible in the scope.  This rule that a type can conform to a protocol only once holds true even if two declarations of conformance are conditional with disjoint conditions.  
-  * A declaration that a type conforms to a protocol `a` further constitutes, with respect to each protocol `n` from which protocol `a` directly or indirectly inherits, a declaration that the type conforms to protocol `n` so long as the type has not already been declared to conform to protocol `n`.
+  * 
 
 &#9724; implementation
 : Given a protocol requirement and a type, an ***implementation*** is a member of the type that is capable of satisfying the protocol requirement.
@@ -396,11 +396,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xMzc2MDE0OTg2LDUzNzU3MjUx
-NiwxMTM3OTYwMzM5LDE2ODYzMTAxMjksLTE5NTMwMTUyMSwxNj
-A5ODg3MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIxOCwtNzI4Mzcx
-Nzc3LDg0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMzU5NTE0MSwtMj
-AzNDk3MjI5MCwtMTA0NzkxMTQwOSwtOTI4ODQ4Njk1LDE2NTYz
-NzUwMDcsLTE0MTA1NjEyMjMsLTQ2NTEwMDA0OSwtNDk4ODg0NT
-AzLDEzNTQ5NzA1NzhdfQ==
+AnJ1xuIiwiaGlzdG9yeSI6Wzc0MDg5MTk5Niw1Mzc1NzI1MTYs
+MTEzNzk2MDMzOSwxNjg2MzEwMTI5LC0xOTUzMDE1MjEsMTYwOT
+g4NzAwNSwtODUzNjMxNzMzLC0zMDU3MjUyMTgsLTcyODM3MTc3
+Nyw4NDM1ODA4MDgsMTI1NjMxMDYyNiwxMjM1OTUxNDEsLTIwMz
+Q5NzIyOTAsLTEwNDc5MTE0MDksLTkyODg0ODY5NSwxNjU2Mzc1
+MDA3LC0xNDEwNTYxMjIzLC00NjUxMDAwNDksLTQ5ODg4NDUwMy
+wxMzU0OTcwNTc4XX0=
 -->
