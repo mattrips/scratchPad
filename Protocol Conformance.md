@@ -1,13 +1,13 @@
-## 1 Protocol Conformance
-With respect to the declaration that a type conforms to a protocol, a set of implementations--*protocol witnesses*--is determined, one for each protocol requirement of the protocol.  Understanding how the protocol witness set is determined is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
+# 1 Protocol Conformance
+With respect to the declaration that a type conforms to a protocol, a set of implementations--*protocol witnesses*--is determined, one for each protocol requirement of the protocol.  Understanding how the *protocol witness set* is determined is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
 
 
-### 1.1 Declaration of Protocol Conformance
+## 1.1 Declaration of Protocol Conformance
 For a type `t` to conform to a protocol `p`, `t` must be declared to conform to `p`, and `t` must have at least one unconditionally accessible implementation for each protocol requirement of `p`.  A declaration that `t` conforms to `p` further constitutes, with respect to each protocol `o`*<sub>i</sub>* from which `p` directly or indirectly inherits, a declaration that `t` conforms to `o`*<sub>i</sub>* so long as `t` has not already been declared to conform to `o`*<sub>i</sub>*.   
 
 In a given scope, a type may not be declared to conform to a protocol if a declaration of the conformance of the same type to the same protocol is visible in the scope.  In a given scope, a type can conform to a protocol in only one way.  This rule holds true even where competing declarations are conditional with disjoint conditions.  
   
-### 1.2 Protocol Witness
+## 1.2 Protocol Witness
 Given a protocol `p`, a *protocol requirement* `m` is a statement in the declaration of `p` that describes a member, such that, as a condition of a type `t` being able to conform to `p`, `t` must have a member satisfying the requirements of `m`.  A member of `t` that satisfies the requirements of `m` is referred to as an *implementation* of `m`.  
 
 If `t` is declared to conform to `p`, then, for protocol requirement `m` of `p`, one and only one of `t`'s  implementations of `m` will actually be used as the implementation of `m`.  Such implementation of `m` is referred to as the *protocol witness* for the `m` requirement of the conformance `t: p`.  A protocol witness exists with respect to a given protocol requirement of a given declaration of conformance of a type to a protocol.
@@ -16,12 +16,12 @@ A type may have more than one implementation of a given protocol requirement.  G
 
 An implementation is not declared to be a protocol witness.  The identify of the protocol witness for a protocol requirement is inferred from the entirety of the scope, including all declarations made within the scope and those imported into the scope.  Careful engineering is required in order to achieve the intended witness for a given requirement.
 
-#### _.1.3 Unconditionally Accessible Implementation
+## 1.3 Unconditionally Accessible Implementation
 Given a declaration that a type conforms to the protocol, the scope in which such declaration is stated, and an implementation of a protocol requirement of the protocol, the implementation is unconditionally accessible if and only if (i) the conditions of any generic where clause to which the declaration of the implementation is subject are satisfied, and (ii) per the rules of access control, the implementation is visible in the scope.
   * With respect to a type that is a concretization of a generic type, this rule is not fully implemented; although the type that is a concretization  may fully satisfy the conditions of a where clause stated on the generic type, implementations subject to such conditions remain unavailable to serve as protocol witnesses.
   * ~~Similarly,  this rule is not fully implemented, in the case of implementations declared in protocol extensions that are subject to the conditions of a generic where clause tied to `associated type` requirements of the protocol.  Regardless of whether the conditions are satisfied, implementations subject to such conditions remain unavailable to serve as protocol witnesses.~~[check this]
 
-&#9724; degree of specialization
+## Most Specialized Implementation
 : Given multiple implementations of the same protocol requirement, the degree of specialization of an implementation is based on the declaration of the implementation, as follows, from most specialized to least specialized: [check this]
   1. conditionally declared in an extension of the type;
   2. unconditionally declared in the declaration or an extension of the type;
@@ -383,13 +383,26 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 
 
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
+
+## Terminology
+
+protocol conformance
+: The set of witnesses used to satisfy the requirements of a given protocol.
+
+<block style="color:blue;"> 
+A protocol specifies a set of requirements.  A protocol may be applied to any type that satisfies its protocol requirements.  
+</block>
+
+A protocol also may supply functionality, which may serve as default implementations of its own protocol requirements.  A protocol provide may provide additional functionality of an arbitrary nature.  
+
+Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xMTE3MTYzODk5LC0yOTA3NTg0
-MzEsMTc0MzUwOTkyNCwxMjEzNTAxNDkyLDUzNzU3MjUxNiwxMT
-M3OTYwMzM5LDE2ODYzMTAxMjksLTE5NTMwMTUyMSwxNjA5ODg3
-MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIxOCwtNzI4MzcxNzc3LD
-g0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMzU5NTE0MSwtMjAzNDk3
-MjI5MCwtMTA0NzkxMTQwOSwtOTI4ODQ4Njk1LDE2NTYzNzUwMD
-csLTE0MTA1NjEyMjNdfQ==
+AnJ1xuIiwiaGlzdG9yeSI6WzEwOTY3MDA1NTgsLTI5MDc1ODQz
+MSwxNzQzNTA5OTI0LDEyMTM1MDE0OTIsNTM3NTcyNTE2LDExMz
+c5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MDk4ODcw
+MDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3NzcsOD
+QzNTgwODA4LDEyNTYzMTA2MjYsMTIzNTk1MTQxLC0yMDM0OTcy
+MjkwLC0xMDQ3OTExNDA5LC05Mjg4NDg2OTUsMTY1NjM3NTAwNy
+wtMTQxMDU2MTIyM119
 -->
