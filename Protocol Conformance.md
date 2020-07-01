@@ -7,7 +7,7 @@ When a type is declared to conform to a protocol, a set of implementations--*pro
 ## 1.1 Declaration of Protocol Conformance
 For a type `t` to conform to a protocol `p`, `t` must be declared to conform to `p`, and `t` must have at least one unconditionally accessible implementation for each protocol requirement of `p`.  A distinct set of protocol witnesses is established for the conformance `t: p`.
 
-A declaration that `t` conforms to `p` further constitutes, with respect to each protocol `o`*<sub>i</sub>* from which `p` directly or indirectly inherits, a declaration that `t` conforms to `o`*<sub>i</sub>* so long as `t` has not already been declared to conform to `o`*<sub>i</sub>*.   Thus, for the declaration of `t: p` to be valid, the declarations of each `t: o`*<sub>i</sub>* must be satisfy the requirement that `t` must have at least one unconditionally accessible implementation for each protocol requirement of  `o`*<sub>i</sub>*. For each conformance `t: o`*<sub>i</sub>*, a distinct set of protocol witnesses is established.
+A declaration that `t` conforms to `p` further constitutes, with respect to each protocol `o`*<sub>i</sub>* from which `p` directly or indirectly inherits, a declaration that `t` conforms to `o`*<sub>i</sub>* so long as `t` has not already been declared to conform to `o`*<sub>i</sub>*.   Thus, for the declaration of `t: p` to be valid, the declarations of each `t: o`*<sub>i</sub>* must satisfy the requirement that `t`  have at least one unconditionally accessible implementation for each protocol requirement of  `o`*<sub>i</sub>*. For each conformance `t: o`*<sub>i</sub>*, a distinct set of protocol witnesses is established.
 
 In a given scope, a type can conform to a protocol in only one way.  A type `t` cannot be declared to conform to a protocol `p` if, within the visible scope, another declaration exists of `t: p`.  This rule holds true even where competing declarations are conditional with disjoint conditions.  
 
@@ -397,11 +397,11 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzM1MDEyMjQ2OSwxMzExMzA3Mzg5
-LDgwMDkyODIxMCwtMTEyMjU3OTI0MCwxNTYzMDk1MzIxLC0yMT
-QzNDU3NzgyLDU3MzI1MDkzNiwtMTExMTQwMzY2LC0xOTk3OTc3
-MjgyLC0xNzA0MzMwNjIwLDY2MDE1NzA4MSwxODYwMTQ1NTU2LD
-Y2MDQyODEyOSwtNjQ2MzkwNDE5LC0yOTA3NTg0MzEsMTc0MzUw
-OTkyNCwxMjEzNTAxNDkyLDUzNzU3MjUxNiwxMTM3OTYwMzM5LD
-E2ODYzMTAxMjldfQ==
+AnJ1xuIiwiaGlzdG9yeSI6WzE0MTc5NTgwNjMsMzUwMTIyNDY5
+LDEzMTEzMDczODksODAwOTI4MjEwLC0xMTIyNTc5MjQwLDE1Nj
+MwOTUzMjEsLTIxNDM0NTc3ODIsNTczMjUwOTM2LC0xMTExNDAz
+NjYsLTE5OTc5NzcyODIsLTE3MDQzMzA2MjAsNjYwMTU3MDgxLD
+E4NjAxNDU1NTYsNjYwNDI4MTI5LC02NDYzOTA0MTksLTI5MDc1
+ODQzMSwxNzQzNTA5OTI0LDEyMTM1MDE0OTIsNTM3NTcyNTE2LD
+ExMzc5NjAzMzldfQ==
 -->
