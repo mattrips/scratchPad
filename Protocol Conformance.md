@@ -32,9 +32,10 @@ Given a declaration that a type conforms to the protocol, the scope in which suc
   * Where multiple protocols outside of a single chain of inheritance provide implementations, an ambiguity error occurs. [check this]
 
 ## Protocol Witness Set
+
 The set of requirements declared within the declaration of a protocol.  
 
-: Given a declaration that a type conforms to a protocol, the protocol witness set is the set consisting of the protocol witness for each declared requirement of the protocol.  [A protocol witness set also is referred to as a protocol conformance.  I am suggesting this term to avoid ambiguity between that usage of the term protocol conformance and similar usage of the term to refer to the more general notion that a type is declared to conform to a protocol or that a type has implementations capable of conforming to a protocol.  I also am suggesting that the termprotocol witness set presents a much better conceptual picture of what the conformance actually is.]
+Given a declaration that a type conforms to a protocol, the protocol witness set is the set consisting of the protocol witness for each declared requirement of the protocol.  [A protocol witness set also is referred to as a protocol conformance.  I am suggesting this term to avoid ambiguity between that usage of the term protocol conformance and similar usage of the term to refer to the more general notion that a type is declared to conform to a protocol or that a type has implementations capable of conforming to a protocol.  I also am suggesting that the termprotocol witness set presents a much better conceptual picture of what the conformance actually is.]
   * There is only one protocol witness set for a protocol conformance declaration.  Such set is immutable, and is not subject to replacement.
   * If a protocol has no declared requirements, the protocol witness set for conformances to the protocol is empty.
   * Inherited requirements of a protocol are irrelevant to determination of a protocol witness set.
@@ -397,7 +398,7 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzExODE2MTc3ODEsLTI5MDc1ODQz
+AnJ1xuIiwiaGlzdG9yeSI6WzE5NDE0OTgyMDksLTI5MDc1ODQz
 MSwxNzQzNTA5OTI0LDEyMTM1MDE0OTIsNTM3NTcyNTE2LDExMz
 c5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MDk4ODcw
 MDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3NzcsOD
