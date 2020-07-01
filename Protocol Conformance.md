@@ -35,7 +35,8 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 : Given multiple implementations of the same protocol requirement, the degree of specialization of an implementation is based on the declaration of the implementation, as follows, from most specialized to least specialized:
   1. conditionally declared in an extension of the type;
   2. unconditionally declared in the declaration or an extension of the type;
-  3.  
+  3.  conditionally declared in an extension of a protocol to which the type conforms (if );
+  4. unconditionally declared in an extension of a protocol to which the type conforms;
 
 
 Ambiguity...
@@ -394,11 +395,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzM3NzQ4OTY3Miw1Mzc1NzI1MTYs
-MTEzNzk2MDMzOSwxNjg2MzEwMTI5LC0xOTUzMDE1MjEsMTYwOT
-g4NzAwNSwtODUzNjMxNzMzLC0zMDU3MjUyMTgsLTcyODM3MTc3
-Nyw4NDM1ODA4MDgsMTI1NjMxMDYyNiwxMjM1OTUxNDEsLTIwMz
-Q5NzIyOTAsLTEwNDc5MTE0MDksLTkyODg0ODY5NSwxNjU2Mzc1
-MDA3LC0xNDEwNTYxMjIzLC00NjUxMDAwNDksLTQ5ODg4NDUwMy
-wxMzU0OTcwNTc4XX0=
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xMDc1ODk2NzI3LDUzNzU3MjUx
+NiwxMTM3OTYwMzM5LDE2ODYzMTAxMjksLTE5NTMwMTUyMSwxNj
+A5ODg3MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIxOCwtNzI4Mzcx
+Nzc3LDg0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMzU5NTE0MSwtMj
+AzNDk3MjI5MCwtMTA0NzkxMTQwOSwtOTI4ODQ4Njk1LDE2NTYz
+NzUwMDcsLTE0MTA1NjEyMjMsLTQ2NTEwMDA0OSwtNDk4ODg0NT
+AzLDEzNTQ5NzA1NzhdfQ==
 -->
