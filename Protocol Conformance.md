@@ -11,24 +11,24 @@ A protocol also may supply functionality, which may serve as default implementat
 
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 
-## 1. Protocol Conformance
+## _.1 Protocol Conformance
 With respect to a type declared to conform to a protocol, a protocol conformance specifies, for each protocol requirement of the protocol, which property, method, initializer, subscript or typealias will be used to implement the protocol requirement when invoked on the type.  Understanding protocol conformance is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines a protocol conformance.
 
 
-#### Declaration of Protocol Conformance
+#### _.1.1 Declaration of Protocol Conformance
 For a type `t` to conform to a protocol `p`, `t` must be declared to conform to `p`, and `t` must have at least one unconditionally accessible implementation for each protocol requirement of `p`.  A declaration that `t` conforms to `p` further constitutes, with respect to each protocol `o`*<sub>i</sub>* from which `p` directly or indirectly inherits, a declaration that `t` conforms to `o`*<sub>i</sub>* so long as `t` has not already been declared to conform to `o`*<sub>i</sub>*.   
 
 In a given scope, a type may not be declared to conform to a protocol if a declaration of the conformance of the same type to the same protocol is visible in the scope.  In a given scope, a type can conform to a protocol in only one way.  This rule holds true even where competing declarations are conditional with disjoint conditions.  
   
-#### Protocol Witness
+#### _.1.2 Protocol Witness
 Given a protocol `p`, a *protocol requirement* `m` is a statement in the declaration of `p` that describes a member, such that, as a condition of a type `t` being able to conform to `p`, `t` must have a member satisfying the requirements of `m`.  A member of `t` that satisfies the requirements of `m` is referred to as an *implementation* of `m`.  
 
 If `t` is declared to conform to `p`, then, for protocol requirement `m` of `p`, one and only one of `t`'s  implementations of `m` will actually be used as the implementation of `m`.  Such implementation of `m` is referred to as the *protocol witness* for the `m` requirement of the conformance `t: p`.  A protocol witness exists with respect to a given protocol requirement of a given declaration of conformance of a type to a protocol.
 
 A type may have more than one implementation of a given protocol requirement.  Given the declaration `t: p` and protocol requirement `m` of `p`, the protocol witness for `m` is the *most specialized* implementation from among the implementations that are *unconditionally accessible* on `t`, as determined in the scope in which the declaration `t: p` is stated.  If `t` has only one *unconditionally accessible* implementation of `m`,  that implementation will be the protocol witness.  If `t` has more than one *unconditionally accessible* implementation of `m`,  the *most specialized* of those implementations will be the protocol witness.
 
-&#9724; unconditionally accessible implementation
-: Given a declaration that a type conforms to the protocol, the scope in which such declaration is stated, and an implementation of a protocol requirement of the protocol, the implementation is unconditionally accessible if and only if (i) the conditions of any generic where clause to which the declaration of the implementation is subject are satisfied, and (ii) per the rules of access control, the implementation is visible in the scope.
+#### _.1.3 Unconditionally Accessible Implementation
+Given a declaration that a type conforms to the protocol, the scope in which such declaration is stated, and an implementation of a protocol requirement of the protocol, the implementation is unconditionally accessible if and only if (i) the conditions of any generic where clause to which the declaration of the implementation is subject are satisfied, and (ii) per the rules of access control, the implementation is visible in the scope.
   * With respect to a type that is a concretization of a generic type, this rule is not fully implemented; although the type that is a concretization  may fully satisfy the conditions of a where clause stated on the generic type, implementations subject to such conditions remain unavailable to serve as protocol witnesses.
   * ~~Similarly,  this rule is not fully implemented, in the case of implementations declared in protocol extensions that are subject to the conditions of a generic where clause tied to `associated type` requirements of the protocol.  Regardless of whether the conditions are satisfied, implementations subject to such conditions remain unavailable to serve as protocol witnesses.~~[check this]
 
@@ -396,11 +396,11 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xMjY4MzEwMTcxLDE3NDM1MDk5
-MjQsMTIxMzUwMTQ5Miw1Mzc1NzI1MTYsMTEzNzk2MDMzOSwxNj
-g2MzEwMTI5LC0xOTUzMDE1MjEsMTYwOTg4NzAwNSwtODUzNjMx
-NzMzLC0zMDU3MjUyMTgsLTcyODM3MTc3Nyw4NDM1ODA4MDgsMT
-I1NjMxMDYyNiwxMjM1OTUxNDEsLTIwMzQ5NzIyOTAsLTEwNDc5
-MTE0MDksLTkyODg0ODY5NSwxNjU2Mzc1MDA3LC0xNDEwNTYxMj
-IzLC00NjUxMDAwNDldfQ==
+AnJ1xuIiwiaGlzdG9yeSI6WzE1NzQxODQ5MzgsMTc0MzUwOTky
+NCwxMjEzNTAxNDkyLDUzNzU3MjUxNiwxMTM3OTYwMzM5LDE2OD
+YzMTAxMjksLTE5NTMwMTUyMSwxNjA5ODg3MDA1LC04NTM2MzE3
+MzMsLTMwNTcyNTIxOCwtNzI4MzcxNzc3LDg0MzU4MDgwOCwxMj
+U2MzEwNjI2LDEyMzU5NTE0MSwtMjAzNDk3MjI5MCwtMTA0Nzkx
+MTQwOSwtOTI4ODQ4Njk1LDE2NTYzNzUwMDcsLTE0MTA1NjEyMj
+MsLTQ2NTEwMDA0OV19
 -->
