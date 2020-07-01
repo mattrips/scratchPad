@@ -24,7 +24,16 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 : Given a protocol requirement and a type, an ***implementation*** is a member of the type that is capable of satisfying the protocol requirement.
 
 &#9724; protocol witness
-: Given a declaration that a type conforms to a protocol and a protocol requirement of the protocol, the ***protocol witness*** for such protocol requirement is the most specialized implementation from among the implementations that are unconditionally accessible.
+: Given a declaration that a type conforms to a protocol and a protocol requirement of the protocol, the ***protocol witness*** for such protocol requirement is the most specialized implementation from among the implementations that are unconditionally accessible on the type.
+
+&#9724; unconditionally accessible implementation
+: Given a declaration that a type conforms to the protocol, the scope in which such declaration is stated, and an implementation of a protocol requirement of the protocol, the implementation is unconditionally accessible if and only if (i) the conditions of any generic where clause to which the declaration of the implementation is subject are satisfied, and (ii) per the rules of access control, the implementation is visible in the scope.
+  * With respect to a type that is a concretization of a generic type, this rule is not fully implemented.  Although the type that is a concretization  may fully satisfy the conditions of a generic where clause stated on the generic type, implementations subject to such conditions remain unavailable to serve as protocol witnesses.
+  * Similarly,  this rule is not fully implemented, in the case of implementations declared in protocol extensions that are subject to the conditions of a generic where clause tied to `associated type` requirements of the protocol.  Regardless of whether the conditions are satisfied, implementations subject to such conditions remain unavailable to serve as protocol witnesses. 
+
+&#9724; implementation
+: Given
+
 
 &#9724; protocol requirements set
 : The set of requirements declared within the declaration of a protocol.  
@@ -34,14 +43,8 @@ With respect to a type declared to conform to a protocol, a protocol conformance
   * There is only one protocol witness set for a protocol conformance declaration.  Such set is immutable, and is not subject to replacement.
   * If a protocol has no declared requirements, the protocol witness set for conformances to the protocol is empty.
   * Inherited requirements of a protocol are irrelevant to determination of a protocol witness set.
-  * 
   
 
-
-&#9724; unconditionally accessible implementation
-: Given a declaration that a type conforms to the protocol, the scope in which such declaration is stated, and an implementation of a protocol requirement of the protocol, the implementation is unconditionally accessible if and only if (i) the conditions of any generic where clause to which the declaration of the implementation is subject are satisfied, and (ii) per the rules of access control, the implementation is visible in the scope.
-  * With respect to a type that is a concretization of a generic type, this rule is not fully implemented.  Although the type that is a concretization  may fully satisfy the conditions of a generic where clause stated on the generic type, implementations subject to such conditions remain unavailable to serve as protocol witnesses.
-  * Similarly,  this rule is not fully implemented, in the case of implementations declared in protocol extensions that are subject to the conditions of a generic where clause tied to `associated type` requirements of the protocol.  Regardless of whether the conditions are satisfied, implementations subject to such conditions remain unavailable to serve as protocol witnesses. 
 
 &#9724; accessible member
 : Given a type in a scope, a member of the type is accessible if, per the rules of access control, the member is visible in the scope.
@@ -386,7 +389,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy01NDE3ODg4MDgsNTM3NTcyNTE2
+AnJ1xuIiwiaGlzdG9yeSI6WzE1MTc4Njk2MDUsNTM3NTcyNTE2
 LDExMzc5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MD
 k4ODcwMDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3
 NzcsODQzNTgwODA4LDEyNTYzMTA2MjYsMTIzNTk1MTQxLC0yMD
