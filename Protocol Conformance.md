@@ -9,9 +9,9 @@ A declaration that `t` conforms to `p` further constitutes, with respect to each
 In a given scope, a type can conform to a protocol in only one way.  A type `t` cannot be declared to conform to a protocol `p` if, within the visible scope, another declaration exists of `t: p`.  This rule holds true even where competing declarations are conditional with disjoint conditions.  
 
 ## 1.2 Protocol Witness
-Given the declaration of conformance `t: p`, a *protocol requirement* `m` is a statement in the declaration of `p` that `t` or any other type seeking to conform to `p` must have a member satisfying the requirements of `m`.  A member of `t` that satisfies the requirements of `m` is referred to as an *implementation* of `m`.  
+Given the declaration of conformance `t: p`, a *protocol requirement* `m` is a statement in the declaration of `p` that `t` (or any other type seeking to conform to `p`) must have a member satisfying the requirements of `m`.  A member of `t` that satisfies the requirements of `m` is referred to as an *implementation* of `m`.  
 
-If `t` is declared to conform to `p`, then, for protocol requirement `m` of `p`, one and only one of `t`'s  implementations of `m` will actually be used as the implementation of `m`.  Such implementation of `m` is referred to as the *protocol witness* for the `m` requirement of the conformance `t: p`.
+If `t: p`, then, for protocol requirement `m` of `p`, one and only one of `t`'s  implementations of `m` will actually be used as the implementation of `m`.  Such implementation of `m` is referred to as the *protocol witness* for the `m` requirement of the conformance `t: p`.
 
 A type may have more than one implementation of a given protocol requirement.  Given the declaration `t: p` and protocol requirement `m` of `p`, the protocol witness for `m` is the *most specialized* of the *unconditionally accessible* implementations on `t`, as determined in the scope in which the declaration `t: p` is stated.  If `t` has only one *unconditionally accessible* implementation of `m`,  that implementation will be the protocol witness.  If `t` has more than one *unconditionally accessible* implementation of `m`,  the *most specialized* of those implementations will be the protocol witness.
 
@@ -393,11 +393,11 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzE3MTE0MTE5NzksMTU2MzA5NTMy
-MSwtMjE0MzQ1Nzc4Miw1NzMyNTA5MzYsLTExMTE0MDM2NiwtMT
-k5Nzk3NzI4MiwtMTcwNDMzMDYyMCw2NjAxNTcwODEsMTg2MDE0
-NTU1Niw2NjA0MjgxMjksLTY0NjM5MDQxOSwtMjkwNzU4NDMxLD
-E3NDM1MDk5MjQsMTIxMzUwMTQ5Miw1Mzc1NzI1MTYsMTEzNzk2
-MDMzOSwxNjg2MzEwMTI5LC0xOTUzMDE1MjEsMTYwOTg4NzAwNS
-wtODUzNjMxNzMzXX0=
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xMTIyNTc5MjQwLDE1NjMwOTUz
+MjEsLTIxNDM0NTc3ODIsNTczMjUwOTM2LC0xMTExNDAzNjYsLT
+E5OTc5NzcyODIsLTE3MDQzMzA2MjAsNjYwMTU3MDgxLDE4NjAx
+NDU1NTYsNjYwNDI4MTI5LC02NDYzOTA0MTksLTI5MDc1ODQzMS
+wxNzQzNTA5OTI0LDEyMTM1MDE0OTIsNTM3NTcyNTE2LDExMzc5
+NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MDk4ODcwMD
+UsLTg1MzYzMTczM119
 -->
