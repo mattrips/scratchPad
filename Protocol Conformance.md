@@ -11,7 +11,7 @@ Given a protocol `p`, a *protocol requirement* `m` is a statement in the declara
 
 If `t` is declared to conform to `p`, then, for protocol requirement `m` of `p`, one and only one of `t`'s  implementations of `m` will actually be used as the implementation of `m`.  Such implementation of `m` is referred to as the *protocol witness* for the `m` requirement of the conformance `t: p`.
 
-A type may have more than one implementation of a given protocol requirement.  Given the declaration `t: p` and protocol requirement `m` of `p`, the protocol witness for `m` is the *most specialized* implementation from among the implementations that are *unconditionally accessible* on `t`, as determined in the scope in which the declaration `t: p` is stated.  If `t` has only one *unconditionally accessible* implementation of `m`,  that implementation will be the protocol witness.  If `t` has more than one *unconditionally accessible* implementation of `m`,  the *most specialized* of those implementations will be the protocol witness.
+A type may have more than one implementation of a given protocol requirement.  Given the declaration `t: p` and protocol requirement `m` of `p`, the protocol witness for `m` is the *most specialized* of the *unconditionally accessible* implementations on `t`, as determined in the scope in which the declaration `t: p` is stated.  If `t` has only one *unconditionally accessible* implementation of `m`,  that implementation will be the protocol witness.  If `t` has more than one *unconditionally accessible* implementation of `m`,  the *most specialized* of those implementations will be the protocol witness.
 
 An implementation is not declared to be a protocol witness.  The identity of the protocol witness for a protocol requirement is inferred from the entirety of the scope, including all declarations made within the scope and those imported into the scope.  Careful engineering is required in order to achieve the intended witness for a given requirement.
 
@@ -391,11 +391,11 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzU3MzI1MDkzNiwtMTExMTQwMzY2
-LC0xOTk3OTc3MjgyLC0xNzA0MzMwNjIwLDY2MDE1NzA4MSwxOD
-YwMTQ1NTU2LDY2MDQyODEyOSwtNjQ2MzkwNDE5LC0yOTA3NTg0
-MzEsMTc0MzUwOTkyNCwxMjEzNTAxNDkyLDUzNzU3MjUxNiwxMT
-M3OTYwMzM5LDE2ODYzMTAxMjksLTE5NTMwMTUyMSwxNjA5ODg3
-MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIxOCwtNzI4MzcxNzc3LD
-g0MzU4MDgwOF19
+AnJ1xuIiwiaGlzdG9yeSI6Wy0yMTQzNDU3NzgyLDU3MzI1MDkz
+NiwtMTExMTQwMzY2LC0xOTk3OTc3MjgyLC0xNzA0MzMwNjIwLD
+Y2MDE1NzA4MSwxODYwMTQ1NTU2LDY2MDQyODEyOSwtNjQ2Mzkw
+NDE5LC0yOTA3NTg0MzEsMTc0MzUwOTkyNCwxMjEzNTAxNDkyLD
+UzNzU3MjUxNiwxMTM3OTYwMzM5LDE2ODYzMTAxMjksLTE5NTMw
+MTUyMSwxNjA5ODg3MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIxOC
+wtNzI4MzcxNzc3XX0=
 -->
