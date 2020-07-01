@@ -18,7 +18,7 @@ An implementation is not declared to be a protocol witness.  The identity of the
 
 ## 1.3 Unconditionally Accessible Implementations
 A type's possible implementation of a protocol requirement is available to serve as the protocol witness for the requirement only if the implementation is an *unconditionally accessible* member of the type in the scope in which the protocol conformance is declared.  Given a declaration that a type `t` conforms to a protocol `p` and an implementation of a protocol requirement `m` of `p`, the implementation is *unconditionally accessible* if and only if (i) the conditions of any generic where clause to which the declaration of the implementation is subject are satisfied, and (ii) per the rules of access control, the implementation is visible in the scope in which the protocol conformance is declared.
-  * With respect to a type that is a concretization of a generic type, this rule is not fully implemented; although the type that is a concretization  may satisfy the conditions of a where clause stated on the generic type that would otherwise make an implementation unconditionally accessible, the implementation subject to such where clause is unavailable to serve as a protocol witness.  However, implementations 
+  * With respect to types that are generic types that , this rule is not fully implemented; although the type that is a concretization  may satisfy the conditions of a where clause stated on the generic type that would otherwise make an implementation unconditionally accessible, the implementation subject to such where clause is unavailable to serve as a protocol witness.
 
 ## Most Specialized Implementation
 : Given multiple implementations of the same protocol requirement, the degree of specialization of an implementation is based on the declaration of the implementation, as follows, from most specialized to least specialized: [check this]
@@ -397,11 +397,11 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy02NDYzOTA0MTksLTI5MDc1ODQz
-MSwxNzQzNTA5OTI0LDEyMTM1MDE0OTIsNTM3NTcyNTE2LDExMz
-c5NjAzMzksMTY4NjMxMDEyOSwtMTk1MzAxNTIxLDE2MDk4ODcw
-MDUsLTg1MzYzMTczMywtMzA1NzI1MjE4LC03MjgzNzE3NzcsOD
-QzNTgwODA4LDEyNTYzMTA2MjYsMTIzNTk1MTQxLC0yMDM0OTcy
-MjkwLC0xMDQ3OTExNDA5LC05Mjg4NDg2OTUsMTY1NjM3NTAwNy
-wtMTQxMDU2MTIyM119
+AnJ1xuIiwiaGlzdG9yeSI6WzY2MDQyODEyOSwtNjQ2MzkwNDE5
+LC0yOTA3NTg0MzEsMTc0MzUwOTkyNCwxMjEzNTAxNDkyLDUzNz
+U3MjUxNiwxMTM3OTYwMzM5LDE2ODYzMTAxMjksLTE5NTMwMTUy
+MSwxNjA5ODg3MDA1LC04NTM2MzE3MzMsLTMwNTcyNTIxOCwtNz
+I4MzcxNzc3LDg0MzU4MDgwOCwxMjU2MzEwNjI2LDEyMzU5NTE0
+MSwtMjAzNDk3MjI5MCwtMTA0NzkxMTQwOSwtOTI4ODQ4Njk1LD
+E2NTYzNzUwMDddfQ==
 -->
