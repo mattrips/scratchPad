@@ -22,6 +22,7 @@ A type's possible implementation of a protocol requirement is available to serve
 
 With respect to generic types, clause (i) of this rule is not fully implemented.  A generic type with its generic arguments all specified as concrete types may be referred to as a *concretization* of the generic type.  A concretization is a type separate and apart from its generic type.  Swift's existing implementation of protocols does not include the ability for a concretization to develop its own, specialized conformance relationship with a protocol.  Instead, a concretization uses the protocol conformances of its generic type, without specialization for implementations available via the concretization.  Thus, although a concretization may satisfy the conditions of a generic where clause that would make an implementation unconditionally accessible, the implementation subject to such where clause nevertheless is unavailable to serve as a protocol witness for the shared conformance.  
   * Although specialized implementations available to a concretization are not available to serve as protocol witnesses and cannot be accessed via the interface of a protocol, they remain members of the concretization.  Accordingly, as members, they may be accessed directly on the concretization following the rules applicable to resolution of overloads.
+  * Notwithstanding the general inability of concretizations to take advantage of specialized implementations, the Standard Library 
   
 
 ## 1.4 Most Specialized Implementation
@@ -393,11 +394,11 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzgwMDkyODIxMCwtMTEyMjU3OTI0
-MCwxNTYzMDk1MzIxLC0yMTQzNDU3NzgyLDU3MzI1MDkzNiwtMT
-ExMTQwMzY2LC0xOTk3OTc3MjgyLC0xNzA0MzMwNjIwLDY2MDE1
-NzA4MSwxODYwMTQ1NTU2LDY2MDQyODEyOSwtNjQ2MzkwNDE5LC
-0yOTA3NTg0MzEsMTc0MzUwOTkyNCwxMjEzNTAxNDkyLDUzNzU3
-MjUxNiwxMTM3OTYwMzM5LDE2ODYzMTAxMjksLTE5NTMwMTUyMS
-wxNjA5ODg3MDA1XX0=
+AnJ1xuIiwiaGlzdG9yeSI6WzExMTEwOTUwMDAsODAwOTI4MjEw
+LC0xMTIyNTc5MjQwLDE1NjMwOTUzMjEsLTIxNDM0NTc3ODIsNT
+czMjUwOTM2LC0xMTExNDAzNjYsLTE5OTc5NzcyODIsLTE3MDQz
+MzA2MjAsNjYwMTU3MDgxLDE4NjAxNDU1NTYsNjYwNDI4MTI5LC
+02NDYzOTA0MTksLTI5MDc1ODQzMSwxNzQzNTA5OTI0LDEyMTM1
+MDE0OTIsNTM3NTcyNTE2LDExMzc5NjAzMzksMTY4NjMxMDEyOS
+wtMTk1MzAxNTIxXX0=
 -->
