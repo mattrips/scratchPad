@@ -29,7 +29,27 @@ With respect to generic types, clause (i) of this rule is not fully implemented.
   
 
 ## 1.4 Most Specialized Implementation
-Among a type's unconditionally accessible implementations of a protocol requirement, the most specialized will serve as the protocol witness for the requirement.
+Among a type's unconditionally accessible implementations of a protocol requirement, the most specialized will serve as the protocol witness for the requirement.  The relative specialization between two implementations, imp1 and imp2, is determined as follows:
+
+ - If m1 is declared in an extension of a protocol and m2 is declared on
+   t (whether in the declaration and/or an extension), then m2 is more
+   specialized.   If m1 is declared in an extension of protocol p1 and
+   m2 is declared in an extension of protocol p2, then (a) if p2
+   inherits from p1, m2 is more specialized, (b) if p1 inherits from p2,
+   m1 is more specialized, and (c) otherwise, m1 and m2 present an
+   ambiguity (if there is no other implementation that is more
+   specialized than both m1 and m2, an error will be raised at compile
+   time).   If m1 and m2 are both declared on t (whether in the
+   declaration and/or an extension) or are both declared in extensions
+   of the same protocol, then (a) if the declaration of m1 is more
+   constrained than the declaration of m2, m1 is more specialized, (b)
+   if the declaration of m2 is more constrained than the declaration of
+   m1, m2 is more specialized, and (c) otherwise, m1 and m2 present an
+   ambiguity (if there is no other implementation that is more
+   specialized than both m1 and m2, an error will be raised at compile
+   time). [Given the way conditional declarations work or don’t work,
+   I’m not sure these declared-on-same-type situations could arise in a
+   meaningful way. Thoughts?]
 
 en multiple implementations of the same protocol requirement, the degree of specialization of an implementation is based on the declaration of the implementation, as follows, from most specialized to least specialized: [check this]
   1. conditionally declared in an extension of the type;
@@ -399,7 +419,7 @@ A protocol also may supply functionality, which may serve as default implementat
 Most powerfully, a protocol may serve as the basis for an existential type bearing the same type name as the protocol, with the interface of the existential type being defined by the protocol.
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy04OTk0NDU4NzEsMTQxNzk1ODA2
+AnJ1xuIiwiaGlzdG9yeSI6WzE4MjIzODcxNzAsMTQxNzk1ODA2
 MywzNTAxMjI0NjksMTMxMTMwNzM4OSw4MDA5MjgyMTAsLTExMj
 I1NzkyNDAsMTU2MzA5NTMyMSwtMjE0MzQ1Nzc4Miw1NzMyNTA5
 MzYsLTExMTE0MDM2NiwtMTk5Nzk3NzI4MiwtMTcwNDMzMDYyMC
