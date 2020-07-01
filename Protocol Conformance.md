@@ -17,7 +17,7 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 
 &#9724; protocol conformance declaration
 : a declaration that a type conforms to a protocol.
-  * A declaration includes implicit
+  * A declaration that a type conforms to a protocol also acts as an implicit declaration that the type conforms to all protocols from which the protocol inherits.
 
 &#9724; unconditionally accessible implementation
 : Given a declaration that a type conforms to a protocol,
@@ -364,7 +364,7 @@ The instance `y` of `Y<Int>` conforms to both `P` and `Q`.   The `id2` getter de
 but only four of those implementations are possibly visible implementations with respect to each of `Y: P` and `Y:Q`. 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzEwODgzMzM5ODAsMTEzNzk2MDMz
+AnJ1xuIiwiaGlzdG9yeSI6WzE0MzYzNzQzOTEsMTEzNzk2MDMz
 OSwxNjg2MzEwMTI5LC0xOTUzMDE1MjEsMTYwOTg4NzAwNSwtOD
 UzNjMxNzMzLC0zMDU3MjUyMTgsLTcyODM3MTc3Nyw4NDM1ODA4
 MDgsMTI1NjMxMDYyNiwxMjM1OTUxNDEsLTIwMzQ5NzIyOTAsLT
