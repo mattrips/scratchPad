@@ -33,26 +33,11 @@ Among a type's unconditionally accessible implementations of a protocol requirem
 
 If `i`*<sub>1</sub>* is declared in an extension of a protocol and `i`*<sub>2</sub>* is declared on t (whether in the declaration and/or an extension), then `i`*<sub>2</sub>* is more specialized.  
 
-If `i`*<sub>1</sub>* is declared in an extension of protocol p1 and `i`*<sub>2</sub>* is declared in an extension of protocol p2, then (a) if p2 inherits from p1, `i`*<sub>2</sub>* is more specialized, (b) if p1 inherits from p2, `i`*<sub>1</sub>* is more specialized, and (c) otherwise, `i`*<sub>1</sub>* and m2 present an ambiguity (if there is no other implementation that is more specialized than both `i`*<sub>1</sub>* and `i`*<sub>2</sub>*, an error will be raised at compile time).  
+If `i`*<sub>1</sub>* is declared in an extension of protocol p1 and `i`*<sub>2</sub>* is declared in an extension of protocol p2, then (i) if p2 inherits from p1, `i`*<sub>2</sub>* is more specialized, (ii) if p1 inherits from p2, `i`*<sub>1</sub>* is more specialized, and (iii) otherwise, `i`*<sub>1</sub>* and m2 present an ambiguity (if there is no other implementation that is more specialized than both `i`*<sub>1</sub>* and `i`*<sub>2</sub>*, an error will be raised at compile time).  
 
 If `i`*<sub>1</sub>* and `i`*<sub>2</sub>* are both declared on t (whether in the declaration and/or an extension) or are both declared in extensions of the same protocol, then (i) if the declaration of `i`*<sub>1</sub>* is more constrained than the declaration of `i`*<sub>2</sub>*, `i`*<sub>1</sub>* is more specialized, (ii) if the declaration of m2 is more constrained than the declaration of `i`*<sub>1</sub>*, `i`*<sub>2</sub>* is more specialized, and (iii) otherwise, `i`*<sub>1</sub>* and `i`*<sub>2</sub>* present an ambiguity (if there is no other implementation that is more specialized than both `i`*<sub>1</sub>* and `i`*<sub>2</sub>*, an error will be raised at compile time).[^1] 
 
 [^1]: Given the way conditional declarations work or don’t work, I’m not sure these declared-on-same-type situations could arise in a meaningful way. Thoughts?
-
-
-
-
-
-
-
-en multiple implementations of the same protocol requirement, the degree of specialization of an implementation is based on the declaration of the implementation, as follows, from most specialized to least specialized: [check this]
-  1. conditionally declared in an extension of the type;
-  2. unconditionally declared in the declaration or an extension of the type;
-  3.  conditionally declared in an extension of a protocol to which the type conforms; and
-  4. unconditionally declared in an extension of a protocol to which the type conforms. 
-
-  * If multiple protocols in a chain of inheritance of protocols provide declarations of an implementation, the implementation on a more refined protocol is more specialized than an implementation on a less refined protocol. [check this]
-  * Where multiple protocols outside of a single chain of inheritance provide implementations, an ambiguity error occurs. [check this]
 
 ## 1.5 Protocol Witness Set
 
@@ -67,6 +52,6 @@ Given a declaration that a type conforms to a protocol, the protocol witness set
 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy05OTk0ODY5NjUsLTEzOTc0OTg5
-NDcsLTUxODQ5MzkxMF19
+AnJ1xuIiwiaGlzdG9yeSI6WzY3MDAxMDM3MCwtMTM5NzQ5ODk0
+NywtNTE4NDkzOTEwXX0=
 -->
