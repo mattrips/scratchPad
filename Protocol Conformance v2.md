@@ -41,15 +41,16 @@ If `i`*<sub>1</sub>* and `i`*<sub>2</sub>* are both declared on t (whether in th
 
 ## 1.5 Set of Protocol Witnesses
 
-Given a declaration that a type conforms to a protocol, the protocol witness set is the set consisting of the protocol witness for each declared requirement of the protocol.  [A protocol witness set also is referred to as a protocol conformance.  I am suggesting this term to avoid ambiguity between that usage of the term protocol conformance and similar usage of the term to refer to the more general notion that a type is declared to conform to a protocol or that a type has implementations capable of conforming to a protocol.  I also am suggesting that the termprotocol witness set presents a much better conceptual picture of what the conformance actually is.]
-  * There is only one protocol witness set for a protocol conformance declaration.  Such set is immutable, and is not subject to replacement.
-  * If a protocol has no declared requirements, the protocol witness set for conformances to the protocol is empty.
-  * Inherited requirements of a protocol are irrelevant to determination of a protocol witness set.
+Given a declaration that a type conforms to a protocol, the protocol witness for the conformance is the set consisting of the protocol witness for each declared requirement of the protocol.  Inherited requirements of a protocol are irrelevant to determination of a protocol witness set.
+
+There is only one protocol witness set for a protocol conformance declaration.  Such set is immutable, and is not subject to replacement.
+
+If a protocol has no declared requirements, the protocol witness set for conformances to the protocol is empty.
   
 
 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy03NTExMzg3MzksLTEzOTc0OTg5
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xODQ5OTUyMzcsLTEzOTc0OTg5
 NDcsLTUxODQ5MzkxMF19
 -->
