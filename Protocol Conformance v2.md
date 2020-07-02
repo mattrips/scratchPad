@@ -2,7 +2,7 @@
 
 >***Protocol Witness*** - Given a type `t` declared to conform to protocol `p` and a protocol requirement `m` of `p`, the protocol witness for `m` is the implementation that is the most specialized of the unconditionally accessible implementations of `m` on `t`, as determined in the scope in which the declaration `t: p` is stated.
 
-When a type is declared to conform to a protocol, a set of implementations--*protocol witnesses*--is determined, one for each protocol requirement of the protocol.  Understanding how a set of protocol witnesses is determined is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines the set of protocol witnesses for a protocol conformance.
+When a type is declared to conform to a protocol, a set of implementations--*protocol witnesses*--is determined, one for each protocol requirement of the protocol.  This document specifies how Swift determines the set of protocol witnesses for a protocol conformance.
 
 ## 1.1 Declaration of Protocol Conformance
 For a type `t` to conform to a protocol `p`, `t` must be declared to conform to `p`, and `t` must have at least one unconditionally accessible implementation for each protocol requirement of `p`.  A distinct set of protocol witnesses is established for the conformance `t: p`.
@@ -51,6 +51,6 @@ If a protocol has no declared requirements, the protocol witness set for conform
 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6WzE4NTc5MTc2NjksLTE2NjYwNjYx
-OTksLTEzOTc0OTg5NDcsLTUxODQ5MzkxMF19
+AnJ1xuIiwiaGlzdG9yeSI6Wy0xMTkyMTMyNzUyLC0xNjY2MDY2
+MTk5LC0xMzk3NDk4OTQ3LC01MTg0OTM5MTBdfQ==
 -->
