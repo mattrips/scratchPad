@@ -1,6 +1,6 @@
 # 1 Protocol Conformance
 
->Given `t: p` and a protocol requirement `m` of `p`, the protocol witness for `m` is the implementation that is the most specialized of the unconditionally accessible implementations of `m` on `t`, as determined in the scope in which the declaration `t: p` is stated.
+>Given a type `t` declared to conform to prot and a protocol requirement `m` of `p`, the protocol witness for `m` is the implementation that is the most specialized of the unconditionally accessible implementations of `m` on `t`, as determined in the scope in which the declaration `t: p` is stated.
 
 When a type is declared to conform to a protocol, a set of implementations--*protocol witnesses*--is determined, one for each protocol requirement of the protocol.  Understanding how a set of protocol witnesses is determined is key to obtaining predictable polymorphic behavior.  This guide explains the semantics of how Swift determines the *protocol witness set* for a protocol conformance.
 
@@ -29,7 +29,7 @@ With respect to generic types, clause (i) of this rule is not fully implemented.
   
 
 ## 1.4 Most Specialized Implementation
-Among a type's unconditionally accessible implementations of a protocol requirement, the most specialized will serve as the protocol witness for the requirement.  The relative specialization between two implementations, `i`*<sub>1</sub>* and `i`*<sub>2</sub>*, is determined as follows:
+Among a type's unconditionally accessible implementations of a protocol requirement, the most specialized implementation will serve as the protocol witness for the requirement.  The relative specialization between two implementations, `i`*<sub>1</sub>* and `i`*<sub>2</sub>*, is determined as follows:
 
 If `i`*<sub>1</sub>* is declared in an extension of a protocol and `i`*<sub>2</sub>* is declared on t (whether in the declaration and/or an extension), then `i`*<sub>2</sub>* is more specialized.  
 
@@ -51,6 +51,6 @@ If a protocol has no declared requirements, the protocol witness set for conform
 
 <!--stackedit_data:
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
-AnJ1xuIiwiaGlzdG9yeSI6Wy0xODQ5OTUyMzcsLTEzOTc0OTg5
+AnJ1xuIiwiaGlzdG9yeSI6WzIxMjEzODQ3MDcsLTEzOTc0OTg5
 NDcsLTUxODQ5MzkxMF19
 -->
