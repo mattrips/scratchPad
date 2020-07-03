@@ -26,6 +26,16 @@ A conformance is created in response to a named concrete type being declared to 
 >enum-declaration → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub>  [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>   **`indirect`**<sub>*opt*</sub>  **`enum`**  [enum-name](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_enum-name)  [generic-parameter-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-parameter-clause)<sub>*opt*</sub>  [type-inheritance-clause](https://docs.swift.org/swift-book/ReferenceManual/Types.html#grammar_type-inheritance-clause)<sub>*opt*</sub>  [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub>  `{`  [union-style-enum-members](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_union-style-enum-members)<sub>*opt*</sub>  `}`
 >enum-declaration → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub>  [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>  **`enum`**  [enum-name](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_enum-name)  [generic-parameter-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-parameter-clause)<sub>*opt*</sub>  raw-value-type-relationship-clause [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub>  `{`  [raw-value-style-enum-members](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_raw-value-style-enum-members)  `}`
 
+<sub>GRAMMAR OF AN EXTENSION DECLARATION</sub>
+
+*extension-declaration* → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub>  [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>  `extension`  [type-identifier](https://docs.swift.org/swift-book/ReferenceManual/Types.html#grammar_type-identifier)  [type-inheritance-clause](https://docs.swift.org/swift-book/ReferenceManual/Types.html#grammar_type-inheritance-clause)<sub>*opt*</sub>  [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub>  [extension-body](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_extension-body)
+
+extension-body → `{`  [extension-members](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_extension-members)  opt  `}`
+
+extension-members → [extension-member](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_extension-member)  [extension-members](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_extension-members)  opt
+
+extension-member → [declaration](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_declaration)  |  [compiler-control-statement](https://docs.swift.org/swift-book/ReferenceManual/Statements.html#grammar_compiler-control-statement)
+
 >*class-type-relationship-clause* → class-inheritance-clause  |  protocol-conformance-clause  |  class-inheritance-clause  **`,`**  protocol-conformance-list 
 >
 >*class-inheritance-clause* →  **`:`**  class-identifier
@@ -197,5 +207,5 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1OTM4NDIyOF19
+eyJoaXN0b3J5IjpbMTI2MTY0ODI2OSwxMzU5Mzg0MjI4XX0=
 -->
