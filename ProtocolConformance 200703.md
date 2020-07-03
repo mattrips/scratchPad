@@ -20,7 +20,7 @@ A conformance is created in response to a named concrete type being declared to 
 
 <sub>GRAMMAR OF AN CONCRETE TYPE DECLARATION</sub>
 
-*struct-declaration* → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub> [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>  **`struct`**  [struct-name](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_struct-name)  [generic-parameter-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-parameter-clause)<sub>*opt*</sub> protocol-conformance-clause<sub>*opt*</sub> [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub> [struct-body](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_struct-body) 
+*struct-declaration* → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub> [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>  **`struct`**  [struct-name](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_struct-name)  [generic-parameter-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-parameter-clause)<sub>*opt*</sub> [protocol-conformance-clause](#pookie)<sub>*opt*</sub> [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub> [struct-body](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_struct-body) 
 
 *class-declaration* → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub> [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>  `final`<sub>*opt*</sub>  `class`  [class-name](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_class-name)  [generic-parameter-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-parameter-clause)<sub>*opt*</sub>  class-relationship-clause<sub>*opt*</sub>  [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub>  [class-body](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_class-body)
 
@@ -41,8 +41,9 @@ enum-declaration → [attributes](https://docs.swift.org/swift-book/ReferenceMan
 >*class-inheritance-clause* →  **`:`**  class-identifier
 >*class-identifier* → type-identifier 
 >
->*protocol-conformance-clause* →  **`:`**  protocol-conformance-list
->*protocol-conformance-list* → protocol-identifier  |  protocol-identifier   **`,`**  protocol-conformance-list 
+<a name="pookie"></a>
+*protocol-conformance-clause* →  **`:`**  protocol-conformance-list
+*protocol-conformance-list* → protocol-identifier  |  protocol-identifier   **`,`**  protocol-conformance-list 
 >
 >*raw-value-style-relationship-clause* → **`:`**  raw-value-type-identifier | raw-value-type-identifier  **`,`** protocol-conformance-list
 >*raw-value-type-identifier* → protocol-identifier 
@@ -207,6 +208,6 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDI4Njk3MjQsLTE2Nzg2NDAwNDQsLT
-MxNTU1ODE4MCwtMTUwMzIzMTI5NywxMzU5Mzg0MjI4XX0=
+eyJoaXN0b3J5IjpbODQ1NzI5NDU5LC0xNjc4NjQwMDQ0LC0zMT
+U1NTgxODAsLTE1MDMyMzEyOTcsMTM1OTM4NDIyOF19
 -->
