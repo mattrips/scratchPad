@@ -46,10 +46,10 @@ enum-declaration → [attributes](https://docs.swift.org/swift-book/ReferenceMan
 <a name="protocol-conformance-list"></a>*protocol-conformance-list* → [protocol-identifier](#protocol-identifier)  |  [protocol-identifier](#protocol-identifier)   **`,`**  [protocol-conformance-list](#protocol-conformance-list) 
 <a name="protocol-identifier"></a>*protocol-identifer*  → type-identifier
 
-*raw-value-style-relationship-clause* → **`:`**  raw-value-type-identifier | raw-value-type-identifier  **`,`** [protocol-conformance-list](#protocol-conformance-list)
-<a name="protocol-identifier"></a>*raw-value-type-identifier* → protocol-identifier 
+*raw-value-style-relationship-clause* → **`:`**  [raw-value-identifier](#raw-value-identifier) | [raw-value-identifier](#raw-value-identifier)  **`,`** [protocol-conformance-list](#protocol-conformance-list)
+<a name="raw-value-identifier"></a>*raw-value-identifier* → protocol-identifier 
 >
->*protocol-refinement-list* → protocol-identifier  |  protocol-identifier   **`,`**  protocol-inheritance-list
+>*protocol-refinement-list* → [protocol-identifier](#protocol-identifier)  |  [protocol-identifier](#protocol-identifier)   **`,`**  protocol-inheritance-list
 >
 >
 >*protocol-refinement-clause* →  **`:`**  protocol-refinement-list
@@ -209,7 +209,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MTY5MzM1Miw4NDU3Mjk0NTksLTE2Nz
+eyJoaXN0b3J5IjpbMTc2NDQxOTAxMyw4NDU3Mjk0NTksLTE2Nz
 g2NDAwNDQsLTMxNTU1ODE4MCwtMTUwMzIzMTI5NywxMzU5Mzg0
 MjI4XX0=
 -->
