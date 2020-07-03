@@ -18,6 +18,7 @@ A conformance is created in response to a named concrete type being declared to 
 >*type-identifier → [type-name](https://docs.swift.org/swift-book/ReferenceManual/Types.html#grammar_type-name)  [generic-argument-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-argument-clause) generic-where-clause<sub>opt</sub>*
 >
 
+<sub>GRAMMAR OF AN CONCRETE TYPE DECLARATION</sub>
 
 *struct-declaration* → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub> [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>  **`struct`**  [struct-name](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_struct-name)  [generic-parameter-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-parameter-clause)<sub>*opt*</sub> protocol-conformance-clause<sub>*opt*</sub> [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub> [struct-body](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_struct-body) 
 
@@ -206,6 +207,6 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk3ODU5NzE5LC0xNTAzMjMxMjk3LDEzNT
-kzODQyMjhdfQ==
+eyJoaXN0b3J5IjpbLTMxNTU1ODE4MCwtMTUwMzIzMTI5NywxMz
+U5Mzg0MjI4XX0=
 -->
