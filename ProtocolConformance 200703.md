@@ -34,25 +34,23 @@ enum-declaration → [attributes](https://docs.swift.org/swift-book/ReferenceMan
 
 *extension-declaration* → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub>  [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>  `extension`  protocol-identifier  [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub>  [extension-body](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_extension-body)
 
->*class-relationship-clause* → class-inheritance-clause  |  protocol-conformance-clause  |  class-inheritance-clause  **`,`**  protocol-conformance-list 
+<a name="class-relationship-clause"></a>*class-relationship-clause* → class-inheritance-clause  |  protocol-conformance-clause  |  class-inheritance-clause  **`,`**  protocol-conformance-list 
 >
 >*concrete-type-identifier* → type-identifier 
 >
 >*class-inheritance-clause* →  **`:`**  class-identifier
 >*class-identifier* → type-identifier 
 >
-<a name="protocol-conformance-clause"></a>
-*protocol-conformance-clause* →  **`:`**  [protocol-conformance-list](#protocol-conformance-list)  
+<a name="protocol-conformance-clause"></a>*protocol-conformance-clause* →  **`:`**  [protocol-conformance-list](#protocol-conformance-list)  
 <a name="protocol-conformance-list"></a>*protocol-conformance-list* → [protocol-identifier](#protocol-identifier)  |  [protocol-identifier](#protocol-identifier)   **`,`**  [protocol-conformance-list](#protocol-conformance-list) 
 <a name="protocol-identifier"></a>*protocol-identifer*  → type-identifier
 
 *raw-value-style-relationship-clause* → **`:`**  [raw-value-identifier](#raw-value-identifier) | [raw-value-identifier](#raw-value-identifier)  **`,`** [protocol-conformance-list](#protocol-conformance-list)
-<a name="raw-value-identifier"></a>*raw-value-identifier* → protocol-identifier 
->
->*protocol-refinement-list* → [protocol-identifier](#protocol-identifier)  |  [protocol-identifier](#protocol-identifier)   **`,`**  protocol-inheritance-list
->
->
->*protocol-refinement-clause* →  **`:`**  protocol-refinement-list
+<a name="raw-value-identifier"></a>*raw-value-identifier* → [protocol-identifier](#protocol-identifier)
+
+*protocol-refinement-clause* →  **`:`**  protocol-refinement-list
+*protocol-refinement-list* → [protocol-identifier](#protocol-identifier)  |  [protocol-identifier](#protocol-identifier)   **`,`**  protocol-inheritance-list
+
 >
 
 >
@@ -209,7 +207,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NDQxOTAxMyw4NDU3Mjk0NTksLTE2Nz
+eyJoaXN0b3J5IjpbLTcyNzM1MTQ2OSw4NDU3Mjk0NTksLTE2Nz
 g2NDAwNDQsLTMxNTU1ODE4MCwtMTUwMzIzMTI5NywxMzU5Mzg0
 MjI4XX0=
 -->
