@@ -26,7 +26,7 @@ A conformance is created in response to a named concrete type being declared to 
 
 enum-declaration → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub>  [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>   **`indirect`**<sub>*opt*</sub>  **`enum`**  [enum-name](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_enum-name)  [generic-parameter-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-parameter-clause)<sub>*opt*</sub>  [type-inheritance-clause](https://docs.swift.org/swift-book/ReferenceManual/Types.html#grammar_type-inheritance-clause)<sub>*opt*</sub>  [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub>  `{`  [union-style-enum-members](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_union-style-enum-members)<sub>*opt*</sub>  `}`
 
-enum-declaration → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub>  [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>  **`enum`**  [enum-name](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_enum-name)  [generic-parameter-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-parameter-clause)<sub>*opt*</sub>  raw-value-type-relationship-clause [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub>  `{`  [raw-value-style-enum-members](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_raw-value-style-enum-members)  `}`
+enum-declaration → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub>  [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>  **`enum`**  [enum-name](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_enum-name)  [generic-parameter-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-parameter-clause)<sub>*opt*</sub>  raw-value-style-relationship-clause [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub>  `{`  [raw-value-style-enum-members](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_raw-value-style-enum-members)  `}`
 
 <sub>GRAMMAR OF AN EXTENSION DECLARATION</sub>
 
@@ -44,7 +44,7 @@ enum-declaration → [attributes](https://docs.swift.org/swift-book/ReferenceMan
 >*protocol-conformance-clause* →  **`:`**  protocol-conformance-list
 >*protocol-conformance-list* → protocol-identifier  |  protocol-identifier   **`,`**  protocol-conformance-list 
 >
->*raw-value-type-relationship-clause* → **`:`**  raw-value-type-identifier | raw-value-type-identifier  **`,`** protocol-conformance-list
+>*raw-value-style-relationship-clause* → **`:`**  raw-value-type-identifier | raw-value-type-identifier  **`,`** protocol-conformance-list
 >*raw-value-type-identifier* → protocol-identifier 
 >
 >*protocol-refinement-list* → protocol-identifier  |  protocol-identifier   **`,`**  protocol-inheritance-list
@@ -207,6 +207,6 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Nzg2NDAwNDQsLTMxNTU1ODE4MCwtMT
-UwMzIzMTI5NywxMzU5Mzg0MjI4XX0=
+eyJoaXN0b3J5IjpbMjAyODQ4NTk4LC0xNjc4NjQwMDQ0LC0zMT
+U1NTgxODAsLTE1MDMyMzEyOTcsMTM1OTM4NDIyOF19
 -->
