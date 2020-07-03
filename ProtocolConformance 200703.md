@@ -31,6 +31,8 @@ enum-declaration → [attributes](https://docs.swift.org/swift-book/ReferenceMan
 
 *extension-declaration* → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub>  [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>  `extension`  concrete-type-identifier  protocol-conformance-clause<sub>*opt*</sub>  [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub>  [extension-body](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_extension-body)
 
+*extension-declaration* → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub>  [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>  `extension`  protocol-identifier  [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub>  [extension-body](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_extension-body)
+
 >*class-type-relationship-clause* → class-inheritance-clause  |  protocol-conformance-clause  |  class-inheritance-clause  **`,`**  protocol-conformance-list 
 >
 >*concrete-type-identifier* → type-identifier 
@@ -204,6 +206,6 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODcxMzM4Mjc1LC0xNTAzMjMxMjk3LDEzNT
+eyJoaXN0b3J5IjpbNjk3ODU5NzE5LC0xNTAzMjMxMjk3LDEzNT
 kzODQyMjhdfQ==
 -->
