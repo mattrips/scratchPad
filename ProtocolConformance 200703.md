@@ -166,12 +166,12 @@ comparisons of pairs of implementations are made until the most specialized
 implementation is determined.
 
 
-## 1.6 Set of Protocol Witnesses
+## 1.6 Set of Witnesses
 
-Given a declaration that a type conforms to a protocol, the protocol witness for
-the conformance is the set consisting of the protocol witness for each declared
+Given a declaration that a type conforms to a protocol, the protocol witness that are
+the conformance is the set consisting of the witness for each declared
 requirement of the protocol.  Inherited requirements of a protocol are
-irrelevant to determination of a protocol witness set.
+irrelevant to determining a witness set.
 
 There is only one protocol witness set for a protocol conformance declaration.
 Such set is immutable, and is not subject to replacement.
@@ -179,5 +179,5 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzM3NDk4NDgsNTU3MDYwNzEwXX0=
+eyJoaXN0b3J5IjpbMTA0MDUxNzUxMiw1NTcwNjA3MTBdfQ==
 -->
