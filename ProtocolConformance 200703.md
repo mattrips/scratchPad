@@ -173,10 +173,3 @@ Such set is immutable, and is not subject to replacement.
 
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU3MDYwNzEwLC0xMjQ5NTU3NDcyLC0yMD
-kxNjU2NTkzLC01MDEwNTAyODAsMTQzMTEzNjE0MywtODE5Mzgw
-NTYzLDEzNTM1NzI4ODQsMTMyNTU4NjY1MiwxNjk4NDI4MTUsOD
-Q1NzI5NDU5LC0xNjc4NjQwMDQ0LC0zMTU1NTgxODAsLTE1MDMy
-MzEyOTcsMTM1OTM4NDIyOF19
--->
