@@ -10,7 +10,7 @@ That set of witnesses is referred to as the conformance for ["of" or "for"?] `T:
 This document specifies how Swift determines a conformance.
 
 ## 1.1 Creation of a Conformance
-The substance of a conformance is not declared.  It is created in response to a named concrete type being declared to conform to a protocol.  The set of w is inferred from the context.[^2]  
+The substance of a conformance is not declared.  It is created in response to a named concrete type being declared to conform to a protocol.  The set of witnesses that is the conformance inferred from the context.[^2]  
 [^2]: [What about tuples and [SE-0283\](https://github.com/apple/swift-evolution/blob/master/proposals/0283-tuples-are-equatable-comparable-hashable.md)?]
 
 When a generic 
@@ -208,7 +208,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzE3OTEsMTMyNTU4NjY1MiwxNjk4ND
-I4MTUsODQ1NzI5NDU5LC0xNjc4NjQwMDQ0LC0zMTU1NTgxODAs
-LTE1MDMyMzEyOTcsMTM1OTM4NDIyOF19
+eyJoaXN0b3J5IjpbMTQ5MDMxNjg3MiwxMzI1NTg2NjUyLDE2OT
+g0MjgxNSw4NDU3Mjk0NTksLTE2Nzg2NDAwNDQsLTMxNTU1ODE4
+MCwtMTUwMzIzMTI5NywxMzU5Mzg0MjI4XX0=
 -->
