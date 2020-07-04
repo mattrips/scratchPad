@@ -151,12 +151,12 @@ If *i<sub>1</sub>* is declared in an extension of protocol `P1` and
 *i<sub>2</sub>* is declared in an extension of protocol `P2`, then (i) if `P2`
 inherits from `P1`, *i<sub>2</sub>* is more specialized, (ii) if `P1` inherits
 from `P2`, *i<sub>1</sub>* is more specialized, and (iii) otherwise,
-*i<sub>1</sub>* and *i<sub>2</sub>* present an ambiguity .
+*i<sub>1</sub>* and *i<sub>2</sub>* present an ambiguity.
 
-If `i`*<sub>1</sub>* and `i`*<sub>2</sub>* are both declared on T (whether in
+If *i<sub>1</sub>* and *i<sub>2</sub>* are both declared on T (whether in
 the declaration and/or an extension) or are both declared in extensions of the
-same protocol, then (i) if the declaration of `i`*<sub>1</sub>* is more
-constrained than the declaration of `i`*<sub>2</sub>*, `i`*<sub>1</sub>* is more
+same protocol, then (i) if the declaration of *i<sub>1</sub>* is more
+constrained than the declaration of *i<sub>2</sub>*, *i<sub>1</sub>* is more
 specialized, (ii) if the declaration of `i`*<sub>2</sub>* is more constrained
 than the declaration of `i`*<sub>1</sub>*, `i`*<sub>2</sub>* is more
 specialized, and (iii) otherwise, `i`*<sub>1</sub>* and `i`*<sub>2</sub>*
@@ -181,9 +181,9 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDU3NDEyNTIsLTIwOTE2NTY1OTMsLT
-UwMTA1MDI4MCwxNDMxMTM2MTQzLC04MTkzODA1NjMsMTM1MzU3
-Mjg4NCwxMzI1NTg2NjUyLDE2OTg0MjgxNSw4NDU3Mjk0NTksLT
-E2Nzg2NDAwNDQsLTMxNTU1ODE4MCwtMTUwMzIzMTI5NywxMzU5
-Mzg0MjI4XX0=
+eyJoaXN0b3J5IjpbLTMxMDU1NzQ4LC0yMDkxNjU2NTkzLC01MD
+EwNTAyODAsMTQzMTEzNjE0MywtODE5MzgwNTYzLDEzNTM1NzI4
+ODQsMTMyNTU4NjY1MiwxNjk4NDI4MTUsODQ1NzI5NDU5LC0xNj
+c4NjQwMDQ0LC0zMTU1NTgxODAsLTE1MDMyMzEyOTcsMTM1OTM4
+NDIyOF19
 -->
