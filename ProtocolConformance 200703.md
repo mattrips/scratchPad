@@ -193,7 +193,7 @@ extension) or are both declared in extensions of the same protocol, then:
 
 Example 1.5.3 demonstrates the determination of the most specialized implementation among multiple implementations declared on the same type.  
 
-The conformance of `S: P` has two implementations of the requirement *m1* of protocol `P`, implementations *i1* and *i2*.  While the property labelled *i3* also would satisfy *m1*, it is not present on `S`, because the extension of `P` on which it is declared is available only to types that implement *m2* with a type that conforms to protocol `StringProtocol`.  Thus,
+The conformance of `S: P` has two implementations of the requirement *m1* of protocol `P`, implementations *i1* and *i2*.  While the property labelled *i3* also would satisfy *m1*, it is not present on `S`, because the `P` extension on which it is declared is an extension only of types that implement *m2* with a type that conforms to protocol `StringProtocol`.  Thus,
 
 , each of which implement requirement *m* of protocol `P`.  All three implementations are declared on the same type, `P`.  
  
@@ -241,7 +241,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNTUzMTUxNyw5MDM2ODAyMTEsLTQwOT
+eyJoaXN0b3J5IjpbMTA1NjIwMjkxNSw5MDM2ODAyMTEsLTQwOT
 QzNTc4OCw5NDgzNzkxOTYsOTIxNjQ0MjQ3LDEwNDA1MTc1MTIs
 NTU3MDYwNzEwXX0=
 -->
