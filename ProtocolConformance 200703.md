@@ -238,14 +238,14 @@ Given concretization `T`, the conformance `T: P`, requirement *m* of `P`, and im
 >***Discussion**
 >This limitation came as part of the adoption of conditional conformance, SE-0143.  It exists due to issues of implementablity.*
 
-Example 1.5.4 demonstrates the that a constrained implementation is unavailable to a concretization even though .  
+Example 1.5.4 demonstrates the that a constrained implementation can be unavailable to a concretization even though the concretization satisfies the constraints on the implementation.  
 
-The conformance of `S: P` has two implementations of the requirement *m1* of protocol `P`, implementations *i1* and *i2*.  While the property labelled *i3* also would satisfy *m1*, it is not present on `S`, because the `P` extension on which it is declared is an extension only of types that conform to `P` with an implemention of *m2* that conforms to protocol `StringProtocol`; since `S`'s implementation of *m2* is `Int`, which does not conform to  `StringProtocol`, the extension containing *i3* does not extend `S`. 
+The conformance of `X: P` has two implementations of the requirement *m1* of protocol `P`, implementations *i1* and *i2*.  While the property labelled *i3* also would satisfy *m1*, it is not present on `S`, because the `P` extension on which it is declared is an extension only of types that conform to `P` with an implemention of *m2* that conforms to protocol `StringProtocol`; since `S`'s implementation of *m2* is `Int`, which does not conform to  `StringProtocol`, the extension containing *i3* does not extend `S`. 
 ```swift
 /// Example 1.5.4
 protocol P {
-  associatedtype V
   var id: String { get } // (m1)
+  associatedtype V // (m2)
 }
 extension P { // (c1)
   var id: String { "P" } // (i1)
@@ -285,8 +285,8 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMjEyNTQxNiw1OTIwOTA1MDYsLTIwOD
-czMzYyOTMsLTEwMTI4Njc4MTAsOTAzNjgwMjExLC00MDk0MzU3
-ODgsOTQ4Mzc5MTk2LDkyMTY0NDI0NywxMDQwNTE3NTEyLDU1Nz
-A2MDcxMF19
+eyJoaXN0b3J5IjpbLTEwMjkzODc1MjUsNTkyMDkwNTA2LC0yMD
+g3MzM2MjkzLC0xMDEyODY3ODEwLDkwMzY4MDIxMSwtNDA5NDM1
+Nzg4LDk0ODM3OTE5Niw5MjE2NDQyNDcsMTA0MDUxNzUxMiw1NT
+cwNjA3MTBdfQ==
 -->
