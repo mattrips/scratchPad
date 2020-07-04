@@ -159,10 +159,7 @@ same protocol, then (i) if the declaration of *i<sub>1</sub>* is more
 constrained than the declaration of *i<sub>2</sub>*, *i<sub>1</sub>* is more
 specialized, (ii) if the declaration of *i<sub>2</sub>* is more constrained
 than the declaration of *i<sub>1</sub>*, *i<sub>2</sub>* is more
-specialized, and (iii) otherwise, it is ambiguous whether *i<sub>1</sub>* and *i<sub>2</sub>*
-present an ambiguity (if there is no other implementation that is more
-specialized than both `i`*<sub>1</sub>* and `i`*<sub>2</sub>*, an error will be
-raised at compile time).[^1]
+specialized, and (iii) otherwise, it is ambiguous whether *i<sub>1</sub>* or *i<sub>2</sub>* is more specialized.[^1]
 
 [^1]: Given the way conditional declarations work or don’t work, I’m not sure
       these declared-on-same-type situations could arise in a meaningful
@@ -181,7 +178,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzA4NzE3MDQsLTIwOTE2NTY1OTMsLT
+eyJoaXN0b3J5IjpbLTEyNDk1NTc0NzIsLTIwOTE2NTY1OTMsLT
 UwMTA1MDI4MCwxNDMxMTM2MTQzLC04MTkzODA1NjMsMTM1MzU3
 Mjg4NCwxMzI1NTg2NjUyLDE2OTg0MjgxNSw4NDU3Mjk0NTksLT
 E2Nzg2NDAwNDQsLTMxNTU1ODE4MCwtMTUwMzIzMTI5NywxMzU5
