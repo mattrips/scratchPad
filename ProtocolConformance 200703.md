@@ -234,7 +234,7 @@ print(getId(of: s)) // "O_Numeric"
 >Prior to the adoption of conditional conformance per SE-0143, it appears that the distinction made no difference; overload resolution and protocol conformance always produced the same observable behavior.  Now, due to the rule stated in Section 1.5.4, there are cases where there is a difference in behavior.  [move this discussion to 1.5.4, and explain the difference...]             
 
 ### 1.5.4 Implementations on Generics via Constrained Extensions
-Given concretization `T`, the conformance `T: P`, and requirement *m* of `P`, if an implementation *i* of *m* is constrained differently than `T: P` is constrained, then *i* is disregarded for purposes of conformance `T: P`.       
+Given concretization `T`, the conformance `T: P`, and requirement *m* of `P`, if an implementation *i* of *m* is constrained differently than `T: P` is constrained, then *i* is unavailable for purposes of conformance `T: P`.  This unavailability persists regardless of whether the constraint on        
 >***Discussion**
 >This limitation came as part of the adoption of conditional conformance, SE-0143.  It appears to exist due to issues of implementablity.*
 
@@ -253,7 +253,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTE1MjQzNTMsLTIwODczMzYyOTMsLT
-EwMTI4Njc4MTAsOTAzNjgwMjExLC00MDk0MzU3ODgsOTQ4Mzc5
-MTk2LDkyMTY0NDI0NywxMDQwNTE3NTEyLDU1NzA2MDcxMF19
+eyJoaXN0b3J5IjpbMTg0NTQxOTM3MywtMjA4NzMzNjI5MywtMT
+AxMjg2NzgxMCw5MDM2ODAyMTEsLTQwOTQzNTc4OCw5NDgzNzkx
+OTYsOTIxNjQ0MjQ3LDEwNDA1MTc1MTIsNTU3MDYwNzEwXX0=
 -->
