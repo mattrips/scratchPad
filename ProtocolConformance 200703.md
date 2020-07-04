@@ -237,8 +237,8 @@ print(getId(of: s)) // "O_Numeric"
 In the case of concretizations, under certain circumstances certain implementations are disregarded for purposes determining a conformance of the type to a protocol.  Specifically, if 
 
 
->Discussion
->This limitation was part of the adoption of conditional conformance, SE-0143.  I
+>**Discussion**
+>This limitation came as part of the adoption of conditional conformance, SE-0143.  It appears to exist due to issues of implementablity.  Prior to the availability of conditional conformance, 
 
 ## 1.6 Set of Witnesses
 
@@ -253,7 +253,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNTkxNjIzNSwtMjA4NzMzNjI5MywtMT
+eyJoaXN0b3J5IjpbLTY5NTQwODQ3MSwtMjA4NzMzNjI5MywtMT
 AxMjg2NzgxMCw5MDM2ODAyMTEsLTQwOTQzNTc4OCw5NDgzNzkx
 OTYsOTIxNjQ0MjQ3LDEwNDA1MTc1MTIsNTU3MDYwNzEwXX0=
 -->
