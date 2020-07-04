@@ -13,7 +13,9 @@ This document specifies how Swift determines a conformance.
 The substance of a conformance is not declared.  It is created in response to a named concrete type being conformed to a protocol.  The set of witnesses that is the conformance inferred from the context.[^2]  
 [^2]: [What about tuples and [SE-0283\](https://github.com/apple/swift-evolution/blob/master/proposals/0283-tuples-are-equatable-comparable-hashable.md)?]
 
-A concrete type is conformed to a protocol in one of two ways.  If the type is a 
+### 1.1.1 Conformance of Non-Generic Concrete Types
+
+A concrete type is conformed to a protocol in one of two ways.  If a concrete type is non-generic, it  
 
 When a generic 
 That declaration may occur in one of two ways.  For a non-generic concrete type, that declaration occurs in single step, with an express statement of the conformance in the declaration or an extension of the type. 
@@ -210,7 +212,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyMjk3NTgxNiwxMzI1NTg2NjUyLDE2OT
+eyJoaXN0b3J5IjpbLTgyMjgzNTg4OSwxMzI1NTg2NjUyLDE2OT
 g0MjgxNSw4NDU3Mjk0NTksLTE2Nzg2NDAwNDQsLTMxNTU1ODE4
 MCwtMTUwMzIzMTI5NywxMzU5Mzg0MjI4XX0=
 -->
