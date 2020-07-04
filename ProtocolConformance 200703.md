@@ -148,7 +148,8 @@ If *i<sub>1</sub>* is declared in an extension of a protocol and
 extension), then *i<sub>2</sub>* is more specialized.
 
 ```
-protocol P { var id: String
+protocol P { var id: String { "P" } }
+extension P 
 ```
 
 If *i<sub>1</sub>* is declared in an extension of protocol `P1` and
@@ -183,6 +184,6 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODY2MDE2MSw5MjE2NDQyNDcsMTA0MD
+eyJoaXN0b3J5IjpbMTIyNzY0MjU5OSw5MjE2NDQyNDcsMTA0MD
 UxNzUxMiw1NTcwNjA3MTBdfQ==
 -->
