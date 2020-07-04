@@ -79,7 +79,7 @@ Given `T: P` and a protocol requirement *m* of `P`, an **implementation**
 of *m* is any member of `T` that satisfies *m*.  A type
 may have more than one implementation of a requirement.
 
-
+[explain all of the possible sources and discuss conditionality...]
 
 ## 1.4 Witness
 
@@ -142,9 +142,17 @@ unavailable to serve as a protocol witness for the shared conformance.
 ## 1.5 Most Specialized Implementation
 Among a type's implementations of a protocol
 requirement, the most specialized implementation will serve as the 
-witness for the requirement.  The relative specialization between two
+witness for the requirement.  If only one implementation of a requirement is present, that implementation is the most specialized.
+
+If more than two implementations of a requirement are present, they necessary 
+comparisons of pairs of implementations are made until the most specialized 
+implementation is determined.
+
+
+The relative specialization between two
 implementations, *i<sub>1</sub>* and *i<sub>2</sub>*, is determined as follows:
 
+### 1.5.1 Implementations On Protocol vs. Type
 If *i<sub>1</sub>* is declared in an extension of a protocol and
 *i<sub>2</sub>* is declared on `T` (whether in its declaration and/or an
 extension), then *i<sub>2</sub>* is more specialized.
@@ -164,23 +172,57 @@ struct S {
 extension S: P {}
 ```
 
+### 1.5.2 Implementations on One Protocol vs. Another Protocol 
+*Subject to the exception stated in 1.5.__*: 
 If *i<sub>1</sub>* is declared in an extension of protocol `P1` and
-*i<sub>2</sub>* is declared in an extension of protocol `P2`, then (i) if `P2`
-inherits from `P1`, *i<sub>2</sub>* is more specialized, (ii) if `P1` inherits
-from `P2`, *i<sub>1</sub>* is more specialized, and (iii) otherwise,
-*i<sub>1</sub>* and *i<sub>2</sub>* present an ambiguity.
+*i<sub>2</sub>* is declared in an extension of protocol `P2`, then:
+ (i) if `P2` refines `P1`, *i<sub>2</sub>* is more specialized, 
+ (ii) if `P1` refines `P2`, *i<sub>1</sub>* is more specialized, and
+ (iii) otherwise, *i<sub>1</sub>* and *i<sub>2</sub>* present an ambiguity.
 
-If *i<sub>1</sub>* and *i<sub>2</sub>* are both declared on T (whether in
-the declaration and/or an extension) or are both declared in extensions of the
-same protocol, then (i) if the declaration of *i<sub>1</sub>* is more
-constrained than the declaration of *i<sub>2</sub>*, *i<sub>1</sub>* is more
-specialized, (ii) if the declaration of *i<sub>2</sub>* is more constrained
-than the declaration of *i<sub>1</sub>*, *i<sub>2</sub>* is more
-specialized, and (iii) otherwise, it is ambiguous whether *i<sub>1</sub>* or *i<sub>2</sub>* is more specialized.
 
-If more than two implementations of a requirement are present, they necessary 
-comparisons of pairs of implementations are made until the most specialized 
-implementation is determined.
+
+### 1.5.3 Implementations on Same Type 
+If *i<sub>1</sub>* and *i<sub>2</sub>* are both declared on T (whether in the declaration and/or an 
+extension) or are both declared in extensions of the same protocol, then:
+(i) if the declaration of *i<sub>1</sub>* is more constrained than the declaration of *i<sub>2</sub>*, 
+*i<sub>1</sub>* is more specialized;
+(ii) if the declaration of *i<sub>2</sub>* is more constrained than the declaration of *i<sub>1</sub>*, 
+*i<sub>2</sub>* is more specialized; and 
+(iii) otherwise, it is ambiguous whether *i<sub>1</sub>* or *i<sub>2</sub>* is more specialized.
+
+Example 1.5.3 demonstrates the determination of the most specialized implementation among multiple implementations declared on the same type.  The conformance of `S: P` has two implementations of the requirement *m* of protocol `P`.  
+ three implementations, *i1*, *i2* and *i3*, each of which implement requirement *m* of protocol `P`.  All three implementations are declared on the same type, `P`.  
+ 
+```
+Example 1.5.3
+protocol P {
+  associatedtype V
+  var id: String { get } // (m)
+}
+extension P { 
+  var id: String { "O" } // (i1)
+}
+extension P where V: Numeric {
+ var id: String { "O_Numeric" } // (i2)
+}
+extension P where V: StringProtocol {
+  var id: String { "O_StringProtocol" } // (i3)
+}
+
+func getId<T: P>(of t: T) -> String {
+  t.id // (a2)
+}
+
+struct S: P {
+  typealias V = Int
+}
+
+let s = S()
+print(s.id) // (a1)
+print(getId(of: s))
+```
+
 
 
 ## 1.6 Set of Witnesses
@@ -196,6 +238,6 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ4Mzc5MTk2LDkyMTY0NDI0NywxMDQwNT
-E3NTEyLDU1NzA2MDcxMF19
+eyJoaXN0b3J5IjpbLTQwOTQzNTc4OCw5NDgzNzkxOTYsOTIxNj
+Q0MjQ3LDEwNDA1MTc1MTIsNTU3MDYwNzEwXX0=
 -->
