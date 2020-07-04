@@ -144,7 +144,7 @@ witness for the requirement.  The relative specialization between two
 implementations, *i<sub>1</sub>* and *i<sub>2</sub>*, is determined as follows:
 
 If *i<sub>1</sub>* is declared in an extension of a protocol and
-*i<sub>2</sub>* is declared on T (whether in the declaration and/or an
+*i<sub>2</sub>* is declared on `T` (whether in its declaration and/or an
 extension), then *i<sub>2</sub>* is more specialized.
 
 If *i<sub>1</sub>* is declared in an extension of protocol `P1` and
@@ -179,5 +179,6 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0MDUxNzUxMiw1NTcwNjA3MTBdfQ==
+eyJoaXN0b3J5IjpbOTIxNjQ0MjQ3LDEwNDA1MTc1MTIsNTU3MD
+YwNzEwXX0=
 -->
