@@ -77,7 +77,7 @@ conform to the protocol must have a member satisfying *m*.
 
 Given `T: P` and a protocol requirement *m* of `P`, an **implementation** 
 of *m* is any member of `T` that satisfies *m*.  A type
-may have more than one implementation of a requirement.    
+may have more than one implementation of a requirement.
 
 ## 1.4 Witness
 
@@ -148,7 +148,7 @@ If *i<sub>1</sub>* is declared in an extension of a protocol and
 extension), then *i<sub>2</sub>* is more specialized.
 
 ```
-EXAMPLE 1.5.1.1
+EXAMPLE 1.5.1
 protocol P { 
   var id: String { get } // requirement m
 }
@@ -194,6 +194,6 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY3MDIwNjksOTIxNjQ0MjQ3LDEwNDA1MT
-c1MTIsNTU3MDYwNzEwXX0=
+eyJoaXN0b3J5IjpbMTExMzM3NDc0NCw5MjE2NDQyNDcsMTA0MD
+UxNzUxMiw1NTcwNjA3MTBdfQ==
 -->
