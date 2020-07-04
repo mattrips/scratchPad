@@ -240,7 +240,7 @@ Given concretization `T`, the conformance `T: P`, requirement *m* of `P`, and im
 
 Example 1.5.4 demonstrates the that a constrained implementation can be unavailable to a concretization even though the concretization satisfies the constraints on the implementation.  
 
-The conformance of `X<Int>: P` has two implementations of the requirement *m1* of protocol `P`, implementations *i1* and *i2*.  
+The conformance of `X<Int>: P` has two implementations of the requirement *m1* of protocol `P`, implementations *i1* and *i2*.  While *i2* is constrained to cases in which requirement *m2* is satisfied with a type that conforms to protocol `Numeric`, that 
 
 However, *i2* is disregarded for 
 While the property labelled *i3* also would satisfy *m1*, it is not present on `S`, because the `P` extension on which it is declared is an extension only of types that conform to `P` with an implemention of *m2* that conforms to protocol `StringProtocol`; since `S`'s implementation of *m2* is `Int`, which does not conform to  `StringProtocol`, the extension containing *i3* does not extend `S`. 
@@ -288,8 +288,8 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzQxMzUwMjYsNTkyMDkwNTA2LC0yMD
-g3MzM2MjkzLC0xMDEyODY3ODEwLDkwMzY4MDIxMSwtNDA5NDM1
-Nzg4LDk0ODM3OTE5Niw5MjE2NDQyNDcsMTA0MDUxNzUxMiw1NT
-cwNjA3MTBdfQ==
+eyJoaXN0b3J5IjpbMjA0MTQyNDEwNCw1OTIwOTA1MDYsLTIwOD
+czMzYyOTMsLTEwMTI4Njc4MTAsOTAzNjgwMjExLC00MDk0MzU3
+ODgsOTQ4Mzc5MTk2LDkyMTY0NDI0NywxMDQwNTE3NTEyLDU1Nz
+A2MDcxMF19
 -->
