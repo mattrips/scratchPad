@@ -242,7 +242,7 @@ Example 1.5.4 demonstrates the that a constrained implementation can be unavaila
 
 The conformance of `X<Int>: P` has two implementations of the requirement *m1* of protocol `P`, implementations *i1* and *i2*.  The constraint *c2* on *i2* limits the availability of *i2* to cases in which requirement *m2* is performed by a witness that conforms to protocol `Numeric`.  Constraint *c2* is satisfied by `X<Int>`, because `Int`, which is `X<Int>`'s implementation of *m2*, conforms to `Numeric`.  Thus, *i2* is available on `X<Int>`, and when the `id` property is accessed directly on `X<Int>`, *i2* is used; the value "P_Numeric" is returned.
 
-However, *i2* is disregarded for purposes of the conformance `X<Int>: P`.  The constraint, *c3*, on the conformance is always satisfied (i.e., the conformance is unconstrained).  Constraint *c2* is not a superset of the constraint *c3* on  
+However, *i2* is disregarded for purposes of the conformance `X<Int>: P`.  The constraint, *c3*, on the conformance is always satisfied (i.e., the conformance is unconstrained).  Constraint *c2* is not a superset of constraint *c3*.  
 The conformance is unconstrained.  
 While the property labelled *i3* also would satisfy *m1*, it is not present on `S`, because the `P` extension on which it is declared is an extension only of types that conform to `P` with an implemention of *m2* that conforms to protocol `StringProtocol`; since `S`'s implementation of *m2* is `Int`, which does not conform to  `StringProtocol`, the extension containing *i3* does not extend `S`. 
 ```swift
@@ -289,8 +289,8 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgyMTM4Mzk0LDU5MjA5MDUwNiwtMjA4Nz
-MzNjI5MywtMTAxMjg2NzgxMCw5MDM2ODAyMTEsLTQwOTQzNTc4
-OCw5NDgzNzkxOTYsOTIxNjQ0MjQ3LDEwNDA1MTc1MTIsNTU3MD
-YwNzEwXX0=
+eyJoaXN0b3J5IjpbMTI4OTI3NTM4Niw1OTIwOTA1MDYsLTIwOD
+czMzYyOTMsLTEwMTI4Njc4MTAsOTAzNjgwMjExLC00MDk0MzU3
+ODgsOTQ4Mzc5MTk2LDkyMTY0NDI0NywxMDQwNTE3NTEyLDU1Nz
+A2MDcxMF19
 -->
