@@ -79,6 +79,8 @@ Given `T: P` and a protocol requirement *m* of `P`, an **implementation**
 of *m* is any member of `T` that satisfies *m*.  A type
 may have more than one implementation of a requirement.
 
+
+
 ## 1.4 Witness
 
 Given `T: P` and a protocol requirement *m* of `P`, the **witness** for *m* is the implementation used to perform *m*.  One and only one
@@ -194,6 +196,6 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMzM3NDc0NCw5MjE2NDQyNDcsMTA0MD
-UxNzUxMiw1NTcwNjA3MTBdfQ==
+eyJoaXN0b3J5IjpbOTQ4Mzc5MTk2LDkyMTY0NDI0NywxMDQwNT
+E3NTEyLDU1NzA2MDcxMF19
 -->
