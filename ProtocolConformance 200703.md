@@ -141,10 +141,9 @@ unavailable to serve as a protocol witness for the shared conformance.
 Among a type's implementations of a protocol
 requirement, the most specialized implementation will serve as the 
 witness for the requirement.  The relative specialization between two
-implementations, i*<sub>1</sub>* and `i`*<sub>2</sub>*, is determined as
-follows:
+implementations, *i<sub>1</sub>* and *i<sub>2</sub>*, is determined as follows:
 
-If `i`*<sub>1</sub>* is declared in an extension of a protocol and
+If *i<sub>1</sub>* is declared in an extension of a protocol and
 `i`*<sub>2</sub>* is declared on T (whether in the declaration and/or an
 extension), then `i`*<sub>2</sub>* is more specialized.
 
@@ -184,7 +183,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMTIzMDM1MywtMjA5MTY1NjU5MywtNT
+eyJoaXN0b3J5IjpbMTYzNTI2NzA0MSwtMjA5MTY1NjU5MywtNT
 AxMDUwMjgwLDE0MzExMzYxNDMsLTgxOTM4MDU2MywxMzUzNTcy
 ODg0LDEzMjU1ODY2NTIsMTY5ODQyODE1LDg0NTcyOTQ1OSwtMT
 Y3ODY0MDA0NCwtMzE1NTU4MTgwLC0xNTAzMjMxMjk3LDEzNTkz
