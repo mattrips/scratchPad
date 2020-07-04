@@ -13,11 +13,14 @@ This document specifies how Swift determines a conformance.
 The substance of a conformance is not declared.  It is created in response to a named concrete type being conformed to a protocol.  The set of witnesses that is the conformance inferred from the context.[^2]  
 [^2]: [What about tuples and [SE-0283\](https://github.com/apple/swift-evolution/blob/master/proposals/0283-tuples-are-equatable-comparable-hashable.md)?]
 
-A concrete type is conformed to a protocol in one of two ways.  A non-generic concrete type is directly declared to conform to a protocol and, implicitly, to any protocols refined by the protocol.  A concretization of a generic type
+A concrete type is conformed to a protocol in one of two ways.  A non-generic concrete type is directly declared to conform to a protocol.  A concretization of a generic type is indirectly declared to conform to a protocol based on the pattern established in the declaration of the corresponding generic type.
 
 follows the protocol conformance   
 
 When a generic 
+
+
+and, implicitly, to any protocols refined by the protocol
 That declaration may occur in one of two ways.  For a non-generic concrete type, that declaration occurs in single step, with an express statement of the conformance in the declaration or an extension of the type. 
 
 >*type-identifier → [type-name](https://docs.swift.org/swift-book/ReferenceManual/Types.html#grammar_type-name)  [generic-argument-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-argument-clause) generic-where-clause<sub>opt</sub>*
@@ -212,7 +215,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjU5NTQ1MTUsMTMyNTU4NjY1MiwxNj
-k4NDI4MTUsODQ1NzI5NDU5LC0xNjc4NjQwMDQ0LC0zMTU1NTgx
-ODAsLTE1MDMyMzEyOTcsMTM1OTM4NDIyOF19
+eyJoaXN0b3J5IjpbMTM1MzU3Mjg4NCwxMzI1NTg2NjUyLDE2OT
+g0MjgxNSw4NDU3Mjk0NTksLTE2Nzg2NDAwNDQsLTMxNTU1ODE4
+MCwtMTUwMzIzMTI5NywxMzU5Mzg0MjI4XX0=
 -->
