@@ -149,13 +149,15 @@ extension), then *i<sub>2</sub>* is more specialized.
 
 ```
 protocol P { 
-  var id: String { get } // requirement
+  var id: String { get } // requirement m
 }
 extension P { 
-  var id: String { "P" } // implementation 1
+  var id: String { "P" } // implementation A of m
 } 
 
-struct S 
+struct S: P {
+  var id: String { "P" } // implementation B of m
+}
 ```
 
 If *i<sub>1</sub>* is declared in an extension of protocol `P1` and
@@ -190,6 +192,6 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTA4NDM0MDIsOTIxNjQ0MjQ3LDEwND
-A1MTc1MTIsNTU3MDYwNzEwXX0=
+eyJoaXN0b3J5IjpbLTU4NDQ2NDgwNiw5MjE2NDQyNDcsMTA0MD
+UxNzUxMiw1NTcwNjA3MTBdfQ==
 -->
