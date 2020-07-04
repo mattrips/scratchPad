@@ -90,11 +90,11 @@ for a requirement is inferred from the entirety of the scope, including all decl
 made within the scope and those imported into the scope.  
 
 Given `T: P` and a protocol requirement *m* of `P`, the witness for *m*  is the 
-**most specialized** of the implementations of *m* on `T`,
-as determined in the scope in which the declaration `T: P` is stated.  If `T`
-has only one unconditionally accessible implementation of *m*, that
+**most specialized** implementations of *m* on `T`, as determined in the scope
+in which the declaration `T: P` is stated.  If `T`
+has only one implementation of *m*, that
 implementation will be the protocol witness.  If `T` has more than one
-unconditionally accessible implementation of *m*, the most specialized of those
+implementation of *m*, the most specialized of those
 implementations will be the protocol witness.
 
 
@@ -182,7 +182,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5MzYwMDU1MiwtMjA5MTY1NjU5MywtNT
+eyJoaXN0b3J5IjpbMTE5NjAzOTk1MiwtMjA5MTY1NjU5MywtNT
 AxMDUwMjgwLDE0MzExMzYxNDMsLTgxOTM4MDU2MywxMzUzNTcy
 ODg0LDEzMjU1ODY2NTIsMTY5ODQyODE1LDg0NTcyOTQ1OSwtMT
 Y3ODY0MDA0NCwtMzE1NTU4MTgwLC0xNTAzMjMxMjk3LDEzNTkz
