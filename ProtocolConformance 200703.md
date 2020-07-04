@@ -79,7 +79,7 @@ Given `T: P` and a protocol requirement *m* of `P`, an **implementation**
 of *m* is any member of `T` that satisfies *m*.  A type
 may have more than one implementation of a requirement.    
 
-## 1.3 Witness
+## 1.4 Witness
 
 Given `T: P` and a protocol requirement *m* of `P`, the **witness** for *m* is the implementation used to perform *m*.  One and only one
 of `T`'s implementations of *m* will be the witness for *m*.
@@ -100,6 +100,8 @@ implementations will be the protocol witness.
 
 
 ## 1.3 Unconditionally Accessible Implementations
+
+ELIMINATE ALL OF THIS.  ANYTHING TO SALVAGE?
 
 A type's possible implementation of a protocol requirement is available to serve
 as the protocol witness for the requirement only if the implementation is an
@@ -135,11 +137,11 @@ unavailable to serve as a protocol witness for the shared conformance.
     `BidirectionalCollection` and `RandomAccessCollection`.
 
 
-## 1.4 Most Specialized Implementation
-Among a type's unconditionally accessible implementations of a protocol
-requirement, the most specialized implementation will serve as the protocol
+## 1.5 Most Specialized Implementation
+Among a type's implementations of a protocol
+requirement, the most specialized implementation will serve as the 
 witness for the requirement.  The relative specialization between two
-implementations, `i`*<sub>1</sub>* and `i`*<sub>2</sub>*, is determined as
+implementations, i*<sub>1</sub>* and `i`*<sub>2</sub>*, is determined as
 follows:
 
 If `i`*<sub>1</sub>* is declared in an extension of a protocol and
@@ -182,7 +184,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NjAzOTk1MiwtMjA5MTY1NjU5MywtNT
+eyJoaXN0b3J5IjpbMTgxMTIzMDM1MywtMjA5MTY1NjU5MywtNT
 AxMDUwMjgwLDE0MzExMzYxNDMsLTgxOTM4MDU2MywxMzUzNTcy
 ODg0LDEzMjU1ODY2NTIsMTY5ODQyODE1LDg0NTcyOTQ1OSwtMT
 Y3ODY0MDA0NCwtMzE1NTU4MTgwLC0xNTAzMjMxMjk3LDEzNTkz
