@@ -238,7 +238,32 @@ Given concretization `T`, the conformance `T: P`, requirement *m* of `P`, and im
 >***Discussion**
 >This limitation came as part of the adoption of conditional conformance, SE-0143.  It exists due to issues of implementablity.*
 ```swift
+/// Example 1.5.4
 
+protocol P {
+  associatedtype V
+  var id: String { get } // (m1)
+}
+extension P { // (c1)
+  var id: String { "P" } // (i1)
+}
+extension P where V: Numeric { // (c2)
+  var id: String { "P_Numeric" } // (i2)
+}
+
+func getId<T: P>(of t: T) -> String {
+  t.id // (a1)
+}
+
+struct X<T> {
+  typealias V = T
+}
+extension X: P {} // (c3) - X<T> cannot access P_Numeric
+
+let x = X<Int>() // (c4) - Int: Numeric, 
+                 // but X<Int>: P does not have (i2) as witness
+print(x.id) // (a2) "P_Numeric"
+print(getId(of: x)) // "P"
 ```
 
 
@@ -257,8 +282,8 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzNDQ3NjAzOSw1OTIwOTA1MDYsLTIwOD
-czMzYyOTMsLTEwMTI4Njc4MTAsOTAzNjgwMjExLC00MDk0MzU3
-ODgsOTQ4Mzc5MTk2LDkyMTY0NDI0NywxMDQwNTE3NTEyLDU1Nz
-A2MDcxMF19
+eyJoaXN0b3J5IjpbLTExODkwNjc5NTMsNTkyMDkwNTA2LC0yMD
+g3MzM2MjkzLC0xMDEyODY3ODEwLDkwMzY4MDIxMSwtNDA5NDM1
+Nzg4LDk0ODM3OTE5Niw5MjE2NDQyNDcsMTA0MDUxNzUxMiw1NT
+cwNjA3MTBdfQ==
 -->
