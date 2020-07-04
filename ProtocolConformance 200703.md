@@ -147,6 +147,10 @@ If *i<sub>1</sub>* is declared in an extension of a protocol and
 *i<sub>2</sub>* is declared on `T` (whether in its declaration and/or an
 extension), then *i<sub>2</sub>* is more specialized.
 
+```
+protocol P { var id: String
+```
+
 If *i<sub>1</sub>* is declared in an extension of protocol `P1` and
 *i<sub>2</sub>* is declared in an extension of protocol `P2`, then (i) if `P2`
 inherits from `P1`, *i<sub>2</sub>* is more specialized, (ii) if `P1` inherits
@@ -179,6 +183,6 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIxNjQ0MjQ3LDEwNDA1MTc1MTIsNTU3MD
-YwNzEwXX0=
+eyJoaXN0b3J5IjpbLTE2ODY2MDE2MSw5MjE2NDQyNDcsMTA0MD
+UxNzUxMiw1NTcwNjA3MTBdfQ==
 -->
