@@ -32,52 +32,6 @@ When a generic
 and, implicitly, to any protocols refined by the protocol
 That declaration may occur in one of two ways.  For a non-generic concrete type, that declaration occurs in single step, with an express statement of the conformance in the declaration or an extension of the type. 
 
->*type-identifier → [type-name](https://docs.swift.org/swift-book/ReferenceManual/Types.html#grammar_type-name)  [generic-argument-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-argument-clause) generic-where-clause<sub>opt</sub>*
->
-
-<sub>GRAMMAR OF AN CONCRETE TYPE DECLARATION</sub>
-
-*struct-declaration* → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub> [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>  **`struct`**  [struct-name](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_struct-name)  [generic-parameter-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-parameter-clause)<sub>*opt*</sub> [protocol-conformance-clause](#protocol-conformance-clause)<sub>*opt*</sub> [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub> [struct-body](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_struct-body) 
-
-*class-declaration* → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub> [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>  `final`<sub>*opt*</sub>  `class`  [class-name](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_class-name)  [generic-parameter-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-parameter-clause)<sub>*opt*</sub>  [class-relationship-clause](#class-relationship-clause)<sub>*opt*</sub>  [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub>  [class-body](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_class-body)
-
-enum-declaration → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub>  [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>   **`indirect`**<sub>*opt*</sub>  **`enum`**  [enum-name](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_enum-name)  [generic-parameter-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-parameter-clause)<sub>*opt*</sub>  [protocol-conformance-clause](#protocol-conformance-clause)<sub>*opt*</sub>  [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub>  `{`  [union-style-enum-members](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_union-style-enum-members)<sub>*opt*</sub>  `}`
-
-enum-declaration → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub>  [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>  **`enum`**  [enum-name](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_enum-name)  [generic-parameter-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-parameter-clause)<sub>*opt*</sub>  raw-value-style-relationship-clause [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub>  `{`  [raw-value-style-enum-members](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_raw-value-style-enum-members)  `}`
-
-<sub>GRAMMAR OF AN EXTENSION DECLARATION</sub>
-
-*extension-declaration* → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub>  [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>  `extension`  [concrete-type-identifier](#concrete-type-identifier)  protocol-conformance-clause<sub>*opt*</sub>  [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub>  [extension-body](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_extension-body)
-
-*extension-declaration* → [attributes](https://docs.swift.org/swift-book/ReferenceManual/Attributes.html#grammar_attributes)<sub>*opt*</sub>  [access-level-modifier](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_access-level-modifier)<sub>*opt*</sub>  `extension`   [protocol-identifier](#protocol-identifier)  [generic-where-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-where-clause)<sub>*opt*</sub>  [extension-body](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_extension-body)
-
-<a name="class-relationship-clause"></a>*class-relationship-clause* → class-inheritance-clause  |  protocol-conformance-clause  |  class-inheritance-clause  **`,`**  protocol-conformance-list 
-
-<a name="concrete-type-identifier"></a>*concrete-type-identifier* → type-identifier 
->
->*class-inheritance-clause* →  **`:`**  class-identifier
->*class-identifier* → type-identifier 
->
-<a name="protocol-conformance-clause"></a>*protocol-conformance-clause* →  **`:`**  [protocol-conformance-list](#protocol-conformance-list)  
-<a name="protocol-conformance-list"></a>*protocol-conformance-list* → [protocol-identifier](#protocol-identifier)  |  [protocol-identifier](#protocol-identifier)   **`,`**  [protocol-conformance-list](#protocol-conformance-list) 
-<a name="protocol-identifier"></a>*protocol-identifer*  → type-identifier
-
-*raw-value-style-relationship-clause* → **`:`**  [raw-value-identifier](#raw-value-identifier) | [raw-value-identifier](#raw-value-identifier)  **`,`** [protocol-conformance-list](#protocol-conformance-list)
-<a name="raw-value-identifier"></a>*raw-value-identifier* → [protocol-identifier](#protocol-identifier)
-
-*protocol-refinement-clause* →  **`:`**  protocol-refinement-list
-*protocol-refinement-list* → [protocol-identifier](#protocol-identifier)  |  [protocol-identifier](#protocol-identifier)   **`,`**  protocol-inheritance-list
-
->
-
->
-
-
-
-
-
-
-
 
 
  stated on the concrete type.  For a concretization of a generic type, that declaration occurs
@@ -224,8 +178,8 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzMTEzNjE0MywtODE5MzgwNTYzLDEzNT
-M1NzI4ODQsMTMyNTU4NjY1MiwxNjk4NDI4MTUsODQ1NzI5NDU5
-LC0xNjc4NjQwMDQ0LC0zMTU1NTgxODAsLTE1MDMyMzEyOTcsMT
-M1OTM4NDIyOF19
+eyJoaXN0b3J5IjpbLTUwMTA1MDI4MCwxNDMxMTM2MTQzLC04MT
+kzODA1NjMsMTM1MzU3Mjg4NCwxMzI1NTg2NjUyLDE2OTg0Mjgx
+NSw4NDU3Mjk0NTksLTE2Nzg2NDAwNDQsLTMxNTU1ODE4MCwtMT
+UwMzIzMTI5NywxMzU5Mzg0MjI4XX0=
 -->
