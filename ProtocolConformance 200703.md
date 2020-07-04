@@ -70,8 +70,8 @@ declarations are conditional with disjoint conditions.
 
 ## 1.2 Protocol Requirement
 
-A **protocol requirement** *m* is a statement in the declaration of the protocol that a type declared to
-conform to the protocol must have a member satisfying the requirements of *m*.  A member
+A **protocol requirement** *m* is a statement in the declaration of a protocol that a type declared to
+conform to the protocol must have a member satisfying *m*.  A member
 of `T` that satisfies the requirements of *m* is referred to as an
 *implementation* of *m*.
 
@@ -177,8 +177,9 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTE2NTY1OTMsLTUwMTA1MDI4MCwxND
-MxMTM2MTQzLC04MTkzODA1NjMsMTM1MzU3Mjg4NCwxMzI1NTg2
-NjUyLDE2OTg0MjgxNSw4NDU3Mjk0NTksLTE2Nzg2NDAwNDQsLT
-MxNTU1ODE4MCwtMTUwMzIzMTI5NywxMzU5Mzg0MjI4XX0=
+eyJoaXN0b3J5IjpbLTE1NzU4ODYwMSwtMjA5MTY1NjU5MywtNT
+AxMDUwMjgwLDE0MzExMzYxNDMsLTgxOTM4MDU2MywxMzUzNTcy
+ODg0LDEzMjU1ODY2NTIsMTY5ODQyODE1LDg0NTcyOTQ1OSwtMT
+Y3ODY0MDA0NCwtMzE1NTU4MTgwLC0xNTAzMjMxMjk3LDEzNTkz
+ODQyMjhdfQ==
 -->
