@@ -12,7 +12,7 @@ This document specifies how Swift determines a conformance.
 ## 1.1 Creation of a Conformance
 
 A conformance is not declared.  It is created in response to a named concrete type being declared to conform to a protocol.[^2]  
-
+[What about implicit ]
 That declaration may occur in one of two ways.  For a non-generic concrete type, that declaration occurs in single step, with an express statement of the conformance in the declaration or an extension of the type. 
 
 >*type-identifier → [type-name](https://docs.swift.org/swift-book/ReferenceManual/Types.html#grammar_type-name)  [generic-argument-clause](https://docs.swift.org/swift-book/ReferenceManual/GenericParametersAndArguments.html#grammar_generic-argument-clause) generic-where-clause<sub>opt</sub>*
@@ -207,7 +207,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA2MDg5Nzk4LDE2OTg0MjgxNSw4NDU3Mj
-k0NTksLTE2Nzg2NDAwNDQsLTMxNTU1ODE4MCwtMTUwMzIzMTI5
-NywxMzU5Mzg0MjI4XX0=
+eyJoaXN0b3J5IjpbMTMyNTU4NjY1MiwxNjk4NDI4MTUsODQ1Nz
+I5NDU5LC0xNjc4NjQwMDQ0LC0zMTU1NTgxODAsLTE1MDMyMzEy
+OTcsMTM1OTM4NDIyOF19
 -->
