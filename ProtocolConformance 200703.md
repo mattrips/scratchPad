@@ -157,8 +157,8 @@ If *i<sub>1</sub>* is declared in an extension of a protocol and
 *i<sub>2</sub>* is declared on `T` (whether in its declaration and/or an
 extension), then *i<sub>2</sub>* is more specialized.
 
-```
-EXAMPLE 1.5.1
+```swift
+// EXAMPLE 1.5.1
 protocol P { 
   var id: String { get } // requirement m
 }
@@ -195,7 +195,7 @@ The conformance of `S: P` has two implementations of the requirement *m1* of pro
 As between the only two implementations available on `S`, *i1* and *i2*, both are declared on `P`.  Since *i1* is unconstrained and *i2* is constrained, *i2* is more specialized.  Thus, *i2* is the witness for *m1* of `S: P`.  When *m1* of `S: P` is accessed at *a1* (or anywhere else), *i2* is the witness, and serves as the implementation of *m1*.      
  
 ```swift
-/// Example 1.5.3
+// Example 1.5.3
 protocol P {
   associatedtype V // (m2)
   var id: String { get } // (m1)
@@ -237,7 +237,9 @@ print(getId(of: s)) // "O_Numeric"
 Given concretization `T`, the conformance `T: P`, requirement *m* of `P`, and implementation *i* of *m*, if the constraints on *i* are not a superset of the constraints on `T: P`, then *i* is unavailable for purposes of conformance `T: P`.  This unavailability persists regardless of whether `T` satisfies the constraints on *i*, and so, even though *i* may be available on `T`, it is not available for purposes of the conformance `T: P`.        
 >***Discussion**
 >This limitation came as part of the adoption of conditional conformance, SE-0143.  It exists due to issues of implementablity.*
+```swift
 
+```
 
 
 
@@ -255,7 +257,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NTEwOTcwMCw1OTIwOTA1MDYsLTIwOD
+eyJoaXN0b3J5IjpbMTAzNDQ3NjAzOSw1OTIwOTA1MDYsLTIwOD
 czMzYyOTMsLTEwMTI4Njc4MTAsOTAzNjgwMjExLC00MDk0MzU3
 ODgsOTQ4Mzc5MTk2LDkyMTY0NDI0NywxMDQwNTE3NTEyLDU1Nz
 A2MDcxMF19
