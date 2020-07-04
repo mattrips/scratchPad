@@ -240,6 +240,8 @@ Given concretization `T`, the conformance `T: P`, and requirement *m* of `P`, if
 
 
 
+
+
 ## 1.6 Set of Witnesses
 
 Given a declaration that a type conforms to a protocol, the protocol witness that are
@@ -253,7 +255,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI3NzUzNTc0LC0yMDg3MzM2MjkzLC0xMD
+eyJoaXN0b3J5IjpbNTkyMDkwNTA2LC0yMDg3MzM2MjkzLC0xMD
 EyODY3ODEwLDkwMzY4MDIxMSwtNDA5NDM1Nzg4LDk0ODM3OTE5
 Niw5MjE2NDQyNDcsMTA0MDUxNzUxMiw1NTcwNjA3MTBdfQ==
 -->
