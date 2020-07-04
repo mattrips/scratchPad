@@ -161,6 +161,9 @@ specialized, (ii) if the declaration of *i<sub>2</sub>* is more constrained
 than the declaration of *i<sub>1</sub>*, *i<sub>2</sub>* is more
 specialized, and (iii) otherwise, it is ambiguous whether *i<sub>1</sub>* or *i<sub>2</sub>* is more specialized.
 
+If more than two implementations of a requirement are present, 
+
+
 ## 1.6 Set of Protocol Witnesses
 
 Given a declaration that a type conforms to a protocol, the protocol witness for
@@ -174,5 +177,5 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU3MDYwNzEwXX0=
+eyJoaXN0b3J5IjpbMTk5NzQ5MDIwNiw1NTcwNjA3MTBdfQ==
 -->
