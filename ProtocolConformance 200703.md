@@ -195,7 +195,7 @@ Example 1.5.3 demonstrates the determination of the most specialized implementat
 
 The conformance of `S: P` has two implementations of the requirement *m1* of protocol `P`, implementations *i1* and *i2*.  While the property labelled *i3* also would satisfy *m1*, it is not present on `S`, because the `P` extension on which it is declared is an extension only of types that conform to `P` with an implemention of *m2* that conforms to protocol `StringProtocol`; since `S`'s implementation of *m2* is `Int`, which does not conform to  `StringProtocol`, the extension containing *i3* does not extend `S`.  
 
-As between *i1* and *i2*, 
+As between *i1* and *i2*, both declared on `P`,  
 , each of which implement requirement *m* of protocol `P`.  All three implementations are declared on the same type, `P`.  
  
 ```swift
@@ -242,7 +242,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTU3NjU0NjAsOTAzNjgwMjExLC00MD
-k0MzU3ODgsOTQ4Mzc5MTk2LDkyMTY0NDI0NywxMDQwNTE3NTEy
-LDU1NzA2MDcxMF19
+eyJoaXN0b3J5IjpbLTkzODEwNTMzNCw5MDM2ODAyMTEsLTQwOT
+QzNTc4OCw5NDgzNzkxOTYsOTIxNjQ0MjQ3LDEwNDA1MTc1MTIs
+NTU3MDYwNzEwXX0=
 -->
