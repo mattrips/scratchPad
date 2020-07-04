@@ -84,7 +84,12 @@ may have more than one implementation of a requirement.
 Given `T: P` and a protocol requirement *m* of `P`, the **witness** for *m* is the implementation used to perform *m*.  One and only one
 of `T`'s implementations of *m* will be the witness for *m*.
 
-The protocol witness for *m* is the implementation that is the *most
+An implementation is not *declared* to be a witness.  The identity of
+the witness for a requirement is inferred from the entirety of
+the scope, including all declarations made within the scope and those imported
+into the scope.  
+
+The witness for *m* is the implementation that is the *most
 specialized* of the *unconditionally accessible* implementations of *m* on `T`,
 as determined in the scope in which the declaration `T: P` is stated.  If `T`
 has only one unconditionally accessible implementation of *m*, that
@@ -92,11 +97,7 @@ implementation will be the protocol witness.  If `T` has more than one
 unconditionally accessible implementation of *m*, the most specialized of those
 implementations will be the protocol witness.
 
-An implementation is not *declared* to be a protocol witness.  The identity of
-the protocol witness for a protocol requirement is inferred from the entirety of
-the scope, including all declarations made within the scope and those imported
-into the scope.  Careful engineering is required in order to achieve the
-intended witness for a given requirement.
+
 
 ## 1.3 Unconditionally Accessible Implementations
 
@@ -181,9 +182,9 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyNzI4MTkzMiwtMjA5MTY1NjU5MywtNT
-AxMDUwMjgwLDE0MzExMzYxNDMsLTgxOTM4MDU2MywxMzUzNTcy
-ODg0LDEzMjU1ODY2NTIsMTY5ODQyODE1LDg0NTcyOTQ1OSwtMT
-Y3ODY0MDA0NCwtMzE1NTU4MTgwLC0xNTAzMjMxMjk3LDEzNTkz
-ODQyMjhdfQ==
+eyJoaXN0b3J5IjpbLTEyNzczNzgxODAsLTIwOTE2NTY1OTMsLT
+UwMTA1MDI4MCwxNDMxMTM2MTQzLC04MTkzODA1NjMsMTM1MzU3
+Mjg4NCwxMzI1NTg2NjUyLDE2OTg0MjgxNSw4NDU3Mjk0NTksLT
+E2Nzg2NDAwNDQsLTMxNTU1ODE4MCwtMTUwMzIzMTI5NywxMzU5
+Mzg0MjI4XX0=
 -->
