@@ -197,8 +197,8 @@ The conformance of `S: P` has two implementations of the requirement *m1* of pro
 
 , each of which implement requirement *m* of protocol `P`.  All three implementations are declared on the same type, `P`.  
  
-```
-Example 1.5.3
+```swift
+/// Example 1.5.3
 protocol P {
   associatedtype V // (m2)
   var id: String { get } // (m1)
@@ -241,7 +241,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAzNjgwMjExLC00MDk0MzU3ODgsOTQ4Mz
-c5MTk2LDkyMTY0NDI0NywxMDQwNTE3NTEyLDU1NzA2MDcxMF19
-
+eyJoaXN0b3J5IjpbLTMzNTUzMTUxNyw5MDM2ODAyMTEsLTQwOT
+QzNTc4OCw5NDgzNzkxOTYsOTIxNjQ0MjQ3LDEwNDA1MTc1MTIs
+NTU3MDYwNzEwXX0=
 -->
