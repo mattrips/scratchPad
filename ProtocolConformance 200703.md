@@ -185,17 +185,14 @@ If *i<sub>1</sub>* is declared in an extension of protocol `P1` and
 ### 1.5.3 Implementations on Same Type 
 If *i<sub>1</sub>* and *i<sub>2</sub>* are both declared on T (whether in the declaration and/or an 
 extension) or are both declared in extensions of the same protocol, then:
-(i) if the declaration of *i<sub>1</sub>* is more constrained than the declaration of *i<sub>2</sub>*, 
-*i<sub>1</sub>* is more specialized;
-(ii) if the declaration of *i<sub>2</sub>* is more constrained than the declaration of *i<sub>1</sub>*, 
-*i<sub>2</sub>* is more specialized; and 
-(iii) otherwise, it is ambiguous whether *i<sub>1</sub>* or *i<sub>2</sub>* is more specialized.
+(i) if one of the two implementations is declared in a scope that is more constrained than scope in which the other implementation is declared, the implementation in the more constrained scope is the more specialized implementation; and
+(ii) otherwise, it is ambiguous whether *i<sub>1</sub>* or *i<sub>2</sub>* is more specialized.
 
 Example 1.5.3 demonstrates the determination of the most specialized implementation among multiple implementations declared on the same type.  
 
 The conformance of `S: P` has two implementations of the requirement *m1* of protocol `P`, implementations *i1* and *i2*.  While the property labelled *i3* also would satisfy *m1*, it is not present on `S`, because the `P` extension on which it is declared is an extension only of types that conform to `P` with an implemention of *m2* that conforms to protocol `StringProtocol`; since `S`'s implementation of *m2* is `Int`, which does not conform to  `StringProtocol`, the extension containing *i3* does not extend `S`.  
-
-As between the only two implementations available on `S`, *i1* and *i2*, both are declared on `P`.  Since *i1* is unconstrained and *i2* is constrained, *i2* is more specialized.  Thus, *i2* is the witness for *m1* of `S: P`.
+***[REVISE TO ADDRESS i4]***
+As between the only two implementations available on `S`, *i1* and *i2*, both are declared on `P`.  Since *i1* is unconstrained and *i2* is constrained, *i2* is more specialized.  Thus, *i2* is the witness for *m1* of `S: P`.  When *m1* of `S: P` is accessed at *a1* (or anywhere else), *i2* is the witness, and serves as the implementation of *m1*.      
  
 ```swift
 /// Example 1.5.3
@@ -212,9 +209,12 @@ extension P where V: Numeric {
 extension P where V: StringProtocol {
   var id: String { "O_StringProtocol" } // (i3)
 }
+extension P where V == Int {
+  var id: String { "O_Int" } // (i4)
+}
 
 func getId<T: P>(of t: T) -> String {
-  t.id // (a2)
+  t.id // (a1) 
 }
 
 struct S: P {
@@ -222,10 +222,18 @@ struct S: P {
 }
 
 let s = S()
-print(s.id) // (a1)
-print(getId(of: s))
+print(s.id) // (a2) // "O_Numeric"
+print(getId(of: s)) // "O_Numeric"
 ```
 
+>**Discussion**
+>The method `id` exists on `P` solely by virtue of `S: P`.  At *a1*, the instance of `S` is wrapped within an instance of existential `P`, and so the `id` property is accessed via *m* of the interface `P`, which uses the conformance `S: P` to access the witness for *m*, which is *i2*.
+>    
+>When the `id` property is accessed at *a2*, the access is directly on the instance of `S`, rather than through the interface of `P`.  In this example, *i2* is accessed.  The question arises, whether the access is a direct access of the `id` property on `S`,  with *i2* selected because it is the best overload of `id`, or of *m* using the conformance `S: P`, with *i2* selected because it is the witness for *m* of `S:P`?
+>
+>Prior to the adoption of conditional conformance per SE-0143, it appears that the distinction made no difference; overload resolution and protocol conformance always produced the same observable behavior.  Now, due to the rule stated in Section 1.5.4, there are cases where there is a difference in behavior.  [move this discussion to 1.5.4, and explain the difference...]             
+
+### 1.5.4 Implementations on Generics via Constrained Extensions
 
 
 ## 1.6 Set of Witnesses
@@ -241,7 +249,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTI4Njc4MTAsOTAzNjgwMjExLC00MD
-k0MzU3ODgsOTQ4Mzc5MTk2LDkyMTY0NDI0NywxMDQwNTE3NTEy
-LDU1NzA2MDcxMF19
+eyJoaXN0b3J5IjpbLTIwODczMzYyOTMsLTEwMTI4Njc4MTAsOT
+AzNjgwMjExLC00MDk0MzU3ODgsOTQ4Mzc5MTk2LDkyMTY0NDI0
+NywxMDQwNTE3NTEyLDU1NzA2MDcxMF19
 -->
