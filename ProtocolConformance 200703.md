@@ -156,7 +156,7 @@ extension P {
 } 
 
 struct S: P {
-  var id: String { "P" } // implementation B of m
+  var id: String { "S" } // implementation B of m
 }
 ```
 
@@ -192,6 +192,6 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4NDQ2NDgwNiw5MjE2NDQyNDcsMTA0MD
+eyJoaXN0b3J5IjpbMTU5NTM3MTU0OSw5MjE2NDQyNDcsMTA0MD
 UxNzUxMiw1NTcwNjA3MTBdfQ==
 -->
