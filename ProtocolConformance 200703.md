@@ -144,11 +144,11 @@ witness for the requirement.  The relative specialization between two
 implementations, *i<sub>1</sub>* and *i<sub>2</sub>*, is determined as follows:
 
 If *i<sub>1</sub>* is declared in an extension of a protocol and
-`i`*<sub>2</sub>* is declared on T (whether in the declaration and/or an
-extension), then `i`*<sub>2</sub>* is more specialized.
+*i<sub>2</sub>* is declared on T (whether in the declaration and/or an
+extension), then *i<sub>2</sub>* is more specialized.
 
-If `i`*<sub>1</sub>* is declared in an extension of protocol p1 and
-`i`*<sub>2</sub>* is declared in an extension of protocol p2, then (i) if p2
+If *i<sub>1</sub>* is declared in an extension of protocol `P1` and
+*i<sub>2</sub>* is declared in an extension of protocol P2, then (i) if p2
 inherits from p1, `i`*<sub>2</sub>* is more specialized, (ii) if p1 inherits
 from p2, `i`*<sub>1</sub>* is more specialized, and (iii) otherwise,
 `i`*<sub>1</sub>* and `i`*<sub>2</sub>* present an ambiguity (if there is no
@@ -183,9 +183,9 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNTI2NzA0MSwtMjA5MTY1NjU5MywtNT
-AxMDUwMjgwLDE0MzExMzYxNDMsLTgxOTM4MDU2MywxMzUzNTcy
-ODg0LDEzMjU1ODY2NTIsMTY5ODQyODE1LDg0NTcyOTQ1OSwtMT
-Y3ODY0MDA0NCwtMzE1NTU4MTgwLC0xNTAzMjMxMjk3LDEzNTkz
-ODQyMjhdfQ==
+eyJoaXN0b3J5IjpbMTEwMzI3MDYzLC0yMDkxNjU2NTkzLC01MD
+EwNTAyODAsMTQzMTEzNjE0MywtODE5MzgwNTYzLDEzNTM1NzI4
+ODQsMTMyNTU4NjY1MiwxNjk4NDI4MTUsODQ1NzI5NDU5LC0xNj
+c4NjQwMDQ0LC0zMTU1NTgxODAsLTE1MDMyMzEyOTcsMTM1OTM4
+NDIyOF19
 -->
