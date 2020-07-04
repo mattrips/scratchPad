@@ -15,7 +15,7 @@ The substance of a conformance is not declared.  It is created in response to a 
 
 A concrete type is declared to conform to a protocol in one of two ways.  A non-generic concrete type is directly declared to conform to a protocol, while a concretization of a generic type is indirectly declared to conform to a protocol based on the pattern established in the declaration of the corresponding generic type.
 
-A concretization of a generic type is the specialized version of the generic type formed by replacing the generic type's parameters `Key:  Hashable` and `Value` with the concrete type arguments `String` and `Int`.
+A concretization of a generic type is a specialized version of the generic type formed by replacing the generic type's type parameters with concrete type arguments.
 
 results from the instantiation of a type arguments  
 
@@ -221,7 +221,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNjY2OTIyMywtODE5MzgwNTYzLDEzNT
+eyJoaXN0b3J5IjpbLTc3MjIzOTkzOCwtODE5MzgwNTYzLDEzNT
 M1NzI4ODQsMTMyNTU4NjY1MiwxNjk4NDI4MTUsODQ1NzI5NDU5
 LC0xNjc4NjQwMDQ0LC0zMTU1NTgxODAsLTE1MDMyMzEyOTcsMT
 M1OTM4NDIyOF19
