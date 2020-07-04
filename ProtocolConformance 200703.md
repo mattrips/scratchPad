@@ -68,15 +68,15 @@ cannot be declared to conform to a protocol `P` if, within the visible scope,
 another declaration exists of `T: P`.  This rule holds true even where competing
 declarations are conditional with disjoint conditions.
 
-## 1.2 Protocol Requirements
+## 1.2 Requirements
 
 A **protocol requirement** *m* is a statement in the declaration of a protocol that a type declared to
 conform to the protocol must have a member satisfying *m*.  
 
 ## 1.3 Implementations
 
-Given `T: P` and a protocol requirement *m* of `P`, a member of `T` 
-that satisfies *m* is referred to as an *implementation* of *m*.  A type
+Given `T: P` and a protocol requirement *m* of `P`, an **implementation** 
+of *m* is any member of `T` that satisfies *m*.  A type
 may have more than one implementation of a requirement.    
 
 ## 1.3 Witness
@@ -183,9 +183,9 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Nzg4MDE5NzMsLTIwOTE2NTY1OTMsLT
-UwMTA1MDI4MCwxNDMxMTM2MTQzLC04MTkzODA1NjMsMTM1MzU3
-Mjg4NCwxMzI1NTg2NjUyLDE2OTg0MjgxNSw4NDU3Mjk0NTksLT
-E2Nzg2NDAwNDQsLTMxNTU1ODE4MCwtMTUwMzIzMTI5NywxMzU5
-Mzg0MjI4XX0=
+eyJoaXN0b3J5IjpbMTM0MTgzMTQ3OCwtMjA5MTY1NjU5MywtNT
+AxMDUwMjgwLDE0MzExMzYxNDMsLTgxOTM4MDU2MywxMzUzNTcy
+ODg0LDEzMjU1ODY2NTIsMTY5ODQyODE1LDg0NTcyOTQ1OSwtMT
+Y3ODY0MDA0NCwtMzE1NTU4MTgwLC0xNTAzMjMxMjk3LDEzNTkz
+ODQyMjhdfQ==
 -->
