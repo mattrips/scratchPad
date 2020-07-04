@@ -15,8 +15,11 @@ The substance of a conformance is not declared.  It is created in response to a 
 
 A concrete type is declared to conform to a protocol in one of two ways.  A non-generic concrete type is directly declared to conform to a protocol, while a concretization of a generic type is indirectly declared to conform to a protocol based on the pattern established in the declaration of the corresponding generic type.
 
-A concretization of a generic type results from the instantiation of a type arguments  
+A concretization of a generic type is the specialized version of the generic type formed by replacing the generic type's parameters `Key:  Hashable` and `Value` with the concrete type arguments `String` and `Int`.
 
+results from the instantiation of a type arguments  
+
+The specialized version of the generic `Dictionary` type, `Dictionary<String,  Int>` is formed by replacing the generic parameters `Key:  Hashable` and `Value` with the concrete type arguments `String` and `Int`. Each type argument must satisfy all the constraints of the generic parameter it replaces, including any additional requirements specified in a generic `where` clause. In the example above, the `Key` type parameter is constrained to conform to the `Hashable` protocol and therefore `String` must also conform to the `Hashable` protocol.
 
 follows the protocol conformance   
 
@@ -218,8 +221,8 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxOTM4MDU2MywxMzUzNTcyODg0LDEzMj
-U1ODY2NTIsMTY5ODQyODE1LDg0NTcyOTQ1OSwtMTY3ODY0MDA0
-NCwtMzE1NTU4MTgwLC0xNTAzMjMxMjk3LDEzNTkzODQyMjhdfQ
-==
+eyJoaXN0b3J5IjpbLTkzNjY2OTIyMywtODE5MzgwNTYzLDEzNT
+M1NzI4ODQsMTMyNTU4NjY1MiwxNjk4NDI4MTUsODQ1NzI5NDU5
+LC0xNjc4NjQwMDQ0LC0zMTU1NTgxODAsLTE1MDMyMzEyOTcsMT
+M1OTM4NDIyOF19
 -->
