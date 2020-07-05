@@ -13,15 +13,7 @@ The syntactic declaration, `T: P`, that type `T` conforms to protocol `P` is sep
 For a type `T` to conform to a protocol `P`, `T` must be declared to conform to `P`, and `T` must have at least one implementation
 for each protocol requirement of `P`.  A distinct set of protocol witnesses is established for the conformance of `T: P`.
 
-A declaration that `T` conforms to `P` further constitutes, with respect to each
-protocol `o`*<sub>i</sub>* from which `P` directly or indirectly inherits, a
-declaration that `T` conforms to `o`*<sub>i</sub>* so long as `T` has not
-already been declared to conform to `o`*<sub>i</sub>*.  Thus, for the
-declaration of `T: P` to be valid, the declarations of each `T: o`*<sub>i</sub>*
-must satisfy the requirement that `T` have at least one unconditionally
-accessible implementation for each protocol requirement of
-`o`*<sub>i</sub>*. For each conformance `T: o`*<sub>i</sub>*, a distinct set of
-protocol witnesses is established.
+A declaration that `T` conforms to `P` further constitutes, with respect to each protocol `o`*<sub>i</sub>* which `P` refines, a declaration that `T` conforms to `o`*<sub>i</sub>* so long as `T` has not already been declared to conform to `o`*<sub>i</sub>*.  Thus, for the declaration of `T: P` to be valid, the declarations of each `T: o`*<sub>i</sub>* must satisfy the requirement that `T` have at least one unconditionally accessible implementation for each protocol requirement of `o`*<sub>i</sub>*. For each conformance `T: o`*<sub>i</sub>*, a distinct set of protocol witnesses is established.
 
 In a given scope, a type can conform to a protocol in only one way.  A type `T`
 cannot be declared to conform to a protocol `P` if, within the visible scope,
@@ -266,7 +258,7 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3OTExODYyNiwxODY0MzIzNDY0LC0yMT
+eyJoaXN0b3J5IjpbMjA5Njk1NzUxMiwxODY0MzIzNDY0LC0yMT
 YxNDA5OCwtNDEyNTczNzg4LC0xNTMwNjk2Mzk4LC05MzM2MTcz
 MDgsLTE3OTk5MzgwMDQsMTcwMzM3NjExOCw1NjgxMTM1NTQsND
 YxOTcxNjI3LC0yMTEyMzgwNTA1LC0yMDYxMDEzNzcxLDEyODky
