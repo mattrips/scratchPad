@@ -121,7 +121,7 @@ print(getId(of: s)) // "O_Numeric"
 ```           
 
 ### 1.5.4 Implementations on Generics via Constrained Extensions
-If a concretization is declared to conform to a protocol and an implementation of a requirement of the protocol is more constrained than the declaration of conformance, the implementation is unavailable to serve as a witness of the conformance of the concretization to the protocol.  Given concretization `T`, the conformance `T: P`, requirement *m* of `P`, and a constrained implementation *i* of *m*, if the constraint on *i* is not a superset of the constraint on `T: P`, then *i* is unavailable for purposes of the conformance of `T: P`.  This unavailability persists regardless of whether `T` satisfies the constraints on *i*, so, even though *i* may be available on `T`, it is not available for purposes of the conformance `T: P`.        
+If a concretization is declared to conform to a protocol and an implementation of a requirement of the protocol is more constrained than the declaration of conformance, the implementation is unavailable to serve as a witness of the conformance of the concretization to the protocol.  Given concretization `T`, the conformance `T: P`, requirement *m* of `P`, and a constrained implementation *i* of *m*, if the constraint on *i* is not a superset of the constraint on `T: P`, then *i* is unavailable for purposes of the conformance of `T: P`.  This unavailability persists regardless of whether `T` satisfies the constraints on *i*.  Thus, even though *i* may be available on `T`, it is not available for purposes of the conformance `T: P`.  
 
 ---
 
@@ -193,7 +193,7 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MTcwMDkwNCwtMjA3ODM1NTQ4OSwtMT
+eyJoaXN0b3J5IjpbMTY5NTc0OTE4MCwtMjA3ODM1NTQ4OSwtMT
 MyNjExNDIxMiwtMjkwODk4NDY4LC0xMTQyMjU2MjIxLDExNzY5
 Mzk1ODQsLTE3MTMxMzA3MjMsLTMyMzk4NDIyMSwtMzM1NTY0MD
 gwLDE1OTMzODc2NywxODY0MzIzNDY0LC0yMTYxNDA5OCwtNDEy
