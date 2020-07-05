@@ -1,13 +1,5 @@
 # 1 Protocol Conformance
-
->***Witness*** - Given a concrete type `T` declared to conform to
->protocol `P` and a requirement *m* of `P`, the member of `T` 
->used to perform *m* is referred to as the *witness* for *m* of `T: P`.
-
-When a named concrete type `T` is conformed to a protocol `P`, a set of
-implementations--*witnesses*--is determined, one for each requirement of `P`.  
-That set of witnesses is referred to as the conformance for ["of" or "for"?] `T: P`.  
-This document specifies how Swift determines a conformance.
+When a named concrete type `T` is conformed to a protocol `P`, a set of implementations--*witnesses*--is determined, one for each requirement of `P`.   That set of witnesses is referred to as the conformance for ["of" or "for"?] `T: P`.  This document specifies how Swift determines a conformance.
 
 ## 1.1 Creation of a Conformance
 The substance of a conformance is not declared.  It is created in response to a named concrete type being conformed to a protocol.  The set of witnesses that is the conformance inferred from the context.[^2]  
@@ -305,23 +297,12 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 
-
-
-## 1.6 Set of Witnesses
-
-Given a declaration that a type conforms to a protocol, the protocol witness that are the conformance is the set consisting of the witness for each declared requirement of the protocol.  Inherited requirements of a protocol are irrelevant to determining a witness set.
-
-There is only one protocol witness set for a protocol conformance declaration.
-Such set is immutable, and is not subject to replacement.
-
-If a protocol has no declared requirements, the protocol witness set for
-conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODMyNzg1MjYsLTIxNjE0MDk4LC00MT
-I1NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYxNzMwOCwtMTc5OTkz
-ODAwNCwxNzAzMzc2MTE4LDU2ODExMzU1NCw0NjE5NzE2MjcsLT
-IxMTIzODA1MDUsLTIwNjEwMTM3NzEsMTI4OTI3NTM4Niw1OTIw
-OTA1MDYsLTIwODczMzYyOTMsLTEwMTI4Njc4MTAsOTAzNjgwMj
-ExLC00MDk0MzU3ODgsOTQ4Mzc5MTk2LDkyMTY0NDI0NywxMDQw
-NTE3NTEyXX0=
+eyJoaXN0b3J5IjpbMTU4ODYzOTU5MCwtMjE2MTQwOTgsLTQxMj
+U3Mzc4OCwtMTUzMDY5NjM5OCwtOTMzNjE3MzA4LC0xNzk5OTM4
+MDA0LDE3MDMzNzYxMTgsNTY4MTEzNTU0LDQ2MTk3MTYyNywtMj
+ExMjM4MDUwNSwtMjA2MTAxMzc3MSwxMjg5Mjc1Mzg2LDU5MjA5
+MDUwNiwtMjA4NzMzNjI5MywtMTAxMjg2NzgxMCw5MDM2ODAyMT
+EsLTQwOTQzNTc4OCw5NDgzNzkxOTYsOTIxNjQ0MjQ3LDEwNDA1
+MTc1MTJdfQ==
 -->
