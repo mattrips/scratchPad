@@ -272,7 +272,9 @@ print(getId(of: x)) // "P"
 ```
 ---
 Example 1.5.4.2 demonstrates that an implementation of a protocol's requirement provided by a refinement of the protocol can be unavailable to a conformance of the concretization to the protocol even though though the concretization conforms to the refinement. 
-
+```swift
+<<insert 1.5.4.2>>
+```
 
 
 
@@ -289,7 +291,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3Mjg2OTU5MiwtMTc5OTkzODAwNCwxNz
+eyJoaXN0b3J5IjpbLTkzMzYxNzMwOCwtMTc5OTkzODAwNCwxNz
 AzMzc2MTE4LDU2ODExMzU1NCw0NjE5NzE2MjcsLTIxMTIzODA1
 MDUsLTIwNjEwMTM3NzEsMTI4OTI3NTM4Niw1OTIwOTA1MDYsLT
 IwODczMzYyOTMsLTEwMTI4Njc4MTAsOTAzNjgwMjExLC00MDk0
