@@ -238,7 +238,7 @@ Given concretization `T`, the conformance `T: P`, requirement *m* of `P`, and im
 >***Discussion**
 >This limitation came as part of the adoption of conditional conformance, SE-0143.  It exists due to issues of implementablity.*
 ---
-Example 1.5.4.1 demonstrates that a constrained implementation can be unavailable to a concretization even though the concretization satisfies the constraints on the implementation.  
+Example 1.5.4.1 demonstrates that a constrained implementation can be unavailable to a protocol conformance on  a concretization even though the concretization satisfies the constraints on the implementation.  
 
 The conformance of `X<Int>: P` has two implementations of the requirement *m1* of protocol `P`, *i1* and *i2*.  The constraint *c2* on *i2* limits the availability of *i2* to cases in which requirement *m2* is performed by a witness that conforms to protocol `Numeric`.  Constraint *c2* is satisfied by `X<Int>`, because `Int`, which is `X<Int>`'s implementation of *m2*, conforms to `Numeric`.  Thus, *i2* is available on `X<Int>`, and when the `id` property is accessed directly on `X<Int>` as *a2*, *i2* is used; the value "P_Numeric" is returned.
 
@@ -271,7 +271,7 @@ print(x.id) // (a2) "P_Numeric"
 print(getId(of: x)) // "P"
 ```
 ---
-Example 1.5.4.2 demonstrates that an implementation provided by a refinement of a protocol can be unavailable to a concretization even though the concretization satisfies the constraints on the implementation. 
+Example 1.5.4.2 demonstrates that an implementation of a protocol's requirement provided by a refinement of the protocol can be unavailable to a concretization even though the concretization satisfies the constraints on the implementation. 
 
 
 
@@ -288,10 +288,10 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTk5MzgwMDQsMTcwMzM3NjExOCw1Nj
-gxMTM1NTQsNDYxOTcxNjI3LC0yMTEyMzgwNTA1LC0yMDYxMDEz
-NzcxLDEyODkyNzUzODYsNTkyMDkwNTA2LC0yMDg3MzM2MjkzLC
-0xMDEyODY3ODEwLDkwMzY4MDIxMSwtNDA5NDM1Nzg4LDk0ODM3
-OTE5Niw5MjE2NDQyNDcsMTA0MDUxNzUxMiw1NTcwNjA3MTBdfQ
-==
+eyJoaXN0b3J5IjpbMjAzOTY3NjY2NCwtMTc5OTkzODAwNCwxNz
+AzMzc2MTE4LDU2ODExMzU1NCw0NjE5NzE2MjcsLTIxMTIzODA1
+MDUsLTIwNjEwMTM3NzEsMTI4OTI3NTM4Niw1OTIwOTA1MDYsLT
+IwODczMzYyOTMsLTEwMTI4Njc4MTAsOTAzNjgwMjExLC00MDk0
+MzU3ODgsOTQ4Mzc5MTk2LDkyMTY0NDI0NywxMDQwNTE3NTEyLD
+U1NzA2MDcxMF19
 -->
