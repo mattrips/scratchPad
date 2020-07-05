@@ -282,8 +282,7 @@ extension P { // (c1)
   var id: String { "P" } // (i1)
 }
 
-protocol Q {}
-extension Q: P {} // (c2)
+protocol Q: P {} // (c2)
 extension Q where V: Numeric {
   var id: String { "Q_Numeric" } // (i2)
 }
@@ -299,7 +298,7 @@ extension X: P {} // (c3)
 extension X: Q {}
 
 let x = X<Int>()
-print(x.id) // (a2) "P_Numeric"
+print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 
@@ -318,10 +317,10 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTE0MDczMzEsLTE1MzA2OTYzOTgsLT
-kzMzYxNzMwOCwtMTc5OTkzODAwNCwxNzAzMzc2MTE4LDU2ODEx
-MzU1NCw0NjE5NzE2MjcsLTIxMTIzODA1MDUsLTIwNjEwMTM3Nz
-EsMTI4OTI3NTM4Niw1OTIwOTA1MDYsLTIwODczMzYyOTMsLTEw
-MTI4Njc4MTAsOTAzNjgwMjExLC00MDk0MzU3ODgsOTQ4Mzc5MT
-k2LDkyMTY0NDI0NywxMDQwNTE3NTEyLDU1NzA2MDcxMF19
+eyJoaXN0b3J5IjpbMTAwNjY2NDAwLC0xNTMwNjk2Mzk4LC05Mz
+M2MTczMDgsLTE3OTk5MzgwMDQsMTcwMzM3NjExOCw1NjgxMTM1
+NTQsNDYxOTcxNjI3LC0yMTEyMzgwNTA1LC0yMDYxMDEzNzcxLD
+EyODkyNzUzODYsNTkyMDkwNTA2LC0yMDg3MzM2MjkzLC0xMDEy
+ODY3ODEwLDkwMzY4MDIxMSwtNDA5NDM1Nzg4LDk0ODM3OTE5Ni
+w5MjE2NDQyNDcsMTA0MDUxNzUxMiw1NTcwNjA3MTBdfQ==
 -->
