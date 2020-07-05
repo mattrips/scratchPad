@@ -40,28 +40,7 @@ Given `T: P` and a protocol requirement *m* of `P`, the witness for *m*  is the 
 
 ELIMINATE ALL OF THIS.  ANYTHING TO SALVAGE?
 
-With respect to generic types, clause (i) of this rule is not fully implemented.
-A generic type instantiated with its generic arguments specified as concrete
-types may be referred to as a *concretization* of the generic type.  A
-concretization is a type separate and apart from its generic type.  Swift's
-existing implementation of protocols does not include the ability for a
-concretization to develop its own, specialized conformance relationship with a
-protocol.  Instead, a concretization uses the protocol conformances of its
-generic type, without specialization for implementations available via the
-concretization.  Thus, although a concretization may satisfy the conditions of a
-generic where clause that would make an implementation unconditionally
-accessible, the implementation subject to such where clause nevertheless is
-unavailable to serve as a protocol witness for the shared conformance.
-  * Although specialized implementations available to a concretization are not
-    available to serve as protocol witnesses and cannot be accessed via the
-    interface of a protocol, they remain members of the concretization.
-    Accordingly, as members, they may be accessed directly on the concretization
-    following the rules applicable to resolution of overloads.
-  * Notwithstanding the general inability of concretizations to take advantage
-    of specialized implementations, the `Collection` family of protocols in the
-    Standard Library uses a private attribute to gain some access to specialized
-    implementations for concretizations of generic types conforming to
-    `BidirectionalCollection` and `RandomAccessCollection`.
+  * Notwithstanding the general inability of concretizations to take advantage of specialized implementations, the `Collection` family of protocols in the Standard Library uses a private attribute to gain some access to specialized implementations for concretizations of generic types conforming to `BidirectionalCollection` and `RandomAccessCollection`.
 
 
 ## 1.5 Most Specialized Implementation
@@ -231,11 +210,11 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NjkzOTU4NCwtMTcxMzEzMDcyMywtMz
-IzOTg0MjIxLC0zMzU1NjQwODAsMTU5MzM4NzY3LDE4NjQzMjM0
-NjQsLTIxNjE0MDk4LC00MTI1NzM3ODgsLTE1MzA2OTYzOTgsLT
-kzMzYxNzMwOCwtMTc5OTkzODAwNCwxNzAzMzc2MTE4LDU2ODEx
-MzU1NCw0NjE5NzE2MjcsLTIxMTIzODA1MDUsLTIwNjEwMTM3Nz
-EsMTI4OTI3NTM4Niw1OTIwOTA1MDYsLTIwODczMzYyOTMsLTEw
-MTI4Njc4MTBdfQ==
+eyJoaXN0b3J5IjpbMTI2NTk3MzA1LDExNzY5Mzk1ODQsLTE3MT
+MxMzA3MjMsLTMyMzk4NDIyMSwtMzM1NTY0MDgwLDE1OTMzODc2
+NywxODY0MzIzNDY0LC0yMTYxNDA5OCwtNDEyNTczNzg4LC0xNT
+MwNjk2Mzk4LC05MzM2MTczMDgsLTE3OTk5MzgwMDQsMTcwMzM3
+NjExOCw1NjgxMTM1NTQsNDYxOTcxNjI3LC0yMTEyMzgwNTA1LC
+0yMDYxMDEzNzcxLDEyODkyNzUzODYsNTkyMDkwNTA2LC0yMDg3
+MzM2MjkzXX0=
 -->
