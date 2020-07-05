@@ -44,7 +44,7 @@ If more than two implementations of a requirement are present, they necessary co
 
 The relative specialization between two implementations of a requirement is determined as follows:
 
-### 1.5.1 Implementations On Protocol vs. Conforming Type
+### 1.5.1 Implementations on Protocol and Conforming Type
 *Subject to the limitation stated in Section 1.5.4*, if one implementation is declared in an extension of a protocol and another implementation is declared on a conforming type (whether in its declaration and/or an extension), the latter implementation is more specialized.
 
 ---
@@ -74,7 +74,7 @@ extension S: P {}
 (ii) otherwise, it is ambiguous which implementation is the more specialized.
 
 ### 1.5.3 Implementations on Same Type 
-*Subject to the limitation stated in Section 1.5.4*, if two implementations are both declared on the same type (whether in the declaration and/or an extension), then:
+*Subject to the limitation stated in Section 1.5.4*, if two implementations are both declared on the same protocol or the same concrete type , then:
 
 (i) if one implementation is more constrained than the other implementation, the more constrained implementation is the more specialized implementation; and
 
@@ -190,11 +190,11 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzY3MTc4NjQsLTIwNzgzNTU0ODksLT
-EzMjYxMTQyMTIsLTI5MDg5ODQ2OCwtMTE0MjI1NjIyMSwxMTc2
-OTM5NTg0LC0xNzEzMTMwNzIzLC0zMjM5ODQyMjEsLTMzNTU2ND
-A4MCwxNTkzMzg3NjcsMTg2NDMyMzQ2NCwtMjE2MTQwOTgsLTQx
-MjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMzNjE3MzA4LC0xNzk5OT
-M4MDA0LDE3MDMzNzYxMTgsNTY4MTEzNTU0LDQ2MTk3MTYyNywt
-MjExMjM4MDUwNV19
+eyJoaXN0b3J5IjpbLTQzNDE3OTQ1MiwtMjA3ODM1NTQ4OSwtMT
+MyNjExNDIxMiwtMjkwODk4NDY4LC0xMTQyMjU2MjIxLDExNzY5
+Mzk1ODQsLTE3MTMxMzA3MjMsLTMyMzk4NDIyMSwtMzM1NTY0MD
+gwLDE1OTMzODc2NywxODY0MzIzNDY0LC0yMTYxNDA5OCwtNDEy
+NTczNzg4LC0xNTMwNjk2Mzk4LC05MzM2MTczMDgsLTE3OTk5Mz
+gwMDQsMTcwMzM3NjExOCw1NjgxMTM1NTQsNDYxOTcxNjI3LC0y
+MTEyMzgwNTA1XX0=
 -->
