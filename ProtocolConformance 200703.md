@@ -15,7 +15,7 @@ for each protocol requirement of `P`.  A distinct set of protocol witnesses is e
 
 A declaration that `T` conforms to `P` further constitutes, with respect to each protocol `o`*<sub>i</sub>* which `P` refines, a declaration that `T` conforms to `o`*<sub>i</sub>*.  Thus, for the declaration of `T: P` to be valid, the implicit declarations of each `T: o`*<sub>i</sub>* must be valid.  For each conformance `T: o`*<sub>i</sub>*, a distinct set of protocol witnesses is established.
 
-The requirements of a protocol cannot be overridden by any protocol that refines the protocol.  The requirements of a protocol are not part of the conformance of any refining protocol, and refining protocols do not pro
+The requirements of a protocol cannot be overridden by a protocol that refines the protocol.  The requirements of a protocol are not part of the requirement of a refining protocol.    
 
 In a given scope, a type can conform to a protocol in only one way.  A type `T`
 cannot be declared to conform to a protocol `P` if, within the visible scope,
@@ -260,7 +260,7 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NzkxNzIxNSwxODY0MzIzNDY0LC0yMT
+eyJoaXN0b3J5IjpbMTYyODQ2MzM0MiwxODY0MzIzNDY0LC0yMT
 YxNDA5OCwtNDEyNTczNzg4LC0xNTMwNjk2Mzk4LC05MzM2MTcz
 MDgsLTE3OTk5MzgwMDQsMTcwMzM3NjExOCw1NjgxMTM1NTQsND
 YxOTcxNjI3LC0yMTEyMzgwNTA1LC0yMDYxMDEzNzcxLDEyODky
