@@ -15,6 +15,8 @@ for each protocol requirement of `P`.  A distinct set of protocol witnesses is e
 
 A declaration that `T` conforms to `P` further constitutes, with respect to each protocol `o`*<sub>i</sub>* which `P` refines, a declaration that `T` conforms to `o`*<sub>i</sub>*.  Thus, for the declaration of `T: P` to be valid, the implicit declarations of each `T: o`*<sub>i</sub>* must be valid.  For each conformance `T: o`*<sub>i</sub>*, a distinct set of protocol witnesses is established.
 
+The requirements of a protocol cannot be overridden by any protocol that refines the protocol.  The requirement
+
 In a given scope, a type can conform to a protocol in only one way.  A type `T`
 cannot be declared to conform to a protocol `P` if, within the visible scope,
 another declaration exists of `T: P`.  This rule holds true even where competing
@@ -258,11 +260,11 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg3MjIwMDIzLDE4NjQzMjM0NjQsLTIxNj
-E0MDk4LC00MTI1NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYxNzMw
-OCwtMTc5OTkzODAwNCwxNzAzMzc2MTE4LDU2ODExMzU1NCw0Nj
-E5NzE2MjcsLTIxMTIzODA1MDUsLTIwNjEwMTM3NzEsMTI4OTI3
-NTM4Niw1OTIwOTA1MDYsLTIwODczMzYyOTMsLTEwMTI4Njc4MT
-AsOTAzNjgwMjExLC00MDk0MzU3ODgsOTQ4Mzc5MTk2LDkyMTY0
-NDI0N119
+eyJoaXN0b3J5IjpbOTMxOTcwODUsMTg2NDMyMzQ2NCwtMjE2MT
+QwOTgsLTQxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMzNjE3MzA4
+LC0xNzk5OTM4MDA0LDE3MDMzNzYxMTgsNTY4MTEzNTU0LDQ2MT
+k3MTYyNywtMjExMjM4MDUwNSwtMjA2MTAxMzc3MSwxMjg5Mjc1
+Mzg2LDU5MjA5MDUwNiwtMjA4NzMzNjI5MywtMTAxMjg2NzgxMC
+w5MDM2ODAyMTEsLTQwOTQzNTc4OCw5NDgzNzkxOTYsOTIxNjQ0
+MjQ3XX0=
 -->
