@@ -76,7 +76,7 @@ extension S: P {}
 
 Example 1.5.2 demonstrates that an implementation on a protocol is considered more specialized than an implementation on a protocol that is refined by the first protocol and that the same holds true even if the implementation on the less-refined protocol is more constrained than the implementation on the more-refined protocol.
 
-The conformance of `S: P` has two implementations of the requirement *m1* of protocol `P`, implementation *i1* declared in an extension of `P` and implementation *i2* declared on an extension of protocol `Q`.  `Q` refines `P`.  Implementation *i1* is subject to constraint *c1*, while *i2* is unconstrained.  
+The conformance of `S: P` has two implementations of the requirement *m1* of protocol `P`:  implementation *i1* declared in an extension of `P`, and implementation *i2* declared in an extension of protocol `Q`.  `Q` refines `P`.  Implementation *i1* is subject to constraint *c1*, while *i2* is unconstrained.  
 
 ```swift
 // Example 1.5.2
@@ -89,7 +89,7 @@ extension P where V: Numeric { // (c1)
 }
 
 protocol Q: P {} //
-extension Q { // (c3)
+extension Q {  // unconstrained
   var id: String { "Q_Numeric" } // (i2)
 }
 
@@ -102,6 +102,10 @@ struct S {
 }
 extension S: P {}
 extension S: Q {}
+
+let s = S()
+print(s.id) // (a2) // "Q_Numeric"
+print(getId(of: s)) // "Q_Numeric"
 ```
 
 ### 1.5.3 Implementations on Same Type 
@@ -221,11 +225,11 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MjAxNjI5MCwzMzE3MjgyNzIsLTIwNz
-gzNTU0ODksLTEzMjYxMTQyMTIsLTI5MDg5ODQ2OCwtMTE0MjI1
-NjIyMSwxMTc2OTM5NTg0LC0xNzEzMTMwNzIzLC0zMjM5ODQyMj
-EsLTMzNTU2NDA4MCwxNTkzMzg3NjcsMTg2NDMyMzQ2NCwtMjE2
-MTQwOTgsLTQxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMzNjE3Mz
-A4LC0xNzk5OTM4MDA0LDE3MDMzNzYxMTgsNTY4MTEzNTU0LDQ2
-MTk3MTYyN119
+eyJoaXN0b3J5IjpbNDM2ODg1NjU3LDMzMTcyODI3MiwtMjA3OD
+M1NTQ4OSwtMTMyNjExNDIxMiwtMjkwODk4NDY4LC0xMTQyMjU2
+MjIxLDExNzY5Mzk1ODQsLTE3MTMxMzA3MjMsLTMyMzk4NDIyMS
+wtMzM1NTY0MDgwLDE1OTMzODc2NywxODY0MzIzNDY0LC0yMTYx
+NDA5OCwtNDEyNTczNzg4LC0xNTMwNjk2Mzk4LC05MzM2MTczMD
+gsLTE3OTk5MzgwMDQsMTcwMzM3NjExOCw1NjgxMTM1NTQsNDYx
+OTcxNjI3XX0=
 -->
