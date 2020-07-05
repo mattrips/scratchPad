@@ -3,7 +3,7 @@ When a named concrete type[^2] `T` is conformed to a protocol `P`, a set of impl
 [^2]: What about tuples and [SE-0283](https://github.com/apple/swift-evolution/blob/master/proposals/0283-tuples-are-equatable-comparable-hashable.md)?
 
 ## 1.1 Creation of a Conformance
-A **protocol conformance** is the set of witnesses for each requirement  
+A **protocol conformance** is the set of witnesses used by a concrete type to satisfy the requirements of a protocol.  
 
 A named concrete type is declared to conform to a protocol in one of two ways.  A non-generic concrete type is directly declared to conform to a protocol.  A concretization of a generic type is implicitly declared to conform to a protocol based on the pattern established by the generic type's declaration and extensions.
 
@@ -255,11 +255,11 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NjY1MTk4MywtMzM1NTY0MDgwLDE1OT
-MzODc2NywxODY0MzIzNDY0LC0yMTYxNDA5OCwtNDEyNTczNzg4
-LC0xNTMwNjk2Mzk4LC05MzM2MTczMDgsLTE3OTk5MzgwMDQsMT
-cwMzM3NjExOCw1NjgxMTM1NTQsNDYxOTcxNjI3LC0yMTEyMzgw
-NTA1LC0yMDYxMDEzNzcxLDEyODkyNzUzODYsNTkyMDkwNTA2LC
-0yMDg3MzM2MjkzLC0xMDEyODY3ODEwLDkwMzY4MDIxMSwtNDA5
-NDM1Nzg4XX0=
+eyJoaXN0b3J5IjpbLTEzNTQ3MjAwNDUsLTMzNTU2NDA4MCwxNT
+kzMzg3NjcsMTg2NDMyMzQ2NCwtMjE2MTQwOTgsLTQxMjU3Mzc4
+OCwtMTUzMDY5NjM5OCwtOTMzNjE3MzA4LC0xNzk5OTM4MDA0LD
+E3MDMzNzYxMTgsNTY4MTEzNTU0LDQ2MTk3MTYyNywtMjExMjM4
+MDUwNSwtMjA2MTAxMzc3MSwxMjg5Mjc1Mzg2LDU5MjA5MDUwNi
+wtMjA4NzMzNjI5MywtMTAxMjg2NzgxMCw5MDM2ODAyMTEsLTQw
+OTQzNTc4OF19
 -->
