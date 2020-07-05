@@ -1,5 +1,5 @@
 # 1 Protocol Conformance
-When a named concrete type[^2] `T` is conformed to a protocol `P`, a set of implementations--*witnesses*--is determined, one for each requirement of `P`.   That set of witnesses is referred to as the conformance of `T: P`.  This document specifies how Swift determines a conformance.
+When a named concrete type[^2] `T` is conformed to a protocol `P`, a set of implementations--*witnesses*--is determined, one for each requirement of `P`.   That set of witnesses is referred to as the protocol conformance of `T: P`.  This document specifies how Swift determines a conformance.
 [^2]: What about tuples and [SE-0283](https://github.com/apple/swift-evolution/blob/master/proposals/0283-tuples-are-equatable-comparable-hashable.md)?
 
 ## 1.1 Creation of a Conformance
@@ -298,7 +298,7 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NjE0MzQzNiwtMjE2MTQwOTgsLTQxMj
+eyJoaXN0b3J5IjpbMTg2NDMyMzQ2NCwtMjE2MTQwOTgsLTQxMj
 U3Mzc4OCwtMTUzMDY5NjM5OCwtOTMzNjE3MzA4LC0xNzk5OTM4
 MDA0LDE3MDMzNzYxMTgsNTY4MTEzNTU0LDQ2MTk3MTYyNywtMj
 ExMjM4MDUwNSwtMjA2MTAxMzc3MSwxMjg5Mjc1Mzg2LDU5MjA5
