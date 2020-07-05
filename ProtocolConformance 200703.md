@@ -284,8 +284,8 @@ extension P {
   var id: String { "P" } // (i1)
 }
 
-protocol Q: P {} //
-extension Q where V: Numeric {
+protocol Q: P {}
+extension Q where V: Numeric { // (c1)
   var id: String { "Q_Numeric" } // (i2)
 }
 
@@ -296,7 +296,7 @@ func getId<T: Q>(of t: T) -> String {
 struct X<T> {
   typealias V = T
 }
-extension X: P {} // (c3)
+extension X: P {} // (c2)
 extension X: Q {}
 
 let x = X<Int>()
@@ -319,11 +319,11 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM2Mjg4MzQ1LC00MTI1NzM3ODgsLTE1Mz
-A2OTYzOTgsLTkzMzYxNzMwOCwtMTc5OTkzODAwNCwxNzAzMzc2
-MTE4LDU2ODExMzU1NCw0NjE5NzE2MjcsLTIxMTIzODA1MDUsLT
-IwNjEwMTM3NzEsMTI4OTI3NTM4Niw1OTIwOTA1MDYsLTIwODcz
-MzYyOTMsLTEwMTI4Njc4MTAsOTAzNjgwMjExLC00MDk0MzU3OD
-gsOTQ4Mzc5MTk2LDkyMTY0NDI0NywxMDQwNTE3NTEyLDU1NzA2
-MDcxMF19
+eyJoaXN0b3J5IjpbLTE2NjI2ODQzMjMsLTQxMjU3Mzc4OCwtMT
+UzMDY5NjM5OCwtOTMzNjE3MzA4LC0xNzk5OTM4MDA0LDE3MDMz
+NzYxMTgsNTY4MTEzNTU0LDQ2MTk3MTYyNywtMjExMjM4MDUwNS
+wtMjA2MTAxMzc3MSwxMjg5Mjc1Mzg2LDU5MjA5MDUwNiwtMjA4
+NzMzNjI5MywtMTAxMjg2NzgxMCw5MDM2ODAyMTEsLTQwOTQzNT
+c4OCw5NDgzNzkxOTYsOTIxNjQ0MjQ3LDEwNDA1MTc1MTIsNTU3
+MDYwNzEwXX0=
 -->
