@@ -121,9 +121,9 @@ print(getId(of: s)) // "O_Numeric"
 ```           
 
 ### 1.5.4 Implementations on Generics via Constrained Extensions
+A constrained implementation of a requirement of a protocol is unavailable for purposes of conformance of a concretization 
 
-
-Given concretization `T`, the conformance `T: P`, requirement *m* of `P`, and a constrained implementation *i* of *m*, if the constraint on *i* is not a superset of the constraint on `T: P`, then *i* is unavailable for purposes of conformance `T: P`.  This unavailability persists regardless of whether `T` satisfies the constraints on *i*, and so, even though *i* may be available on `T`, it is not available for purposes of the conformance `T: P`.        
+Given concretization `T`, the conformance `T: P`, requirement *m* of `P`, and a constrained implementation *i* of *m*, if the constraint on *i* is not a superset of the constraint on `T: P`, then *i* is unavailable for purposes of the conformance of `T: P`.  This unavailability persists regardless of whether `T` satisfies the constraints on *i*, and so, even though *i* may be available on `T`, it is not available for purposes of the conformance `T: P`.        
 
 ---
 
@@ -195,11 +195,11 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjYxMTQyMTIsLTI5MDg5ODQ2OCwtMT
-E0MjI1NjIyMSwxMTc2OTM5NTg0LC0xNzEzMTMwNzIzLC0zMjM5
-ODQyMjEsLTMzNTU2NDA4MCwxNTkzMzg3NjcsMTg2NDMyMzQ2NC
-wtMjE2MTQwOTgsLTQxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMz
-NjE3MzA4LC0xNzk5OTM4MDA0LDE3MDMzNzYxMTgsNTY4MTEzNT
-U0LDQ2MTk3MTYyNywtMjExMjM4MDUwNSwtMjA2MTAxMzc3MSwx
-Mjg5Mjc1Mzg2XX0=
+eyJoaXN0b3J5IjpbLTIwMDEzMzc4MDYsLTEzMjYxMTQyMTIsLT
+I5MDg5ODQ2OCwtMTE0MjI1NjIyMSwxMTc2OTM5NTg0LC0xNzEz
+MTMwNzIzLC0zMjM5ODQyMjEsLTMzNTU2NDA4MCwxNTkzMzg3Nj
+csMTg2NDMyMzQ2NCwtMjE2MTQwOTgsLTQxMjU3Mzc4OCwtMTUz
+MDY5NjM5OCwtOTMzNjE3MzA4LC0xNzk5OTM4MDA0LDE3MDMzNz
+YxMTgsNTY4MTEzNTU0LDQ2MTk3MTYyNywtMjExMjM4MDUwNSwt
+MjA2MTAxMzc3MV19
 -->
