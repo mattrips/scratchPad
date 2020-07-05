@@ -273,7 +273,8 @@ print(getId(of: x)) // "P"
 ---
 Example 1.5.4.2 demonstrates that an implementation of a protocol's requirement provided by a refinement of the protocol can be unavailable to a conformance of the concretization to the protocol even though though the concretization conforms to the refinement. 
 
-Since constraint *c1* on *i2* is not a superset of constraint *c2* on `T: P`
+Since constraint *c1* on *i2* is not a superset of constraint *c2* on `X<Int>: P`, *i2*
+
 ```swift
 /// Example 1.5.4.2
 protocol P {
@@ -319,11 +320,11 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5MTYzOTM5MywtNDEyNTczNzg4LC0xNT
-MwNjk2Mzk4LC05MzM2MTczMDgsLTE3OTk5MzgwMDQsMTcwMzM3
-NjExOCw1NjgxMTM1NTQsNDYxOTcxNjI3LC0yMTEyMzgwNTA1LC
-0yMDYxMDEzNzcxLDEyODkyNzUzODYsNTkyMDkwNTA2LC0yMDg3
-MzM2MjkzLC0xMDEyODY3ODEwLDkwMzY4MDIxMSwtNDA5NDM1Nz
-g4LDk0ODM3OTE5Niw5MjE2NDQyNDcsMTA0MDUxNzUxMiw1NTcw
-NjA3MTBdfQ==
+eyJoaXN0b3J5IjpbLTEzNTE1NzM4MzMsLTQxMjU3Mzc4OCwtMT
+UzMDY5NjM5OCwtOTMzNjE3MzA4LC0xNzk5OTM4MDA0LDE3MDMz
+NzYxMTgsNTY4MTEzNTU0LDQ2MTk3MTYyNywtMjExMjM4MDUwNS
+wtMjA2MTAxMzc3MSwxMjg5Mjc1Mzg2LDU5MjA5MDUwNiwtMjA4
+NzMzNjI5MywtMTAxMjg2NzgxMCw5MDM2ODAyMTEsLTQwOTQzNT
+c4OCw5NDgzNzkxOTYsOTIxNjQ0MjQ3LDEwNDA1MTc1MTIsNTU3
+MDYwNzEwXX0=
 -->
