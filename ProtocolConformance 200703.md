@@ -266,8 +266,7 @@ struct X<T> {
 }
 extension X: P {} // (c3)
 
-let x = X<Int>() // (c4) - Int: Numeric, 
-                 // but X<Int>: P does not use (i2)
+let x = X<Int>()
 print(x.id) // (a2) "P_Numeric"
 print(getId(of: x)) // "P"
 ```
@@ -288,8 +287,9 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTIzODA1MDUsLTIwNjEwMTM3NzEsMT
-I4OTI3NTM4Niw1OTIwOTA1MDYsLTIwODczMzYyOTMsLTEwMTI4
-Njc4MTAsOTAzNjgwMjExLC00MDk0MzU3ODgsOTQ4Mzc5MTk2LD
-kyMTY0NDI0NywxMDQwNTE3NTEyLDU1NzA2MDcxMF19
+eyJoaXN0b3J5IjpbNDYxOTcxNjI3LC0yMTEyMzgwNTA1LC0yMD
+YxMDEzNzcxLDEyODkyNzUzODYsNTkyMDkwNTA2LC0yMDg3MzM2
+MjkzLC0xMDEyODY3ODEwLDkwMzY4MDIxMSwtNDA5NDM1Nzg4LD
+k0ODM3OTE5Niw5MjE2NDQyNDcsMTA0MDUxNzUxMiw1NTcwNjA3
+MTBdfQ==
 -->
