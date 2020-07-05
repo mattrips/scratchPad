@@ -74,10 +74,32 @@ extension S: P {}
 
 ---
 
-Example 1.5.2 _____.
+Example 1.5.2 demonstrates that an implementation on a more refined protocol is considered more specialized than an implementat
 
 ```swift
+// Example 1.5.2
+protocol P {
+  var id: String { get } // (m1)
+  associatedtype V // (m2)
+}
+extension P where V: Numeric { // (c1)
+  var id: String { "P" } // (i1)
+}
 
+protocol Q: P {} // (c2)
+extension Q { // (c3)
+  var id: String { "Q_Numeric" } // (i2)
+}
+
+func getId<T: P>(of t: T) -> String {
+  t.id // (a1)
+}
+
+struct S {
+  typealias V = Int
+}
+extension S: P {}
+extension S: Q {}
 ```
 
 ### 1.5.3 Implementations on Same Type 
@@ -197,11 +219,11 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMxNzI4MjcyLC0yMDc4MzU1NDg5LC0xMz
-I2MTE0MjEyLC0yOTA4OTg0NjgsLTExNDIyNTYyMjEsMTE3Njkz
-OTU4NCwtMTcxMzEzMDcyMywtMzIzOTg0MjIxLC0zMzU1NjQwOD
-AsMTU5MzM4NzY3LDE4NjQzMjM0NjQsLTIxNjE0MDk4LC00MTI1
-NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYxNzMwOCwtMTc5OTkzOD
-AwNCwxNzAzMzc2MTE4LDU2ODExMzU1NCw0NjE5NzE2MjcsLTIx
-MTIzODA1MDVdfQ==
+eyJoaXN0b3J5IjpbMTYwMzEwOTAxMCwzMzE3MjgyNzIsLTIwNz
+gzNTU0ODksLTEzMjYxMTQyMTIsLTI5MDg5ODQ2OCwtMTE0MjI1
+NjIyMSwxMTc2OTM5NTg0LC0xNzEzMTMwNzIzLC0zMjM5ODQyMj
+EsLTMzNTU2NDA4MCwxNTkzMzg3NjcsMTg2NDMyMzQ2NCwtMjE2
+MTQwOTgsLTQxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMzNjE3Mz
+A4LC0xNzk5OTM4MDA0LDE3MDMzNzYxMTgsNTY4MTEzNTU0LDQ2
+MTk3MTYyN119
 -->
