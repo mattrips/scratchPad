@@ -15,10 +15,9 @@ for each protocol requirement of `P`.  A distinct set of protocol witnesses is e
 
 A declaration that `T` conforms to `P` further constitutes, with respect to each protocol `o`*<sub>i</sub>* which `P` refines, a declaration that `T` conforms to `o`*<sub>i</sub>*.  Thus, for the declaration of `T: P` to be valid, the implicit declarations of each `T: o`*<sub>i</sub>* must be valid.  For each conformance `T: o`*<sub>i</sub>*, a distinct set of protocol witnesses is established.
 
-The requirements of a protocol are not part of the requirements of a refining protocol.  The requirements of a protocol cannot be overridden by a protocol that refines the protocol.  Thus, the conformances formed by a refining protocol do not include witnesses for the requirements of the protocols refined by the refining  
+The requirements of a protocol are not part of the requirements of a refining protocol.  The requirements of a protocol cannot be overridden by a protocol that refines the protocol.  Thus, the conformances formed by a refining protocol do not include witnesses for requirements of the protocols refined by the refining protocol.    
 
-In a given scope, a type can conform to a protocol in only one way.  A type `T`
-cannot be declared to conform to a protocol `P` if, within the visible scope,
+In a given scope, a type can conform to a protocol in only one way.  A type `T` cannot be declared to conform to a protocol `P` if, within the visible scope,
 another declaration exists of `T: P`.  This rule holds true even where competing
 declarations are conditional with disjoint conditions.
 
@@ -260,11 +259,11 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODQ1NDkwNzAsMTg2NDMyMzQ2NCwtMj
-E2MTQwOTgsLTQxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMzNjE3
-MzA4LC0xNzk5OTM4MDA0LDE3MDMzNzYxMTgsNTY4MTEzNTU0LD
-Q2MTk3MTYyNywtMjExMjM4MDUwNSwtMjA2MTAxMzc3MSwxMjg5
-Mjc1Mzg2LDU5MjA5MDUwNiwtMjA4NzMzNjI5MywtMTAxMjg2Nz
-gxMCw5MDM2ODAyMTEsLTQwOTQzNTc4OCw5NDgzNzkxOTYsOTIx
-NjQ0MjQ3XX0=
+eyJoaXN0b3J5IjpbNDY5MzA1NDA5LDE4NjQzMjM0NjQsLTIxNj
+E0MDk4LC00MTI1NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYxNzMw
+OCwtMTc5OTkzODAwNCwxNzAzMzc2MTE4LDU2ODExMzU1NCw0Nj
+E5NzE2MjcsLTIxMTIzODA1MDUsLTIwNjEwMTM3NzEsMTI4OTI3
+NTM4Niw1OTIwOTA1MDYsLTIwODczMzYyOTMsLTEwMTI4Njc4MT
+AsOTAzNjgwMjExLC00MDk0MzU3ODgsOTQ4Mzc5MTk2LDkyMTY0
+NDI0N119
 -->
