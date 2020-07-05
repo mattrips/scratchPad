@@ -237,15 +237,15 @@ print(getId(of: s)) // "O_Numeric"
 Given concretization `T`, the conformance `T: P`, requirement *m* of `P`, and implementation *i* of *m*, if the constraints on *i* are not a superset of the constraints on `T: P`, then *i* is unavailable for purposes of conformance `T: P`.  This unavailability persists regardless of whether `T` satisfies the constraints on *i*, and so, even though *i* may be available on `T`, it is not available for purposes of the conformance `T: P`.        
 >***Discussion**
 >This limitation came as part of the adoption of conditional conformance, SE-0143.  It exists due to issues of implementablity.*
-
-Example 1.5.4 demonstrates that a constrained implementation can be unavailable to a concretization even though the concretization satisfies the constraints on the implementation.  
+---
+Example 1.5.4.1 demonstrates that a constrained implementation can be unavailable to a concretization even though the concretization satisfies the constraints on the implementation.  
 
 The conformance of `X<Int>: P` has two implementations of the requirement *m1* of protocol `P`, *i1* and *i2*.  The constraint *c2* on *i2* limits the availability of *i2* to cases in which requirement *m2* is performed by a witness that conforms to protocol `Numeric`.  Constraint *c2* is satisfied by `X<Int>`, because `Int`, which is `X<Int>`'s implementation of *m2*, conforms to `Numeric`.  Thus, *i2* is available on `X<Int>`, and when the `id` property is accessed directly on `X<Int>` as *a2*, *i2* is used; the value "P_Numeric" is returned.
 
 However, constraint *c3* on conformance `X<Int>: P` is the universal set (i.e., the conformance is unconstrained).  Constraint *c2* is not a superset of the universal set, *c3*.  Consequently, per the rule stated at the outset of this Section 1.5.4,  *i2* is disregarded for purposes of the conformance `X<Int>: P`, and so *i1*, as the only implementation of *m1* available for purposes of `X<Int>: P`, is the witness for *m1*.  When *m1* of `X<Int>: P` is accessed at *a1* (or anywhere else), *i1* is the witness, and serves as the implementation of *m1*.  
 
 ```swift
-/// Example 1.5.4
+/// Example 1.5.4.1
 protocol P {
   var id: String { get } // (m1)
   associatedtype V // (m2)
@@ -270,7 +270,8 @@ let x = X<Int>()
 print(x.id) // (a2) "P_Numeric"
 print(getId(of: x)) // "P"
 ```
-
+---
+Example 1.5.4.2 demonstrates that a constrained implementation can be unavailable to a concretization even though the concretization satisfies the constraints on the implementation. 
 
 
 
@@ -287,9 +288,9 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY4MTEzNTU0LDQ2MTk3MTYyNywtMjExMj
-M4MDUwNSwtMjA2MTAxMzc3MSwxMjg5Mjc1Mzg2LDU5MjA5MDUw
-NiwtMjA4NzMzNjI5MywtMTAxMjg2NzgxMCw5MDM2ODAyMTEsLT
-QwOTQzNTc4OCw5NDgzNzkxOTYsOTIxNjQ0MjQ3LDEwNDA1MTc1
-MTIsNTU3MDYwNzEwXX0=
+eyJoaXN0b3J5IjpbMTcwMzM3NjExOCw1NjgxMTM1NTQsNDYxOT
+cxNjI3LC0yMTEyMzgwNTA1LC0yMDYxMDEzNzcxLDEyODkyNzUz
+ODYsNTkyMDkwNTA2LC0yMDg3MzM2MjkzLC0xMDEyODY3ODEwLD
+kwMzY4MDIxMSwtNDA5NDM1Nzg4LDk0ODM3OTE5Niw5MjE2NDQy
+NDcsMTA0MDUxNzUxMiw1NTcwNjA3MTBdfQ==
 -->
