@@ -14,11 +14,6 @@ A **concretization** of a generic type is a specialized version of the generic t
 
 results from the instantiation of a type arguments  
 
-The specialized version of the generic `Dictionary` type, `Dictionary<String,  Int>` is formed by replacing the generic parameters `Key:  Hashable` and `Value` with the concrete type arguments `String` and `Int`. Each type argument must satisfy all the constraints of the generic parameter it replaces, including any additional requirements specified in a generic `where` clause. In the example above, the `Key` type parameter is constrained to conform to the `Hashable` protocol and therefore `String` must also conform to the `Hashable` protocol.
-
-follows the protocol conformance   
-
-When a generic 
 
 
 and, implicitly, to any protocols refined by the protocol
@@ -298,11 +293,11 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk3Mzg1OTA2LDE4NjQzMjM0NjQsLTIxNj
-E0MDk4LC00MTI1NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYxNzMw
-OCwtMTc5OTkzODAwNCwxNzAzMzc2MTE4LDU2ODExMzU1NCw0Nj
-E5NzE2MjcsLTIxMTIzODA1MDUsLTIwNjEwMTM3NzEsMTI4OTI3
-NTM4Niw1OTIwOTA1MDYsLTIwODczMzYyOTMsLTEwMTI4Njc4MT
-AsOTAzNjgwMjExLC00MDk0MzU3ODgsOTQ4Mzc5MTk2LDkyMTY0
-NDI0N119
+eyJoaXN0b3J5IjpbLTEzNTc2NTM4NDQsMTg2NDMyMzQ2NCwtMj
+E2MTQwOTgsLTQxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMzNjE3
+MzA4LC0xNzk5OTM4MDA0LDE3MDMzNzYxMTgsNTY4MTEzNTU0LD
+Q2MTk3MTYyNywtMjExMjM4MDUwNSwtMjA2MTAxMzc3MSwxMjg5
+Mjc1Mzg2LDU5MjA5MDUwNiwtMjA4NzMzNjI5MywtMTAxMjg2Nz
+gxMCw5MDM2ODAyMTEsLTQwOTQzNTc4OCw5NDgzNzkxOTYsOTIx
+NjQ0MjQ3XX0=
 -->
