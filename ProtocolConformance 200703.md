@@ -1,6 +1,6 @@
 # 1 Protocol Conformance
-When a named concrete type[^2] `T` is conformed to a protocol `P`, a set of implementations--*witnesses*--is determined, one for each requirement of `P`.   That set of witnesses is referred to as the protocol conformance of `T: P`.  This document specifies how Swift determines a conformance.
-[^2]: What about tuples and [SE-0283](https://github.com/apple/swift-evolution/blob/master/proposals/0283-tuples-are-equatable-comparable-hashable.md)?
+When a named concrete type[^1] `T` is conformed to a protocol `P`, a set of implementations--*witnesses*--is determined, one for each requirement of `P`.   That set of witnesses is referred to as the protocol conformance of `T: P`.  This document specifies how Swift determines a conformance.
+[^1]: What about tuples and [SE-0283](https://github.com/apple/swift-evolution/blob/master/proposals/0283-tuples-are-equatable-comparable-hashable.md)?
 
 ## 1.1 Creation of a Conformance
 A **protocol conformance** is the set of witnesses used by a concrete type to satisfy the requirements of a protocol.  The syntactic declaration, `T: P`, that type `T` conforms to protocol `P` is separate and distinct from the determination of the set of witnesses that is a conformance.  The substance of a conformance is not declared.  It is created in response to a type being declared conform to a protocol.  The set of witnesses that is a conformance is inferred from the context.
@@ -121,14 +121,7 @@ struct S: P {
 let s = S()
 print(s.id) // (a2) // "O_Numeric"
 print(getId(of: s)) // "O_Numeric"
-```
-
->**Discussion**
->The method `id` exists on `P` solely by virtue of `S: P`.  At *a1*, the instance of `S` is wrapped within an instance of existential `P`, and so the `id` property is accessed via *m* of the interface `P`, which uses the conformance `S: P` to access the witness for *m*, which is *i2*.
->    
->When the `id` property is accessed at *a2*, the access is directly on the instance of `S`, rather than through the interface of `P`.  In this example, *i2* is accessed.  The question arises, whether the access is a direct access of the `id` property on `S`,  with *i2* selected because it is the best overload of `id`, or of *m* using the conformance `S: P`, with *i2* selected because it is the witness for *m* of `S:P`?
->
->Prior to the adoption of conditional conformance per SE-0143, it appears that the distinction made no difference; overload resolution and protocol conformance always produced the same observable behavior.  Now, due to the rule stated in Section 1.5.4, there are cases where there is a difference in behavior.  [move this discussion to 1.5.4, and explain the difference...]             
+```           
 
 ### 1.5.4 Implementations on Generics via Constrained Extensions
 Given concretization `T`, the conformance `T: P`, requirement *m* of `P`, and implementation *i* of *m*, if the constraint on *i* is not a superset of the constraint on `T: P`, then *i* is unavailable for purposes of conformance `T: P`.  This unavailability persists regardless of whether `T` satisfies the constraints on *i*, and so, even though *i* may be available on `T`, it is not available for purposes of the conformance `T: P`.        
@@ -168,8 +161,8 @@ print(x.id) // (a2) "P_Numeric"
 print(getId(of: x)) // "P"
 ```
 ---
-Example 1.5.4.2 demonstrates that a specialized implementation of a protocol's requirement provided by a refinement of the protocol can be unavailable to a conformance of a concretization to the protocol even though the concretization conforms to the refinement.[^3] 
-[^3]: Notwithstanding the general inability of concretizations to take advantage of specialized implementations, the `Collection` family of protocols in the Standard Library uses a private attribute to gain some access to specialized implementations for concretizations of generic types conforming to `BidirectionalCollection` and `RandomAccessCollection`.
+Example 1.5.4.2 demonstrates that a specialized implementation of a protocol's requirement provided by a refinement of the protocol can be unavailable to a conformance of a concretization to the protocol even though the concretization conforms to the refinement.[^2] 
+[^2]: Notwithstanding the general inability of concretizations to take advantage of specialized implementations, the `Collection` family of protocols in the Standard Library uses a private attribute to gain some access to specialized implementations for concretizations of generic types conforming to `BidirectionalCollection` and `RandomAccessCollection`.
 
 Since constraint *c1* on *i2* is not a superset of constraint *c2* on `X<Int>: P`, *i2* is unavailable for purposes of the conformance of `X<Int>: P`. 
 
@@ -202,13 +195,12 @@ let x = X<Int>()
 print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDIyNTYyMjEsMTE3NjkzOTU4NCwtMT
-cxMzEzMDcyMywtMzIzOTg0MjIxLC0zMzU1NjQwODAsMTU5MzM4
-NzY3LDE4NjQzMjM0NjQsLTIxNjE0MDk4LC00MTI1NzM3ODgsLT
-E1MzA2OTYzOTgsLTkzMzYxNzMwOCwtMTc5OTkzODAwNCwxNzAz
-Mzc2MTE4LDU2ODExMzU1NCw0NjE5NzE2MjcsLTIxMTIzODA1MD
-UsLTIwNjEwMTM3NzEsMTI4OTI3NTM4Niw1OTIwOTA1MDYsLTIw
-ODczMzYyOTNdfQ==
+eyJoaXN0b3J5IjpbLTEyNzUxMTgwODksLTExNDIyNTYyMjEsMT
+E3NjkzOTU4NCwtMTcxMzEzMDcyMywtMzIzOTg0MjIxLC0zMzU1
+NjQwODAsMTU5MzM4NzY3LDE4NjQzMjM0NjQsLTIxNjE0MDk4LC
+00MTI1NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYxNzMwOCwtMTc5
+OTkzODAwNCwxNzAzMzc2MTE4LDU2ODExMzU1NCw0NjE5NzE2Mj
+csLTIxMTIzODA1MDUsLTIwNjEwMTM3NzEsMTI4OTI3NTM4Niw1
+OTIwOTA1MDZdfQ==
 -->
