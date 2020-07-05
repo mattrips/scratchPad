@@ -75,8 +75,7 @@ extension S: P {}
 (ii) otherwise, it is ambiguous which implementation is the more specialized.
 
 ### 1.5.3 Implementations on Same Type 
-If *i<sub>1</sub>* and *i<sub>2</sub>* are both declared on T (whether in the declaration and/or an 
-extension) or are both declared in extensions of the same protocol, then:
+If two implementations are both declared on the same type (whether in the declaration and/or an extension) or are both declared in extensions of the same protocol, then:
 (i) if one of the two implementations is declared in a scope that is more constrained than scope in which the other implementation is declared, the implementation in the more constrained scope is the more specialized implementation; and
 (ii) otherwise, it is ambiguous whether *i<sub>1</sub>* or *i<sub>2</sub>* is more specialized.
 
@@ -191,7 +190,7 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMTY5MDI1NSwtMTE0MjI1NjIyMSwxMT
+eyJoaXN0b3J5IjpbLTUwNzMwMDgwMSwtMTE0MjI1NjIyMSwxMT
 c2OTM5NTg0LC0xNzEzMTMwNzIzLC0zMjM5ODQyMjEsLTMzNTU2
 NDA4MCwxNTkzMzg3NjcsMTg2NDMyMzQ2NCwtMjE2MTQwOTgsLT
 QxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMzNjE3MzA4LC0xNzk5
