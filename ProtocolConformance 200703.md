@@ -273,18 +273,18 @@ print(getId(of: x)) // "P"
 ---
 Example 1.5.4.2 demonstrates that an implementation of a protocol's requirement provided by a refinement of the protocol can be unavailable to a conformance of the concretization to the protocol even though though the concretization conforms to the refinement. 
 
-
+Since 
 ```swift
 /// Example 1.5.4.2
 protocol P {
   var id: String { get } // (m1)
   associatedtype V // (m2)
 }
-extension P { // (c1)
+extension P {
   var id: String { "P" } // (i1)
 }
 
-protocol Q: P {} // (c2)
+protocol Q: P {} //
 extension Q where V: Numeric {
   var id: String { "Q_Numeric" } // (i2)
 }
@@ -319,10 +319,11 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOT
-MzNjE3MzA4LC0xNzk5OTM4MDA0LDE3MDMzNzYxMTgsNTY4MTEz
-NTU0LDQ2MTk3MTYyNywtMjExMjM4MDUwNSwtMjA2MTAxMzc3MS
-wxMjg5Mjc1Mzg2LDU5MjA5MDUwNiwtMjA4NzMzNjI5MywtMTAx
-Mjg2NzgxMCw5MDM2ODAyMTEsLTQwOTQzNTc4OCw5NDgzNzkxOT
-YsOTIxNjQ0MjQ3LDEwNDA1MTc1MTIsNTU3MDYwNzEwXX0=
+eyJoaXN0b3J5IjpbMjM2Mjg4MzQ1LC00MTI1NzM3ODgsLTE1Mz
+A2OTYzOTgsLTkzMzYxNzMwOCwtMTc5OTkzODAwNCwxNzAzMzc2
+MTE4LDU2ODExMzU1NCw0NjE5NzE2MjcsLTIxMTIzODA1MDUsLT
+IwNjEwMTM3NzEsMTI4OTI3NTM4Niw1OTIwOTA1MDYsLTIwODcz
+MzYyOTMsLTEwMTI4Njc4MTAsOTAzNjgwMjExLC00MDk0MzU3OD
+gsOTQ4Mzc5MTk2LDkyMTY0NDI0NywxMDQwNTE3NTEyLDU1NzA2
+MDcxMF19
 -->
