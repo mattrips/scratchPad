@@ -238,9 +238,9 @@ Given concretization `T`, the conformance `T: P`, requirement *m* of `P`, and im
 >***Discussion**
 >This limitation came as part of the adoption of conditional conformance, SE-0143.  It exists due to issues of implementablity.*
 
-Example 1.5.4 demonstrates the that a constrained implementation can be unavailable to a concretization even though the concretization satisfies the constraints on the implementation.  
+Example 1.5.4 demonstrates that a constrained implementation can be unavailable to a concretization even though the concretization satisfies the constraints on the implementation.  
 
-The conformance of `X<Int>: P` has two implementations of the requirement *m1* of protocol `P`, implementations *i1* and *i2*.  The constraint *c2* on *i2* limits the availability of *i2* to cases in which requirement *m2* is performed by a witness that conforms to protocol `Numeric`.  Constraint *c2* is satisfied by `X<Int>`, because `Int`, which is `X<Int>`'s implementation of *m2*, conforms to `Numeric`.  Thus, *i2* is available on `X<Int>`, and when the `id` property is accessed directly on `X<Int>`, *i2* is used; the value "P_Numeric" is returned.
+The conformance of `X<Int>: P` has two implementations of the requirement *m1* of protocol `P`, *i1* and *i2*.  The constraint *c2* on *i2* limits the availability of *i2* to cases in which requirement *m2* is performed by a witness that conforms to protocol `Numeric`.  Constraint *c2* is satisfied by `X<Int>`, because `Int`, which is `X<Int>`'s implementation of *m2*, conforms to `Numeric`.  Thus, *i2* is available on `X<Int>`, and when the `id` property is accessed directly on `X<Int>`, *i2* is used; the value "P_Numeric" is returned.
 
 However, constraint *c3* on conformance `X<Int>: P` is the universal set (i.e., the conformance is unconstrained).  Constraint *c2* is not a superset of the universal set, *c3*.  Consequently, per the rule stated at the outset of this Section 1.5.4,  *i2* is disregarded for purposes of the conformance `X<Int>: P`.
 
@@ -288,8 +288,8 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjEwMTM3NzEsMTI4OTI3NTM4Niw1OT
-IwOTA1MDYsLTIwODczMzYyOTMsLTEwMTI4Njc4MTAsOTAzNjgw
-MjExLC00MDk0MzU3ODgsOTQ4Mzc5MTk2LDkyMTY0NDI0NywxMD
-QwNTE3NTEyLDU1NzA2MDcxMF19
+eyJoaXN0b3J5IjpbLTIxMTIzODA1MDUsLTIwNjEwMTM3NzEsMT
+I4OTI3NTM4Niw1OTIwOTA1MDYsLTIwODczMzYyOTMsLTEwMTI4
+Njc4MTAsOTAzNjgwMjExLC00MDk0MzU3ODgsOTQ4Mzc5MTk2LD
+kyMTY0NDI0NywxMDQwNTE3NTEyLDU1NzA2MDcxMF19
 -->
