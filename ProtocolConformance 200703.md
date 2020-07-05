@@ -37,17 +37,12 @@ the witness for a requirement is inferred from the entirety of the scope, includ
 Given `T: P` and a protocol requirement *m* of `P`, the witness for *m*  is the **most specialized** implementations of *m* on `T`, as determined in the scope in which the declaration `T: P` is stated.  If `T` has only one implementation of *m*, that implementation will be the protocol witness.  If `T` has more than one implementation of *m*, the most specialized of those implementations will be the protocol witness.
 
 ## 1.5 Most Specialized Implementation
-Among a type's implementations of a protocol
-requirement, the most specialized implementation will serve as the 
-witness for the requirement.  If only one implementation of a requirement is present, that implementation is the most specialized.
+Among a type's implementations of a protocol requirement, the most specialized implementation will serve as the witness for the requirement.  If only one implementation of a requirement is present, that implementation is the most specialized.
 
-If more than two implementations of a requirement are present, they necessary 
-comparisons of pairs of implementations are made until the most specialized 
-implementation is determined.
+If more than two implementations of a requirement are present, they necessary comparisons of pairs of implementations are made until the most specialized implementation is determined.
 
 
-The relative specialization between two
-implementations, *i<sub>1</sub>* and *i<sub>2</sub>*, is determined as follows:
+The relative specialization between two implementations of a requirement is determined as follows:
 
 ### 1.5.1 Implementations On Protocol vs. Conforming Type
 *Subject to the limitation stated in Section 1.5.4*, if one implementation is declared in an extension of a protocol and another implementation is declared on `T` (whether in its declaration and/or an extension), the latter implementation is more specialized.
@@ -71,8 +66,12 @@ extension S: P {}
 
 ### 1.5.2 Implementations on Two Different Protocols 
 *Subject to the limitation stated in Section 1.5.4*, if one implementation is declared in an extension of one protocol and another implementation is declared in an extension of another protocol, then:
-(i) if one of the protocols refines the other protocol, the implementation declared in an extension of the more refined protocol is the more specialized; and 
-(ii) otherwise, it is ambiguous which implementation is the more specialized.
+
+ - if one of the protocols refines the other protocol, the
+   implementation declared in an extension of the more refined protocol
+   is the more specialized; and  
+   otherwise, it is ambiguous which
+   implementation is the more specialized.
 
 ### 1.5.3 Implementations on Same Type 
 If two implementations are both declared on the same type (whether in the declaration and/or an extension), then:
@@ -190,11 +189,11 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MDg5ODQ2OCwtMTE0MjI1NjIyMSwxMT
-c2OTM5NTg0LC0xNzEzMTMwNzIzLC0zMjM5ODQyMjEsLTMzNTU2
-NDA4MCwxNTkzMzg3NjcsMTg2NDMyMzQ2NCwtMjE2MTQwOTgsLT
-QxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMzNjE3MzA4LC0xNzk5
-OTM4MDA0LDE3MDMzNzYxMTgsNTY4MTEzNTU0LDQ2MTk3MTYyNy
-wtMjExMjM4MDUwNSwtMjA2MTAxMzc3MSwxMjg5Mjc1Mzg2LDU5
-MjA5MDUwNl19
+eyJoaXN0b3J5IjpbLTE2ODgzNDAxODUsLTI5MDg5ODQ2OCwtMT
+E0MjI1NjIyMSwxMTc2OTM5NTg0LC0xNzEzMTMwNzIzLC0zMjM5
+ODQyMjEsLTMzNTU2NDA4MCwxNTkzMzg3NjcsMTg2NDMyMzQ2NC
+wtMjE2MTQwOTgsLTQxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMz
+NjE3MzA4LC0xNzk5OTM4MDA0LDE3MDMzNzYxMTgsNTY4MTEzNT
+U0LDQ2MTk3MTYyNywtMjExMjM4MDUwNSwtMjA2MTAxMzc3MSwx
+Mjg5Mjc1Mzg2XX0=
 -->
