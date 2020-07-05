@@ -10,20 +10,6 @@ A concrete type is declared to conform to a protocol in one of two ways.  A non-
 ><sub>***Conretization of a Generic Type**
 >A concretization of a generic type is a specialized version of the generic type formed by replacing the generic type's type parameters with concrete type arguments.  A generic type may specify that its concretizations will conform, or conditionally may conform, to one or more protocols, which establishes a pattern for protocol conformance.  When a concretization is formed, its protocol conformances are determined by that pattern.*</sub>
 
-
-
-
- stated on the concrete type.  For a concretization of a generic type, that declaration occurs
-[^1]: Should we address the possible implicit conformance of tuple types to `Equatable`, `Hashable` and `Comparable`?
-
-A non-generic concrete type `X` may be declared to conform to a protocol `P` by stating `X: P` on the declaration or an extension of `X`.  That declaration directly results in the conformance for `X: P` being determined.
-
-By contrast, if a generic type `Y<T>` is declared to conform to a protocol `P` (by stating either `Y<T>: P` on the declaration of `Y<T>` or `Y: P` on an extension of `Y<T>`), `Y<T>` itself does not conform to `P`, and no conformance is determined.  Rather, the declaration establishes the pattern by which concretizations of `Y<T>` may conform to `P`.  If and when a concretization of `Y<T>`, with the generic argument for parameter `T` specified as concrete type `C`, `Y: C` satisfies the conditions, if any, of the `Y<T>` pattern for conforming to `P` is instantiated, the conformance of `Y<C>: P` is determined.  
-
-
-
-
-
 The syntactic declaration, `T: P`, that type `T` conforms to protocol `P` is separate and distinct from the determination of the conformance associated with the 
 
 
@@ -285,7 +271,7 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODEyMzE0NzU0LDE4NjQzMjM0NjQsLTIxNj
+eyJoaXN0b3J5IjpbLTQwNTc5MTkyLDE4NjQzMjM0NjQsLTIxNj
 E0MDk4LC00MTI1NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYxNzMw
 OCwtMTc5OTkzODAwNCwxNzAzMzc2MTE4LDU2ODExMzU1NCw0Nj
 E5NzE2MjcsLTIxMTIzODA1MDUsLTIwNjEwMTM3NzEsMTI4OTI3
