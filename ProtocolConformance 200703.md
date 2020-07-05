@@ -22,12 +22,6 @@ A **protocol requirement** *m* is a statement in the declaration of a protocol t
 
 If one protocol refines another protocol, the requirements of the latter are not part of the requirements of the former.  The requirements of a protocol are not overridden by a protocol that refines the protocol.  Thus, the conformances formed by a refining protocol do not include witnesses for requirements of the refined protocol.
 
-
-
-><sub>GRAMMAR OF A PROTOCOL PROPERTY DECLARATION</sub>
->
->protocol-property-declaration → [variable-declaration-head](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_variable-declaration-head)  [variable-name](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_variable-name)  [type-annotation](https://docs.swift.org/swift-book/ReferenceManual/Types.html#grammar_type-annotation)  [getter-setter-keyword-block](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_getter-setter-keyword-block)   
-
 ## 1.3 Implementations
 
 Given `T: P` and a protocol requirement *m* of `P`, an **implementation** of *m* is any member of `T` that satisfies *m*.  A type may have more than one implementation of a requirement.
@@ -257,11 +251,11 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNDY4MzgzOCwtMTcxMzEzMDcyMywtMz
-IzOTg0MjIxLC0zMzU1NjQwODAsMTU5MzM4NzY3LDE4NjQzMjM0
-NjQsLTIxNjE0MDk4LC00MTI1NzM3ODgsLTE1MzA2OTYzOTgsLT
-kzMzYxNzMwOCwtMTc5OTkzODAwNCwxNzAzMzc2MTE4LDU2ODEx
-MzU1NCw0NjE5NzE2MjcsLTIxMTIzODA1MDUsLTIwNjEwMTM3Nz
-EsMTI4OTI3NTM4Niw1OTIwOTA1MDYsLTIwODczMzYyOTMsLTEw
-MTI4Njc4MTBdfQ==
+eyJoaXN0b3J5IjpbODA5MjA5NDgyLC0xNzEzMTMwNzIzLC0zMj
+M5ODQyMjEsLTMzNTU2NDA4MCwxNTkzMzg3NjcsMTg2NDMyMzQ2
+NCwtMjE2MTQwOTgsLTQxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOT
+MzNjE3MzA4LC0xNzk5OTM4MDA0LDE3MDMzNzYxMTgsNTY4MTEz
+NTU0LDQ2MTk3MTYyNywtMjExMjM4MDUwNSwtMjA2MTAxMzc3MS
+wxMjg5Mjc1Mzg2LDU5MjA5MDUwNiwtMjA4NzMzNjI5MywtMTAx
+Mjg2NzgxMF19
 -->
