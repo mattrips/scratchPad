@@ -8,14 +8,10 @@ A named concrete type is declared to conform to a protocol in one of two ways.  
 ><sub>***Conretization of a Generic Type**
 >A concretization of a generic type is a specialized version of the generic type formed by replacing the generic type's type parameters with concrete type arguments.  A generic type may specify that its concretizations will conform, or conditionally may conform, to one or more protocols, which establishes a pattern for protocol conformance.  When a concretization is formed, its protocol conformances are determined by that pattern.*</sub>
 
-The syntactic declaration, `T: P`, that type `T` conforms to protocol `P` is separate and distinct from the determination of the set of witnesses that is the protocol conformance.  The substance of a conformance is not declared.  It is created in response to a named concrete type being conformed to a protocol.  The set of witnesses that is the conformance inferred from the context.
+The syntactic declaration, `T: P`, that type `T` conforms to protocol `P` is separate and distinct from the determination of the set of witnesses that is a conformance.  The substance of a conformance is not declared.  It is created in response to a type being declared conform to a protocol.  The set of witnesses that is the conformance inferred from the context.
 
-
-
-For a type `T` to conform to a protocol `P`, `T` must be declared to conform to
-`P`, and `T` must have at least one unconditionally accessible implementation
-for each protocol requirement of `P`.  A distinct set of protocol witnesses is
-established for the conformance `T: P`.
+For a type `T` to conform to a protocol `P`, `T` must be declared to conform to `P`, and `T` must have at least one implementation
+for each protocol requirement of `P`.  A distinct set of protocol witnesses is established for the conformance of `T: P`.
 
 A declaration that `T` conforms to `P` further constitutes, with respect to each
 protocol `o`*<sub>i</sub>* from which `P` directly or indirectly inherits, a
@@ -270,7 +266,7 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2NDU5NDY4OCwxODY0MzIzNDY0LC0yMT
+eyJoaXN0b3J5IjpbMTA3OTExODYyNiwxODY0MzIzNDY0LC0yMT
 YxNDA5OCwtNDEyNTczNzg4LC0xNTMwNjk2Mzk4LC05MzM2MTcz
 MDgsLTE3OTk5MzgwMDQsMTcwMzM3NjExOCw1NjgxMTM1NTQsND
 YxOTcxNjI3LC0yMTEyMzgwNTA1LC0yMDYxMDEzNzcxLDEyODky
