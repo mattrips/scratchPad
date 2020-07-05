@@ -39,7 +39,7 @@ Given `T: P` and a protocol requirement *m* of `P`, the witness for *m*  is the 
 ## 1.5 Most Specialized Implementation
 Among a type's implementations of a protocol requirement, the most specialized implementation will serve as the witness for the requirement.  If only one implementation of a requirement is present, that implementation is the most specialized.
 
-If more than two implementations of a requirement are present, they necessary comparisons of pairs of implementations are made until the most specialized implementation is determined.
+If more than two implementations of a requirement are visible, the necessary comparisons of pairs of implementations are made until the most specialized implementation is determined.
 
 
 The relative specialization between two implementations of a requirement is determined as follows:
@@ -74,7 +74,7 @@ extension S: P {}
 (ii) otherwise, it is ambiguous which implementation is the more specialized.
 
 ### 1.5.3 Implementations on Same Type 
-*Subject to the limitation stated in Section 1.5.4*, if two implementations are both declared on the same protocol or the same concrete type , then:
+*Subject to the limitation stated in Section 1.5.4*, if two implementations are both declared on the same protocol or the same concrete type, then:
 
 (i) if one implementation is more constrained than the other implementation, the more constrained implementation is the more specialized implementation; and
 
@@ -190,7 +190,7 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzNDE3OTQ1MiwtMjA3ODM1NTQ4OSwtMT
+eyJoaXN0b3J5IjpbLTQ1MjAwOTI4MCwtMjA3ODM1NTQ4OSwtMT
 MyNjExNDIxMiwtMjkwODk4NDY4LC0xMTQyMjU2MjIxLDExNzY5
 Mzk1ODQsLTE3MTMxMzA3MjMsLTMyMzk4NDIyMSwtMzM1NTY0MD
 gwLDE1OTMzODc2NywxODY0MzIzNDY0LC0yMTYxNDA5OCwtNDEy
