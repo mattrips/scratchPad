@@ -49,7 +49,7 @@ implementation is determined.
 The relative specialization between two
 implementations, *i<sub>1</sub>* and *i<sub>2</sub>*, is determined as follows:
 
-### 1.5.1 Implementations On Protocol vs. Type
+### 1.5.1 Implementations On Protocol vs. Conforming Type
 *Subject to the limitation stated in Section 1.5.4*, if one implementation is declared in an extension of a protocol and another implementation is declared on `T` (whether in its declaration and/or an extension), the latter implementation is more specialized.
 
 Example 1.5.1 demonstrates this case.  For the requirement *m1* of conformance of `S: P`, `S` has two implementations: *i1* declared in an extension of `P`, and *i2* declared in the declaration of `S`.  Accordingly, *i2* is the more specialized, and is the witness for *m1* of `S: P`.  
@@ -69,13 +69,13 @@ struct S {
 extension S: P {}
 ```
 
-### 1.5.2 Implementations on Different Protocols 
+### 1.5.2 Implementations on Two Different Protocols 
 *Subject to the limitation stated in Section 1.5.4*, if one implementation is declared in an extension of one protocol and another implementation is declared in an extension of another protocol, then:
 (i) if one of the protocols refines the other protocol, the implementation declared in an extension of the more refined protocol is the more specialized; and 
 (ii) otherwise, it is ambiguous which implementation is the more specialized.
 
 ### 1.5.3 Implementations on Same Type 
-If two implementations are both declared on the same type (whether in the declaration and/or an extension) or are both declared in extensions of the same protocol, then:
+If two implementations are both declared on the same type (whether in the declaration and/or an extension), then:
 (i) if one of the two implementations is declared in a scope that is more constrained than scope in which the other implementation is declared, the implementation in the more constrained scope is the more specialized implementation; and
 (ii) otherwise, it is ambiguous whether *i<sub>1</sub>* or *i<sub>2</sub>* is more specialized.
 
@@ -190,7 +190,7 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNzMwMDgwMSwtMTE0MjI1NjIyMSwxMT
+eyJoaXN0b3J5IjpbLTI5MDg5ODQ2OCwtMTE0MjI1NjIyMSwxMT
 c2OTM5NTg0LC0xNzEzMTMwNzIzLC0zMjM5ODQyMjEsLTMzNTU2
 NDA4MCwxNTkzMzg3NjcsMTg2NDMyMzQ2NCwtMjE2MTQwOTgsLT
 QxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMzNjE3MzA4LC0xNzk5
