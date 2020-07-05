@@ -17,9 +17,7 @@ A declaration that `T` conforms to `P` further constitutes, with respect to each
 
 The requirements of a protocol are not part of the requirements of a refining protocol.  The requirements of a protocol cannot be overridden by a protocol that refines the protocol.  Thus, the conformances formed by a refining protocol do not include witnesses for requirements of the protocols refined by the refining protocol.    
 
-In a given scope, a type can conform to a protocol in only one way.  A type `T` cannot be declared to conform to a protocol `P` if, within the visible scope,
-another declaration exists of `T: P`.  This rule holds true even where competing
-declarations are conditional with disjoint conditions.
+A type `T` cannot be declared to conform to a protocol `P` if, within the visible scope, another declaration exists of `T: P`.  This rule holds true even where competing declarations are conditional with disjoint conditions.  In a given scope, a type can conform to a protocol in only one way.
 
 ## 1.2 Requirements
 
@@ -259,11 +257,11 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY5MzA1NDA5LDE4NjQzMjM0NjQsLTIxNj
-E0MDk4LC00MTI1NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYxNzMw
-OCwtMTc5OTkzODAwNCwxNzAzMzc2MTE4LDU2ODExMzU1NCw0Nj
-E5NzE2MjcsLTIxMTIzODA1MDUsLTIwNjEwMTM3NzEsMTI4OTI3
-NTM4Niw1OTIwOTA1MDYsLTIwODczMzYyOTMsLTEwMTI4Njc4MT
-AsOTAzNjgwMjExLC00MDk0MzU3ODgsOTQ4Mzc5MTk2LDkyMTY0
-NDI0N119
+eyJoaXN0b3J5IjpbMTI0NjM5ODQ2OSwxODY0MzIzNDY0LC0yMT
+YxNDA5OCwtNDEyNTczNzg4LC0xNTMwNjk2Mzk4LC05MzM2MTcz
+MDgsLTE3OTk5MzgwMDQsMTcwMzM3NjExOCw1NjgxMTM1NTQsND
+YxOTcxNjI3LC0yMTEyMzgwNTA1LC0yMDYxMDEzNzcxLDEyODky
+NzUzODYsNTkyMDkwNTA2LC0yMDg3MzM2MjkzLC0xMDEyODY3OD
+EwLDkwMzY4MDIxMSwtNDA5NDM1Nzg4LDk0ODM3OTE5Niw5MjE2
+NDQyNDddfQ==
 -->
