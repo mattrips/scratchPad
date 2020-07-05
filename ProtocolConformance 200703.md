@@ -69,8 +69,8 @@ struct S {
 extension S: P {}
 ```
 
-### 1.5.2 Implementations on One Protocol vs. Another Protocol 
-*Subject to the exception stated in 1.5.__*: 
+### 1.5.2 Implementations on Different Protocols 
+*Subject to the limitation stated in Section 1.5.4:* 
 If *i<sub>1</sub>* is declared in an extension of protocol `P1` and
 *i<sub>2</sub>* is declared in an extension of protocol `P2`, then:
  (i) if `P2` refines `P1`, *i<sub>2</sub>* is more specialized, 
@@ -196,11 +196,11 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxODYxNTQsLTExNDIyNTYyMjEsMTE3Nj
-kzOTU4NCwtMTcxMzEzMDcyMywtMzIzOTg0MjIxLC0zMzU1NjQw
-ODAsMTU5MzM4NzY3LDE4NjQzMjM0NjQsLTIxNjE0MDk4LC00MT
-I1NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYxNzMwOCwtMTc5OTkz
-ODAwNCwxNzAzMzc2MTE4LDU2ODExMzU1NCw0NjE5NzE2MjcsLT
-IxMTIzODA1MDUsLTIwNjEwMTM3NzEsMTI4OTI3NTM4Niw1OTIw
-OTA1MDZdfQ==
+eyJoaXN0b3J5IjpbLTEwNjg4MDIyNTQsLTExNDIyNTYyMjEsMT
+E3NjkzOTU4NCwtMTcxMzEzMDcyMywtMzIzOTg0MjIxLC0zMzU1
+NjQwODAsMTU5MzM4NzY3LDE4NjQzMjM0NjQsLTIxNjE0MDk4LC
+00MTI1NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYxNzMwOCwtMTc5
+OTkzODAwNCwxNzAzMzc2MTE4LDU2ODExMzU1NCw0NjE5NzE2Mj
+csLTIxMTIzODA1MDUsLTIwNjEwMTM3NzEsMTI4OTI3NTM4Niw1
+OTIwOTA1MDZdfQ==
 -->
