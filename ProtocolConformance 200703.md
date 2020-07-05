@@ -71,10 +71,8 @@ extension S: P {}
 
 ### 1.5.2 Implementations on Different Protocols 
 *Subject to the limitation stated in Section 1.5.4*, if one implementation is declared in an extension of one protocol and another implementation is declared in an extension of another protocol, then:
-(i) if one of the protocols refines the other protocol, the 
- (i) if `P2` refines `P1`, *i<sub>2</sub>* is more specialized, 
- (ii) if `P1` refines `P2`, *i<sub>1</sub>* is more specialized, and
- (iii) otherwise, *i<sub>1</sub>* and *i<sub>2</sub>* present an ambiguity.
+(i) if one of the protocols refines the other protocol, the implementation declared in an extension of the more refined protocol is the more specialized; and 
+(ii) otherwise, it i
 
 
 
@@ -195,7 +193,7 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzMTMwOTY1MSwtMTE0MjI1NjIyMSwxMT
+eyJoaXN0b3J5IjpbMTIzNjE5NTc1NCwtMTE0MjI1NjIyMSwxMT
 c2OTM5NTg0LC0xNzEzMTMwNzIzLC0zMjM5ODQyMjEsLTMzNTU2
 NDA4MCwxNTkzMzg3NjcsMTg2NDMyMzQ2NCwtMjE2MTQwOTgsLT
 QxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMzNjE3MzA4LC0xNzk5
