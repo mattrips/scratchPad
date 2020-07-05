@@ -36,13 +36,6 @@ the witness for a requirement is inferred from the entirety of the scope, includ
 
 Given `T: P` and a protocol requirement *m* of `P`, the witness for *m*  is the **most specialized** implementations of *m* on `T`, as determined in the scope in which the declaration `T: P` is stated.  If `T` has only one implementation of *m*, that implementation will be the protocol witness.  If `T` has more than one implementation of *m*, the most specialized of those implementations will be the protocol witness.
 
-## 1.3 Unconditionally Accessible Implementations
-
-ELIMINATE ALL OF THIS.  ANYTHING TO SALVAGE?
-
-  * Notwithstanding the general inability of concretizations to take advantage of specialized implementations, the `Collection` family of protocols in the Standard Library uses a private attribute to gain some access to specialized implementations for concretizations of generic types conforming to `BidirectionalCollection` and `RandomAccessCollection`.
-
-
 ## 1.5 Most Specialized Implementation
 Among a type's implementations of a protocol
 requirement, the most specialized implementation will serve as the 
@@ -175,7 +168,8 @@ print(x.id) // (a2) "P_Numeric"
 print(getId(of: x)) // "P"
 ```
 ---
-Example 1.5.4.2 demonstrates that a specialized implementation of a protocol's requirement provided by a refinement of the protocol can be unavailable to a conformance of a concretization to the protocol even though the concretization conforms to the refinement. 
+Example 1.5.4.2 demonstrates that a specialized implementation of a protocol's requirement provided by a refinement of the protocol can be unavailable to a conformance of a concretization to the protocol even though the concretization conforms to the refinement.[^3] 
+[^3]: Notwithstanding the general inability of concretizations to take advantage of specialized implementations, the `Collection` family of protocols in the Standard Library uses a private attribute to gain some access to specialized implementations for concretizations of generic types conforming to `BidirectionalCollection` and `RandomAccessCollection`.
 
 Since constraint *c1* on *i2* is not a superset of constraint *c2* on `X<Int>: P`, *i2* is unavailable for purposes of the conformance of `X<Int>: P`. 
 
@@ -210,11 +204,11 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NTk3MzA1LDExNzY5Mzk1ODQsLTE3MT
-MxMzA3MjMsLTMyMzk4NDIyMSwtMzM1NTY0MDgwLDE1OTMzODc2
-NywxODY0MzIzNDY0LC0yMTYxNDA5OCwtNDEyNTczNzg4LC0xNT
-MwNjk2Mzk4LC05MzM2MTczMDgsLTE3OTk5MzgwMDQsMTcwMzM3
-NjExOCw1NjgxMTM1NTQsNDYxOTcxNjI3LC0yMTEyMzgwNTA1LC
-0yMDYxMDEzNzcxLDEyODkyNzUzODYsNTkyMDkwNTA2LC0yMDg3
-MzM2MjkzXX0=
+eyJoaXN0b3J5IjpbLTExNDIyNTYyMjEsMTE3NjkzOTU4NCwtMT
+cxMzEzMDcyMywtMzIzOTg0MjIxLC0zMzU1NjQwODAsMTU5MzM4
+NzY3LDE4NjQzMjM0NjQsLTIxNjE0MDk4LC00MTI1NzM3ODgsLT
+E1MzA2OTYzOTgsLTkzMzYxNzMwOCwtMTc5OTkzODAwNCwxNzAz
+Mzc2MTE4LDU2ODExMzU1NCw0NjE5NzE2MjcsLTIxMTIzODA1MD
+UsLTIwNjEwMTM3NzEsMTI4OTI3NTM4Niw1OTIwOTA1MDYsLTIw
+ODczMzYyOTNdfQ==
 -->
