@@ -52,7 +52,7 @@ implementations, *i<sub>1</sub>* and *i<sub>2</sub>*, is determined as follows:
 ### 1.5.1 Implementations On Protocol vs. Type
 If one implementation is declared in an extension of a protocol and another implementation is declared on `T` (whether in its declaration and/or an extension), the latter implementation is more specialized.
 
-Example 1.5.1 demonstrates this case.  For the requirement *m1* of conformance of `S: P`, `S` has two implementations: *i1* declared in an extension of `P`, and *i2* declared in the declaration of `S`.  Accordingly, *i2* is the more specialized.  
+Example 1.5.1 demonstrates this case.  For the requirement *m1* of conformance of `S: P`, `S` has two implementations: *i1* declared in an extension of `P`, and *i2* declared in the declaration of `S`.  Accordingly, *i2* is the more specialized, and is the witness for *m1* of `S: P`.  
 
 ```swift
 // EXAMPLE 1.5.1
@@ -196,11 +196,11 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA3MjU5MTU4LC0xMTQyMjU2MjIxLDExNz
-Y5Mzk1ODQsLTE3MTMxMzA3MjMsLTMyMzk4NDIyMSwtMzM1NTY0
-MDgwLDE1OTMzODc2NywxODY0MzIzNDY0LC0yMTYxNDA5OCwtND
-EyNTczNzg4LC0xNTMwNjk2Mzk4LC05MzM2MTczMDgsLTE3OTk5
-MzgwMDQsMTcwMzM3NjExOCw1NjgxMTM1NTQsNDYxOTcxNjI3LC
-0yMTEyMzgwNTA1LC0yMDYxMDEzNzcxLDEyODkyNzUzODYsNTky
-MDkwNTA2XX0=
+eyJoaXN0b3J5IjpbMTYxODYxNTQsLTExNDIyNTYyMjEsMTE3Nj
+kzOTU4NCwtMTcxMzEzMDcyMywtMzIzOTg0MjIxLC0zMzU1NjQw
+ODAsMTU5MzM4NzY3LDE4NjQzMjM0NjQsLTIxNjE0MDk4LC00MT
+I1NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYxNzMwOCwtMTc5OTkz
+ODAwNCwxNzAzMzc2MTE4LDU2ODExMzU1NCw0NjE5NzE2MjcsLT
+IxMTIzODA1MDUsLTIwNjEwMTM3NzEsMTI4OTI3NTM4Niw1OTIw
+OTA1MDZdfQ==
 -->
