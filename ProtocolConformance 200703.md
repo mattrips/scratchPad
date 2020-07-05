@@ -17,18 +17,16 @@ A declaration that `T` conforms to `P` further constitutes, with respect to each
 
 A type `T` cannot be declared to conform to a protocol `P` if, within the visible scope, another declaration exists of `T: P`.  This rule holds true even where competing declarations are conditional with disjoint conditions.  In a given scope, a type can conform to a protocol in only one way.
 
-The requirements of a protocol are not part of the requirements of a refining protocol.  The requirements of a protocol cannot be overridden by a protocol that refines the protocol.  Thus, the conformances formed by a refining protocol do not include witnesses for requirements of the protocols refined by the refining protocol.   
 
 ## 1.2 Requirements
 
-A **protocol requirement** *m* is a statement in the declaration of a protocol that a type declared to
-conform to the protocol must have a member satisfying *m*.  
+A **protocol requirement** *m* is a statement in the declaration of a protocol that a type declared to conform to the protocol must have a member satisfying *m*.
+
+The requirements of a protocol are not part of the requirements of a refining protocol.  The requirements of a protocol cannot be overridden by a protocol that refines the protocol.  Thus, the conformances formed by a refining protocol do not include witnesses for requirements of the protocols refined by the refining protocol.   
 
 ## 1.3 Implementations
 
-Given `T: P` and a protocol requirement *m* of `P`, an **implementation** 
-of *m* is any member of `T` that satisfies *m*.  A type
-may have more than one implementation of a requirement.
+Given `T: P` and a protocol requirement *m* of `P`, an **implementation** of *m* is any member of `T` that satisfies *m*.  A type may have more than one implementation of a requirement.
 
 [explain all of the possible sources and discuss conditionality...]
 
@@ -257,11 +255,11 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5MzM4NzY3LDE4NjQzMjM0NjQsLTIxNj
-E0MDk4LC00MTI1NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYxNzMw
-OCwtMTc5OTkzODAwNCwxNzAzMzc2MTE4LDU2ODExMzU1NCw0Nj
-E5NzE2MjcsLTIxMTIzODA1MDUsLTIwNjEwMTM3NzEsMTI4OTI3
-NTM4Niw1OTIwOTA1MDYsLTIwODczMzYyOTMsLTEwMTI4Njc4MT
-AsOTAzNjgwMjExLC00MDk0MzU3ODgsOTQ4Mzc5MTk2LDkyMTY0
-NDI0N119
+eyJoaXN0b3J5IjpbMTM1NTkwMzQ5NSwxNTkzMzg3NjcsMTg2ND
+MyMzQ2NCwtMjE2MTQwOTgsLTQxMjU3Mzc4OCwtMTUzMDY5NjM5
+OCwtOTMzNjE3MzA4LC0xNzk5OTM4MDA0LDE3MDMzNzYxMTgsNT
+Y4MTEzNTU0LDQ2MTk3MTYyNywtMjExMjM4MDUwNSwtMjA2MTAx
+Mzc3MSwxMjg5Mjc1Mzg2LDU5MjA5MDUwNiwtMjA4NzMzNjI5My
+wtMTAxMjg2NzgxMCw5MDM2ODAyMTEsLTQwOTQzNTc4OCw5NDgz
+NzkxOTZdfQ==
 -->
