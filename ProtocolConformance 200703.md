@@ -76,7 +76,7 @@ extension S: P {}
 ### 1.5.3 Implementations on Same Type 
 *Subject to the limitation stated in Section 1.5.4*, if two implementations are both declared on the same type (whether in the declaration and/or an extension), then:
 
-(i) if one implementation is declared in a scope that is more constrained than the scope in which the other implementation is declared, the implementation in the more constrained scope is the more specialized implementation; and
+(i) if one implementation is more constrained than the other implementation, the more constrained implementation is the more specialized implementation; and
 
 (ii) otherwise, it is ambiguous which implementation is the more specialized.
 
@@ -121,6 +121,8 @@ print(getId(of: s)) // "O_Numeric"
 ```           
 
 ### 1.5.4 Implementations on Generics via Constrained Extensions
+
+
 Given concretization `T`, the conformance `T: P`, requirement *m* of `P`, and implementation *i* of *m*, if the constraint on *i* is not a superset of the constraint on `T: P`, then *i* is unavailable for purposes of conformance `T: P`.  This unavailability persists regardless of whether `T` satisfies the constraints on *i*, and so, even though *i* may be available on `T`, it is not available for purposes of the conformance `T: P`.        
 
 ---
@@ -193,11 +195,11 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4NjUzMzc5MywtMjkwODk4NDY4LC0xMT
-QyMjU2MjIxLDExNzY5Mzk1ODQsLTE3MTMxMzA3MjMsLTMyMzk4
-NDIyMSwtMzM1NTY0MDgwLDE1OTMzODc2NywxODY0MzIzNDY0LC
-0yMTYxNDA5OCwtNDEyNTczNzg4LC0xNTMwNjk2Mzk4LC05MzM2
-MTczMDgsLTE3OTk5MzgwMDQsMTcwMzM3NjExOCw1NjgxMTM1NT
-QsNDYxOTcxNjI3LC0yMTEyMzgwNTA1LC0yMDYxMDEzNzcxLDEy
-ODkyNzUzODZdfQ==
+eyJoaXN0b3J5IjpbODkxNDY4NTMxLC0yOTA4OTg0NjgsLTExND
+IyNTYyMjEsMTE3NjkzOTU4NCwtMTcxMzEzMDcyMywtMzIzOTg0
+MjIxLC0zMzU1NjQwODAsMTU5MzM4NzY3LDE4NjQzMjM0NjQsLT
+IxNjE0MDk4LC00MTI1NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYx
+NzMwOCwtMTc5OTkzODAwNCwxNzAzMzc2MTE4LDU2ODExMzU1NC
+w0NjE5NzE2MjcsLTIxMTIzODA1MDUsLTIwNjEwMTM3NzEsMTI4
+OTI3NTM4Nl19
 -->
