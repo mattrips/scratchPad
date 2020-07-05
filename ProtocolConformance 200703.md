@@ -78,6 +78,8 @@ If two implementations are both declared on the same type (whether in the declar
 (i) if one of the two implementations is declared in a scope that is more constrained than scope in which the other implementation is declared, the implementation in the more constrained scope is the more specialized implementation; and
 (ii) otherwise, it is ambiguous whether *i<sub>1</sub>* or *i<sub>2</sub>* is more specialized.
 
+---
+
 Example 1.5.3 demonstrates the determination of the most specialized implementation among multiple implementations declared on the same type.  
 
 The conformance of `S: P` has two implementations of the requirement *m1* of protocol `P`, implementations *i1* and *i2*.  While the property labelled *i3* also would satisfy *m1*, it is not present on `S`, because the `P` extension on which it is declared is an extension only of types that conform to `P` with an implemention of *m2* that conforms to protocol `StringProtocol`; since `S`'s implementation of *m2* is `Int`, which does not conform to  `StringProtocol`, the extension containing *i3* does not extend `S`.  
@@ -189,11 +191,11 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NDAwNjYyMywtMjkwODk4NDY4LC0xMT
-QyMjU2MjIxLDExNzY5Mzk1ODQsLTE3MTMxMzA3MjMsLTMyMzk4
-NDIyMSwtMzM1NTY0MDgwLDE1OTMzODc2NywxODY0MzIzNDY0LC
-0yMTYxNDA5OCwtNDEyNTczNzg4LC0xNTMwNjk2Mzk4LC05MzM2
-MTczMDgsLTE3OTk5MzgwMDQsMTcwMzM3NjExOCw1NjgxMTM1NT
-QsNDYxOTcxNjI3LC0yMTEyMzgwNTA1LC0yMDYxMDEzNzcxLDEy
-ODkyNzUzODZdfQ==
+eyJoaXN0b3J5IjpbLTE1MDU3NzcyNjIsLTI5MDg5ODQ2OCwtMT
+E0MjI1NjIyMSwxMTc2OTM5NTg0LC0xNzEzMTMwNzIzLC0zMjM5
+ODQyMjEsLTMzNTU2NDA4MCwxNTkzMzg3NjcsMTg2NDMyMzQ2NC
+wtMjE2MTQwOTgsLTQxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMz
+NjE3MzA4LC0xNzk5OTM4MDA0LDE3MDMzNzYxMTgsNTY4MTEzNT
+U0LDQ2MTk3MTYyNywtMjExMjM4MDUwNSwtMjA2MTAxMzc3MSwx
+Mjg5Mjc1Mzg2XX0=
 -->
