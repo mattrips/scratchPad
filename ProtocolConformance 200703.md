@@ -75,8 +75,10 @@ extension S: P {}
 
 ### 1.5.3 Implementations on Same Type 
 If two implementations are both declared on the same type (whether in the declaration and/or an extension), then:
+
 (i) if one of the two implementations is declared in a scope that is more constrained than scope in which the other implementation is declared, the implementation in the more constrained scope is the more specialized implementation; and
-(ii) otherwise, it is ambiguous whether *i<sub>1</sub>* or *i<sub>2</sub>* is more specialized.
+
+(ii) otherwise, it is ambiguous which implementation is the more specialized.
 
 ---
 
@@ -120,9 +122,9 @@ print(getId(of: s)) // "O_Numeric"
 
 ### 1.5.4 Implementations on Generics via Constrained Extensions
 Given concretization `T`, the conformance `T: P`, requirement *m* of `P`, and implementation *i* of *m*, if the constraint on *i* is not a superset of the constraint on `T: P`, then *i* is unavailable for purposes of conformance `T: P`.  This unavailability persists regardless of whether `T` satisfies the constraints on *i*, and so, even though *i* may be available on `T`, it is not available for purposes of the conformance `T: P`.        
->***Discussion**
->This limitation came as part of the adoption of conditional conformance, SE-0143.  It exists due to issues of implementablity.*
+
 ---
+
 Example 1.5.4.1 demonstrates that a constrained implementation can be unavailable to a protocol conformance on a concretization even though the concretization satisfies the constraints on the implementation.  
 
 The conformance of `X<Int>: P` has two implementations of the requirement *m1* of protocol `P`, *i1* and *i2*.  The constraint *c2* on *i2* limits the availability of *i2* to cases in which requirement *m2* is performed by a witness that conforms to protocol `Numeric`.  Constraint *c2* is satisfied by `X<Int>`, because `Int`, which is `X<Int>`'s implementation of *m2*, conforms to `Numeric`.  Thus, *i2* is available on `X<Int>`, and when the `id` property is accessed directly on `X<Int>` as *a2*, *i2* is used; the value "P_Numeric" is returned.
@@ -191,7 +193,7 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDU3NzcyNjIsLTI5MDg5ODQ2OCwtMT
+eyJoaXN0b3J5IjpbLTE4NDYyNzI0MDYsLTI5MDg5ODQ2OCwtMT
 E0MjI1NjIyMSwxMTc2OTM5NTg0LC0xNzEzMTMwNzIzLC0zMjM5
 ODQyMjEsLTMzNTU2NDA4MCwxNTkzMzg3NjcsMTg2NDMyMzQ2NC
 wtMjE2MTQwOTgsLTQxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMz
