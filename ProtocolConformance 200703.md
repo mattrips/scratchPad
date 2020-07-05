@@ -76,7 +76,7 @@ extension S: P {}
 
 Example 1.5.2 demonstrates that an implementation on a protocol is considered more specialized than an implementation on a protocol that is refined by the first protocol and that the same holds true even if the implementation on the less-refined protocol is more constrained than the implementation on the more-refined protocol.
 
-The conformance of `S: P` has two implementations of the requirement *m1* of protocol `P`:  implementation *i1* declared in an extension of `P`, and implementation *i2* declared in an extension of protocol `Q`.  Since `Q` refines `P`, *i2* is more specialized than *i1*, and     
+The conformance of `S: P` has two implementations of the requirement *m1* of protocol `P`:  implementation *i1* declared in an extension of `P`, and implementation *i2* declared in an extension of protocol `Q`.  Since `Q` refines `P`, *i2* is more specialized than *i1*.  Thus, *i2* is the witness for *m1* of `S: P`.  When *m1* of `S: P` is accessed at *a1* (or anywhere else), *i2* is the witness, and serves as the implementation of *m1*.     
 
 ```swift
 // Example 1.5.2
@@ -225,7 +225,7 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzE2MzAzNDksMzMxNzI4MjcyLC0yMD
+eyJoaXN0b3J5IjpbLTE3NjgyMzI4NTYsMzMxNzI4MjcyLC0yMD
 c4MzU1NDg5LC0xMzI2MTE0MjEyLC0yOTA4OTg0NjgsLTExNDIy
 NTYyMjEsMTE3NjkzOTU4NCwtMTcxMzEzMDcyMywtMzIzOTg0Mj
 IxLC0zMzU1NjQwODAsMTU5MzM4NzY3LDE4NjQzMjM0NjQsLTIx
