@@ -20,7 +20,7 @@ A type `T` cannot be declared to conform to a protocol `P` if, within the visibl
 
 A **protocol requirement** *m* is a statement in the declaration of a protocol that a type declared to conform to the protocol must have a member satisfying *m*.
 
-The requirements of a protocol are not part of the requirements of a refining protocol.  The requirements of a protocol cannot be overridden by a protocol that refines the protocol.  Thus, the conformances formed by a refining protocol do not include witnesses for requirements of the protocols refined by the refining protocol.   
+If one protocol refines another protocol, the requirements of the latter are not part of the requirements of the former.  The requirements of a protocol are not overridden by a protocol that refines the protocol.  Thus, the conformances formed by a refining protocol do not include witnesses for requirements of the protocols refined by the refining protocol.   
 
 ## 1.3 Implementations
 
@@ -251,11 +251,11 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTMxMzA3MjMsLTMyMzk4NDIyMSwtMz
-M1NTY0MDgwLDE1OTMzODc2NywxODY0MzIzNDY0LC0yMTYxNDA5
-OCwtNDEyNTczNzg4LC0xNTMwNjk2Mzk4LC05MzM2MTczMDgsLT
-E3OTk5MzgwMDQsMTcwMzM3NjExOCw1NjgxMTM1NTQsNDYxOTcx
-NjI3LC0yMTEyMzgwNTA1LC0yMDYxMDEzNzcxLDEyODkyNzUzOD
-YsNTkyMDkwNTA2LC0yMDg3MzM2MjkzLC0xMDEyODY3ODEwLDkw
-MzY4MDIxMV19
+eyJoaXN0b3J5IjpbMTMyNTMzMjY5OSwtMTcxMzEzMDcyMywtMz
+IzOTg0MjIxLC0zMzU1NjQwODAsMTU5MzM4NzY3LDE4NjQzMjM0
+NjQsLTIxNjE0MDk4LC00MTI1NzM3ODgsLTE1MzA2OTYzOTgsLT
+kzMzYxNzMwOCwtMTc5OTkzODAwNCwxNzAzMzc2MTE4LDU2ODEx
+MzU1NCw0NjE5NzE2MjcsLTIxMTIzODA1MDUsLTIwNjEwMTM3Nz
+EsMTI4OTI3NTM4Niw1OTIwOTA1MDYsLTIwODczMzYyOTMsLTEw
+MTI4Njc4MTBdfQ==
 -->
