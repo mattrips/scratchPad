@@ -3,14 +3,13 @@ When a named concrete type[^2] `T` is conformed to a protocol `P`, a set of impl
 [^2]: What about tuples and [SE-0283](https://github.com/apple/swift-evolution/blob/master/proposals/0283-tuples-are-equatable-comparable-hashable.md)?
 
 ## 1.1 Creation of a Conformance
-The substance of a conformance is not declared.  It is created in response to a named concrete type being conformed to a protocol.  The set of witnesses that is the conformance inferred from the context.
-
-A concrete type is declared to conform to a protocol in one of two ways.  A non-generic concrete type is directly declared to conform to a protocol.  A concretization of a generic type is implicitly declared to conform to a protocol based on the pattern established by the generic type's declaration and extensions.
+A named concrete type is declared to conform to a protocol in one of two ways.  A non-generic concrete type is directly declared to conform to a protocol.  A concretization of a generic type is implicitly declared to conform to a protocol based on the pattern established by the generic type's declaration and extensions.
 
 ><sub>***Conretization of a Generic Type**
 >A concretization of a generic type is a specialized version of the generic type formed by replacing the generic type's type parameters with concrete type arguments.  A generic type may specify that its concretizations will conform, or conditionally may conform, to one or more protocols, which establishes a pattern for protocol conformance.  When a concretization is formed, its protocol conformances are determined by that pattern.*</sub>
 
-The syntactic declaration, `T: P`, that type `T` conforms to protocol `P` is separate and distinct from the determination of the conformance associated with the 
+The syntactic declaration, `T: P`, that type `T` conforms to protocol `P` is separate and distinct from the determination of the set of witnesses that is the protocol conformance.  The substance of a conformance is not declared.  It is created in response to a named concrete type being conformed to a protocol.  The set of witnesses that is the conformance inferred from the context.
+
 
 
 For a type `T` to conform to a protocol `P`, `T` must be declared to conform to
@@ -271,11 +270,11 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNTc5MTkyLDE4NjQzMjM0NjQsLTIxNj
-E0MDk4LC00MTI1NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYxNzMw
-OCwtMTc5OTkzODAwNCwxNzAzMzc2MTE4LDU2ODExMzU1NCw0Nj
-E5NzE2MjcsLTIxMTIzODA1MDUsLTIwNjEwMTM3NzEsMTI4OTI3
-NTM4Niw1OTIwOTA1MDYsLTIwODczMzYyOTMsLTEwMTI4Njc4MT
-AsOTAzNjgwMjExLC00MDk0MzU3ODgsOTQ4Mzc5MTk2LDkyMTY0
-NDI0N119
+eyJoaXN0b3J5IjpbMTg2NDU5NDY4OCwxODY0MzIzNDY0LC0yMT
+YxNDA5OCwtNDEyNTczNzg4LC0xNTMwNjk2Mzk4LC05MzM2MTcz
+MDgsLTE3OTk5MzgwMDQsMTcwMzM3NjExOCw1NjgxMTM1NTQsND
+YxOTcxNjI3LC0yMTEyMzgwNTA1LC0yMDYxMDEzNzcxLDEyODky
+NzUzODYsNTkyMDkwNTA2LC0yMDg3MzM2MjkzLC0xMDEyODY3OD
+EwLDkwMzY4MDIxMSwtNDA5NDM1Nzg4LDk0ODM3OTE5Niw5MjE2
+NDQyNDddfQ==
 -->
