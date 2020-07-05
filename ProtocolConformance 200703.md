@@ -67,11 +67,9 @@ extension S: P {}
 ### 1.5.2 Implementations on Two Different Protocols 
 *Subject to the limitation stated in Section 1.5.4*, if one implementation is declared in an extension of one protocol and another implementation is declared in an extension of another protocol, then:
 
- - if one of the protocols refines the other protocol, the
-   implementation declared in an extension of the more refined protocol
-   is the more specialized; and  
-   otherwise, it is ambiguous which
-   implementation is the more specialized.
+(i) if one of the protocols refines the other protocol, the implementation declared in an extension of the more refined protocol is the more specialized; and  
+
+(ii) otherwise, it is ambiguous which implementation is the more specialized.
 
 ### 1.5.3 Implementations on Same Type 
 If two implementations are both declared on the same type (whether in the declaration and/or an extension), then:
@@ -189,11 +187,11 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODgzNDAxODUsLTI5MDg5ODQ2OCwtMT
-E0MjI1NjIyMSwxMTc2OTM5NTg0LC0xNzEzMTMwNzIzLC0zMjM5
-ODQyMjEsLTMzNTU2NDA4MCwxNTkzMzg3NjcsMTg2NDMyMzQ2NC
-wtMjE2MTQwOTgsLTQxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMz
-NjE3MzA4LC0xNzk5OTM4MDA0LDE3MDMzNzYxMTgsNTY4MTEzNT
-U0LDQ2MTk3MTYyNywtMjExMjM4MDUwNSwtMjA2MTAxMzc3MSwx
-Mjg5Mjc1Mzg2XX0=
+eyJoaXN0b3J5IjpbNjY4NTQ2NTk5LC0yOTA4OTg0NjgsLTExND
+IyNTYyMjEsMTE3NjkzOTU4NCwtMTcxMzEzMDcyMywtMzIzOTg0
+MjIxLC0zMzU1NjQwODAsMTU5MzM4NzY3LDE4NjQzMjM0NjQsLT
+IxNjE0MDk4LC00MTI1NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYx
+NzMwOCwtMTc5OTkzODAwNCwxNzAzMzc2MTE4LDU2ODExMzU1NC
+w0NjE5NzE2MjcsLTIxMTIzODA1MDUsLTIwNjEwMTM3NzEsMTI4
+OTI3NTM4Nl19
 -->
