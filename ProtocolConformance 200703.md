@@ -5,13 +5,11 @@ When a named concrete type[^2] `T` is conformed to a protocol `P`, a set of impl
 ## 1.1 Creation of a Conformance
 A **protocol conformance** is the set of witnesses used by a concrete type to satisfy the requirements of a protocol.  The syntactic declaration, `T: P`, that type `T` conforms to protocol `P` is separate and distinct from the determination of the set of witnesses that is a conformance.  The substance of a conformance is not declared.  It is created in response to a type being declared conform to a protocol.  The set of witnesses that is a conformance is inferred from the context.
 
-A named concrete type is declared to conform to a protocol in one of two ways.  A non-generic concrete type is directly declared to conform to a protocol.  A concretization of a generic type is implicitly declared to conform to a protocol based on the pattern established by the generic type's declaration and extensions.
+For a type `T` to conform to a protocol `P`, `T` must be declared to conform to `P`, and `T` must have at least one implementation
+for each protocol requirement of `P`.  A named concrete type is declared to conform to a protocol in one of two ways.  A non-generic concrete type is expressly declared to conform to a protocol.  A concretization of a generic type is implicitly declared to conform to a protocol based on the pattern established by the generic type's declaration and extensions.
 
 ><sub>***Conretization of a Generic Type**
 >A concretization of a generic type is a specialized version of the generic type formed by replacing the generic type's type parameters with concrete type arguments.  A generic type may specify that its concretizations will conform, or conditionally may conform, to one or more protocols, which establishes a pattern for protocol conformance.  When a concretization is formed, its protocol conformances are determined by that pattern.*</sub>
-
-For a type `T` to conform to a protocol `P`, `T` must be declared to conform to `P`, and `T` must have at least one implementation
-for each protocol requirement of `P`.  A distinct set of protocol witnesses is established for the conformance of `T: P`.
 
 A declaration that `T` conforms to `P` further constitutes, with respect to each protocol `o`*<sub>i</sub>* which `P` refines, a declaration that `T` conforms to `o`*<sub>i</sub>*.  Thus, for the declaration of `T: P` to be valid, the implicit declarations of each `T: o`*<sub>i</sub>* must be valid.  For each conformance `T: o`*<sub>i</sub>*, a distinct set of protocol witnesses is established. 
 
@@ -253,11 +251,11 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyMzk4NDIyMSwtMzM1NTY0MDgwLDE1OT
-MzODc2NywxODY0MzIzNDY0LC0yMTYxNDA5OCwtNDEyNTczNzg4
-LC0xNTMwNjk2Mzk4LC05MzM2MTczMDgsLTE3OTk5MzgwMDQsMT
-cwMzM3NjExOCw1NjgxMTM1NTQsNDYxOTcxNjI3LC0yMTEyMzgw
-NTA1LC0yMDYxMDEzNzcxLDEyODkyNzUzODYsNTkyMDkwNTA2LC
-0yMDg3MzM2MjkzLC0xMDEyODY3ODEwLDkwMzY4MDIxMSwtNDA5
-NDM1Nzg4XX0=
+eyJoaXN0b3J5IjpbLTE3MTMxMzA3MjMsLTMyMzk4NDIyMSwtMz
+M1NTY0MDgwLDE1OTMzODc2NywxODY0MzIzNDY0LC0yMTYxNDA5
+OCwtNDEyNTczNzg4LC0xNTMwNjk2Mzk4LC05MzM2MTczMDgsLT
+E3OTk5MzgwMDQsMTcwMzM3NjExOCw1NjgxMTM1NTQsNDYxOTcx
+NjI3LC0yMTEyMzgwNTA1LC0yMDYxMDEzNzcxLDEyODkyNzUzOD
+YsNTkyMDkwNTA2LC0yMDg3MzM2MjkzLC0xMDEyODY3ODEwLDkw
+MzY4MDIxMV19
 -->
