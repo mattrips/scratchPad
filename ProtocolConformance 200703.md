@@ -32,33 +32,13 @@ Given `T: P` and a protocol requirement *m* of `P`, the **witness** for *m* is t
 of `T`'s implementations of *m* will be the witness for *m*.
 
 An implementation is not *declared* to be a witness.  The identity of
-the witness 
-for a requirement is inferred from the entirety of the scope, including all declarations
-made within the scope and those imported into the scope.  
+the witness for a requirement is inferred from the entirety of the scope, including all declarations made within the scope and those imported into the scope.  
 
-Given `T: P` and a protocol requirement *m* of `P`, the witness for *m*  is the 
-**most specialized** implementations of *m* on `T`, as determined in the scope
-in which the declaration `T: P` is stated.  If `T`
-has only one implementation of *m*, that
-implementation will be the protocol witness.  If `T` has more than one
-implementation of *m*, the most specialized of those
-implementations will be the protocol witness.
-
-
+Given `T: P` and a protocol requirement *m* of `P`, the witness for *m*  is the **most specialized** implementations of *m* on `T`, as determined in the scope in which the declaration `T: P` is stated.  If `T` has only one implementation of *m*, that implementation will be the protocol witness.  If `T` has more than one implementation of *m*, the most specialized of those implementations will be the protocol witness.
 
 ## 1.3 Unconditionally Accessible Implementations
 
 ELIMINATE ALL OF THIS.  ANYTHING TO SALVAGE?
-
-A type's possible implementation of a protocol requirement is available to serve
-as the protocol witness for the requirement only if the implementation is an
-*unconditionally accessible* member of the type in the scope in which the
-protocol conformance is declared.  Given a declaration of `T: P` and an
-implementation of a protocol requirement *m* of `P`, the implementation is
-*unconditionally accessible* if and only if (i) `T` satisfies the conditions, if
-any, to which the declaration of the implementation is subject, and (ii) per the
-rules of access control, the implementation is visible in the scope in which `T:
-P` is declared.
 
 With respect to generic types, clause (i) of this rule is not fully implemented.
 A generic type instantiated with its generic arguments specified as concrete
@@ -251,11 +231,11 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA5MjA5NDgyLC0xNzEzMTMwNzIzLC0zMj
-M5ODQyMjEsLTMzNTU2NDA4MCwxNTkzMzg3NjcsMTg2NDMyMzQ2
-NCwtMjE2MTQwOTgsLTQxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOT
-MzNjE3MzA4LC0xNzk5OTM4MDA0LDE3MDMzNzYxMTgsNTY4MTEz
-NTU0LDQ2MTk3MTYyNywtMjExMjM4MDUwNSwtMjA2MTAxMzc3MS
-wxMjg5Mjc1Mzg2LDU5MjA5MDUwNiwtMjA4NzMzNjI5MywtMTAx
-Mjg2NzgxMF19
+eyJoaXN0b3J5IjpbMTE3NjkzOTU4NCwtMTcxMzEzMDcyMywtMz
+IzOTg0MjIxLC0zMzU1NjQwODAsMTU5MzM4NzY3LDE4NjQzMjM0
+NjQsLTIxNjE0MDk4LC00MTI1NzM3ODgsLTE1MzA2OTYzOTgsLT
+kzMzYxNzMwOCwtMTc5OTkzODAwNCwxNzAzMzc2MTE4LDU2ODEx
+MzU1NCw0NjE5NzE2MjcsLTIxMTIzODA1MDUsLTIwNjEwMTM3Nz
+EsMTI4OTI3NTM4Niw1OTIwOTA1MDYsLTIwODczMzYyOTMsLTEw
+MTI4Njc4MTBdfQ==
 -->
