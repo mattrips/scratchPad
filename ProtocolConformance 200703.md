@@ -7,7 +7,8 @@ The substance of a conformance is not declared.  It is created in response to a 
 
 A concrete type is declared to conform to a protocol in one of two ways.  A non-generic concrete type is directly declared to conform to a protocol.  A concretization of a generic type is implicitly declared to conform to a protocol based on the pattern established by the generic type's declaration and extensions.
 
-A **concretization** of a generic type is a specialized version of the generic type formed by replacing the generic type's type parameters with concrete type arguments.  A generic type may specify that its concretizations will conform, or conditionally may conform, to one or more protocols, which establishes a pattern for protocol conformance.  When a concretization is formed, its protocol conformances are determined by that pattern.
+><sub>***Conretization of a Generic Type**
+>A concretization of a generic type is a specialized version of the generic type formed by replacing the generic type's type parameters with concrete type arguments.  A generic type may specify that its concretizations will conform, or conditionally may conform, to one or more protocols, which establishes a pattern for protocol conformance.  When a concretization is formed, its protocol conformances are determined by that pattern.*</sub>
 
 
 
@@ -284,11 +285,11 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5Njk5NDY5NSwxODY0MzIzNDY0LC0yMT
-YxNDA5OCwtNDEyNTczNzg4LC0xNTMwNjk2Mzk4LC05MzM2MTcz
-MDgsLTE3OTk5MzgwMDQsMTcwMzM3NjExOCw1NjgxMTM1NTQsND
-YxOTcxNjI3LC0yMTEyMzgwNTA1LC0yMDYxMDEzNzcxLDEyODky
-NzUzODYsNTkyMDkwNTA2LC0yMDg3MzM2MjkzLC0xMDEyODY3OD
-EwLDkwMzY4MDIxMSwtNDA5NDM1Nzg4LDk0ODM3OTE5Niw5MjE2
-NDQyNDddfQ==
+eyJoaXN0b3J5IjpbODEyMzE0NzU0LDE4NjQzMjM0NjQsLTIxNj
+E0MDk4LC00MTI1NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYxNzMw
+OCwtMTc5OTkzODAwNCwxNzAzMzc2MTE4LDU2ODExMzU1NCw0Nj
+E5NzE2MjcsLTIxMTIzODA1MDUsLTIwNjEwMTM3NzEsMTI4OTI3
+NTM4Niw1OTIwOTA1MDYsLTIwODczMzYyOTMsLTEwMTI4Njc4MT
+AsOTAzNjgwMjExLC00MDk0MzU3ODgsOTQ4Mzc5MTk2LDkyMTY0
+NDI0N119
 -->
