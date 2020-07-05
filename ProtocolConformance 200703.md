@@ -240,9 +240,9 @@ Given concretization `T`, the conformance `T: P`, requirement *m* of `P`, and im
 
 Example 1.5.4 demonstrates that a constrained implementation can be unavailable to a concretization even though the concretization satisfies the constraints on the implementation.  
 
-The conformance of `X<Int>: P` has two implementations of the requirement *m1* of protocol `P`, *i1* and *i2*.  The constraint *c2* on *i2* limits the availability of *i2* to cases in which requirement *m2* is performed by a witness that conforms to protocol `Numeric`.  Constraint *c2* is satisfied by `X<Int>`, because `Int`, which is `X<Int>`'s implementation of *m2*, conforms to `Numeric`.  Thus, *i2* is available on `X<Int>`, and when the `id` property is accessed directly on `X<Int>`, *i2* is used; the value "P_Numeric" is returned.
+The conformance of `X<Int>: P` has two implementations of the requirement *m1* of protocol `P`, *i1* and *i2*.  The constraint *c2* on *i2* limits the availability of *i2* to cases in which requirement *m2* is performed by a witness that conforms to protocol `Numeric`.  Constraint *c2* is satisfied by `X<Int>`, because `Int`, which is `X<Int>`'s implementation of *m2*, conforms to `Numeric`.  Thus, *i2* is available on `X<Int>`, and when the `id` property is accessed directly on `X<Int>` as *a2*, *i2* is used; the value "P_Numeric" is returned.
 
-However, constraint *c3* on conformance `X<Int>: P` is the universal set (i.e., the conformance is unconstrained).  Constraint *c2* is not a superset of the universal set, *c3*.  Consequently, per the rule stated at the outset of this Section 1.5.4,  *i2* is disregarded for purposes of the conformance `X<Int>: P`, and so *i1*, as the only implementation of *m1* available for purposes of `X<Int>: P`, is the witness for *m1*.
+However, constraint *c3* on conformance `X<Int>: P` is the universal set (i.e., the conformance is unconstrained).  Constraint *c2* is not a superset of the universal set, *c3*.  Consequently, per the rule stated at the outset of this Section 1.5.4,  *i2* is disregarded for purposes of the conformance `X<Int>: P`, and so *i1*, as the only implementation of *m1* available for purposes of `X<Int>: P`, is the witness for *m1*.  When the 
 
 ```swift
 /// Example 1.5.4
@@ -287,9 +287,9 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDEzMDQ0NTYsNDYxOTcxNjI3LC0yMT
-EyMzgwNTA1LC0yMDYxMDEzNzcxLDEyODkyNzUzODYsNTkyMDkw
-NTA2LC0yMDg3MzM2MjkzLC0xMDEyODY3ODEwLDkwMzY4MDIxMS
-wtNDA5NDM1Nzg4LDk0ODM3OTE5Niw5MjE2NDQyNDcsMTA0MDUx
-NzUxMiw1NTcwNjA3MTBdfQ==
+eyJoaXN0b3J5IjpbOTM0NzM0Nzc4LDQ2MTk3MTYyNywtMjExMj
+M4MDUwNSwtMjA2MTAxMzc3MSwxMjg5Mjc1Mzg2LDU5MjA5MDUw
+NiwtMjA4NzMzNjI5MywtMTAxMjg2NzgxMCw5MDM2ODAyMTEsLT
+QwOTQzNTc4OCw5NDgzNzkxOTYsOTIxNjQ0MjQ3LDEwNDA1MTc1
+MTIsNTU3MDYwNzEwXX0=
 -->
