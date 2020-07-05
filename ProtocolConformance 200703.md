@@ -72,6 +72,14 @@ extension S: P {}
 
 (ii) otherwise, it is ambiguous which implementation is the more specialized.
 
+---
+
+Example 1.5.2 _____.
+
+```swift
+
+```
+
 ### 1.5.3 Implementations on Same Type 
 *Subject to the limitation stated in Section 1.5.4*, if two implementations are both declared on the same protocol or the same concrete type, then:
 
@@ -189,11 +197,11 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NTk1MTc0MywtMjA3ODM1NTQ4OSwtMT
-MyNjExNDIxMiwtMjkwODk4NDY4LC0xMTQyMjU2MjIxLDExNzY5
-Mzk1ODQsLTE3MTMxMzA3MjMsLTMyMzk4NDIyMSwtMzM1NTY0MD
-gwLDE1OTMzODc2NywxODY0MzIzNDY0LC0yMTYxNDA5OCwtNDEy
-NTczNzg4LC0xNTMwNjk2Mzk4LC05MzM2MTczMDgsLTE3OTk5Mz
-gwMDQsMTcwMzM3NjExOCw1NjgxMTM1NTQsNDYxOTcxNjI3LC0y
-MTEyMzgwNTA1XX0=
+eyJoaXN0b3J5IjpbMzMxNzI4MjcyLC0yMDc4MzU1NDg5LC0xMz
+I2MTE0MjEyLC0yOTA4OTg0NjgsLTExNDIyNTYyMjEsMTE3Njkz
+OTU4NCwtMTcxMzEzMDcyMywtMzIzOTg0MjIxLC0zMzU1NjQwOD
+AsMTU5MzM4NzY3LDE4NjQzMjM0NjQsLTIxNjE0MDk4LC00MTI1
+NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYxNzMwOCwtMTc5OTkzOD
+AwNCwxNzAzMzc2MTE4LDU2ODExMzU1NCw0NjE5NzE2MjcsLTIx
+MTIzODA1MDVdfQ==
 -->
