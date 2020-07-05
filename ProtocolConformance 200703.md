@@ -10,12 +10,6 @@ A concrete type is declared to conform to a protocol in one of two ways.  A non-
 A **concretization** of a generic type is a specialized version of the generic type formed by replacing the generic type's type parameters with concrete type arguments.  A generic type may specify that its concretizations will conform, or conditionally may conform, to one or more protocols, which establishes a pattern for protocol conformance.  When a concretization is formed, its protocol conformances are determined by that pattern.
 
 
- 
-
-results from the instantiation of a type arguments  
-
-
-
 and, implicitly, to any protocols refined by the protocol
 That declaration may occur in one of two ways.  For a non-generic concrete type, that declaration occurs in single step, with an express statement of the conformance in the declaration or an extension of the type. 
 
@@ -293,11 +287,11 @@ print(getId(of: x)) // "P"
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTc2NTM4NDQsMTg2NDMyMzQ2NCwtMj
-E2MTQwOTgsLTQxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMzNjE3
-MzA4LC0xNzk5OTM4MDA0LDE3MDMzNzYxMTgsNTY4MTEzNTU0LD
-Q2MTk3MTYyNywtMjExMjM4MDUwNSwtMjA2MTAxMzc3MSwxMjg5
-Mjc1Mzg2LDU5MjA5MDUwNiwtMjA4NzMzNjI5MywtMTAxMjg2Nz
-gxMCw5MDM2ODAyMTEsLTQwOTQzNTc4OCw5NDgzNzkxOTYsOTIx
-NjQ0MjQ3XX0=
+eyJoaXN0b3J5IjpbLTQ3NDQyMzcwLDE4NjQzMjM0NjQsLTIxNj
+E0MDk4LC00MTI1NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYxNzMw
+OCwtMTc5OTkzODAwNCwxNzAzMzc2MTE4LDU2ODExMzU1NCw0Nj
+E5NzE2MjcsLTIxMTIzODA1MDUsLTIwNjEwMTM3NzEsMTI4OTI3
+NTM4Niw1OTIwOTA1MDYsLTIwODczMzYyOTMsLTEwMTI4Njc4MT
+AsOTAzNjgwMjExLC00MDk0MzU3ODgsOTQ4Mzc5MTk2LDkyMTY0
+NDI0N119
 -->
