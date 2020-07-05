@@ -121,7 +121,7 @@ print(getId(of: s)) // "O_Numeric"
 ```           
 
 ### 1.5.4 Implementations on Generics via Constrained Extensions
-If a concretization is declared to conform to a protocol, if an implementation of a requirement of the protocol is more constrained than the declaration of conformance, the implementation is unavailable to serve as a witness of the conformance of the concretization to the protocol if the declaration of the con.  Given concretization `T`, the conformance `T: P`, requirement *m* of `P`, and a constrained implementation *i* of *m*, if the constraint on *i* is not a superset of the constraint on `T: P`, then *i* is unavailable for purposes of the conformance of `T: P`.  This unavailability persists regardless of whether `T` satisfies the constraints on *i*, and so, even though *i* may be available on `T`, it is not available for purposes of the conformance `T: P`.        
+If a concretization is declared to conform to a protocol and an implementation of a requirement of the protocol is more constrained than the declaration of conformance, the implementation is unavailable to serve as a witness of the conformance of the concretization to the protocol.  Given concretization `T`, the conformance `T: P`, requirement *m* of `P`, and a constrained implementation *i* of *m*, if the constraint on *i* is not a superset of the constraint on `T: P`, then *i* is unavailable for purposes of the conformance of `T: P`.  This unavailability persists regardless of whether `T` satisfies the constraints on *i*, and so, even though *i* may be available on `T`, it is not available for purposes of the conformance `T: P`.        
 
 ---
 
@@ -193,11 +193,11 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjExMTA5NywtMTMyNjExNDIxMiwtMj
-kwODk4NDY4LC0xMTQyMjU2MjIxLDExNzY5Mzk1ODQsLTE3MTMx
-MzA3MjMsLTMyMzk4NDIyMSwtMzM1NTY0MDgwLDE1OTMzODc2Ny
-wxODY0MzIzNDY0LC0yMTYxNDA5OCwtNDEyNTczNzg4LC0xNTMw
-Njk2Mzk4LC05MzM2MTczMDgsLTE3OTk5MzgwMDQsMTcwMzM3Nj
-ExOCw1NjgxMTM1NTQsNDYxOTcxNjI3LC0yMTEyMzgwNTA1LC0y
-MDYxMDEzNzcxXX0=
+eyJoaXN0b3J5IjpbLTIwNzgzNTU0ODksLTEzMjYxMTQyMTIsLT
+I5MDg5ODQ2OCwtMTE0MjI1NjIyMSwxMTc2OTM5NTg0LC0xNzEz
+MTMwNzIzLC0zMjM5ODQyMjEsLTMzNTU2NDA4MCwxNTkzMzg3Nj
+csMTg2NDMyMzQ2NCwtMjE2MTQwOTgsLTQxMjU3Mzc4OCwtMTUz
+MDY5NjM5OCwtOTMzNjE3MzA4LC0xNzk5OTM4MDA0LDE3MDMzNz
+YxMTgsNTY4MTEzNTU0LDQ2MTk3MTYyNywtMjExMjM4MDUwNSwt
+MjA2MTAxMzc3MV19
 -->
