@@ -39,7 +39,7 @@ Given `T: P` and a protocol requirement *m* of `P`, the witness for *m*  is the 
 ## 1.5 Most Specialized Implementation
 Among a type's implementations of a protocol requirement, the most specialized implementation will serve as the witness for the requirement.  If only one implementation of a requirement is present, that implementation is the most specialized.
 
-If two implementations of a requirement are visible, the rules stated in this Section 1.5 determine which is the most specialized.  If more than two implementations of a requirement are visible, the necessary comparisons of pairs of implementations are made until the most specialized implementation is determined.
+If two implementations of a requirement are visible, the rules stated in this Section 1.5 determine which is the most specialized.  If more than two implementations of a requirement are visible, the implementations are paired and compared iteratively until the most specialized implementation is determined.
 
 
 The relative specialization between two implementations of a requirement is determined as follows:
@@ -190,11 +190,11 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0MDg2MTYwMSwtMjA3ODM1NTQ4OSwtMT
-MyNjExNDIxMiwtMjkwODk4NDY4LC0xMTQyMjU2MjIxLDExNzY5
-Mzk1ODQsLTE3MTMxMzA3MjMsLTMyMzk4NDIyMSwtMzM1NTY0MD
-gwLDE1OTMzODc2NywxODY0MzIzNDY0LC0yMTYxNDA5OCwtNDEy
-NTczNzg4LC0xNTMwNjk2Mzk4LC05MzM2MTczMDgsLTE3OTk5Mz
-gwMDQsMTcwMzM3NjExOCw1NjgxMTM1NTQsNDYxOTcxNjI3LC0y
-MTEyMzgwNTA1XX0=
+eyJoaXN0b3J5IjpbLTE2NTYwODM1MzcsLTIwNzgzNTU0ODksLT
+EzMjYxMTQyMTIsLTI5MDg5ODQ2OCwtMTE0MjI1NjIyMSwxMTc2
+OTM5NTg0LC0xNzEzMTMwNzIzLC0zMjM5ODQyMjEsLTMzNTU2ND
+A4MCwxNTkzMzg3NjcsMTg2NDMyMzQ2NCwtMjE2MTQwOTgsLTQx
+MjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMzNjE3MzA4LC0xNzk5OT
+M4MDA0LDE3MDMzNzYxMTgsNTY4MTEzNTU0LDQ2MTk3MTYyNywt
+MjExMjM4MDUwNV19
 -->
