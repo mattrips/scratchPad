@@ -289,7 +289,7 @@ extension Q where V: Numeric {
   var id: String { "Q_Numeric" } // (i2)
 }
 
-func getId<T: P>(of t: T) -> String {
+func getId<T: Q>(of t: T) -> String {
   t.id // (a1)
 }
 
@@ -319,7 +319,7 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMjUxNTg3NSwtMTUzMDY5NjM5OCwtOT
+eyJoaXN0b3J5IjpbLTQxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOT
 MzNjE3MzA4LC0xNzk5OTM4MDA0LDE3MDMzNzYxMTgsNTY4MTEz
 NTU0LDQ2MTk3MTYyNywtMjExMjM4MDUwNSwtMjA2MTAxMzc3MS
 wxMjg5Mjc1Mzg2LDU5MjA5MDUwNiwtMjA4NzMzNjI5MywtMTAx
