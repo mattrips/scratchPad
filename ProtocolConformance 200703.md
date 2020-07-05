@@ -69,7 +69,7 @@ extension S: P {}
 ### 1.5.2 Implementations on Two Different Protocols 
 *Subject to the limitation stated in Section 1.5.4*, if one implementation is declared in an extension of one protocol and another implementation is declared in an extension of another protocol, then:
 
-(i) if one of the protocols refines the other protocol, the implementation declared in an extension of the more refined protocol is the more specialized; and  
+(i) if one protocol refines the other protocol, the implementation declared in an extension of the more refined protocol is the more specialized; and  
 
 (ii) otherwise, it is ambiguous which implementation is the more specialized.
 
@@ -85,7 +85,7 @@ extension S: P {}
 Example 1.5.3 demonstrates the determination of the most specialized implementation among multiple implementations declared on the same type.  
 
 The conformance of `S: P` has two implementations of the requirement *m1* of protocol `P`, implementations *i1* and *i2*.  While the property labelled *i3* also would satisfy *m1*, it is not present on `S`, because the `P` extension on which it is declared is an extension only of types that conform to `P` with an implemention of *m2* that conforms to protocol `StringProtocol`; since `S`'s implementation of *m2* is `Int`, which does not conform to  `StringProtocol`, the extension containing *i3* does not extend `S`.  
-***[REVISE TO ADDRESS i4]***
+
 As between the only two implementations available on `S`, *i1* and *i2*, both are declared on `P`.  Since *i1* is unconstrained and *i2* is constrained, *i2* is more specialized.  Thus, *i2* is the witness for *m1* of `S: P`.  When *m1* of `S: P` is accessed at *a1* (or anywhere else), *i2* is the witness, and serves as the implementation of *m1*.      
  
 ```swift
@@ -102,9 +102,6 @@ extension P where V: Numeric {
 }
 extension P where V: StringProtocol {
   var id: String { "O_StringProtocol" } // (i3)
-}
-extension P where V == Int {
-  var id: String { "O_Int" } // (i4)
 }
 
 func getId<T: P>(of t: T) -> String {
@@ -193,11 +190,11 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5NTc0OTE4MCwtMjA3ODM1NTQ4OSwtMT
-MyNjExNDIxMiwtMjkwODk4NDY4LC0xMTQyMjU2MjIxLDExNzY5
-Mzk1ODQsLTE3MTMxMzA3MjMsLTMyMzk4NDIyMSwtMzM1NTY0MD
-gwLDE1OTMzODc2NywxODY0MzIzNDY0LC0yMTYxNDA5OCwtNDEy
-NTczNzg4LC0xNTMwNjk2Mzk4LC05MzM2MTczMDgsLTE3OTk5Mz
-gwMDQsMTcwMzM3NjExOCw1NjgxMTM1NTQsNDYxOTcxNjI3LC0y
-MTEyMzgwNTA1XX0=
+eyJoaXN0b3J5IjpbLTExNzY3MTc4NjQsLTIwNzgzNTU0ODksLT
+EzMjYxMTQyMTIsLTI5MDg5ODQ2OCwtMTE0MjI1NjIyMSwxMTc2
+OTM5NTg0LC0xNzEzMTMwNzIzLC0zMjM5ODQyMjEsLTMzNTU2ND
+A4MCwxNTkzMzg3NjcsMTg2NDMyMzQ2NCwtMjE2MTQwOTgsLTQx
+MjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMzNjE3MzA4LC0xNzk5OT
+M4MDA0LDE3MDMzNzYxMTgsNTY4MTEzNTU0LDQ2MTk3MTYyNywt
+MjExMjM4MDUwNV19
 -->
