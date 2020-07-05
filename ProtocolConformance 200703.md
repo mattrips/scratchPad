@@ -271,7 +271,7 @@ print(x.id) // (a2) "P_Numeric"
 print(getId(of: x)) // "P"
 ```
 ---
-Example 1.5.4.2 demonstrates that a constrained implementation can be unavailable to a concretization even though the concretization satisfies the constraints on the implementation. 
+Example 1.5.4.2 demonstrates that an implementation provided by a refinement of a protocol can be unavailable to a concretization even though the concretization satisfies the constraints on the implementation. 
 
 
 
@@ -288,9 +288,10 @@ Such set is immutable, and is not subject to replacement.
 If a protocol has no declared requirements, the protocol witness set for
 conformances to the protocol is empty.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMzM3NjExOCw1NjgxMTM1NTQsNDYxOT
-cxNjI3LC0yMTEyMzgwNTA1LC0yMDYxMDEzNzcxLDEyODkyNzUz
-ODYsNTkyMDkwNTA2LC0yMDg3MzM2MjkzLC0xMDEyODY3ODEwLD
-kwMzY4MDIxMSwtNDA5NDM1Nzg4LDk0ODM3OTE5Niw5MjE2NDQy
-NDcsMTA0MDUxNzUxMiw1NTcwNjA3MTBdfQ==
+eyJoaXN0b3J5IjpbLTE3OTk5MzgwMDQsMTcwMzM3NjExOCw1Nj
+gxMTM1NTQsNDYxOTcxNjI3LC0yMTEyMzgwNTA1LC0yMDYxMDEz
+NzcxLDEyODkyNzUzODYsNTkyMDkwNTA2LC0yMDg3MzM2MjkzLC
+0xMDEyODY3ODEwLDkwMzY4MDIxMSwtNDA5NDM1Nzg4LDk0ODM3
+OTE5Niw5MjE2NDQyNDcsMTA0MDUxNzUxMiw1NTcwNjA3MTBdfQ
+==
 -->
