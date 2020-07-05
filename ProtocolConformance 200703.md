@@ -50,7 +50,7 @@ The relative specialization between two
 implementations, *i<sub>1</sub>* and *i<sub>2</sub>*, is determined as follows:
 
 ### 1.5.1 Implementations On Protocol vs. Type
-If one implementation is declared in an extension of a protocol and another implementation is declared on `T` (whether in its declaration and/or an extension), the latter implementation is more specialized.
+*Subject to the limitation stated in Section 1.5.4*, if one implementation is declared in an extension of a protocol and another implementation is declared on `T` (whether in its declaration and/or an extension), the latter implementation is more specialized.
 
 Example 1.5.1 demonstrates this case.  For the requirement *m1* of conformance of `S: P`, `S` has two implementations: *i1* declared in an extension of `P`, and *i2* declared in the declaration of `S`.  Accordingly, *i2* is the more specialized, and is the witness for *m1* of `S: P`.  
 
@@ -70,7 +70,8 @@ extension S: P {}
 ```
 
 ### 1.5.2 Implementations on Different Protocols 
-*Subject to the limitation stated in Section 1.5.4:*, if one implementation is declared in an extension of one protocol and another implementation is declared in an extension of protocol `P2`, then:
+*Subject to the limitation stated in Section 1.5.4*, if one implementation is declared in an extension of one protocol and another implementation is declared in an extension of another protocol, then:
+(i) if one of the protocols refines the other protocol, the 
  (i) if `P2` refines `P1`, *i<sub>2</sub>* is more specialized, 
  (ii) if `P1` refines `P2`, *i<sub>1</sub>* is more specialized, and
  (iii) otherwise, *i<sub>1</sub>* and *i<sub>2</sub>* present an ambiguity.
@@ -194,11 +195,11 @@ print(x.id) // (a2) "Q_Numeric"
 print(getId(of: x)) // "P"
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTk1ODAxNjUsLTExNDIyNTYyMjEsMT
-E3NjkzOTU4NCwtMTcxMzEzMDcyMywtMzIzOTg0MjIxLC0zMzU1
-NjQwODAsMTU5MzM4NzY3LDE4NjQzMjM0NjQsLTIxNjE0MDk4LC
-00MTI1NzM3ODgsLTE1MzA2OTYzOTgsLTkzMzYxNzMwOCwtMTc5
-OTkzODAwNCwxNzAzMzc2MTE4LDU2ODExMzU1NCw0NjE5NzE2Mj
-csLTIxMTIzODA1MDUsLTIwNjEwMTM3NzEsMTI4OTI3NTM4Niw1
-OTIwOTA1MDZdfQ==
+eyJoaXN0b3J5IjpbMTYzMTMwOTY1MSwtMTE0MjI1NjIyMSwxMT
+c2OTM5NTg0LC0xNzEzMTMwNzIzLC0zMjM5ODQyMjEsLTMzNTU2
+NDA4MCwxNTkzMzg3NjcsMTg2NDMyMzQ2NCwtMjE2MTQwOTgsLT
+QxMjU3Mzc4OCwtMTUzMDY5NjM5OCwtOTMzNjE3MzA4LC0xNzk5
+OTM4MDA0LDE3MDMzNzYxMTgsNTY4MTEzNTU0LDQ2MTk3MTYyNy
+wtMjExMjM4MDUwNSwtMjA2MTAxMzc3MSwxMjg5Mjc1Mzg2LDU5
+MjA5MDUwNl19
 -->
