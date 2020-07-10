@@ -8,3 +8,5 @@ With respect to a type declared to conform to a protocol, a protocol conformance
 
 &#9724; implementation
 : A property, method, initializer, subscript or typealias that is capable of satisfying a given protocol requirement.   
+
+<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
